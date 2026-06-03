@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Let's talk | Grupo Higienissa</title>
+  <meta name="description" content="Let's talk. Request a strategic diagnosis for your textile, hospital, hotel or industrial operation. Contact details and locations of Grupo Higienissa.">
+  <link rel="icon" href="../assets/logos/isotipo-azul.png">
+  <link rel="stylesheet" href="../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../assets/styles/wireframe.css">
+</head>
+<body>
+
+  <!-- ===== HEADER GLOBAL ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand-logo" href="home.html" aria-label="Grupo Higienissa — Home">
+        <img src="../assets/logos/lockup-horizontal-blanco.png" alt="Grupo Higienissa">
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      <nav class="main-nav" id="nav" aria-label="Main navigation">
+        <a href="home.html">Home</a>
+        <a href="marca-pacifica.html">Pacífica</a>
+        <a href="marca-trazatex.html">Trazatex</a>
+        <a href="marca-operissa.html">Operissa</a>
+        <a href="sectores.html">Sectors</a>
+        <a href="institucional.html">About</a>
+        <a href="recursos.html">Resources</a>
+        <a class="nav-cta" href="contacto.html" aria-current="page">Contact</a>
+        <span class="lang-switch" aria-label="Language selector">
+          <a href="../es/contacto.html">ES</a>
+          <span class="sep">|</span>
+          <a href="contacto.html" class="active" aria-current="true">EN</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="home.html">Home</a></li>
+        <li>Contact</li>
+      </ol>
+    </nav>
+
+    <!-- ===== HERO CORTO ===== -->
+    <section class="hero">
+      <div class="container">
+        <span class="kicker">Contact</span>
+        <h1 class="display">Let's talk</h1>
+        <p class="lead">Request a strategic diagnosis. We assess your operation and design the ecosystem solution that fits you.</p>
+      </div>
+    </section>
+
+    <!-- ===== FORMULARIO ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Request</span>
+          <h2>Tell us about your operation</h2>
+          <p class="lead">Fill out the form and an ecosystem specialist will contact you. Fields marked with <span class="req">*</span> are required.</p>
+        </div>
+        <form class="form-panel" action="#" method="post" novalidate>
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="nombre">Full name <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="E.g. María Pérez" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="cargo">Job title</label>
+                <input type="text" id="cargo" name="cargo" placeholder="E.g. Operations Manager" autocomplete="organization-title">
+              </div>
+              <div class="form-field">
+                <label for="empresa">Company <span class="req">*</span></label>
+                <input type="text" id="empresa" name="empresa" placeholder="Your organization's name" autocomplete="organization" required>
+              </div>
+              <div class="form-field">
+                <label for="correo">Work email <span class="req">*</span></label>
+                <input type="email" id="correo" name="correo" placeholder="name@company.com" autocomplete="email" required>
+              </div>
+              <div class="form-field">
+                <label for="telefono">Phone</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+51 999 000 000" autocomplete="tel">
+              </div>
+              <div class="form-field">
+                <label for="pais">Country / Region</label>
+                <input type="text" id="pais" name="pais" placeholder="E.g. Peru" autocomplete="country-name">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your operation</legend>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="sector">Sector <span class="req">*</span></label>
+                <select id="sector" name="sector" required>
+                  <option value="">Select a sector</option>
+                  <option value="salud">Healthcare</option>
+                  <option value="hoteleria">Hospitality</option>
+                  <option value="industria">Industry</option>
+                  <option value="mineria">Mining</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="marca">Brand of interest</label>
+                <select id="marca" name="marca">
+                  <option value="">Not sure / Whole ecosystem</option>
+                  <option value="pacifica">Pacífica — Industrial laundry</option>
+                  <option value="trazatex">Trazatex — RFID &amp; traceability</option>
+                  <option value="operissa">Operissa — Operation &amp; management</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="tipo">Request type</label>
+                <select id="tipo" name="tipo">
+                  <option value="evaluacion">Request an assessment</option>
+                  <option value="diagnostico">Request a diagnosis (Trazatex)</option>
+                  <option value="info">General information</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="volumen">Operation size</label>
+                <select id="volumen" name="volumen">
+                  <option value="">Select (optional)</option>
+                  <option value="s">Small</option>
+                  <option value="m">Medium</option>
+                  <option value="l">Large / Multi-site</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="mensaje">Message <span class="req">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Briefly tell us about your operation, volumes and what you need to solve." required></textarea>
+                <span class="form-hint">The more context, the better we can shape the proposal.</span>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="privacidad" name="privacidad" required>
+                <label for="privacidad">I have read and accept the <a href="#">privacy policy</a>. <span class="req">*</span></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="btn-primary" type="submit">Send request</button>
+            <span class="form-hint">We reply within 24–48 business hours.</span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== DATOS DE CONTACTO / UBICACIONES ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Contact details</span>
+          <h2>Where to find us</h2>
+        </div>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Email</h3>
+            <p class="card-desc"><a href="mailto:contacto@higienissa.com">contacto@higienissa.com</a></p>
+          </article>
+          <article class="card">
+            <h3>Phone</h3>
+            <p class="card-desc">+51 1 000 0000</p>
+          </article>
+          <article class="card">
+            <h3>Address</h3>
+            <p class="card-desc">Address · Lima, Perú</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FRANJA DE RESPALDO ASIS IDTRAK ===== -->
+    <section class="asis-strip">
+      <div class="container">
+        <div class="placeholder-img">ASIS IDTRAK</div>
+        <p>In technological partnership with <strong>ASIS IDTRAK</strong> (Spain) · 30+ years in textile RFID.</p>
+        <a class="link-arrow" href="marca-trazatex.html">Discover Trazatex</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER GLOBAL ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/logos/lockup-horizontal-blanco.png" alt="Grupo Higienissa">
+          <p>One ecosystem. Infinite possibilities.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+          </div>
+          <span class="lang-switch" aria-label="Language selector">
+            <a href="../es/contacto.html">ES</a>
+            <span class="sep">|</span>
+            <a href="contacto.html" class="active" aria-current="true">EN</a>
+          </span>
+        </div>
+        <div>
+          <h4>Ecosystem</h4>
+          <ul>
+            <li><a href="marca-pacifica.html">Pacífica</a></li>
+            <li><a href="marca-trazatex.html">Trazatex</a></li>
+            <li><a href="marca-operissa.html">Operissa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sectors</h4>
+          <ul>
+            <li><a href="sector-salud.html">Healthcare</a></li>
+            <li><a href="sector-hoteleria.html">Hospitality</a></li>
+            <li><a href="sector-industria.html">Industry</a></li>
+            <li><a href="sector-mineria.html">Mining</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="institucional.html">About</a></li>
+            <li><a href="recursos.html">Resources</a></li>
+            <li><a href="contacto.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:contacto@higienissa.com">contacto@higienissa.com</a></li>
+            <li>+51 1 000 0000</li>
+            <li>Lima, Perú</li>
+          </ul>
+          <p class="muted">In technology partnership with ASIS IDTRAK (Spain).</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© Grupo Higienissa</span>
+        <span><a href="#">Legal notice</a> · <a href="#">Privacy</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
