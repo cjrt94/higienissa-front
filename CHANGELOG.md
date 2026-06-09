@@ -6,6 +6,8 @@ Formato: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) + [Semantic Ve
 
 ## [Unreleased]
 
+- refactor: página **Nosotros** — quitada la sección "Las tres divisiones" (repetía las marcas que ya están en la tesis del ecosistema; los enlaces a marca se movieron a los nodos del diagrama); "Capacidades" y "Sectores" expandidas de chips a **cards con descripción** (+ enlace "Ver sector" en sectores)
+- refactor: `sectores.html` — quitada la línea "Marcas relevantes" de las cards del hub (todas las marcas aplican a todos los sectores, era redundante)
 - feat: "Sectores que atendemos" en páginas de servicio (pacífica, operissa, trazatex, soluciones) pasa de chips a **cards con descripción + enlace "Ver sector"**; en soluciones se separó como sección propia (antes vivía dentro de "A quién aplica")
 - feat: íconos SVG inline en los 3 pilares de "Lo que nos define" del home (componente `.pillar-icon`)
 - style: quitada la franja azul (`border-left`) de los cards `.highlight` bajo el hero
