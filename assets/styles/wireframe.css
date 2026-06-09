@@ -158,6 +158,9 @@ li { margin-bottom: var(--space-2); }
 /* .steps puede ser <ol>: anular numeración nativa (el número lo da .step-num) */
 .steps { list-style: none; margin: 0; padding: 0; }
 .pillar, .step { background: var(--bg-alt); border-radius: var(--radius); padding: var(--space-5); margin: 0; }
+/* ícono opcional de pilar */
+.pillar-icon { display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: var(--radius-sm); background: var(--bg); border: 1px solid var(--line); color: var(--azul); margin-bottom: var(--space-3); }
+.pillar-icon svg { width: 24px; height: 24px; display: block; }
 .step .step-num { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 50%; background: var(--azul); color: #fff; font: 700 var(--fs-small) var(--font-body); margin-bottom: var(--space-3); }
 
 /* chips de sector */
@@ -182,7 +185,7 @@ ul.chips li { margin-bottom: 0; }
 
 .highlight-stack { display: flex; flex-direction: column; gap: var(--space-3); }
 .highlight {
-  background: var(--bg); border: 1px solid var(--line); border-left: 3px solid var(--azul);
+  background: var(--bg); border: 1px solid var(--line);
   border-radius: var(--radius-sm); padding: var(--space-4) var(--space-5);
 }
 .highlight .h-label { display: block; font: 700 var(--fs-kicker)/1.2 var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--azul); margin-bottom: 4px; }

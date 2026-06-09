@@ -6,6 +6,12 @@ Formato: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) + [Semantic Ve
 
 ## [Unreleased]
 
+- feat: "Sectores que atendemos" en páginas de servicio (pacífica, operissa, trazatex, soluciones) pasa de chips a **cards con descripción + enlace "Ver sector"**; en soluciones se separó como sección propia (antes vivía dentro de "A quién aplica")
+- feat: íconos SVG inline en los 3 pilares de "Lo que nos define" del home (componente `.pillar-icon`)
+- style: quitada la franja azul (`border-left`) de los cards `.highlight` bajo el hero
+- fix: home "Qué es el grupo" — el panel de destacados ya no nombra las marcas (se mencionan abajo); reemplazado por destacados de valor
+- fix: filtro de categorías del blog (`recursos.html`) sin `margin-bottom` ni realce del chip activo — cambiado de `.chips` a `.filters` (componente con margen + estilo de chip activo)
+
 - feat: heros más altos en todas las páginas (`.hero` a `clamp(64px, 8vw, 112px)` + `hero-grid min-height: 420px` + placeholder `tall` a 460px)
 - feat: franja gris bajo el hero rediseñada con el patrón `intro-split` (texto a la izquierda + panel de destacados a la derecha) en home, las 3 marcas, soluciones y el "Contexto" de los 4 sectores
 - feat: página **Nosotros** ampliada de 3 a 10 secciones — propósito, tesis del ecosistema (diagrama Procesa·Traza·Opera), qué integramos, sectores transversales y franja de respaldo ASIS IDTRAK (nombre enlazado a Trazatex)
