@@ -32,7 +32,11 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 ## Trazatex (Powered by ASIS IDTRAK)
 - **Claim hero:** "Gestión estratégica y trazabilidad inteligente de activos textiles."
 - **Tesis:** "Los textiles no son solo insumos. Son activos."
-- **Gancho de apertura (banda "El problema"):** "¿Sabías que la mayoría de hospitales, hoteles e industrias no sabe exactamente dónde están sus prendas? Millones de soles se pierden cada año por falta de control textil. El problema no es la falta de ropa. Es la falta de **información**." *(Feedback cliente — Gabriel, 10/06/26: abrir con esto para que impacte más.)*
+- **Gancho de apertura (banda "El problema"):** *(Feedback cliente — Gabriel, 10/06/26: abrir con esto para que impacte más.)*
+  - **Pregunta:** "¿Sabías que la mayoría de hospitales, hoteles e industrias no sabe exactamente dónde están sus prendas?"
+  - **Encuadre:** "Sin trazabilidad, el textil se vuelve un activo invisible: se mueve, se lava, se pierde y se repone sin que nadie lo registre. Y lo que no se mide, no se controla."
+  - **Síntomas concretos (lista, refuerzan el argumento):** prendas que desaparecen sin saber cuándo ni dónde · compras de reposición "por si acaso" sin inventario real · horas de personal contando a mano con conteos que no cuadran · prendas descartadas casi nuevas o usadas más allá de su vida útil · reclamos por faltantes sin evidencia · auditorías sin datos que las respalden.
+  - **Diagnóstico de cierre:** "Millones de soles se pierden cada año por falta de control textil. El problema no es la falta de ropa. Es la falta de **información**."
 - **Sectores:** Salud · Hotelería · Industria. (Sin Minería.)
 - **Diferenciadores:** tecnología aplicada en operaciones reales (no dispositivos aislados) · integración con Pacífica y Operissa · SmartHub demostrativo · respaldo internacional (ASIS IDTRAK).
 
