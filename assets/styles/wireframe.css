@@ -209,6 +209,20 @@ ul.chips li { margin-bottom: 0; }
 .marker-list.risk li::before { content: "!"; color: var(--gris-marca); }
 .marker-list.gain li::before { content: "\2713"; color: var(--azul); }
 .marker-list.ask  li::before { content: "?"; color: var(--celeste); }
+.marker-list.less li::before { content: "\2212"; color: var(--gris-marca); }  /* menos (−) */
+.marker-list.more li::before { content: "+"; color: var(--azul); }           /* más (+) */
+
+/* ============================================================
+   STATEMENT BAND  ·  gancho / declaración de apertura (Trazatex)
+   ============================================================ */
+.statement { max-width: 62ch; border-left: 4px solid var(--celeste); padding-left: var(--space-6); }
+.statement .statement-q { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; color: var(--ink); margin-bottom: var(--space-4); }
+.statement .statement-sub { font-size: 1.1rem; color: var(--text); margin-bottom: var(--space-3); }
+.statement .statement-punch { font-size: 1.25rem; color: var(--ink); margin: 0; }
+.statement .statement-punch strong { color: var(--azul); }
+
+/* fila de imágenes de ejemplo (mid-fi) bajo una grilla de contenido */
+.example-grid { margin-top: var(--space-6); }
 
 /* ============================================================
    FEATURE GRID  ·  capas / pasos detallados (soluciones)

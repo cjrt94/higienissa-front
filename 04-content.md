@@ -32,6 +32,7 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 ## Trazatex (Powered by ASIS IDTRAK)
 - **Claim hero:** "Gestión estratégica y trazabilidad inteligente de activos textiles."
 - **Tesis:** "Los textiles no son solo insumos. Son activos."
+- **Gancho de apertura (banda "El problema"):** "¿Sabías que la mayoría de hospitales, hoteles e industrias no sabe exactamente dónde están sus prendas? Millones de soles se pierden cada año por falta de control textil. El problema no es la falta de ropa. Es la falta de **información**." *(Feedback cliente — Gabriel, 10/06/26: abrir con esto para que impacte más.)*
 - **Sectores:** Salud · Hotelería · Industria. (Sin Minería.)
 - **Diferenciadores:** tecnología aplicada en operaciones reales (no dispositivos aislados) · integración con Pacífica y Operissa · SmartHub demostrativo · respaldo internacional (ASIS IDTRAK).
 
@@ -41,8 +42,20 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 3. **Plataforma de gestión** — visualización en tiempo real, control por área, reportes históricos, KPIs, auditoría digital.
 4. **Integración operativa** — modelo diseñado según el flujo real de cada organización.
 
+**Infraestructura tecnológica (bajo "Cómo funciona") — tres frentes:**
+- **Hardware especializado:** etiquetas textiles inteligentes · cabinas de lectura masiva · lectores móviles · estaciones de control · armarios inteligentes *(próximamente — confirmar cuando se incorporen).*
+- **Software especializado:** gestión de inventario · control de movimientos · trazabilidad completa · indicadores y KPIs · reportes ejecutivos.
+- **Servicios especializados:** implementación · capacitación · soporte · optimización continua.
+
+**Lo que permite lograr (beneficios operacionales):**
+- **Menos:** pérdidas · compras innecesarias · tiempo contando prendas · contacto con ropa contaminada.
+- **Más:** control · información · productividad.
+
+**Qué información genera (ejemplos reales — el cliente aportará imágenes/dashboards):** inventario por servicio · consumo por piso · ciclos de lavado por prenda · vida útil restante · prendas extraviadas · tiempo promedio de rotación · coste por uso · tendencia de pérdidas. *(Reemplaza la antigua lista "Indicadores medibles" — superada por esta, más concreta.)*
+
+**Impacto económico:** reducción de pérdidas · reducción de compras · ahorro de horas-hombre · reducción de reclamos · evidencia para auditorías.
+
 **Soluciones / capacidades:** RFID industrial · trazabilidad textil avanzada · software y dashboards inteligentes · auditoría operacional · KPIs y analítica · integración tecnológica · control de pérdidas · inventarios inteligentes · smart tracking para hospitales y hoteles.
-**Indicadores medibles:** nivel de merma · rotación por área · ciclos de lavado · vida útil promedio · cumplimiento interno · inventario real en circulación.
 
 ## Operissa
 - **Claim hero:** "Operamos procesos para que usted pueda enfocarse en su negocio."
