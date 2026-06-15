@@ -46,18 +46,23 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 3. **Plataforma de gestión** — visualización en tiempo real, control por área, reportes históricos, KPIs, auditoría digital.
 4. **Integración operativa** — modelo diseñado según el flujo real de cada organización.
 
-**Infraestructura tecnológica (bajo "Cómo funciona") — tres frentes:**
-- **Hardware especializado:** etiquetas textiles inteligentes · cabinas de lectura masiva · lectores móviles · estaciones de control · armarios inteligentes *(próximamente — confirmar cuando se incorporen).*
-- **Software especializado:** gestión de inventario · control de movimientos · trazabilidad completa · indicadores y KPIs · reportes ejecutivos.
-- **Servicios especializados:** implementación · capacitación · soporte · optimización continua.
+**Infraestructura tecnológica (sección tras "El modelo de 4 capas").** Copy final del cliente (13/06/26 — segunda versión, reemplaza el ensayo previo de tres sub-bloques):
+- **Título (kicker):** Infraestructura tecnológica.
+- **Subtítulo (h2):** *Tecnología, datos y experiencia que hacen posible la trazabilidad.*
+- **Intro (2 párrafos):** *"La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado."* + *"A través de hardware especializado, una plataforma de gestión basada en datos y un equipo de profesionales dedicados a la implementación, capacitación y mejora continua, Trazatex permite controlar cada prenda a lo largo de su ciclo de vida, reducir pérdidas, optimizar recursos y tomar decisiones basadas en información confiable."*
+- **Tres cards (listas):**
+  - *Hardware especializado:* etiquetas textiles inteligentes · cabinas de lectura masiva · lectores móviles · estaciones de control · armarios inteligentes *(próximamente).*
+  - *Software especializado:* gestión de inventario · control de movimientos · trazabilidad completa · indicadores y KPIs · reportes ejecutivos.
+  - *Servicios especializados:* implementación · capacitación · soporte · optimización continua.
+- **Párrafo de cierre (bajo las cards):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
 
-**Lo que permite lograr (beneficios operacionales):**
-- **Menos:** pérdidas · compras innecesarias · tiempo contando prendas · contacto con ropa contaminada.
-- **Más:** control · información · productividad.
+> Nota: la versión rica de tres sub-bloques (Infraestructura/Plataforma de inteligencia operativa/Servicios con descripciones y 5 servicios) quedó descartada por esta segunda versión del cliente. Si se quisiera recuperar el detalle (descripciones de lectura masiva/control fijo/operación móvil, los 5 servicios con texto), está en el historial git.
 
 **Qué información genera (ejemplos reales — el cliente aportará imágenes/dashboards):** inventario por servicio · consumo por piso · ciclos de lavado por prenda · vida útil restante · prendas extraviadas · tiempo promedio de rotación · coste por uso · tendencia de pérdidas. *(Reemplaza la antigua lista "Indicadores medibles" — superada por esta, más concreta.)*
 
-**Impacto económico:** reducción de pérdidas · reducción de compras · ahorro de horas-hombre · reducción de reclamos · evidencia para auditorías.
+**El retorno (sección tras "Qué información genera" — fusiona "Lo que permite lograr" + "Impacto económico" en una sola):** la trazabilidad deja de ser un gasto difuso y se vuelve medible, con impacto directo en la operación y en la cuenta de resultados.
+- **Menos:** pérdidas y mermas · compras de reposición innecesarias · horas-hombre en conteos manuales · reclamos por faltantes · contacto con ropa contaminada.
+- **Más:** control sobre cada prenda · información en tiempo real para decidir · productividad · evidencia para auditorías.
 
 **Soluciones / capacidades:** RFID industrial · trazabilidad textil avanzada · software y dashboards inteligentes · auditoría operacional · KPIs y analítica · integración tecnológica · control de pérdidas · inventarios inteligentes · smart tracking para hospitales y hoteles.
 

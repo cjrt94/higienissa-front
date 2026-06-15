@@ -61,6 +61,7 @@ li { margin-bottom: var(--space-2); }
 .section { padding: var(--space-8) 0; }
 .section-tight { padding: var(--space-7) 0; }
 .section-head { max-width: 64ch; margin-bottom: var(--space-6); }
+.section-foot { max-width: 64ch; margin: var(--space-6) 0 0; }  /* párrafo de cierre tras un grid */
 
 /* ============================================================
    HEADER / NAV GLOBAL
