@@ -46,17 +46,17 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 3. **Plataforma de gestión** — visualización en tiempo real, control por área, reportes históricos, KPIs, auditoría digital.
 4. **Integración operativa** — modelo diseñado según el flujo real de cada organización.
 
-**Infraestructura tecnológica (sección tras "El modelo de 4 capas").** Copy final del cliente (13/06/26 — segunda versión, reemplaza el ensayo previo de tres sub-bloques):
-- **Título (kicker):** Infraestructura tecnológica.
+**La solución Trazatex (sección tras "El modelo de 4 capas").** Copy del cliente (versión final, 13/06/26 — combina el encuadre de su 2ª versión con el detalle de la 1ª, que el cliente pidió reincorporar):
+- **Kicker:** La solución Trazatex.
 - **Subtítulo (h2):** *Tecnología, datos y experiencia que hacen posible la trazabilidad.*
 - **Intro (2 párrafos):** *"La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado."* + *"A través de hardware especializado, una plataforma de gestión basada en datos y un equipo de profesionales dedicados a la implementación, capacitación y mejora continua, Trazatex permite controlar cada prenda a lo largo de su ciclo de vida, reducir pérdidas, optimizar recursos y tomar decisiones basadas en información confiable."*
-- **Tres cards (listas):**
-  - *Hardware especializado:* etiquetas textiles inteligentes · cabinas de lectura masiva · lectores móviles · estaciones de control · armarios inteligentes *(próximamente).*
-  - *Software especializado:* gestión de inventario · control de movimientos · trazabilidad completa · indicadores y KPIs · reportes ejecutivos.
-  - *Servicios especializados:* implementación · capacitación · soporte · optimización continua.
-- **Párrafo de cierre (bajo las cards):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
+- **Tres sub-bloques (con descripción):**
+  - *Infraestructura tecnológica* (3 cards): **Lectura masiva automatizada** (túneles RFID, sin abrir bolsas ni manipular textiles) · **Puntos de control fijos** (cabinas RFID en ubicaciones estratégicas, registran ingresos/salidas/movimientos) · **Operación móvil** (dispositivos PDA para inventarios, auditorías, verificaciones y controles en campo).
+  - *Plataforma de inteligencia operativa:* "toda la información capturada se consolida en la plataforma Trazatex, permitiendo visualizar:" inventarios en tiempo real · movimientos de prendas · consumos por área o servicio · pérdidas y puntos críticos · ciclos de lavado · vida útil de las prendas · indicadores y reportes ejecutivos. Cierre: "la información se transforma en herramientas de gestión para la toma de decisiones basada en datos."
+  - *Servicios especializados* (5 cards): **Consultoría y diagnóstico** · **Implementación y puesta en marcha** · **Capacitación del personal** · **Soporte y acompañamiento continuo** · **Optimización basada en datos** (cada uno con su descripción, ver HTML).
+- **Párrafo de cierre (bajo los sub-bloques):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
 
-> Nota: la versión rica de tres sub-bloques (Infraestructura/Plataforma de inteligencia operativa/Servicios con descripciones y 5 servicios) quedó descartada por esta segunda versión del cliente. Si se quisiera recuperar el detalle (descripciones de lectura masiva/control fijo/operación móvil, los 5 servicios con texto), está en el historial git.
+> ⚠️ **Solape pendiente de decidir:** los bullets de "Plataforma de inteligencia operativa" (inventarios, consumos, pérdidas, ciclos de lavado, vida útil…) repiten casi lo mismo que la sección **"Qué información genera"** más abajo. Hoy conviven los dos. Decidir si "Qué información genera" se recorta/elimina o se mantiene.
 
 **Qué información genera (ejemplos reales — el cliente aportará imágenes/dashboards):** inventario por servicio · consumo por piso · ciclos de lavado por prenda · vida útil restante · prendas extraviadas · tiempo promedio de rotación · coste por uso · tendencia de pérdidas. *(Reemplaza la antigua lista "Indicadores medibles" — superada por esta, más concreta.)*
 
