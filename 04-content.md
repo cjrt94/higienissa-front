@@ -41,8 +41,8 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 - **Diferenciadores:** tecnología aplicada en operaciones reales (no dispositivos aislados) · integración con Pacífica y Operissa · SmartHub demostrativo · respaldo internacional (ASIS IDTRAK).
 
 **Modelo de solución (4 capas, con detalle):**
-1. **Identificación individual** — RFID por prenda, lectura masiva sin conteo manual.
-2. **Infraestructura de lectura** — túneles RFID, cabinas, lectores portátiles, estaciones adaptadas al flujo.
+1. **Infraestructura de lectura** — túneles RFID, cabinas, lectores portátiles, estaciones adaptadas al flujo.
+2. **Identificación individual** — RFID por prenda, lectura masiva sin conteo manual.
 3. **Plataforma de gestión** — visualización en tiempo real, control por área, reportes históricos, KPIs, auditoría digital.
 4. **Integración operativa** — modelo diseñado según el flujo real de cada organización.
 

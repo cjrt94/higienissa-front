@@ -128,6 +128,7 @@ li { margin-bottom: var(--space-2); }
 
 /* sello / badge (ej. Powered by ASIS IDTRAK) */
 .badge { display: inline-flex; align-items: center; gap: 8px; font: 600 var(--fs-small) var(--font-body); color: var(--azul); background: var(--bg-alt); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; margin-bottom: var(--space-4); }
+a.badge:hover { border-color: var(--azul); text-decoration: none; }
 
 /* ============================================================
    BOTONES (extiende los de tokens.css)
