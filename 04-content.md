@@ -56,11 +56,9 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
   - *Servicios especializados* (5 cards): **Consultoría y diagnóstico** · **Implementación y puesta en marcha** · **Capacitación del personal** · **Soporte y acompañamiento continuo** · **Optimización basada en datos** (cada uno con su descripción, ver HTML).
 - **Párrafo de cierre (bajo los sub-bloques):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
 
-> ⚠️ **Solape pendiente de decidir:** los bullets de "Plataforma de inteligencia operativa" (inventarios, consumos, pérdidas, ciclos de lavado, vida útil…) repiten casi lo mismo que la sección **"Qué información genera"** más abajo. Hoy conviven los dos. Decidir si "Qué información genera" se recorta/elimina o se mantiene.
+> Solape resuelto: la sección independiente **"Qué información genera"** se **eliminó** (repetía los datos de la plataforma). Sus 3 dashboards de ejemplo (inventario en tiempo real · reporte de pérdidas · coste por uso) se **movieron al sub-bloque "Plataforma de inteligencia operativa"**. Los 8 datos con descripción que tenía esa sección quedan en el historial git por si se quieren recuperar.
 
-**Qué información genera (ejemplos reales — el cliente aportará imágenes/dashboards):** inventario por servicio · consumo por piso · ciclos de lavado por prenda · vida útil restante · prendas extraviadas · tiempo promedio de rotación · coste por uso · tendencia de pérdidas. *(Reemplaza la antigua lista "Indicadores medibles" — superada por esta, más concreta.)*
-
-**El retorno (sección tras "Qué información genera" — fusiona "Lo que permite lograr" + "Impacto económico" en una sola):** la trazabilidad deja de ser un gasto difuso y se vuelve medible, con impacto directo en la operación y en la cuenta de resultados.
+**El retorno (sección tras "La solución Trazatex" — fusiona "Lo que permite lograr" + "Impacto económico" en una sola):** la trazabilidad deja de ser un gasto difuso y se vuelve medible, con impacto directo en la operación y en la cuenta de resultados.
 - **Menos:** pérdidas y mermas · compras de reposición innecesarias · horas-hombre en conteos manuales · reclamos por faltantes · contacto con ropa contaminada.
 - **Más:** control sobre cada prenda · información en tiempo real para decidir · productividad · evidencia para auditorías.
 

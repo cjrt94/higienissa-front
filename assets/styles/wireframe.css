@@ -59,6 +59,9 @@ li { margin-bottom: var(--space-2); }
 
 /* --- Secciones --- */
 .section { padding: var(--space-8) 0; }
+/* Pasada de estructura mid-fi — alternancia de fondos. Por ahora SOLO Trazatex
+   (scope .page-trazatex en <body>). Al aprobar, quitar el prefijo para hacerla global. */
+.page-trazatex .section-alt { background: var(--bg-alt); }
 .section-tight { padding: var(--space-7) 0; }
 .section-head { max-width: 64ch; margin-bottom: var(--space-6); }
 .section-foot { max-width: 64ch; margin: var(--space-6) 0 0; }  /* párrafo de cierre tras un grid */
@@ -150,9 +153,10 @@ a.badge:hover { border-color: var(--azul); text-decoration: none; }
 .card h3 { margin-bottom: var(--space-1); }
 .card h4 { font-size: var(--fs-h3); margin-bottom: var(--space-1); }  /* título de card anidado bajo un .subhead */
 .card .card-desc { color: var(--text); flex: 1; margin-bottom: var(--space-3); }
-/* sub-encabezado de grupo dentro de una sección con varios bloques (p. ej. La solución Trazatex) */
-.subhead { margin: var(--space-7) 0 var(--space-4); }
-.subhead:first-of-type { margin-top: 0; }
+/* sub-encabezado de grupo dentro de una sección con varios bloques (p. ej. La solución Trazatex);
+   un divisor superior + aire separa cada grupo del anterior */
+.subhead { margin: var(--space-8) 0 var(--space-5); padding-top: var(--space-6); border-top: 1px solid var(--line); font-size: var(--fs-h3); }
+.subhead:first-of-type { margin-top: var(--space-4); padding-top: 0; border-top: 0; }
 .card-brand .card-top { margin-bottom: var(--space-3); }
 .card-cross { font-size: var(--fs-small); color: var(--muted); font-style: italic; }
 .card-sub { font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--azul); margin: var(--space-2) 0 var(--space-1); }
