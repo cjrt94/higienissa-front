@@ -46,19 +46,19 @@ Microcopy y listas verificadas del material de marca. **No inventar** servicios,
 3. **Plataforma de gestión** — visualización en tiempo real, control por área, reportes históricos, KPIs, auditoría digital.
 4. **Integración operativa** — modelo diseñado según el flujo real de cada organización.
 
-**La solución Trazatex (sección tras "El modelo de 4 capas").** Copy del cliente (versión final, 13/06/26 — combina el encuadre de su 2ª versión con el detalle de la 1ª, que el cliente pidió reincorporar):
-- **Kicker:** La solución Trazatex.
+**Infraestructura tecnológica (sección tras "El modelo de 4 capas").** Copy del cliente — **versión simple, definitiva (16/06/26: el cliente la pidió "sí o sí")**. Reemplaza el ensayo de tres sub-bloques detallados (Infraestructura/Plataforma/Servicios con descripciones), que queda en el historial git:
+- **Kicker:** Infraestructura tecnológica.
 - **Subtítulo (h2):** *Tecnología, datos y experiencia que hacen posible la trazabilidad.*
 - **Intro (2 párrafos):** *"La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado."* + *"A través de hardware especializado, una plataforma de gestión basada en datos y un equipo de profesionales dedicados a la implementación, capacitación y mejora continua, Trazatex permite controlar cada prenda a lo largo de su ciclo de vida, reducir pérdidas, optimizar recursos y tomar decisiones basadas en información confiable."*
-- **Tres sub-bloques (con descripción):**
-  - *Infraestructura tecnológica* (3 cards): **Lectura masiva automatizada** (túneles RFID, sin abrir bolsas ni manipular textiles) · **Puntos de control fijos** (cabinas RFID en ubicaciones estratégicas, registran ingresos/salidas/movimientos) · **Operación móvil** (dispositivos PDA para inventarios, auditorías, verificaciones y controles en campo).
-  - *Plataforma de inteligencia operativa:* "toda la información capturada se consolida en la plataforma Trazatex, permitiendo visualizar:" inventarios en tiempo real · movimientos de prendas · consumos por área o servicio · pérdidas y puntos críticos · ciclos de lavado · vida útil de las prendas · indicadores y reportes ejecutivos. Cierre: "la información se transforma en herramientas de gestión para la toma de decisiones basada en datos."
-  - *Servicios especializados* (5 cards): **Consultoría y diagnóstico** · **Implementación y puesta en marcha** · **Capacitación del personal** · **Soporte y acompañamiento continuo** · **Optimización basada en datos** (cada uno con su descripción, ver HTML).
-- **Párrafo de cierre (bajo los sub-bloques):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
+- **Tres cards (listas):**
+  - *Hardware especializado:* etiquetas textiles inteligentes · cabinas de lectura masiva · lectores móviles · estaciones de control · armarios inteligentes *(próximamente).*
+  - *Software especializado:* gestión de inventario · control de movimientos · trazabilidad completa · indicadores y KPIs · reportes ejecutivos.
+  - *Servicios especializados:* implementación · capacitación · soporte · optimización continua.
+- **Párrafo de cierre (bajo las cards):** *"Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados."*
 
-> Solape resuelto: la sección independiente **"Qué información genera"** se **eliminó** (repetía los datos de la plataforma). Sus 3 dashboards de ejemplo (inventario en tiempo real · reporte de pérdidas · coste por uso) se **movieron al sub-bloque "Plataforma de inteligencia operativa"**. Los 8 datos con descripción que tenía esa sección quedan en el historial git por si se quieren recuperar.
+**Qué información genera (sección tras "Infraestructura tecnológica" — restaurada):** "Trazatex no solo identifica prendas: produce la información que hoy falta para gestionar el textil como un activo." 8 cards de datos: inventario por servicio · consumo por piso · ciclos de lavado por prenda · vida útil restante · prendas extraviadas · tiempo promedio de rotación · coste por uso · tendencia de pérdidas. + 3 dashboards de ejemplo (inventario en tiempo real · reporte de pérdidas · coste por uso). *(Con la versión simple del bloque anterior ya no hay solape con una "plataforma".)*
 
-**El retorno (sección tras "La solución Trazatex" — fusiona "Lo que permite lograr" + "Impacto económico" en una sola):** la trazabilidad deja de ser un gasto difuso y se vuelve medible, con impacto directo en la operación y en la cuenta de resultados.
+**El retorno (sección tras "Qué información genera" — fusiona "Lo que permite lograr" + "Impacto económico" en una sola):** la trazabilidad deja de ser un gasto difuso y se vuelve medible, con impacto directo en la operación y en la cuenta de resultados.
 - **Menos:** pérdidas y mermas · compras de reposición innecesarias · horas-hombre en conteos manuales · reclamos por faltantes · contacto con ropa contaminada.
 - **Más:** control sobre cada prenda · información en tiempo real para decidir · productividad · evidencia para auditorías.
 
