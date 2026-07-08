@@ -1,0 +1,66 @@
+{
+  "brand": "Grupo Higienissa",
+  "tagline": "Un solo ecosistema. Infinitas posibilidades.",
+  "nav": {
+    "home": "Inicio",
+    "pacifica": "Pacífica",
+    "trazatex": "Trazatex",
+    "operissa": "Operissa",
+    "sectors": "Sectores",
+    "about": "Nosotros",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "mainNav": "Navegación principal",
+    "langSwitch": "Selector de idioma"
+  },
+  "cta": {
+    "evaluation": "Solicitar evaluación",
+    "diagnosis": "Solicitar diagnóstico",
+    "knowEcosystem": "Conocer el ecosistema",
+    "knowGroup": "Conocer el grupo",
+    "seeSector": "Ver sector",
+    "knowMore": "Conocer más",
+    "know": "Conocer"
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "homeLink": "Grupo Higienissa — Inicio"
+  },
+  "footer": {
+    "ecosystem": "Ecosistema",
+    "sectors": "Sectores",
+    "company": "Empresa",
+    "contact": "Contacto",
+    "social": "Redes sociales",
+    "legalNotice": "Aviso legal",
+    "privacy": "Privacidad",
+    "credits": "Créditos",
+    "rights": "© Grupo Higienissa",
+    "asisNote": "En alianza tecnológica con {partner} (España)."
+  },
+  "sectors": {
+    "salud": "Salud",
+    "hoteleria": "Hotelería",
+    "industria": "Industria",
+    "mineria": "Minería"
+  },
+  "contact": {
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "position": "Cargo",
+    "company": "Empresa",
+    "email": "Correo corporativo",
+    "sector": "Sector",
+    "selectSector": "Seleccione un sector",
+    "other": "Otro",
+    "message": "Mensaje",
+    "requestType": "Tipo de solicitud",
+    "consent": "Acepto que Grupo Higienissa use mis datos para responder mi consulta.",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "success": "¡Gracias! Un especialista del ecosistema le contactará a la brevedad.",
+    "error": "No se pudo enviar. Intente nuevamente o escríbanos por correo.",
+    "required": "Los campos con * son obligatorios."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "sectores",
+  "template": "sectors-hub",
+  "status": "published",
+  "seo": {
+    "title": {
+      "es": "Sectores — Soluciones por industria | Grupo Higienissa",
+      "en": "Sectors — Solutions by industry | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Sectores que atiende el ecosistema Higienissa: salud, hotelería, industria y minería. Operaciones de alta exigencia con bioseguridad, trazabilidad y operación especializada.",
+      "en": "Sectors served by the Higienissa ecosystem: healthcare, hospitality, industry and mining. High-demand operations with biosafety, traceability and specialized operation."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Sectores", "en": "Sectors" },
+    "title": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
+    "lead": {
+      "es": "El ecosistema Higienissa atiende operaciones de alta exigencia en cuatro sectores, donde el textil es parte crítica de la operación.",
+      "en": "The Higienissa ecosystem serves high-demand operations across four sectors, where textiles are a critical part of the operation."
+    }
+  },
+  "sectorsBlock": {
+    "eyebrow": { "es": "Sectores", "en": "Sectors" },
+    "title": { "es": "Soluciones por sector", "en": "Solutions by sector" },
+    "items": [
+      {
+        "name": { "es": "Salud", "en": "Healthcare" },
+        "desc": {
+          "es": "Bioseguridad, auditoría y disponibilidad textil.",
+          "en": "Biosafety, auditing and textile availability."
+        },
+        "image": "/img/sector-salud.jpg",
+        "imageAlt": {
+          "es": "Sector salud: ropa hospitalaria limpia y disponible",
+          "en": "Healthcare sector: clean, available hospital linens"
+        },
+        "to": "/sector-salud"
+      },
+      {
+        "name": { "es": "Hotelería", "en": "Hospitality" },
+        "desc": {
+          "es": "Experiencia del huésped, blancos/lencería y housekeeping.",
+          "en": "Guest experience, linens and housekeeping."
+        },
+        "image": "/img/sector-hoteleria.jpg",
+        "imageAlt": {
+          "es": "Sector hotelería: blancos y lencería para la experiencia del huésped",
+          "en": "Hospitality sector: linens for the guest experience"
+        },
+        "to": "/sector-hoteleria"
+      },
+      {
+        "name": { "es": "Industria", "en": "Industry" },
+        "desc": {
+          "es": "Cumplimiento, uniformes y EPP por trabajador.",
+          "en": "Compliance, uniforms and PPE per worker."
+        },
+        "image": "/img/sector-industria.jpg",
+        "imageAlt": {
+          "es": "Sector industria: uniformes y EPP con control por trabajador",
+          "en": "Industry sector: uniforms and PPE tracked per worker"
+        },
+        "to": "/sector-industria"
+      },
+      {
+        "name": { "es": "Minería", "en": "Mining" },
+        "desc": {
+          "es": "Entornos exigentes y operaciones remotas.",
+          "en": "Demanding environments and remote operations."
+        },
+        "image": "/img/sector-mineria.jpg",
+        "imageAlt": {
+          "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas",
+          "en": "Mining sector: textiles and PPE for demanding environments and remote operations"
+        },
+        "to": "/sector-mineria"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+    "lead": {
+      "es": "Evaluamos su operación y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your operation and design the ecosystem solution that fits it."
+    }
+  }
+}

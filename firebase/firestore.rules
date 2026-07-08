@@ -1,0 +1,72 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() { return request.auth != null; }
+    function profile() { return get(/databases/$(database)/documents/users/$(request.auth.uid)).data; }
+    function isActive() { return isSignedIn() && profile().active == true; }
+    function isEditor() { return isActive() && (profile().role == 'admin' || profile().role == 'editor'); }
+    function isAdmin() { return isActive() && profile().role == 'admin'; }
+    function isPublished() { return resource.data.status == 'published' || resource.data.published == true; }
+
+    // --- Contenido público: lectura solo de docs publicados; escritura solo editor/admin ---
+    match /settings/{doc} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+    match /pages/{id} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+    }
+    match /brands/{slug} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+      match /installations/{inst} {
+        // base ASIS: exponer solo con consentimiento explícito
+        allow read: if resource.data.publishConsent == true || isEditor();
+        allow write: if isEditor();
+      }
+    }
+    match /sectors/{slug} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+    }
+    match /solutions/{slug} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+    }
+    match /legalPages/{slug} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+    }
+
+    // --- Blog ---
+    match /posts/{id} {
+      allow read: if isPublished() || isEditor();
+      allow write: if isEditor();
+    }
+    match /postCategories/{id} {
+      allow read: if true;
+      allow write: if isEditor();
+    }
+
+    // --- Formulario de contacto: create público validado, lectura solo admin ---
+    match /contactSubmissions/{id} {
+      allow create: if
+        request.resource.data.name is string && request.resource.data.name.size() <= 60 &&
+        request.resource.data.lastName is string && request.resource.data.lastName.size() <= 60 &&
+        request.resource.data.company is string && request.resource.data.company.size() <= 100 &&
+        request.resource.data.email is string && request.resource.data.email.size() <= 120 &&
+        request.resource.data.message is string && request.resource.data.message.size() <= 1200 &&
+        request.resource.data.consent == true &&
+        request.resource.data.status == 'new';
+      allow read, update, delete: if isAdmin();
+    }
+
+    // --- Usuarios: cada uno lee su perfil; solo admin administra ---
+    match /users/{uid} {
+      allow read: if isSignedIn() && (request.auth.uid == uid || isAdmin());
+      allow write: if isAdmin();
+    }
+  }
+}

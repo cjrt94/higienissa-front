@@ -1,0 +1,138 @@
+{
+  "id": "home",
+  "template": "home",
+  "status": "published",
+  "seo": {
+    "title": {
+      "es": "Grupo Higienissa — Un solo ecosistema. Infinitas posibilidades.",
+      "en": "Grupo Higienissa — One ecosystem. Infinite possibilities."
+    },
+    "description": {
+      "es": "Ecosistema de higiene textil: lavandería industrial inteligente, trazabilidad RFID con data y operación especializada para salud, hotelería, industria y minería.",
+      "en": "Textile hygiene ecosystem: smart industrial laundry, RFID traceability with data and specialized operations for health, hospitality, industry and mining."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Grupo Higienissa", "en": "Grupo Higienissa" },
+    "title": {
+      "es": "Un solo ecosistema.\nInfinitas posibilidades.",
+      "en": "One ecosystem.\nInfinite possibilities."
+    },
+    "lead": {
+      "es": "Todo empieza en la lavandería industrial inteligente —y se potencia con datos, trazabilidad y operación especializada— para sostener la disponibilidad del textil en salud, hotelería, industria y minería.",
+      "en": "It all starts in smart industrial laundry —and is amplified with data, traceability and specialized operations— to sustain textile availability across health, hospitality, industry and mining."
+    },
+    "image": "/img/hero-lavanderia.jpg",
+    "imageAlt": {
+      "es": "Lavandería industrial inteligente de Grupo Higienissa con textil limpio en proceso",
+      "en": "Grupo Higienissa smart industrial laundry with clean textiles in process"
+    },
+    "badge": {
+      "title": { "es": "Trazabilidad individual", "en": "Individual traceability" },
+      "sub": { "es": "de cada activo textil, en tiempo real", "en": "of every textile asset, in real time" }
+    }
+  },
+  "groupIntro": {
+    "eyebrow": { "es": "Qué es el grupo", "en": "What the group is" },
+    "title": {
+      "es": "Un ecosistema que empieza en la lavandería industrial",
+      "en": "An ecosystem that starts in industrial laundry"
+    },
+    "lead": {
+      "es": "Grupo Higienissa integra tres divisiones especializadas del sector higiene, salud y saneamiento: una sola interlocución para procesar, trazar y operar el textil crítico de su operación, bajo un mismo estándar.",
+      "en": "Grupo Higienissa brings together three specialized divisions in the hygiene, health and sanitation sector: a single point of contact to process, trace and operate your operation's critical textiles, under one standard."
+    },
+    "image": "/img/ecosistema.jpg",
+    "imageAlt": {
+      "es": "Textil limpio y ordenado, resultado del estándar único del ecosistema Higienissa",
+      "en": "Clean, orderly textiles — the result of the Higienissa ecosystem's single standard"
+    },
+    "highlights": [
+      {
+        "icon": "activity",
+        "label": { "es": "Una sola interlocución", "en": "A single point of contact" },
+        "text": { "es": "Un único interlocutor para procesar, trazar y operar su textil crítico.", "en": "One partner to process, trace and operate your critical textiles." }
+      },
+      {
+        "icon": "shield",
+        "label": { "es": "Un mismo estándar", "en": "One standard" },
+        "text": { "es": "Calidad, trazabilidad y control consistentes en todo el ciclo del textil.", "en": "Consistent quality, traceability and control across the whole textile cycle." }
+      },
+      {
+        "icon": "chart",
+        "label": { "es": "Decisiones con datos", "en": "Data-driven decisions" },
+        "text": { "es": "Información real, no estimaciones, para gestionar el activo textil.", "en": "Real information, not estimates, to manage the textile asset." }
+      }
+    ]
+  },
+  "divisions": {
+    "eyebrow": { "es": "Las 3 divisiones", "en": "The 3 divisions" },
+    "title": { "es": "Tres marcas, un mismo estándar", "en": "Three brands, one standard" },
+    "items": [
+      {
+        "eyebrow": { "es": "Lavandería inteligente", "en": "Smart laundry" },
+        "name": "Pacífica",
+        "desc": { "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse: procesos especializados, trazabilidad y disponibilidad garantizada del textil.", "en": "Smart industrial laundry for operations that cannot stop: specialized processes, traceability and guaranteed textile availability." },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": { "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala", "en": "Pacífica industrial laundry: machines and washing process at scale" },
+        "to": "/marca-pacifica"
+      },
+      {
+        "eyebrow": { "es": "Trazabilidad · RFID · data", "en": "Traceability · RFID · data" },
+        "name": "Trazatex",
+        "desc": { "es": "RFID, software, auditoría y data que convierten cada activo textil en información gestionable, con control en tiempo real de cada ciclo.", "en": "RFID, software, auditing and data that turn every textile asset into manageable information, with real-time control of each cycle." },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": { "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil", "en": "Trazatex: RFID technology and data applied to every textile asset" },
+        "to": "/marca-trazatex"
+      },
+      {
+        "eyebrow": { "es": "Operación en terreno", "en": "On-site operations" },
+        "name": "Operissa",
+        "desc": { "es": "Operación y gestión textil especializada en terreno, con personas y procesos a la medida de cada operación.", "en": "Specialized on-site textile operations and management, with people and processes tailored to each operation." },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": { "es": "Operissa: equipos y procesos de operación textil especializada en terreno", "en": "Operissa: teams and processes for specialized on-site textile operations" },
+        "to": "/marca-operissa"
+      }
+    ]
+  },
+  "pillars": {
+    "eyebrow": { "es": "Lo que nos define", "en": "What defines us" },
+    "title": { "es": "Lavandería, inteligencia y excelencia operacional", "en": "Laundry, intelligence and operational excellence" },
+    "items": [
+      { "icon": "droplet", "title": { "es": "Lavandería", "en": "Laundry" }, "text": { "es": "Donde empieza la disponibilidad del textil en cada operación.", "en": "Where textile availability begins in every operation." } },
+      { "icon": "target", "title": { "es": "Inteligencia y precisión", "en": "Intelligence and precision" }, "text": { "es": "Cada decisión y cada activo, respaldados por datos y trazabilidad individual.", "en": "Every decision and every asset, backed by data and individual traceability." } },
+      { "icon": "shield", "title": { "es": "Excelencia operacional", "en": "Operational excellence" }, "text": { "es": "Equipos y procesos que se adaptan a la realidad de cada terreno.", "en": "Teams and processes that adapt to the reality of each site." } }
+    ]
+  },
+  "sectorsBlock": {
+    "eyebrow": { "es": "Sectores", "en": "Sectors" },
+    "title": { "es": "Soluciones por sector", "en": "Solutions by sector" },
+    "items": [
+      { "name": { "es": "Salud", "en": "Health" }, "desc": { "es": "Bioseguridad, auditoría y disponibilidad textil.", "en": "Biosafety, auditing and textile availability." }, "image": "/img/sector-salud.jpg", "imageAlt": { "es": "Sector salud: ropa hospitalaria limpia y disponible", "en": "Health sector: clean, available hospital linens" }, "to": "/sector-salud" },
+      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Experiencia del huésped y control de blancos.", "en": "Guest experience and linen control." }, "image": "/img/sector-hoteleria.jpg", "imageAlt": { "es": "Sector hotelería: blancos y textil para la experiencia del huésped", "en": "Hospitality sector: linens and textiles for the guest experience" }, "to": "/sector-hoteleria" },
+      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Cumplimiento, uniformes y EPP por trabajador.", "en": "Compliance, uniforms and PPE per worker." }, "image": "/img/sector-industria.jpg", "imageAlt": { "es": "Sector industria: uniformes y EPP con control por trabajador", "en": "Industry sector: uniforms and PPE tracked per worker" }, "to": "/sector-industria" },
+      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Entornos exigentes y operaciones remotas.", "en": "Demanding environments and remote operations." }, "image": "/img/sector-mineria.jpg", "imageAlt": { "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas", "en": "Mining sector: textiles and PPE for demanding environments and remote operations" }, "to": "/sector-mineria" }
+    ]
+  },
+  "asis": {
+    "eyebrow": { "es": "Respaldo tecnológico", "en": "Technology backing" },
+    "title": { "es": "En alianza con ASIS IDTRAK", "en": "In partnership with ASIS IDTRAK" },
+    "body": {
+      "es": "La trazabilidad de Trazatex se respalda en la tecnología RFID de ASIS IDTRAK (España), con más de 30 años de experiencia en identificación textil.",
+      "en": "Trazatex's traceability is backed by the RFID technology of ASIS IDTRAK (Spain), with over 30 years of experience in textile identification."
+    },
+    "image": "/img/asis-idtrak.jpg",
+    "imageAlt": { "es": "Tecnología RFID de ASIS IDTRAK aplicada al textil", "en": "ASIS IDTRAK RFID technology applied to textiles" },
+    "metrics": [
+      { "value": "+30", "label": { "es": "años en RFID textil", "en": "years in textile RFID" } },
+      { "value": { "es": "España", "en": "Spain" }, "label": { "es": "alianza tecnológica", "en": "technology partnership" } }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Conversemos", "en": "Let's talk" },
+    "lead": {
+      "es": "Evaluamos su operación y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your operation and design the ecosystem solution that fits it."
+    }
+  }
+}

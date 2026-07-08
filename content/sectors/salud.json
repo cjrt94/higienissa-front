@@ -1,0 +1,238 @@
+{
+  "slug": "salud",
+  "order": 1,
+  "icon": "activity",
+  "status": "published",
+  "published": true,
+  "ctaConvention": "evaluacion",
+  "name": { "es": "Salud", "en": "Healthcare" },
+  "summary": {
+    "es": "Bioseguridad, auditoría y disponibilidad textil para hospitales, clínicas, laboratorios y centros especializados.",
+    "en": "Biosafety, audit and textile availability for hospitals, clinics, laboratories and specialized centers."
+  },
+  "seo": {
+    "title": {
+      "es": "Sector Salud — Soluciones del ecosistema | Grupo Higienissa",
+      "en": "Healthcare Sector — Ecosystem solutions | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Soluciones del ecosistema Higienissa para el sector salud: bioseguridad, auditoría y disponibilidad textil en hospitales, clínicas, laboratorios y centros especializados.",
+      "en": "Higienissa ecosystem solutions for the healthcare sector: biosafety, audit and textile availability in hospitals, clinics, laboratories and specialized centers."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Sectores · Salud", "en": "Sectors · Healthcare" },
+    "title": {
+      "es": "Bioseguridad, auditoría y disponibilidad textil para el sector salud.",
+      "en": "Biosafety, audit and textile availability for the healthcare sector."
+    },
+    "lead": {
+      "es": "Soluciones del ecosistema Higienissa para hospitales públicos y privados, clínicas, laboratorios y centros especializados, donde el textil es parte crítica de la operación clínica.",
+      "en": "Higienissa ecosystem solutions for public and private hospitals, clinics, laboratories and specialized centers, where textiles are a critical part of clinical operations."
+    },
+    "image": "/img/salud-hero.jpg",
+    "imageAlt": {
+      "es": "Ropa de cama hospitalaria limpia en un entorno clínico",
+      "en": "Clean hospital bed linens in a clinical environment"
+    },
+    "badge": {
+      "title": { "es": "Trazabilidad por prenda", "en": "Per-garment traceability" },
+      "sub": { "es": "identidad y control en cada ciclo clínico", "en": "identity and control in every clinical cycle" }
+    }
+  },
+  "context": {
+    "kicker": { "es": "El contexto", "en": "The context" },
+    "title": { "es": "El punto ciego operativo", "en": "The operational blind spot" },
+    "lead": {
+      "es": "En hospitales y clínicas, los textiles son parte del ecosistema crítico de atención, pero su gestión depende de conteos manuales y registros fragmentados. El resultado es un punto ciego: decisiones tomadas sobre datos estimados, no reales.",
+      "en": "In hospitals and clinics, textiles are part of the critical care ecosystem, yet their management relies on manual counts and fragmented records. The result is a blind spot: decisions made on estimated data, not real data."
+    },
+    "image": "/img/salud-contexto.jpg",
+    "imageAlt": {
+      "es": "Personal de salud gestionando ropa limpia en un entorno hospitalario",
+      "en": "Healthcare staff handling clean linens in a hospital environment"
+    },
+    "unknownsLabel": { "es": "Lo que hoy no se sabe", "en": "What is unknown today" },
+    "unknowns": [
+      { "es": "Cuántas prendas circulan realmente.", "en": "How many garments actually circulate." },
+      { "es": "Dónde se concentran las pérdidas.", "en": "Where the losses concentrate." },
+      { "es": "Cuál es la vida útil real por prenda.", "en": "The real service life per garment." },
+      { "es": "Qué servicio genera mayor rotación.", "en": "Which service drives the most rotation." },
+      { "es": "Cuál es el costo anual real por merma.", "en": "The real annual cost of attrition." }
+    ]
+  },
+  "risks": {
+    "kicker": { "es": "Riesgos operativos", "en": "Operational risks" },
+    "title": { "es": "Lo que está en juego sin control", "en": "What is at stake without control" },
+    "lead": {
+      "es": "Sin trazabilidad por servicio, la operación textil suma riesgos clínicos, de cumplimiento y de costo.",
+      "en": "Without traceability by service, textile operations accumulate clinical, compliance and cost risks."
+    },
+    "groups": [
+      {
+        "label": { "es": "Clínico", "en": "Clinical" },
+        "items": [
+          { "es": "Manipulación innecesaria de ropa sucia.", "en": "Unnecessary handling of soiled linen." },
+          { "es": "Exposición ocupacional del personal.", "en": "Occupational exposure of staff." }
+        ]
+      },
+      {
+        "label": { "es": "Cumplimiento", "en": "Compliance" },
+        "items": [
+          { "es": "Dificultades en auditorías internas y externas.", "en": "Difficulties during internal and external audits." },
+          { "es": "Falta de trazabilidad por servicio.", "en": "Lack of traceability by service." }
+        ]
+      },
+      {
+        "label": { "es": "Costo", "en": "Cost" },
+        "items": [
+          { "es": "Conflictos por diferencias de conteo.", "en": "Disputes over count discrepancies." }
+        ]
+      }
+    ]
+  },
+  "band": {
+    "eyebrow": { "es": "El cambio", "en": "The shift" },
+    "title": { "es": "De estimar a controlar", "en": "From estimating to controlling" },
+    "statement": {
+      "es": "Cada prenda con identidad, historial y control: la trazabilidad convierte el textil clínico en un activo gestionable, no en un gasto invisible.",
+      "en": "Every garment with identity, history and control: traceability turns clinical textiles into a manageable asset, not an invisible cost."
+    },
+    "image": "/img/salud-band.jpg"
+  },
+  "whatChanges": {
+    "kicker": { "es": "Qué cambia", "en": "What changes" },
+    "title": { "es": "Qué cambia con la solución del grupo", "en": "What changes with the group's solution" },
+    "lead": {
+      "es": "La gestión textil pasa de estimada a estratégica: cada prenda con identidad, historial y control.",
+      "en": "Textile management shifts from estimated to strategic: every garment with identity, history and control."
+    },
+    "from": {
+      "label": { "es": "Antes · estimado", "en": "Before · estimated" },
+      "statement": {
+        "es": "Gestión textil sobre conteos manuales y registros fragmentados: decisiones tomadas sobre datos estimados, no reales.",
+        "en": "Textile management based on manual counts and fragmented records: decisions made on estimated data, not real data."
+      }
+    },
+    "toLabel": { "es": "Ahora · con control", "en": "Now · with control" },
+    "items": [
+      { "es": "Identificación individual por prenda.", "en": "Individual identification per garment." },
+      { "es": "Registro de ciclos de lavado.", "en": "Record of wash cycles." },
+      { "es": "Control por área o servicio.", "en": "Control by area or service." },
+      { "es": "Detección temprana de pérdidas.", "en": "Early loss detection." },
+      { "es": "Reportes estratégicos para dirección.", "en": "Strategic reports for management." }
+    ]
+  },
+  "indicators": {
+    "kicker": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
+    "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "source": "Trazatex · data",
+    "items": [
+      { "icon": "chart", "label": { "es": "Merma por servicio", "en": "Attrition by service" }, "state": { "es": "medible por servicio", "en": "measurable by service" } },
+      { "icon": "target", "label": { "es": "Tiempo de rotación", "en": "Rotation time" }, "state": { "es": "en tiempo real", "en": "in real time" } },
+      { "icon": "activity", "label": { "es": "Ciclos antes de retiro", "en": "Cycles before retirement" }, "state": { "es": "por prenda", "en": "per garment" } },
+      { "icon": "scan", "label": { "es": "Inventario real en circulación", "en": "Real inventory in circulation" }, "state": { "es": "real, no estimado", "en": "real, not estimated" } },
+      { "icon": "shield", "label": { "es": "Cumplimiento por área", "en": "Compliance by area" }, "state": { "es": "auditable", "en": "auditable" } }
+    ]
+  },
+  "impactByRole": {
+    "kicker": { "es": "Impacto por rol", "en": "Impact by role" },
+    "title": { "es": "Qué resuelve en cada nivel", "en": "What it solves at each level" },
+    "image": "/img/salud-band.jpg",
+    "imageAlt": {
+      "es": "Entorno clínico donde el textil es parte de la operación de cada nivel",
+      "en": "Clinical environment where textiles are part of every level's operation"
+    },
+    "items": [
+      {
+        "icon": "chart",
+        "role": { "es": "Dirección", "en": "Management" },
+        "desc": {
+          "es": "Control de costos textiles y evidencia de cumplimiento para la toma de decisiones.",
+          "en": "Textile cost control and compliance evidence to support decision-making."
+        }
+      },
+      {
+        "icon": "scan",
+        "role": { "es": "Logística / Ropería", "en": "Logistics / Linen room" },
+        "desc": {
+          "es": "Control por área y servicio, detección temprana de pérdidas e inventario real disponible.",
+          "en": "Control by area and service, early loss detection and real available inventory."
+        }
+      },
+      {
+        "icon": "shield",
+        "role": { "es": "IAAS y auditoría", "en": "Infection control and audit" },
+        "desc": {
+          "es": "Trazabilidad por servicio y datos demostrables ante auditorías internas y externas.",
+          "en": "Traceability by service and demonstrable data for internal and external audits."
+        }
+      }
+    ]
+  },
+  "brands": {
+    "kicker": { "es": "Marcas relevantes", "en": "Relevant brands" },
+    "title": { "es": "Marcas del ecosistema para Salud", "en": "Ecosystem brands for Healthcare" },
+    "lead": {
+      "es": "Para el sector salud, las tres marcas del ecosistema articulan procesamiento, bioseguridad, trazabilidad y operación en terreno.",
+      "en": "For the healthcare sector, all three ecosystem brands connect processing, biosafety, traceability and field operations."
+    },
+    "items": [
+      {
+        "name": "Pacífica",
+        "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
+        "role": { "es": "Bioseguridad en el lavado", "en": "Biosafety in washing" },
+        "desc": {
+          "es": "Lavandería industrial inteligente con estándar de bioseguridad para operaciones clínicas.",
+          "en": "Smart industrial laundry with a biosafety standard for clinical operations."
+        },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": {
+          "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
+          "en": "Pacífica industrial laundry: machines and washing process at scale"
+        },
+        "to": "/marca-pacifica",
+        "cta": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+      },
+      {
+        "name": "Trazatex",
+        "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
+        "role": { "es": "Trazabilidad individual", "en": "Individual traceability" },
+        "desc": {
+          "es": "RFID, software, auditoría y data para la trazabilidad individual de cada activo textil.",
+          "en": "RFID, software, auditing and data for individual traceability of each textile asset."
+        },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
+          "en": "Trazatex: RFID technology and data applied to every textile asset"
+        },
+        "to": "/marca-trazatex",
+        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+      },
+      {
+        "name": "Operissa",
+        "eyebrow": { "es": "Opera · en terreno", "en": "Operates · on site" },
+        "role": { "es": "Operación clínica", "en": "Clinical operation" },
+        "desc": {
+          "es": "Operación y gestión especializada de la logística textil clínica, con personas y procesos a la medida del entorno hospitalario.",
+          "en": "Specialized operation and management of clinical textile logistics, with people and processes tailored to the hospital environment."
+        },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": {
+          "es": "Operissa: equipos y procesos de operación textil especializada en terreno",
+          "en": "Operissa: teams and processes for specialized on-site textile operations"
+        },
+        "to": "/marca-operissa",
+        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+    "lead": {
+      "es": "Evaluamos su operación clínica y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your clinical operation and design the ecosystem solution that fits it."
+    }
+  }
+}

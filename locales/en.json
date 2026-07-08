@@ -1,0 +1,66 @@
+{
+  "brand": "Grupo Higienissa",
+  "tagline": "One ecosystem. Infinite possibilities.",
+  "nav": {
+    "home": "Home",
+    "pacifica": "Pacífica",
+    "trazatex": "Trazatex",
+    "operissa": "Operissa",
+    "sectors": "Sectors",
+    "about": "About",
+    "resources": "Resources",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "mainNav": "Main navigation",
+    "langSwitch": "Language selector"
+  },
+  "cta": {
+    "evaluation": "Request an assessment",
+    "diagnosis": "Request a diagnosis",
+    "knowEcosystem": "Explore the ecosystem",
+    "knowGroup": "About the group",
+    "seeSector": "View sector",
+    "knowMore": "Learn more",
+    "know": "Discover"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "homeLink": "Grupo Higienissa — Home"
+  },
+  "footer": {
+    "ecosystem": "Ecosystem",
+    "sectors": "Sectors",
+    "company": "Company",
+    "contact": "Contact",
+    "social": "Social media",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy",
+    "credits": "Credits",
+    "rights": "© Grupo Higienissa",
+    "asisNote": "In technological partnership with {partner} (Spain)."
+  },
+  "sectors": {
+    "salud": "Health",
+    "hoteleria": "Hospitality",
+    "industria": "Industry",
+    "mineria": "Mining"
+  },
+  "contact": {
+    "name": "First name",
+    "lastName": "Last name",
+    "position": "Role",
+    "company": "Company",
+    "email": "Work email",
+    "sector": "Sector",
+    "selectSector": "Select a sector",
+    "other": "Other",
+    "message": "Message",
+    "requestType": "Request type",
+    "consent": "I agree that Grupo Higienissa may use my data to respond to my inquiry.",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "success": "Thank you! An ecosystem specialist will contact you shortly.",
+    "error": "Could not send. Please try again or email us.",
+    "required": "Fields marked with * are required."
+  }
+}

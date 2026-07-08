@@ -1,0 +1,288 @@
+{
+  "slug": "pacifica",
+  "order": 1,
+  "name": "Pacífica",
+  "poweredBy": null,
+  "ctaConvention": "evaluacion",
+  "published": true,
+  "updatedAt": "2026-07-08T00:00:00.000Z",
+  "seo": {
+    "title": {
+      "es": "Pacífica — Lavandería industrial inteligente | Grupo Higienissa",
+      "en": "Pacífica — Smart industrial laundry | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Pacífica: lavandería industrial para operaciones que no pueden detenerse. Pensamos como operadores, con el respaldo del ecosistema Grupo Higienissa.",
+      "en": "Pacífica: industrial laundry for operations that cannot stop. We think like operators, backed by the Grupo Higienissa ecosystem."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Pacífica", "en": "Pacífica" },
+    "claim": {
+      "es": "Lavandería industrial para operaciones que no pueden detenerse.",
+      "en": "Industrial laundry for operations that cannot stop."
+    },
+    "lead": {
+      "es": "Lavandería industrial inteligente con el respaldo del ecosistema Grupo Higienissa: procesos especializados, trazabilidad y disponibilidad garantizada.",
+      "en": "Smart industrial laundry backed by the Grupo Higienissa ecosystem: specialized processes, traceability and guaranteed availability."
+    },
+    "image": "/img/marca-pacifica.jpg",
+    "imageAlt": {
+      "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
+      "en": "Pacífica industrial laundry: machines and washing process at scale"
+    }
+  },
+  "whoWeAre": {
+    "eyebrow": { "es": "Quiénes somos", "en": "Who we are" },
+    "title": {
+      "es": "Más que una lavandería industrial.",
+      "en": "More than an industrial laundry."
+    },
+    "body": {
+      "es": "Pacífica transforma la lavandería en una herramienta estratégica: detrás de cada sábana hospitalaria, uniforme o blanco hotelero hay una operación que depende de su disponibilidad. Nuestro compromiso no es solo procesar textiles, sino sostener el funcionamiento de quienes confían en nosotros.",
+      "en": "Pacífica turns laundry into a strategic tool: behind every hospital sheet, uniform or hotel linen there is an operation that depends on its availability. Our commitment is not just to process textiles, but to sustain the operations of those who rely on us."
+    },
+    "highlights": [
+      {
+        "icon": "activity",
+        "label": { "es": "Continuidad operacional", "en": "Operational continuity" },
+        "text": {
+          "es": "Disponibilidad garantizada del textil para operaciones que no pueden detenerse.",
+          "en": "Guaranteed textile availability for operations that cannot stop."
+        }
+      },
+      {
+        "icon": "check",
+        "label": { "es": "Calidad constante", "en": "Consistent quality" },
+        "text": {
+          "es": "Procesos estandarizados con estándar hospitalario y hotelero, ciclo tras ciclo.",
+          "en": "Standardized processes meeting hospital and hotel standards, cycle after cycle."
+        }
+      },
+      {
+        "icon": "shield",
+        "label": { "es": "Respaldo del ecosistema", "en": "Ecosystem backing" },
+        "text": {
+          "es": "Trazabilidad de Trazatex y operación de Operissa integradas a la lavandería.",
+          "en": "Trazatex traceability and Operissa operations integrated into the laundry."
+        }
+      }
+    ]
+  },
+  "solutionsBlock": {
+    "eyebrow": { "es": "Soluciones", "en": "Solutions" },
+    "title": { "es": "Qué hacemos", "en": "What we do" }
+  },
+  "solutions": [
+    {
+      "order": 1,
+      "title": {
+        "es": "Lavandería Industrial Especializada",
+        "en": "Specialized Industrial Laundry"
+      },
+      "executedBy": null,
+      "description": {
+        "es": "Procesamiento profesional de textiles institucionales con calidad, higiene, presentación y disponibilidad.",
+        "en": "Professional processing of institutional textiles with quality, hygiene, presentation and availability."
+      },
+      "listLabel": { "es": "Atiende", "en": "Serves" },
+      "items": [
+        { "es": "Hospitales", "en": "Hospitals" },
+        { "es": "Clínicas", "en": "Clinics" },
+        { "es": "Hoteles", "en": "Hotels" },
+        { "es": "Industrias", "en": "Industries" },
+        { "es": "Minería", "en": "Mining" },
+        { "es": "Laboratorios", "en": "Laboratories" },
+        { "es": "Centros especializados", "en": "Specialized centers" }
+      ]
+    },
+    {
+      "order": 2,
+      "title": {
+        "es": "Renting y Gestión Textil",
+        "en": "Textile Renting and Management"
+      },
+      "executedBy": null,
+      "description": {
+        "es": "Reduce la inversión inicial y mejora el control de activos.",
+        "en": "Reduces upfront investment and improves asset control."
+      },
+      "listLabel": { "es": "Incluye", "en": "Includes" },
+      "items": [
+        { "es": "Blancos hospitalarios", "en": "Hospital linens" },
+        { "es": "Blancos hoteleros", "en": "Hotel linens" },
+        { "es": "Uniformes", "en": "Uniforms" },
+        { "es": "Prendas institucionales", "en": "Institutional garments" },
+        { "es": "Reposición programada", "en": "Scheduled replenishment" },
+        { "es": "Control de rotación", "en": "Rotation control" }
+      ]
+    },
+    {
+      "order": 3,
+      "title": {
+        "es": "Trazabilidad y Control de Activos Textiles",
+        "en": "Textile Asset Traceability and Control"
+      },
+      "executedBy": {
+        "brand": "Trazatex",
+        "label": { "es": "por Trazatex", "en": "by Trazatex" }
+      },
+      "description": {
+        "es": "Identificación individual de prendas con RFID y control del activo textil a lo largo de su vida útil.",
+        "en": "Individual garment identification with RFID and control of the textile asset throughout its useful life."
+      },
+      "listLabel": { "es": "Incluye", "en": "Includes" },
+      "items": [
+        { "es": "Control de inventarios", "en": "Inventory control" },
+        { "es": "Gestión de pérdidas", "en": "Loss management" },
+        { "es": "Control de vida útil", "en": "Lifecycle control" },
+        { "es": "Reportes operativos", "en": "Operational reports" },
+        { "es": "Indicadores de gestión", "en": "Management indicators" }
+      ]
+    },
+    {
+      "order": 4,
+      "title": {
+        "es": "Operación Integral de Lavanderías",
+        "en": "End-to-End Laundry Operation"
+      },
+      "executedBy": {
+        "brand": "Operissa",
+        "label": { "es": "por Operissa", "en": "by Operissa" }
+      },
+      "description": {
+        "es": "Para clientes con infraestructura propia: operación de lavandería in situ.",
+        "en": "For clients with their own infrastructure: on-site laundry operation."
+      },
+      "listLabel": { "es": "Incluye", "en": "Includes" },
+      "items": [
+        { "es": "Supervisión especializada", "en": "Specialized supervision" },
+        { "es": "Personal operativo", "en": "Operating staff" },
+        { "es": "Gestión de producción", "en": "Production management" },
+        { "es": "Procedimientos estandarizados", "en": "Standardized procedures" },
+        { "es": "Optimización de procesos", "en": "Process optimization" }
+      ]
+    }
+  ],
+  "sectorsApplied": {
+    "eyebrow": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
+    "title": { "es": "Para operaciones de alta exigencia", "en": "For high-demand operations" },
+    "items": [
+      {
+        "name": { "es": "Salud", "en": "Healthcare" },
+        "desc": {
+          "es": "Hospitales, clínicas y laboratorios donde el textil impacta directamente en la bioseguridad, la auditoría y la continuidad de la atención.",
+          "en": "Hospitals, clinics and laboratories where textiles directly impact biosecurity, auditing and continuity of care."
+        },
+        "to": "/sector-salud"
+      },
+      {
+        "name": { "es": "Hotelería", "en": "Hospitality" },
+        "desc": {
+          "es": "Hoteles, resorts y apart hoteles donde los blancos y la lencería son parte de la experiencia del huésped y un costo a controlar.",
+          "en": "Hotels, resorts and apart-hotels where linens and bedding are part of the guest experience and a cost to control."
+        },
+        "to": "/sector-hoteleria"
+      },
+      {
+        "name": { "es": "Industria", "en": "Industry" },
+        "desc": {
+          "es": "Manufactura, agroindustria y logística donde los uniformes y el EPP textil forman parte del cumplimiento y la seguridad laboral.",
+          "en": "Manufacturing, agribusiness and logistics where uniforms and textile PPE are part of compliance and workplace safety."
+        },
+        "to": "/sector-industria"
+      },
+      {
+        "name": { "es": "Minería", "en": "Mining" },
+        "desc": {
+          "es": "Campamentos, operaciones remotas y proyectos temporales en entornos exigentes y alejados de los centros urbanos.",
+          "en": "Camps, remote operations and temporary projects in demanding environments far from urban centers."
+        },
+        "to": "/sector-mineria"
+      }
+    ]
+  },
+  "differentiators": {
+    "eyebrow": { "es": "Nuestra diferencia", "en": "Our difference" },
+    "title": { "es": "Más que una lavandería tradicional", "en": "More than a traditional laundry" },
+    "items": [
+      {
+        "icon": "users",
+        "title": { "es": "Pensamos como operadores", "en": "We think like operators" },
+        "text": {
+          "es": "Conocemos la operación desde dentro y diseñamos para que no se detenga.",
+          "en": "We know the operation from the inside and design so it never stops."
+        }
+      },
+      {
+        "icon": "shield",
+        "title": { "es": "Ecosistema de respaldo", "en": "A backing ecosystem" },
+        "text": {
+          "es": "Respaldo del ecosistema frente a la lavandería tradicional.",
+          "en": "Ecosystem backing versus the traditional laundry model."
+        }
+      },
+      {
+        "icon": "activity",
+        "title": { "es": "Soluciones escalables", "en": "Scalable solutions" },
+        "text": {
+          "es": "Soluciones escalables que evolucionan con el cliente.",
+          "en": "Scalable solutions that evolve with the client."
+        }
+      },
+      {
+        "icon": "scan",
+        "title": { "es": "Infraestructura premium", "en": "Premium infrastructure" },
+        "text": {
+          "es": "Infraestructura premium con integración RFID y dashboards.",
+          "en": "Premium infrastructure with RFID integration and dashboards."
+        }
+      }
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": { "es": "Ecosistema HIGIENISSA", "en": "HIGIENISSA Ecosystem" },
+    "title": { "es": "Con el respaldo del ecosistema", "en": "Backed by the ecosystem" },
+    "lead": {
+      "es": "Pacífica procesa. Trazatex aporta datos y trazabilidad. Operissa opera en terreno. Cada marca potencia a las otras.",
+      "en": "Pacífica processes. Trazatex provides data and traceability. Operissa operates on-site. Each brand strengthens the others."
+    },
+    "items": [
+      {
+        "name": "Trazatex",
+        "desc": {
+          "es": "RFID, software, auditoría y data para el control individual de cada activo textil.",
+          "en": "RFID, software, auditing and data for individual control of every textile asset."
+        },
+        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
+          "en": "Trazatex: RFID technology and data applied to every textile asset"
+        },
+        "to": "/marca-trazatex"
+      },
+      {
+        "name": "Operissa",
+        "desc": {
+          "es": "Operación y gestión especializada para que su operación no se detenga.",
+          "en": "Specialized operation and management so your operation never stops."
+        },
+        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": {
+          "es": "Operissa: equipos y procesos de operación textil especializada en terreno",
+          "en": "Operissa: teams and processes for specialized on-site textile operations"
+        },
+        "to": "/marca-operissa"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Conversemos", "en": "Let's talk" },
+    "lead": {
+      "es": "Evaluamos su operación y diseñamos la solución de lavandería industrial que le corresponde.",
+      "en": "We assess your operation and design the industrial laundry solution that fits it."
+    }
+  }
+}

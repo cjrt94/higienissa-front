@@ -1,0 +1,204 @@
+{
+  "id": "articulo",
+  "template": "article",
+  "status": "published",
+  "seo": {
+    "title": {
+      "es": "Trazabilidad textil: por qué los blancos son activos, no insumos — Grupo Higienissa",
+      "en": "Textile traceability: why linens are assets, not supplies — Grupo Higienissa"
+    },
+    "description": {
+      "es": "Artículo de Recursos de Grupo Higienissa sobre trazabilidad y gestión textil: cómo el control individual de activos textiles transforma la operación.",
+      "en": "Grupo Higienissa Resources article on textile traceability and management: how individual control of textile assets transforms operations."
+    }
+  },
+  "hero": {
+    "kicker": { "es": "Gestión textil", "en": "Textile management" },
+    "title": {
+      "es": "Trazabilidad textil: por qué los blancos son activos, no insumos",
+      "en": "Textile traceability: why linens are assets, not supplies"
+    },
+    "meta": {
+      "category": { "es": "Categoría: Gestión textil", "en": "Category: Textile management" },
+      "date": { "es": "3 de junio de 2026", "en": "June 3, 2026" },
+      "author": { "es": "Por Equipo Editorial Higienissa", "en": "By the Higienissa Editorial Team" }
+    }
+  },
+  "body": {
+    "lead": {
+      "es": "En la mayoría de las operaciones, el textil se gestiona como un gasto recurrente: se compra, se usa y se repone. Cuando ese mismo textil se identifica, se mide y se controla de forma individual, deja de ser un insumo desechable y pasa a comportarse como un activo gestionable, con vida útil, costo de reposición y rendimiento conocidos.",
+      "en": "In most operations, textiles are managed as a recurring expense: bought, used and replaced. When that same textile is identified, measured and controlled individually, it stops being a disposable supply and starts behaving like a manageable asset, with a known service life, replacement cost and performance."
+    },
+    "blocks": [
+      {
+        "type": "heading",
+        "text": { "es": "De insumo a activo gestionable", "en": "From supply to manageable asset" }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "La diferencia entre insumo y activo no es semántica: es operativa. Un insumo se contabiliza en bloque y se asume como pérdida natural. Un activo se identifica, se sigue a lo largo de su ciclo y se evalúa por su aporte real a la operación. La trazabilidad individual es el mecanismo que permite ese salto, porque convierte cada prenda en un dato que se puede rastrear desde su ingreso hasta su retiro.",
+          "en": "The difference between a supply and an asset is not semantic: it is operational. A supply is accounted for in bulk and assumed as natural loss. An asset is identified, tracked across its cycle and assessed by its real contribution to the operation. Individual traceability is the mechanism that enables that leap, because it turns every garment into a data point that can be tracked from intake to retirement."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "Esta lógica es especialmente relevante en entornos de alta exigencia —salud, hotelería e industria— donde la disponibilidad textil y el cumplimiento no admiten zonas grises. Saber qué prenda está dónde, cuántos ciclos de lavado acumula y cuándo conviene retirarla deja de ser una estimación para convertirse en una decisión basada en evidencia.",
+          "en": "This logic is especially relevant in high-demand environments —healthcare, hospitality and industry— where textile availability and compliance leave no grey areas. Knowing which garment is where, how many wash cycles it has accumulated and when it should be retired stops being an estimate and becomes an evidence-based decision."
+        }
+      },
+      {
+        "type": "image",
+        "src": "/img/marca-trazatex.jpg",
+        "alt": {
+          "es": "Diagrama del ciclo de vida del activo textil con trazabilidad individual",
+          "en": "Diagram of the textile asset life cycle with individual traceability"
+        },
+        "caption": {
+          "es": "Diagrama · Ciclo de vida del activo textil",
+          "en": "Diagram · Textile asset life cycle"
+        }
+      },
+      {
+        "type": "heading",
+        "text": {
+          "es": "Qué se puede medir cuando cada prenda tiene identidad",
+          "en": "What can be measured when every garment has an identity"
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "Una vez que cada textil cuenta con identificación individual, la operación gana visibilidad sobre indicadores que antes se infería de forma agregada. Entre los más relevantes para la gestión:",
+          "en": "Once every textile has individual identification, the operation gains visibility over indicators that were previously inferred in aggregate. Among the most relevant for management:"
+        }
+      },
+      {
+        "type": "list",
+        "items": [
+          {
+            "term": { "es": "Nivel de merma", "en": "Loss level" },
+            "desc": { "es": "pérdidas reales por área en lugar de promedios globales.", "en": "real losses by area instead of global averages." }
+          },
+          {
+            "term": { "es": "Rotación por área", "en": "Rotation by area" },
+            "desc": { "es": "cómo circula el textil entre puntos de uso y procesamiento.", "en": "how textiles circulate between points of use and processing." }
+          },
+          {
+            "term": { "es": "Ciclos de lavado", "en": "Wash cycles" },
+            "desc": { "es": "desgaste acumulado por prenda como base de la reposición.", "en": "accumulated wear per garment as the basis for replacement." }
+          },
+          {
+            "term": { "es": "Vida útil", "en": "Service life" },
+            "desc": { "es": "el momento óptimo de retiro antes de que el deterioro afecte el servicio.", "en": "the optimal moment to retire a garment before deterioration affects service." }
+          },
+          {
+            "term": { "es": "Inventario real", "en": "Real inventory" },
+            "desc": { "es": "existencias verificables, no estimadas.", "en": "verifiable stock, not estimated." }
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": { "es": "Trazabilidad como base de la auditoría", "en": "Traceability as the basis for auditing" }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "Cuando los datos provienen de la lectura individual de cada activo, la auditoría deja de ser un ejercicio puntual y se vuelve continua. El cumplimiento interno se puede demostrar con registros objetivos, y las desviaciones se detectan a tiempo en lugar de descubrirse al cierre de un período. Esto cambia la conversación entre dirección, operación y áreas de cumplimiento, porque todas trabajan sobre la misma información verificable.",
+          "en": "When data comes from the individual reading of each asset, auditing stops being a one-off exercise and becomes continuous. Internal compliance can be demonstrated with objective records, and deviations are detected in time instead of being discovered at the close of a period. This changes the conversation between management, operations and compliance teams, because they all work from the same verifiable information."
+        }
+      },
+      {
+        "type": "quote",
+        "text": {
+          "es": "Los textiles no son solo insumos. Son activos. Y como todo activo, exigen identidad, control y una decisión informada sobre su ciclo de vida.",
+          "en": "Textiles are not just supplies. They are assets. And like any asset, they demand identity, control and an informed decision about their life cycle."
+        }
+      },
+      {
+        "type": "heading",
+        "text": { "es": "De la medición a la decisión", "en": "From measurement to decision" }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "Medir no es un fin en sí mismo. El valor aparece cuando los indicadores se traducen en decisiones: ajustar dotaciones, anticipar reposiciones, redistribuir inventario o corregir un punto de fuga. La trazabilidad bien implementada acorta la distancia entre lo que ocurre en terreno y lo que la dirección puede gestionar, sin depender de inventarios manuales ni de supuestos.",
+          "en": "Measuring is not an end in itself. Value appears when indicators translate into decisions: adjusting allocations, anticipating replacements, redistributing inventory or correcting a point of leakage. Well-implemented traceability shortens the distance between what happens on the ground and what management can act on, without relying on manual inventories or assumptions."
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": {
+          "es": "En un ecosistema integrado, la identificación y los datos del activo textil se conectan con el procesamiento y con la operación en terreno, de modo que la información fluye en una sola dirección de mejora continua. El resultado no es solo más control: es una operación que toma mejores decisiones con menos incertidumbre.",
+          "en": "In an integrated ecosystem, the identification and data of the textile asset connect with processing and with field operations, so that information flows in a single direction of continuous improvement. The result is not just more control: it is an operation that makes better decisions with less uncertainty."
+        }
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "¿Quiere aplicar esto a su operación?", "en": "Want to apply this to your operation?" },
+    "lead": {
+      "es": "Evaluamos su operación textil y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your textile operation and design the ecosystem solution that fits you."
+    }
+  },
+  "related": {
+    "kicker": { "es": "Recursos", "en": "Resources" },
+    "title": { "es": "Artículos relacionados", "en": "Related articles" },
+    "items": [
+      {
+        "chip": { "es": "Gestión textil", "en": "Textile management" },
+        "title": {
+          "es": "RFID en lavandería industrial: qué medir desde el primer día",
+          "en": "RFID in industrial laundry: what to measure from day one"
+        },
+        "desc": {
+          "es": "Los indicadores que conviene seguir al iniciar un proyecto de trazabilidad.",
+          "en": "The indicators worth tracking when starting a traceability project."
+        },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "RFID aplicado a la lavandería industrial para trazabilidad textil",
+          "en": "RFID applied to industrial laundry for textile traceability"
+        },
+        "to": "/articulo"
+      },
+      {
+        "chip": { "es": "Auditoría", "en": "Auditing" },
+        "title": {
+          "es": "Auditoría continua: del control puntual al registro objetivo",
+          "en": "Continuous auditing: from one-off control to objective records"
+        },
+        "desc": {
+          "es": "Cómo la lectura individual transforma el cumplimiento interno.",
+          "en": "How individual reading transforms internal compliance."
+        },
+        "image": "/img/asis-idtrak.jpg",
+        "imageAlt": {
+          "es": "Lectura individual de activos textiles como base del registro objetivo",
+          "en": "Individual reading of textile assets as the basis for objective records"
+        },
+        "to": "/articulo"
+      },
+      {
+        "chip": { "es": "Operación", "en": "Operations" },
+        "title": {
+          "es": "Vida útil del textil: cuándo conviene retirar una prenda",
+          "en": "Textile service life: when to retire a garment"
+        },
+        "desc": {
+          "es": "Ciclos de lavado y reposición basados en datos, no en estimaciones.",
+          "en": "Wash cycles and replacement based on data, not estimates."
+        },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": {
+          "es": "Textil limpio en lavandería industrial, base de la decisión de reposición",
+          "en": "Clean textiles in industrial laundry, the basis for replacement decisions"
+        },
+        "to": "/articulo"
+      }
+    ]
+  }
+}

@@ -1,64 +1,52 @@
-# Grupo Higienissa — Wireframes (M2 · Arquitectura y UX)
+# Grupo Higienissa — Sitio corporativo
 
-Wireframes **navegables en HTML** del sitio del ecosistema Grupo Higienissa.
-Validan la **estructura** del sitio (navegación, jerarquía de contenido, recorridos) antes del diseño visual (M3).
+Sitio del ecosistema **Grupo Higienissa** (Pacífica · Trazatex · Operissa) para salud, hotelería, industria y minería.
 
-**Fidelidad:** mid-fi estructural — estructura y copy reales, paleta neutra, color de marca solo en navegación / CTAs / acentos, imágenes como placeholders grises. La paleta de marca completa, fotografía y motion llegan en **M3**.
+- **Stack:** Nuxt 3 + Vue 3, **JavaScript nativo** (sin TypeScript), CSS plano con custom properties.
+- **Render híbrido** (`routeRules`): público **SSG/prerender** (sin SDK de Firebase en el cliente) · `/admin/**` **SPA** (`ssr:false`).
+- **Bilingüe ES/EN** con `@nuxtjs/i18n` (`strategy:'prefix'`, `/es/` · `/en/`). Contenido editorial en `{ es, en }`.
+- **Admin embebido** sobre Firebase (Auth + Firestore + Storage + Cloud Functions). Ver `DB.md`.
+- **Hosting:** Vercel.
+
+## Desarrollo
+
+```bash
+npm install
+cp .env.example .env      # completar NUXT_PUBLIC_FIREBASE_* (ver más abajo)
+npm run dev               # http://localhost:3000  (redirige a /es)
+```
 
 ## Estructura
 
 ```
-higienissa-wireframes/
-├── index.html              ← índice de revisión (lista los 10 wireframes ES + EN)
-├── es/                     ← versión español (completa, copy real)
-│   ├── home.html           · Home corporativa (Grupo Higienissa)
-│   ├── marca-pacifica.html · Home de marca — Pacífica
-│   ├── marca-trazatex.html · Home de marca — Trazatex (Powered by ASIS IDTRAK)
-│   ├── marca-operissa.html · Home de marca — Operissa
-│   ├── soluciones.html     · Detalle de servicio (ej. Trazabilidad textil RFID)
-│   ├── sector-salud.html   · Página de sector (ejemplo: Salud)
-│   ├── institucional.html  · Nosotros / Diferencia / Metodología + respaldo ASIS
-│   ├── recursos.html       · Blog (listado)
-│   ├── articulo.html       · Artículo
-│   └── contacto.html       · Formulario de contacto
-├── en/                     ← misma estructura, chrome en inglés + toggle ES|EN
-└── assets/
-    ├── styles/  tokens.css (paleta/tipografía — fuente de verdad) · wireframe.css (layout)
-    ├── logos/   lockup + isotipo (azul/negro/blanco)
-    └── fonts/   Serotiva (titulares)
+assets/css/     tokens.css · site.css · sections.css · admin.css   (diseño "corporativo limpio")
+assets/fonts/   Serotiva (titulares)
+public/img/     fotografía (banco gratuito, ver CREDITS.md)
+public/logos/   isotipo + lockups
+components/      átomos (BaseButton/BaseIcon) · chrome (SiteHeader/SiteFooter) · secciones (HeroHome, …) · ui/ (Modal/Toast/Confirm)
+composables/     useT · useSiteContent · useFirebase · useAuth · useToast/useConfirm/useModal · useStorage · usePublish
+content/         JSON semilla (mismo shape que Firestore): pages/ · brands/ · sectors/ · legal/ · settings.json
+pages/           públicas (16 plantillas) + admin/ (SPA)
+schemas/         Zod: content.js (bloques) · contact.js
+server/          api/contact.post.js + utils/firebaseAdmin.js  (escritura server, sin SDK en cliente)
+firebase/        firestore.rules · storage.rules · firestore.indexes.json
+functions/       Cloud Functions gen2: publishPage (+ rebuild Vercel) · denormalización
+_reference/      wireframes M2 estáticos (referencia histórica, no se sirven)
 ```
 
-## Previsualizar localmente
+## Contenido administrable
 
-Abren sin servidor ni dependencias (rutas relativas, HTML5 + CSS vanilla):
+Hoy el público lee los JSON semilla en `content/` (build-time). El **mismo shape** vive en Firestore `pages/{id}` (ver `DB.md`);
+al conectar el admin, la lectura pasa a Firestore en build/server sin tocar los componentes. El editor `/admin` edita bloques
+(reordenables, bilingües, validados con Zod), guarda `draft` y publica vía Cloud Function `publishPage`, que dispara el rebuild de Vercel.
 
-```bash
-# Opción simple: abrir el índice directamente en el navegador
-open index.html
+## Variables de entorno
 
-# Opción recomendada (server estático local):
-cd higienissa-wireframes && python3 -m http.server 8000
-# → http://localhost:8000/   (índice)   ·   /es/home.html   ·   /en/home.html
-```
+Ver `.env.example`. Web config de Firebase (`NUXT_PUBLIC_FIREBASE_*`), `FIREBASE_SERVICE_ACCOUNT` (server, para `/api/contact`),
+`VERCEL_DEPLOY_HOOK` (rebuild on-publish), `NUXT_PUBLIC_SITE_URL`.
 
-## Publicar en Vercel
+## Pendientes de producción
 
-Sitio **estático, sin build**. Tres formas:
-
-1. **Drag & drop** — arrastrar la carpeta `higienissa-wireframes/` a https://vercel.com/new (o usar [Vercel Drop](https://vercel.com/drop)).
-2. **Git** — importar el repo en Vercel. Preset de framework: **Other**. Build Command: *(vacío)*. Output Directory: *(vacío / raíz)*.
-3. **CLI** — `npm i -g vercel` y luego `vercel` (deploy de preview) / `vercel --prod`.
-
-`vercel.json` ya define:
-- Sin `cleanUrls` (se conservan los enlaces `.html` explícitos entre páginas).
-- Redirecciones de cortesía: `/es` → `/es/home.html`, `/en` → `/en/home.html`.
-- `/` sirve `index.html` (el índice de revisión).
-
-`.vercelignore` excluye del deploy los documentos de trabajo internos (`*.md` del brief).
-
-## Notas para M3
-
-- **Color/tipografía centralizados en `assets/styles/tokens.css`** — activar la paleta de marca completa se hace tocando ese archivo y un par de clases, sin reescribir páginas.
-- **Componentes aislados por clase** (`.hero`, `.card`, `.ecosystem`, `.asis-strip`, `.form-grid`…) — migran limpio a un design system o CMS por bloques.
-- Reemplazar los `.placeholder-img` por fotografía real sin tocar la estructura.
-- **Pendiente:** confirmar autorización de difusión de la base instalada de **ASIS IDTRAK** (son instalaciones del socio tecnológico, no clientes de Higienissa — encuadre ya incluido como disclaimer en `institucional.html`).
+Ver checklist en `IMPLEMENTATION_PLAN.md` §6 y `CREDITS.md`. En resumen: crear/conectar proyecto Firebase,
+importar el contenido semilla a Firestore, datos reales (teléfono/redes), consentimiento ASIS IDTRAK, textos legales definitivos,
+y reemplazar la fotografía de banco por fotografía propia.

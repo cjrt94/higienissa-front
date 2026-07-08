@@ -1,0 +1,332 @@
+{
+  "id": "trazatex",
+  "slug": "trazatex",
+  "name": "Trazatex",
+  "template": "brand",
+  "status": "published",
+  "order": 2,
+  "seo": {
+    "title": {
+      "es": "Trazatex — Trazabilidad inteligente de activos textiles | Grupo Higienissa",
+      "en": "Trazatex — Intelligent traceability of textile assets | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Gestión estratégica y trazabilidad inteligente de activos textiles: RFID industrial, software, dashboards, data y auditoría operacional. Powered by ASIS IDTRAK.",
+      "en": "Strategic management and intelligent traceability of textile assets: industrial RFID, software, dashboards, data and operational auditing. Powered by ASIS IDTRAK."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Trazatex", "en": "Trazatex" },
+    "badge": {
+      "label": { "es": "Powered by ASIS IDTRAK", "en": "Powered by ASIS IDTRAK" },
+      "to": "#respaldo"
+    },
+    "title": {
+      "es": "Gestión estratégica y trazabilidad inteligente de activos textiles.",
+      "en": "Strategic management and intelligent traceability of textile assets."
+    },
+    "lead": {
+      "es": "Los textiles no son solo insumos. Son activos. Trazatex los convierte en información gestionable: identificación individual, datos en tiempo real y control sobre cada ciclo.",
+      "en": "Textiles are not just supplies. They are assets. Trazatex turns them into manageable information: individual identification, real-time data and control over every cycle."
+    },
+    "image": "/img/marca-trazatex.jpg",
+    "imageAlt": {
+      "es": "Tecnología RFID de Trazatex aplicada a la trazabilidad de activos textiles",
+      "en": "Trazatex RFID technology applied to the traceability of textile assets"
+    },
+    "ctaPrimary": { "to": "/contacto" },
+    "ctaSecondary": { "label": { "es": "Explorar soluciones", "en": "Explore solutions" }, "to": "#soluciones" }
+  },
+  "problem": {
+    "kicker": { "es": "El problema", "en": "The problem" },
+    "q": {
+      "es": "¿Sabías que la mayoría de hospitales, hoteles e industrias no sabe exactamente dónde están sus prendas?",
+      "en": "Did you know that most hospitals, hotels and industries don't know exactly where their textiles are?"
+    },
+    "sub": {
+      "es": "No es un detalle menor. Sin trazabilidad, el textil se vuelve un activo invisible: se mueve, se lava, se pierde y se repone sin que nadie lo registre. Y lo que no se mide, no se controla.",
+      "en": "It's not a minor detail. Without traceability, textiles become an invisible asset: they move, get washed, go missing and get replaced with no one recording it. And what isn't measured can't be controlled."
+    },
+    "symptoms": [
+      { "es": "Prendas que desaparecen sin que nadie sepa cuándo ni dónde.", "en": "Garments that vanish with no one knowing when or where." },
+      { "es": "Compras de reposición \"por si acaso\", sin conocer el inventario real.", "en": "\"Just in case\" replacement purchases, with no view of real inventory." },
+      { "es": "Horas de personal contando prendas a mano, con conteos que no cuadran.", "en": "Staff hours spent counting garments by hand, with counts that never add up." },
+      { "es": "Prendas que se descartan casi nuevas o se usan más allá de su vida útil.", "en": "Garments scrapped nearly new — or used well past their useful life." },
+      { "es": "Reclamos por faltantes que no se pueden probar ni resolver.", "en": "Claims over missing items that can't be proven or resolved." },
+      { "es": "Auditorías sin datos que las respalden.", "en": "Audits with no data to back them up." }
+    ],
+    "punch": {
+      "pre": {
+        "es": "Millones de soles se pierden cada año por falta de control textil. El problema no es la falta de ropa. Es la falta de ",
+        "en": "Millions are lost every year to poor textile control. The problem isn't a shortage of textiles. It's a shortage of "
+      },
+      "strong": { "es": "información", "en": "information" },
+      "post": { "es": ".", "en": "." }
+    }
+  },
+  "whoWeAre": {
+    "kicker": { "es": "Quiénes somos", "en": "Who we are" },
+    "title": {
+      "es": "Tecnología RFID, software, data y auditoría para el activo textil",
+      "en": "RFID technology, software, data and auditing for the textile asset"
+    },
+    "lead": {
+      "es": "Trazatex es la división de inteligencia y trazabilidad del Grupo Higienissa. Integramos identificación RFID, plataformas de gestión y auditoría operacional para que cada prenda sea visible, medible y controlable a lo largo de su vida útil. Esa trazabilidad genera datos en tiempo real —información crítica para la gestión del textil hospitalario, hotelero e industrial.",
+      "en": "Trazatex is the intelligence and traceability division of Grupo Higienissa. We integrate RFID identification, management platforms and operational auditing so that every garment is visible, measurable and controllable throughout its useful life. That traceability generates real-time data —critical information for managing hospital, hospitality and industrial textiles."
+    },
+    "highlights": [
+      { "label": { "es": "Aplicada a lo real", "en": "Applied to the real world" }, "text": { "es": "Tecnología probada en operaciones reales, no dispositivos aislados.", "en": "Technology proven in real operations, not isolated devices." } },
+      { "label": { "es": "Integrada al ecosistema", "en": "Integrated into the ecosystem" }, "text": { "es": "Se conecta con la lavandería de Pacífica y la operación de Operissa.", "en": "It connects with Pacífica's laundry and Operissa's operation." } },
+      { "label": { "es": "SmartHub demostrativo", "en": "Demonstrative SmartHub" }, "text": { "es": "Un espacio donde la trazabilidad se ve funcionando antes de implementarla.", "en": "A space where traceability is seen working before implementing it." } },
+      { "label": { "es": "Respaldo internacional", "en": "International backing" }, "text": { "es": "En alianza con ASIS IDTRAK (España), +30 años en RFID textil.", "en": "In partnership with ASIS IDTRAK (Spain), 30+ years in textile RFID." } }
+    ]
+  },
+  "solutions": {
+    "kicker": { "es": "Soluciones", "en": "Solutions" },
+    "title": { "es": "Qué hacemos", "en": "What we do" },
+    "items": [
+      { "title": { "es": "RFID y trazabilidad textil", "en": "RFID & textile traceability" }, "desc": { "es": "Identificación individual con etiquetas resistentes al lavado y seguimiento de cada prenda a lo largo de su ciclo operativo.", "en": "Individual identification with wash-resistant tags and tracking of every garment throughout its operational cycle." } },
+      { "title": { "es": "Software, dashboards y analítica", "en": "Software, dashboards & analytics" }, "desc": { "es": "Plataforma de gestión con visibilidad en tiempo real, KPIs e indicadores accionables para decidir.", "en": "Management platform with real-time visibility, KPIs and actionable indicators for decisions." } },
+      { "title": { "es": "Auditoría operacional", "en": "Operational auditing" }, "desc": { "es": "Verificación y control sobre los procesos y los flujos textiles.", "en": "Verification and control over textile processes and flows." } },
+      { "title": { "es": "Control de pérdidas e inventario", "en": "Loss control & inventory" }, "desc": { "es": "Detección de mermas por área, conteos automáticos y conciliación de inventario real.", "en": "Shrinkage detection by area, automatic counts and reconciliation of real inventory." } },
+      { "title": { "es": "Integración tecnológica", "en": "Technology integration" }, "desc": { "es": "Conexión de la trazabilidad con la operación y los sistemas existentes.", "en": "Connecting traceability with the operation and existing systems." } },
+      { "title": { "es": "Smart tracking para salud y hotelería", "en": "Smart tracking for healthcare & hospitality" }, "desc": { "es": "Seguimiento inteligente de activos textiles en entornos hospitalarios y hoteleros.", "en": "Intelligent tracking of textile assets in healthcare and hospitality environments." } }
+    ],
+    "moreLink": { "label": { "es": "Ver una solución en detalle: Trazabilidad textil RFID", "en": "See a solution in detail: Textile RFID traceability" }, "to": "/soluciones" }
+  },
+  "fourLayer": {
+    "kicker": { "es": "Cómo funciona", "en": "How it works" },
+    "title": { "es": "El modelo de 4 capas", "en": "The 4-layer model" },
+    "lead": {
+      "es": "De la prenda al dato, y del dato a la operación: cada capa habilita a la siguiente.",
+      "en": "From garment to data, and from data to operation: each layer enables the next."
+    },
+    "layers": [
+      { "num": "1", "title": { "es": "Infraestructura de lectura", "en": "Reading infrastructure" }, "text": { "es": "Túneles RFID, cabinas, lectores portátiles y estaciones adaptadas al flujo.", "en": "RFID tunnels, cabins, handheld readers and stations adapted to the flow." } },
+      { "num": "2", "title": { "es": "Identificación individual", "en": "Individual identification" }, "text": { "es": "RFID por prenda; lectura masiva sin conteo manual.", "en": "RFID per garment; bulk reading without manual counting." } },
+      { "num": "3", "title": { "es": "Plataforma de gestión", "en": "Management platform" }, "text": { "es": "Visualización en tiempo real, control por área, reportes históricos, KPIs y auditoría digital.", "en": "Real-time visualization, control by area, historical reports, KPIs and digital auditing." } },
+      { "num": "4", "title": { "es": "Integración operativa", "en": "Operational integration" }, "text": { "es": "Modelo diseñado según el flujo real de cada organización.", "en": "Model designed around each organization's real flow." } }
+    ]
+  },
+  "techInfra": {
+    "kicker": { "es": "Infraestructura tecnológica", "en": "Technology infrastructure" },
+    "title": {
+      "es": "Tecnología, datos y experiencia que hacen posible la trazabilidad",
+      "en": "The technology, data and expertise that make traceability possible"
+    },
+    "lead": {
+      "es": "La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado.",
+      "en": "The Trazatex solution combines technology infrastructure, operational intelligence and specialized services to turn textile management into a controlled, measurable and optimized process."
+    },
+    "body": {
+      "es": "A través de hardware especializado, una plataforma de gestión basada en datos y un equipo de profesionales dedicados a la implementación, capacitación y mejora continua, Trazatex permite controlar cada prenda a lo largo de su ciclo de vida, reducir pérdidas, optimizar recursos y tomar decisiones basadas en información confiable.",
+      "en": "Through specialized hardware, a data-driven management platform and a team of professionals dedicated to implementation, training and continuous improvement, Trazatex makes it possible to control every garment throughout its life cycle, reduce losses, optimize resources and make decisions based on reliable information."
+    },
+    "columns": [
+      {
+        "title": { "es": "Hardware especializado", "en": "Specialized hardware" },
+        "items": [
+          { "label": { "es": "Etiquetas textiles inteligentes", "en": "Smart textile tags" } },
+          { "label": { "es": "Cabinas de lectura masiva", "en": "Bulk-reading cabins" } },
+          { "label": { "es": "Lectores móviles", "en": "Mobile readers" } },
+          { "label": { "es": "Estaciones de control", "en": "Control stations" } },
+          { "label": { "es": "Armarios inteligentes", "en": "Smart cabinets" }, "note": { "es": "(próximamente)", "en": "(coming soon)" } }
+        ]
+      },
+      {
+        "title": { "es": "Software especializado", "en": "Specialized software" },
+        "items": [
+          { "label": { "es": "Gestión de inventario", "en": "Inventory management" } },
+          { "label": { "es": "Control de movimientos", "en": "Movement control" } },
+          { "label": { "es": "Trazabilidad completa", "en": "Full traceability" } },
+          { "label": { "es": "Indicadores y KPIs", "en": "Indicators & KPIs" } },
+          { "label": { "es": "Reportes ejecutivos", "en": "Executive reports" } }
+        ]
+      },
+      {
+        "title": { "es": "Servicios especializados", "en": "Specialized services" },
+        "items": [
+          { "label": { "es": "Implementación", "en": "Implementation" } },
+          { "label": { "es": "Capacitación", "en": "Training" } },
+          { "label": { "es": "Soporte", "en": "Support" } },
+          { "label": { "es": "Optimización continua", "en": "Continuous optimization" } }
+        ]
+      }
+    ],
+    "foot": {
+      "es": "Trazatex diseña, implementa y pone en funcionamiento toda la infraestructura tecnológica necesaria para cada proyecto, integrando hardware especializado, software de gestión y servicios operativos dentro de una solución única orientada a resultados.",
+      "en": "Trazatex designs, implements and commissions all the technology infrastructure each project needs, integrating specialized hardware, management software and operational services into a single, results-oriented solution."
+    }
+  },
+  "infoGenerated": {
+    "kicker": { "es": "Qué información genera", "en": "What information it generates" },
+    "title": { "es": "De cada prenda, una decisión", "en": "From every garment, a decision" },
+    "lead": {
+      "es": "Trazatex no solo identifica prendas: produce la información que hoy falta para gestionar el textil como un activo. Algunos de los datos que genera:",
+      "en": "Trazatex doesn't just identify garments: it produces the information that's missing today to manage textiles as an asset. Some of the data it generates:"
+    },
+    "items": [
+      { "title": { "es": "Inventario por servicio", "en": "Inventory by service" }, "desc": { "es": "Cuántas prendas hay y dónde, desglosado por servicio o área.", "en": "How many garments there are and where, broken down by service or area." } },
+      { "title": { "es": "Consumo por piso", "en": "Consumption by floor" }, "desc": { "es": "Qué consume cada piso o unidad, para asignar costos reales.", "en": "What each floor or unit consumes, to assign real costs." } },
+      { "title": { "es": "Ciclos de lavado por prenda", "en": "Wash cycles per garment" }, "desc": { "es": "Cuántas veces se ha lavado cada prenda individual.", "en": "How many times each individual garment has been washed." } },
+      { "title": { "es": "Vida útil restante", "en": "Remaining useful life" }, "desc": { "es": "Cuánto le queda a cada activo antes de su reposición.", "en": "How much each asset has left before replacement." } },
+      { "title": { "es": "Prendas extraviadas", "en": "Lost garments" }, "desc": { "es": "Qué falta, desde cuándo y en qué punto del flujo.", "en": "What's missing, since when and at which point in the flow." } },
+      { "title": { "es": "Tiempo promedio de rotación", "en": "Average rotation time" }, "desc": { "es": "Cuánto tarda una prenda en volver a circulación.", "en": "How long a garment takes to return to circulation." } },
+      { "title": { "es": "Coste por uso", "en": "Cost per use" }, "desc": { "es": "El costo real de cada prenda repartido entre sus usos.", "en": "The real cost of each garment spread across its uses." } },
+      { "title": { "es": "Tendencia de pérdidas", "en": "Loss trend" }, "desc": { "es": "Cómo evoluciona la merma a lo largo del tiempo.", "en": "How shrinkage evolves over time." } }
+    ]
+  },
+  "retorno": {
+    "kicker": { "es": "Resultados", "en": "Results" },
+    "title": { "es": "Menos pérdidas, más control", "en": "Less loss, more control" },
+    "lead": {
+      "es": "La trazabilidad deja de ser un gasto difuso y se vuelve medible — con impacto directo en la operación y en la cuenta de resultados.",
+      "en": "Traceability stops being a diffuse expense and becomes measurable — with a direct impact on both daily operations and the bottom line."
+    },
+    "lessTitle": { "es": "Menos", "en": "Less" },
+    "less": [
+      { "es": "Pérdidas y mermas", "en": "Losses and shrinkage" },
+      { "es": "Compras de reposición innecesarias", "en": "Unnecessary replacement purchases" },
+      { "es": "Horas-hombre en conteos manuales", "en": "Labor hours on manual counts" },
+      { "es": "Reclamos por faltantes", "en": "Claims over missing items" },
+      { "es": "Contacto con ropa contaminada", "en": "Contact with contaminated textiles" }
+    ],
+    "moreTitle": { "es": "Más", "en": "More" },
+    "more": [
+      { "es": "Control sobre cada prenda", "en": "Control over every garment" },
+      { "es": "Información en tiempo real para decidir", "en": "Real-time information to decide" },
+      { "es": "Productividad", "en": "Productivity" },
+      { "es": "Evidencia para auditorías", "en": "Evidence for audits" }
+    ]
+  },
+  "sectorsBlock": {
+    "kicker": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
+    "title": { "es": "Dónde aporta Trazatex", "en": "Where Trazatex adds value" },
+    "items": [
+      { "name": { "es": "Salud", "en": "Healthcare" }, "desc": { "es": "Trazabilidad de activos textiles clínicos con foco en bioseguridad, auditoría y control por servicio.", "en": "Traceability of clinical textile assets focused on biosecurity, auditing and control by service." }, "to": "/sector-salud" },
+      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Control de blancos y lencería por ubicación, con reducción de mermas y reposición basada en datos.", "en": "Control of linens and bedding by location, with reduced shrinkage and data-driven replenishment." }, "to": "/sector-hoteleria" },
+      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Trazabilidad de uniformes y EPP por trabajador, con registro de lavado y reportes auditables.", "en": "Traceability of uniforms and PPE by worker, with wash records and auditable reports." }, "to": "/sector-industria" },
+      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Control del textil de faena en campamentos y operaciones remotas, con inventario real a distancia.", "en": "Control of work textiles in camps and remote operations, with real inventory at a distance." }, "to": "/sector-mineria" }
+    ]
+  },
+  "ecosystem": {
+    "kicker": { "es": "Ecosistema HIGIENISSA", "en": "HIGIENISSA Ecosystem" },
+    "title": { "es": "Trazatex no trabaja solo", "en": "Trazatex does not work alone" },
+    "lead": {
+      "es": "La trazabilidad de Trazatex potencia al resto del ecosistema: integra datos en la lavandería de Pacífica y en la operación en terreno de Operissa.",
+      "en": "Trazatex traceability strengthens the rest of the ecosystem: it integrates data into Pacífica's laundry and into Operissa's on-site operation."
+    },
+    "items": [
+      { "name": "Pacífica", "desc": { "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.", "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle." }, "image": "/img/marca-pacifica.jpg", "imageAlt": { "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa", "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem" }, "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }, "to": "/marca-pacifica" },
+      { "name": "Operissa", "desc": { "es": "Operación y gestión especializada. Los datos de Trazatex respaldan el control en terreno.", "en": "Specialized operation and management. Trazatex data supports on-site control." }, "image": "/img/marca-operissa.jpg", "imageAlt": { "es": "Operissa, operación y gestión textil especializada en terreno", "en": "Operissa, specialized on-site textile operation and management" }, "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }, "to": "/marca-operissa" }
+    ]
+  },
+  "asisStrip": {
+    "body": {
+      "es": "En alianza tecnológica con ASIS IDTRAK (España) · +30 años en RFID textil. La tecnología que integra Trazatex ya opera en cientos de instalaciones internacionales.",
+      "en": "In technology partnership with ASIS IDTRAK (Spain) · 30+ years in textile RFID. The technology that Trazatex integrates already operates in hundreds of international installations."
+    },
+    "image": "/img/asis-idtrak.jpg",
+    "imageAlt": { "es": "Tecnología RFID de ASIS IDTRAK aplicada al textil", "en": "ASIS IDTRAK RFID technology applied to textiles" },
+    "linkLabel": { "es": "Ver base instalada", "en": "See installed base" },
+    "to": "#respaldo"
+  },
+  "respaldo": {
+    "kicker": { "es": "Respaldo internacional", "en": "International backing" },
+    "title": { "es": "La tecnología de Trazatex, probada a escala", "en": "Trazatex's technology, proven at scale" },
+    "lead": {
+      "es": "Trazatex integra la tecnología RFID textil de ASIS IDTRAK (España), con más de 30 años de trayectoria. Su base instalada da cuenta del alcance real de esa tecnología.",
+      "en": "Trazatex integrates the textile RFID technology of ASIS IDTRAK (Spain), with over 30 years of experience. Its installed base reflects the real reach of that technology."
+    },
+    "disclaimer": {
+      "es": "Encuadre: las instalaciones listadas a continuación son instalaciones de nuestro socio tecnológico ASIS IDTRAK, no clientes propios de Grupo Higienissa. Se presentan como evidencia del alcance de la tecnología que integra Trazatex. (Pendiente: confirmar autorización de difusión y marcas de terceros.)",
+      "en": "Framing: the installations listed below are installations of our technology partner ASIS IDTRAK, not clients of Grupo Higienissa. They are shown as evidence of the reach of the technology that Trazatex integrates. (Pending: confirm disclosure authorization and third-party brands.)"
+    },
+    "regions": [
+      {
+        "region": { "es": "España", "en": "Spain" },
+        "groups": [
+          {
+            "heading": { "es": "Lavanderías", "en": "Laundries" },
+            "items": [
+              { "es": "Carsan by Elis", "en": "Carsan by Elis" },
+              { "es": "La Nueva Constanza", "en": "La Nueva Constanza" },
+              { "es": "AMICA", "en": "AMICA" },
+              { "es": "Minueval", "en": "Minueval" },
+              { "es": "Solain", "en": "Solain" },
+              { "es": "C. P. Provincial de Álava", "en": "C. P. Provincial de Álava" },
+              { "es": "Interhospitalia", "en": "Interhospitalia" }
+            ]
+          },
+          {
+            "heading": { "es": "Hoteles (Madrid)", "en": "Hotels (Madrid)" },
+            "items": [
+              { "es": "Four Seasons 5★", "en": "Four Seasons 5★" },
+              { "es": "Palace 5★", "en": "Palace 5★" },
+              { "es": "Marriott 5★", "en": "Marriott 5★" },
+              { "es": "Only You Boutique 5★", "en": "Only You Boutique 5★" },
+              { "es": "Meliá Ciudad de las Artes 5★", "en": "Meliá Ciudad de las Artes 5★" },
+              { "es": "Meliá Valdebebas 4★", "en": "Meliá Valdebebas 4★" }
+            ]
+          },
+          {
+            "heading": { "es": "Hospitales y clínicas", "en": "Hospitals and clinics" },
+            "items": [
+              { "es": "Puerta de Hierro", "en": "Puerta de Hierro" },
+              { "es": "Comarcal de Hellín", "en": "Comarcal de Hellín" },
+              { "es": "U. Central de Asturias", "en": "U. Central de Asturias" },
+              { "es": "Monte Naranco (Oviedo)", "en": "Monte Naranco (Oviedo)" },
+              { "es": "Clínica Cemtro", "en": "Clínica Cemtro" }
+            ]
+          },
+          {
+            "heading": { "es": "Fabricantes textiles", "en": "Textile manufacturers" },
+            "items": [
+              { "es": "Eugenio Alés Llamas", "en": "Eugenio Alés Llamas" },
+              { "es": "Resuinsa", "en": "Resuinsa" },
+              { "es": "Vayoil", "en": "Vayoil" }
+            ]
+          }
+        ]
+      },
+      {
+        "region": { "es": "Internacional", "en": "International" },
+        "groups": [
+          {
+            "heading": { "es": "Francia", "en": "France" },
+            "items": [
+              { "es": "Disneyland Paris (6 ubicaciones)", "en": "Disneyland Paris (6 locations)" },
+              { "es": "Annet — 2.ª cadena de Francia (partner RFID, hasta 34 lavanderías)", "en": "Annet — France's 2nd-largest chain (RFID partner, up to 34 laundries)" },
+              { "es": "Kalhige (×2)", "en": "Kalhige (×2)" },
+              { "es": "Locatex (Angulema)", "en": "Locatex (Angoulême)" }
+            ]
+          },
+          {
+            "heading": { "es": "Reino Unido", "en": "United Kingdom" },
+            "items": [
+              { "es": "Fishers (×3, Escocia)", "en": "Fishers (×3, Scotland)" },
+              { "es": "Clean (×2, Gales)", "en": "Clean (×2, Wales)" },
+              { "es": "Radisson Edwardian (Londres)", "en": "Radisson Edwardian (London)" }
+            ]
+          },
+          {
+            "heading": { "es": "Países Bajos", "en": "Netherlands" },
+            "items": [
+              { "es": "Clean Lease", "en": "Clean Lease" },
+              { "es": "Van Der Rick", "en": "Van Der Rick" },
+              { "es": "Blycolin", "en": "Blycolin" },
+              { "es": "hoteles APPH", "en": "APPH hotels" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Convierta sus textiles en activos gestionables", "en": "Turn your textiles into manageable assets" },
+    "lead": {
+      "es": "Evaluamos su operación y diseñamos el modelo de trazabilidad que le corresponde.",
+      "en": "We assess your operation and design the traceability model that fits you."
+    }
+  }
+}

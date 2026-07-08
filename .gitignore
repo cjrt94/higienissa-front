@@ -1,4 +1,21 @@
-.DS_Store
-.vercel
+# Nuxt / Node
 node_modules
+.nuxt
+.output
+.data
+dist
+.vercel
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Firebase
+.firebase
+firebase-debug.log
+*-debug.log
+
+# OS / editores
+.DS_Store
 *.log

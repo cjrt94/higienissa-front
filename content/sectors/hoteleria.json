@@ -1,0 +1,187 @@
+{
+  "slug": "hoteleria",
+  "order": 2,
+  "template": "sector",
+  "status": "published",
+  "icon": "hotel",
+  "name": { "es": "Hotelería", "en": "Hospitality" },
+  "summary": {
+    "es": "Experiencia del huésped y control de blancos.",
+    "en": "Guest experience and linen control."
+  },
+  "ctaConvention": "evaluacion",
+  "seo": {
+    "title": {
+      "es": "Sector Hotelería — Soluciones del ecosistema | Grupo Higienissa",
+      "en": "Hospitality Sector — Ecosystem solutions | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Soluciones del ecosistema Higienissa para el sector hotelería: experiencia del huésped, control de mermas de blancos y lencería, y housekeeping en hoteles, resorts, apart hoteles y complejos turísticos.",
+      "en": "Higienissa ecosystem solutions for the hospitality sector: guest experience, linen and bed-linen loss control, and housekeeping for hotels, resorts, apart hotels and tourist complexes."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Sectores · Hotelería", "en": "Sectors · Hospitality" },
+    "title": {
+      "es": "Experiencia del huésped, control de mermas y housekeeping para el sector hotelería.",
+      "en": "Guest experience, loss control and housekeeping for the hospitality sector."
+    },
+    "lead": {
+      "es": "Soluciones del ecosistema Higienissa para hoteles, resorts, apart hoteles y complejos turísticos, donde el textil sostiene la experiencia del huésped y representa un costo que debe gestionarse.",
+      "en": "Higienissa ecosystem solutions for hotels, resorts, apart hotels and tourist complexes, where textiles uphold the guest experience and represent a cost that must be managed."
+    },
+    "image": "/img/sector-hoteleria.jpg",
+    "imageAlt": {
+      "es": "Sector hotelería: blancos y lencería para la experiencia del huésped",
+      "en": "Hospitality sector: linen and bed-linen for the guest experience"
+    }
+  },
+  "context": {
+    "kicker": { "es": "El contexto", "en": "The context" },
+    "title": {
+      "es": "El desafío real del sector hotelería",
+      "en": "The real challenge of the hospitality sector"
+    },
+    "lead": {
+      "es": "La alta rotación de blancos y lencería genera mermas constantes, sobrecompra preventiva e inventarios inexactos. Sin trazabilidad individual, el gasto se acumula año a año como un costo oculto que nadie llega a cuantificar.",
+      "en": "High turnover of linen and bed-linen drives constant losses, preventive overbuying and inaccurate inventories. Without individual traceability, the spend builds up year after year as a hidden cost that no one manages to quantify."
+    },
+    "hiddenCostLabel": {
+      "es": "El costo oculto sin trazabilidad",
+      "en": "The hidden cost without traceability"
+    },
+    "hiddenCost": [
+      { "es": "No se identifica dónde se pierden las prendas.", "en": "There is no way to identify where garments are lost." },
+      { "es": "No se controla la rotación real por área.", "en": "Real rotation by area is not tracked." },
+      { "es": "No se planifica la reposición de forma estratégica.", "en": "Replacement is not planned strategically." },
+      { "es": "Las fugas internas son difíciles de detectar.", "en": "Internal leakage is hard to detect." }
+    ]
+  },
+  "risks": {
+    "kicker": { "es": "Riesgos operativos", "en": "Operational risks" },
+    "title": { "es": "Lo que está en juego sin control", "en": "What is at stake without control" },
+    "lead": {
+      "es": "Sin control del textil, el costo y la experiencia del huésped quedan expuestos.",
+      "en": "Without textile control, both cost and the guest experience are left exposed."
+    },
+    "items": [
+      { "es": "Mermas de blancos y lencería sin trazabilidad que elevan el costo de reposición.", "en": "Untraceable linen and bed-linen losses that raise replacement costs." },
+      { "es": "Quiebres de disponibilidad textil que afectan el armado de habitaciones.", "en": "Textile availability gaps that disrupt room setup." },
+      { "es": "Textil en mal estado que deteriora la experiencia y la percepción del huésped.", "en": "Textiles in poor condition that degrade guest experience and perception." },
+      { "es": "Housekeeping detenido por falta de stock limpio en el momento correcto.", "en": "Housekeeping stalled by a lack of clean stock at the right moment." },
+      { "es": "Imposibilidad de medir consumo, rotación y vida útil del textil por área.", "en": "Inability to measure consumption, rotation and textile lifespan by area." }
+    ]
+  },
+  "whatChanges": {
+    "kicker": { "es": "Qué cambia", "en": "What changes" },
+    "title": { "es": "Qué cambia con la solución del grupo", "en": "What changes with the group's solution" },
+    "lead": {
+      "es": "El ecosistema articula procesamiento, trazabilidad y operación para convertir los blancos y la lencería en un activo gestionado, disponible y al servicio de la experiencia del huésped.",
+      "en": "The ecosystem brings together processing, traceability and operations to turn linen and bed-linen into a managed, available asset that serves the guest experience."
+    },
+    "items": [
+      { "es": "Control por ubicación de cada activo textil.", "en": "Control by location of each textile asset." },
+      { "es": "Foco en las áreas críticas de mayor rotación.", "en": "Focus on the critical areas with the highest rotation." },
+      { "es": "Optimización de la reposición y menos inventario muerto.", "en": "Optimized replacement and less dead inventory." },
+      { "es": "Información financiera precisa para planificar.", "en": "Accurate financial information to plan ahead." },
+      { "es": "Mayor eficiencia en housekeeping.", "en": "Greater efficiency in housekeeping." }
+    ]
+  },
+  "indicators": {
+    "kicker": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
+    "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "items": [
+      { "es": "Merma por mes", "en": "Loss per month" },
+      { "es": "Rotación por piso / área", "en": "Rotation by floor / area" },
+      { "es": "Tiempo en circulación", "en": "Time in circulation" },
+      { "es": "Inventario óptimo", "en": "Optimal inventory" },
+      { "es": "ROI por implementación", "en": "ROI per implementation" }
+    ]
+  },
+  "impactByRole": {
+    "kicker": { "es": "Impacto por rol", "en": "Impact by role" },
+    "title": { "es": "Qué resuelve en cada nivel", "en": "What it solves at each level" },
+    "items": [
+      {
+        "role": { "es": "Gerencia general", "en": "General management" },
+        "desc": {
+          "es": "Información financiera precisa sobre el gasto textil, con datos para proteger margen y experiencia.",
+          "en": "Accurate financial information on textile spend, with data to protect margin and experience."
+        }
+      },
+      {
+        "role": { "es": "Housekeeping", "en": "Housekeeping" },
+        "desc": {
+          "es": "Control por ubicación y áreas críticas, con textil disponible para el armado de habitaciones.",
+          "en": "Control by location and critical areas, with textiles available for room setup."
+        }
+      },
+      {
+        "role": { "es": "Operaciones", "en": "Operations" },
+        "desc": {
+          "es": "Optimización de reposición y menos inventario muerto, con trazabilidad sobre cada activo.",
+          "en": "Optimized replacement and less dead inventory, with traceability over each asset."
+        }
+      }
+    ]
+  },
+  "brands": {
+    "kicker": { "es": "Marcas relevantes", "en": "Relevant brands" },
+    "title": { "es": "Marcas del ecosistema para Hotelería", "en": "Ecosystem brands for Hospitality" },
+    "lead": {
+      "es": "Para el sector hotelería, las tres marcas del ecosistema articulan procesamiento, disponibilidad, control de mermas y operación en terreno.",
+      "en": "For the hospitality sector, all three ecosystem brands bring together processing, availability, loss control and field operations."
+    },
+    "items": [
+      {
+        "name": "Pacífica",
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": {
+          "es": "Pacífica: lavandería industrial inteligente para hotelería",
+          "en": "Pacífica: smart industrial laundry for hospitality"
+        },
+        "desc": {
+          "es": "Lavandería industrial inteligente que procesa blancos y lencería cuidando el textil y la experiencia.",
+          "en": "Smart industrial laundry that processes linen and bed-linen while protecting the textiles and the experience."
+        },
+        "to": "/marca-pacifica",
+        "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+      },
+      {
+        "name": "Trazatex",
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Trazatex: RFID y data para la trazabilidad del textil hotelero",
+          "en": "Trazatex: RFID and data for hotel textile traceability"
+        },
+        "desc": {
+          "es": "RFID, software, auditoría y data para la trazabilidad individual y el control de pérdidas de cada activo textil.",
+          "en": "RFID, software, auditing and data for individual traceability and loss control of each textile asset."
+        },
+        "to": "/marca-trazatex",
+        "linkLabel": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+      },
+      {
+        "name": "Operissa",
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": {
+          "es": "Operissa: operación del circuito textil del hotel",
+          "en": "Operissa: operation of the hotel's textile circuit"
+        },
+        "desc": {
+          "es": "Operación y gestión especializada del circuito textil del hotel, para sostener la disponibilidad y la experiencia del huésped.",
+          "en": "Specialized operation and management of the hotel's textile circuit, to sustain availability and the guest experience."
+        },
+        "to": "/marca-operissa",
+        "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+    "lead": {
+      "es": "Evaluamos su operación hotelera y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your hospitality operation and design the ecosystem solution that fits it."
+    }
+  }
+}

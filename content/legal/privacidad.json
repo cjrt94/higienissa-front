@@ -1,0 +1,21 @@
+{
+  "slug": "privacidad",
+  "status": "draft",
+  "seo": {
+    "title": { "es": "Política de privacidad | Grupo Higienissa", "en": "Privacy policy | Grupo Higienissa" },
+    "description": { "es": "Política de privacidad de Grupo Higienissa.", "en": "Privacy policy for Grupo Higienissa." }
+  },
+  "hero": {
+    "eyebrow": { "es": "Legal", "en": "Legal" },
+    "title": { "es": "Política de privacidad", "en": "Privacy policy" },
+    "lead": {
+      "es": "Contenido en preparación. La política definitiva —tratamiento de datos personales, finalidad, base legal y derechos del titular— se publicará antes del lanzamiento.",
+      "en": "Content in preparation. The final policy —personal data processing, purpose, legal basis and data-subject rights— will be published before launch."
+    }
+  },
+  "disclaimerLead": {
+    "es": "Borrador / pendiente de redacción legal. Para consultas sobre sus datos, escriba a ",
+    "en": "Draft / pending legal drafting. For inquiries about your data, write to "
+  },
+  "contactEmail": "contacto@higienissa.com"
+}

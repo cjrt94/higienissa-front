@@ -1,0 +1,20 @@
+{
+  "contact": {
+    "email": "contacto@higienissa.com",
+    "phone": "+51 1 000 0000",
+    "city": { "es": "Lima, Perú", "en": "Lima, Peru" }
+  },
+  "social": {
+    "linkedin": "#",
+    "instagram": "#",
+    "youtube": "#"
+  },
+  "asisStrip": {
+    "partnerName": "ASIS IDTRAK",
+    "note": {
+      "es": "En alianza tecnológica con ASIS IDTRAK (España) · +30 años en RFID textil",
+      "en": "In technological partnership with ASIS IDTRAK (Spain) · 30+ years in textile RFID"
+    },
+    "link": "/marca-trazatex#respaldo"
+  }
+}

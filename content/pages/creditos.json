@@ -1,0 +1,32 @@
+{
+  "id": "creditos",
+  "template": "creditos",
+  "status": "published",
+  "seo": {
+    "title": { "es": "Créditos de fotografía — Grupo Higienissa", "en": "Photo credits — Grupo Higienissa" },
+    "description": { "es": "Atribución de las imágenes de banco usadas en el sitio.", "en": "Attribution of the stock images used on this site." }
+  },
+  "hero": {
+    "eyebrow": { "es": "Créditos", "en": "Credits" },
+    "title": { "es": "Créditos de fotografía", "en": "Photo credits" },
+    "lead": {
+      "es": "Imágenes de banco gratuito usadas en este sitio, con su autor y licencia.",
+      "en": "Free stock images used on this site, with author and license."
+    }
+  },
+  "items": [
+    { "author": "Laundrykhalas", "license": "CC BY 4.0", "source": "https://commons.wikimedia.org/w/index.php?curid=190690373", "use": { "es": "Home — hero", "en": "Home — hero" } },
+    { "author": "PattayaPatrol", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/w/index.php?curid=189600855", "use": { "es": "Pacífica", "en": "Pacífica" } },
+    { "author": "U.S. Air Force / Senior Airman Jessica Sanchez-Chen", "license": "Public Domain", "source": "https://commons.wikimedia.org/wiki/File:Innovative_RFID_Technology_Enhances_Inventory_Management_at_52nd_LRS_(8877947).jpg", "use": { "es": "Trazatex", "en": "Trazatex" } },
+    { "author": "Samuli Lintula (Turun Tekstiilihuolto Oy)", "license": "CC BY 3.0", "source": "https://commons.wikimedia.org/wiki/File:Industrial_laundry_linen_press,_exit.jpg", "use": { "es": "Operissa", "en": "Operissa" } },
+    { "author": "Rodolpho Zanardo", "license": "Pexels License", "source": "https://www.pexels.com/photo/two-white-towels-1304110/", "use": { "es": "Sector Salud", "en": "Health sector" } },
+    { "author": "Tony Webster", "license": "CC BY 2.0", "source": "https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg", "use": { "es": "Sector Hotelería", "en": "Hospitality sector" } },
+    { "author": "Shixart1985", "license": "CC BY 2.0", "source": "https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg", "use": { "es": "Sector Industria", "en": "Industry sector" } },
+    { "author": "neneqo", "license": "Pexels License", "source": "https://www.pexels.com/photo/a-coal-miner-17839774/", "use": { "es": "Sector Minería", "en": "Mining sector" } },
+    { "author": "HanSangYoon", "license": "CC BY-SA", "source": "https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg", "use": { "es": "Ecosistema", "en": "Ecosystem" } },
+    { "author": "Maschinenjunge", "license": "CC BY-SA 3.0", "source": "https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG", "use": { "es": "Respaldo ASIS IDTRAK", "en": "ASIS IDTRAK backing" } },
+    { "author": "Wnkwdy", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Sanfine_International_Hospital_Ward_01.jpg", "use": { "es": "Sector Salud — hero", "en": "Health sector — hero" } },
+    { "author": "juan pinales", "license": "Pexels License", "source": "https://www.pexels.com/photo/31902663/", "use": { "es": "Sector Salud — contexto", "en": "Health sector — context" } },
+    { "author": "Infrogmation of New Orleans", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:University_Medical_Center_New_Orleans_interior_Feb_2020_17.jpg", "use": { "es": "Sector Salud — banda", "en": "Health sector — band" } }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "id": "institucional",
+  "template": "institucional",
+  "status": "published",
+  "seo": {
+    "title": {
+      "es": "Nosotros — El ecosistema y cómo trabajamos | Grupo Higienissa",
+      "en": "About — The ecosystem and how we work | Grupo Higienissa"
+    },
+    "description": {
+      "es": "El ecosistema Grupo Higienissa: propósito, metodología y diferenciadores de las tres divisiones que lo integran.",
+      "en": "The Grupo Higienissa ecosystem: purpose, methodology and differentiators of the three divisions that make it up."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Nosotros", "en": "About" },
+    "title": {
+      "es": "El ecosistema y cómo trabajamos",
+      "en": "The ecosystem and how we work"
+    },
+    "lead": {
+      "es": "Grupo Higienissa articula procesos, datos y operación en un solo ecosistema. Detrás, una metodología clara y un estándar común que sostiene cada solución.",
+      "en": "Grupo Higienissa brings processes, data and operations together into a single ecosystem. Behind it, a clear methodology and a shared standard that underpins every solution."
+    },
+    "image": "/img/ecosistema.jpg",
+    "imageAlt": {
+      "es": "El ecosistema Grupo Higienissa: procesos, datos y operación bajo un mismo estándar",
+      "en": "The Grupo Higienissa ecosystem: processes, data and operations under one standard"
+    }
+  },
+  "whoWeAre": {
+    "eyebrow": { "es": "Quiénes somos", "en": "Who we are" },
+    "title": {
+      "es": "Un ecosistema para operaciones de alta exigencia",
+      "en": "An ecosystem for highly demanding operations"
+    },
+    "lead": {
+      "es": "Grupo Higienissa es un ecosistema empresarial especializado en soluciones inteligentes para operaciones textiles, hospitalarias, hoteleras e industriales de alta exigencia. Nuestro objetivo es transformar operaciones tradicionales en sistemas modernos, medibles, auditables y altamente eficientes.",
+      "en": "Grupo Higienissa is a business ecosystem specialized in intelligent solutions for highly demanding textile, healthcare, hospitality and industrial operations. Our goal is to transform traditional operations into modern, measurable, auditable and highly efficient systems."
+    },
+    "highlights": [
+      {
+        "icon": "target",
+        "label": { "es": "Inteligencia y precisión", "en": "Intelligence and precision" },
+        "text": {
+          "es": "Decisiones respaldadas por datos y trazabilidad, no por estimaciones.",
+          "en": "Decisions backed by data and traceability, not by estimates."
+        }
+      },
+      {
+        "icon": "activity",
+        "label": { "es": "Innovación", "en": "Innovation" },
+        "text": {
+          "es": "Tecnología aplicada a procesos críticos reales, probada en operación.",
+          "en": "Technology applied to real critical processes, proven in operation."
+        }
+      },
+      {
+        "icon": "shield",
+        "label": { "es": "Excelencia operacional", "en": "Operational excellence" },
+        "text": {
+          "es": "Equipos y procesos estandarizados que sostienen la continuidad.",
+          "en": "Standardized teams and processes that sustain continuity."
+        }
+      }
+    ]
+  },
+  "ecosystem": {
+    "eyebrow": { "es": "Cómo trabajamos", "en": "How we work" },
+    "title": {
+      "es": "Procesa, traza y opera — bajo un mismo estándar",
+      "en": "Process, track and operate — under one standard"
+    },
+    "lead": {
+      "es": "Tres divisiones especializadas que se complementan: cada una potencia a las otras y responde a una sola interlocución.",
+      "en": "Three specialized divisions that complement each other: each one strengthens the others and answers to a single point of contact."
+    },
+    "mother": {
+      "name": { "es": "Grupo Higienissa", "en": "Grupo Higienissa" },
+      "desc": {
+        "es": "La marca madre que articula procesos, datos y operación.",
+        "en": "The parent brand that brings processes, data and operations together."
+      }
+    },
+    "nodes": [
+      {
+        "name": { "es": "Pacífica · Procesa", "en": "Pacífica · Process" },
+        "brand": "Pacífica",
+        "desc": {
+          "es": "Lavandería industrial inteligente: donde empieza la disponibilidad del textil.",
+          "en": "Intelligent industrial laundry: where textile availability begins."
+        },
+        "to": "/marca-pacifica"
+      },
+      {
+        "name": { "es": "Trazatex · Traza", "en": "Trazatex · Track" },
+        "brand": "Trazatex",
+        "desc": {
+          "es": "RFID, software, auditoría y data que convierten el activo en información.",
+          "en": "RFID, software, auditing and data that turn the asset into information."
+        },
+        "to": "/marca-trazatex"
+      },
+      {
+        "name": { "es": "Operissa · Opera", "en": "Operissa · Operate" },
+        "brand": "Operissa",
+        "desc": {
+          "es": "Operación y gestión especializada en terreno, a la medida de cada cliente.",
+          "en": "Specialized operation and management in the field, tailored to each client."
+        },
+        "to": "/marca-operissa"
+      }
+    ]
+  },
+  "capabilities": {
+    "eyebrow": { "es": "Qué integramos", "en": "What we integrate" },
+    "title": {
+      "es": "Capacidades de un solo ecosistema",
+      "en": "Capabilities of a single ecosystem"
+    },
+    "lead": {
+      "es": "Una sola interlocución reúne las capacidades que normalmente exigen múltiples proveedores.",
+      "en": "A single point of contact brings together the capabilities that normally require multiple suppliers."
+    },
+    "items": [
+      {
+        "title": { "es": "Lavandería industrial premium", "en": "Premium industrial laundry" },
+        "desc": {
+          "es": "Procesamiento profesional de textiles institucionales con calidad, higiene y disponibilidad garantizada.",
+          "en": "Professional processing of institutional textiles with guaranteed quality, hygiene and availability."
+        }
+      },
+      {
+        "title": { "es": "Trazabilidad RFID", "en": "RFID traceability" },
+        "desc": {
+          "es": "Identificación individual de cada prenda para seguir su ubicación, uso y estado en tiempo real.",
+          "en": "Individual identification of every garment to track its location, use and condition in real time."
+        }
+      },
+      {
+        "title": { "es": "Software y analítica", "en": "Software and analytics" },
+        "desc": {
+          "es": "Plataformas de gestión con dashboards, KPIs e información accionable para decidir.",
+          "en": "Management platforms with dashboards, KPIs and actionable information to make decisions."
+        }
+      },
+      {
+        "title": { "es": "Auditoría operativa", "en": "Operational audit" },
+        "desc": {
+          "es": "Verificación y control de procesos y flujos textiles, con evidencia para cumplimiento.",
+          "en": "Verification and control of textile processes and flows, with evidence for compliance."
+        }
+      },
+      {
+        "title": { "es": "Continuidad operacional", "en": "Operational continuity" },
+        "desc": {
+          "es": "Operaciones que no se detienen: disponibilidad sostenida del textil crítico.",
+          "en": "Operations that never stop: sustained availability of critical textiles."
+        }
+      },
+      {
+        "title": { "es": "Outsourcing especializado", "en": "Specialized outsourcing" },
+        "desc": {
+          "es": "Personal capacitado y supervisado para procesos que exigen control permanente.",
+          "en": "Trained and supervised staff for processes that demand permanent control."
+        }
+      },
+      {
+        "title": { "es": "Gestión inteligente de procesos", "en": "Intelligent process management" },
+        "desc": {
+          "es": "Procedimientos estandarizados y medibles que modernizan la operación tradicional.",
+          "en": "Standardized, measurable procedures that modernize traditional operations."
+        }
+      }
+    ]
+  },
+  "methodology": {
+    "eyebrow": { "es": "Metodología", "en": "Methodology" },
+    "title": {
+      "es": "Cuatro pasos, un mismo método",
+      "en": "Four steps, one method"
+    },
+    "lead": {
+      "es": "Personas, procesos, supervisión y resultados: la secuencia con la que el ecosistema asegura la continuidad de operaciones críticas.",
+      "en": "People, processes, supervision and results: the sequence the ecosystem uses to ensure the continuity of critical operations."
+    },
+    "steps": [
+      {
+        "num": "1",
+        "title": { "es": "Personas", "en": "People" },
+        "text": {
+          "es": "Equipos especializados que entienden la operación de cada cliente.",
+          "en": "Specialized teams that understand each client's operation."
+        }
+      },
+      {
+        "num": "2",
+        "title": { "es": "Procesos", "en": "Processes" },
+        "text": {
+          "es": "Procedimientos definidos y estandarizados para cada etapa.",
+          "en": "Defined and standardized procedures for every stage."
+        }
+      },
+      {
+        "num": "3",
+        "title": { "es": "Supervisión", "en": "Supervision" },
+        "text": {
+          "es": "Control y trazabilidad continua sobre cada activo y cada proceso.",
+          "en": "Continuous control and traceability over every asset and every process."
+        }
+      },
+      {
+        "num": "4",
+        "title": { "es": "Resultados", "en": "Results" },
+        "text": {
+          "es": "Indicadores gestionables y mejora sostenida en el tiempo.",
+          "en": "Manageable indicators and sustained improvement over time."
+        }
+      }
+    ]
+  },
+  "differentiators": {
+    "eyebrow": { "es": "Diferenciadores", "en": "Differentiators" },
+    "title": { "es": "Qué nos distingue", "en": "What sets us apart" },
+    "items": [
+      {
+        "title": { "es": "Pensamos como operadores", "en": "We think like operators" },
+        "text": {
+          "es": "Diseñamos soluciones desde la realidad de quien opera, no desde el catálogo.",
+          "en": "We design solutions from the reality of those who operate, not from a catalog."
+        }
+      },
+      {
+        "title": { "es": "Ecosistema de respaldo", "en": "Ecosystem backing" },
+        "text": {
+          "es": "Tres divisiones que se potencian entre sí bajo un mismo estándar.",
+          "en": "Three divisions that strengthen one another under the same standard."
+        }
+      },
+      {
+        "title": { "es": "Soluciones escalables", "en": "Scalable solutions" },
+        "text": {
+          "es": "Capacidad de crecer con la operación, sin perder control.",
+          "en": "The ability to grow with the operation, without losing control."
+        }
+      },
+      {
+        "title": { "es": "Infraestructura premium", "en": "Premium infrastructure" },
+        "text": {
+          "es": "Tecnología y operación de alto nivel para entornos de alta exigencia.",
+          "en": "High-level technology and operations for highly demanding environments."
+        }
+      }
+    ]
+  },
+  "sectorsBlock": {
+    "eyebrow": { "es": "Sectores", "en": "Sectors" },
+    "title": { "es": "Dónde operamos", "en": "Where we operate" },
+    "lead": {
+      "es": "El ecosistema atiende entornos de alta exigencia donde el textil es parte crítica de la operación.",
+      "en": "The ecosystem serves highly demanding environments where textiles are a critical part of the operation."
+    },
+    "items": [
+      {
+        "name": { "es": "Salud", "en": "Healthcare" },
+        "desc": {
+          "es": "Hospitales, clínicas y laboratorios donde el textil impacta directamente en la bioseguridad, la auditoría y la continuidad de la atención.",
+          "en": "Hospitals, clinics and laboratories where textiles directly impact biosafety, auditing and continuity of care."
+        },
+        "to": "/sector-salud"
+      },
+      {
+        "name": { "es": "Hotelería", "en": "Hospitality" },
+        "desc": {
+          "es": "Hoteles, resorts y apart hoteles donde los blancos y la lencería son parte de la experiencia del huésped y un costo a controlar.",
+          "en": "Hotels, resorts and apart-hotels where linens and bedding are part of the guest experience and a cost to control."
+        },
+        "to": "/sector-hoteleria"
+      },
+      {
+        "name": { "es": "Industria", "en": "Industry" },
+        "desc": {
+          "es": "Manufactura, agroindustria y logística donde los uniformes y el EPP textil forman parte del cumplimiento y la seguridad laboral.",
+          "en": "Manufacturing, agribusiness and logistics where uniforms and textile PPE are part of compliance and workplace safety."
+        },
+        "to": "/sector-industria"
+      },
+      {
+        "name": { "es": "Minería", "en": "Mining" },
+        "desc": {
+          "es": "Campamentos, operaciones remotas y proyectos temporales en entornos exigentes y alejados de los centros urbanos.",
+          "en": "Camps, remote operations and temporary projects in demanding environments far from urban centers."
+        },
+        "to": "/sector-mineria"
+      }
+    ]
+  },
+  "asis": {
+    "eyebrow": { "es": "Respaldo tecnológico", "en": "Technology backing" },
+    "title": { "es": "En alianza con ASIS IDTRAK", "en": "In partnership with ASIS IDTRAK" },
+    "body": {
+      "es": "En alianza tecnológica con ASIS IDTRAK (España), referente internacional en RFID textil con +30 años de experiencia. La trazabilidad del ecosistema es una capacidad de Trazatex.",
+      "en": "In technology partnership with ASIS IDTRAK (Spain), an international benchmark in textile RFID with 30+ years of experience. The ecosystem's traceability is a capability of Trazatex."
+    },
+    "image": "/img/asis-idtrak.jpg",
+    "imageAlt": {
+      "es": "Tecnología RFID de ASIS IDTRAK aplicada al textil",
+      "en": "ASIS IDTRAK RFID technology applied to textiles"
+    },
+    "metrics": [
+      { "value": "+30", "label": { "es": "años en RFID textil", "en": "years in textile RFID" } },
+      { "value": { "es": "España", "en": "Spain" }, "label": { "es": "alianza tecnológica", "en": "technology partnership" } }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Conversemos", "en": "Let's talk" },
+    "lead": {
+      "es": "Evaluamos su operación y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your operation and design the ecosystem solution that fits it."
+    }
+  }
+}

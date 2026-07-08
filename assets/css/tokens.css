@@ -1,0 +1,62 @@
+/* ============================================================
+   GRUPO HIGIENISSA — Design Tokens
+   Fuente: Brand/Brand_Guidelines.md (Manual de Identidad oficial)
+   Uso en wireframes M2: paleta NEUTRA para los bloques estructurales;
+   los colores de MARCA se reservan para nav, acciones primarias y acentos.
+   En M3 (diseño visual) se aplican los colores de marca por completo.
+   ============================================================ */
+
+@font-face {
+  font-family: "Serotiva";
+  src: url("../fonts/Serotiva-Regular.otf") format("opentype"),
+       url("../fonts/Serotiva-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* --- Colores de marca (oficiales) --- */
+  --azul:      #1C2A87;  /* Azul Higienissa — institucional principal */
+  --celeste:   #4EA7E1;  /* Celeste Higienissa — acento secundario */
+  --gris-marca:#A5A283;  /* Gris Higienissa — neutro cálido */
+  --electrico: #3A78FF;  /* Eléctrico Higienissa — acento/acción */
+  --negro:     #000000;  /* Negro Higienissa */
+
+  /* --- Neutros para wireframe (estructura mid-fi) --- */
+  --ink:    #15203B;   /* texto principal */
+  --text:   #3A3F4A;   /* texto cuerpo */
+  --muted:  #7A8190;   /* texto secundario */
+  --line:   #D7DEE8;   /* bordes / divisores */
+  --bg:     #FFFFFF;   /* fondo */
+  --bg-alt: #F4F7FA;   /* fondo de sección / placeholders claros */
+  --block:  #C9D3E8;   /* relleno de bloques placeholder (imágenes, media) */
+
+  /* --- Tipografía --- */
+  --font-display: "Serotiva", "Poppins", system-ui, sans-serif; /* titulares */
+  --font-body: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; /* cuerpo */
+
+  /* --- Escala tipográfica --- */
+  --fs-display: clamp(2rem, 4vw, 3.25rem);
+  --fs-h1: clamp(1.6rem, 3vw, 2.25rem);
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: 0.85rem;
+  --fs-kicker: 0.72rem; /* uppercase tracked */
+
+  /* --- Espaciado / layout --- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --maxw: 1200px;       /* ancho de contenido */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --header-h: 64px;
+}
+
+/* Helpers sugeridos (Claude Code puede ampliar en wireframe.css) */
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-5); }
+.kicker { font: 700 var(--fs-kicker)/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
+.placeholder-img { background: var(--block); border-radius: var(--radius-sm); }
+.section-alt { background: var(--bg-alt); }
+.btn-primary { background: var(--electrico); color: #fff; border: 0; border-radius: var(--radius-sm); padding: 12px 20px; font: 600 var(--fs-body) var(--font-body); }
+.btn-ghost { background: transparent; color: var(--azul); border: 1px solid var(--azul); border-radius: var(--radius-sm); padding: 11px 19px; }

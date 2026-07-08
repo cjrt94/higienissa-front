@@ -1,0 +1,20 @@
+{
+  "id": "contacto",
+  "template": "contacto",
+  "status": "published",
+  "seo": {
+    "title": { "es": "Contacto — Grupo Higienissa", "en": "Contact — Grupo Higienissa" },
+    "description": {
+      "es": "Solicite una evaluación o diagnóstico. Evaluamos su operación y diseñamos la solución del ecosistema Higienissa que le corresponde.",
+      "en": "Request an assessment or diagnosis. We evaluate your operation and design the Higienissa ecosystem solution that fits it."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Contacto", "en": "Contact" },
+    "title": { "es": "Conversemos", "en": "Let's talk" },
+    "lead": {
+      "es": "Solicite un diagnóstico estratégico. Evaluamos su operación y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "Request a strategic diagnosis. We assess your operation and design the ecosystem solution that fits it."
+    }
+  }
+}

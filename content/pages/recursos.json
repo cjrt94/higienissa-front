@@ -1,0 +1,167 @@
+{
+  "id": "recursos",
+  "template": "resources",
+  "status": "published",
+  "seo": {
+    "title": {
+      "es": "Recursos — Conocimiento aplicado a la gestión textil | Grupo Higienissa",
+      "en": "Resources — Knowledge applied to textile management | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Conocimiento aplicado a la gestión textil: artículos sobre trazabilidad RFID, activos textiles y operación de lavandería del ecosistema Grupo Higienissa.",
+      "en": "Knowledge applied to textile management: articles on RFID traceability, textile assets and laundry operations from the Grupo Higienissa ecosystem."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Recursos", "en": "Resources" },
+    "title": {
+      "es": "Conocimiento aplicado a la gestión textil",
+      "en": "Knowledge applied to textile management"
+    },
+    "lead": {
+      "es": "Artículos, criterios y aprendizajes del ecosistema sobre trazabilidad, control de activos textiles y operación de lavandería.",
+      "en": "Articles, criteria and learnings from the ecosystem on traceability, textile asset control and laundry operations."
+    }
+  },
+  "filters": {
+    "label": { "es": "Filtrar por categoría", "en": "Filter by category" },
+    "items": [
+      { "label": { "es": "Todos", "en": "All" }, "active": true },
+      { "label": { "es": "Trazabilidad", "en": "Traceability" }, "active": false },
+      { "label": { "es": "RFID", "en": "RFID" }, "active": false },
+      { "label": { "es": "Operación", "en": "Operations" }, "active": false },
+      { "label": { "es": "Activos textiles", "en": "Textile assets" }, "active": false },
+      { "label": { "es": "Indicadores", "en": "Indicators" }, "active": false }
+    ]
+  },
+  "posts": {
+    "readLabel": { "es": "Leer", "en": "Read" },
+    "items": [
+      {
+        "category": { "es": "Activos textiles", "en": "Textile assets" },
+        "title": {
+          "es": "Por qué los textiles dejaron de ser un insumo",
+          "en": "Why textiles stopped being a consumable"
+        },
+        "excerpt": {
+          "es": "Cómo el control individual transforma el textil en un activo gestionable, con vida útil y costo medibles.",
+          "en": "How individual control turns textiles into manageable assets, with measurable service life and cost."
+        },
+        "date": { "es": "12 mayo 2026", "en": "12 May 2026" },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Activos textiles identificados individualmente para su gestión",
+          "en": "Individually identified textile assets for management"
+        },
+        "to": "/articulo"
+      },
+      {
+        "category": { "es": "RFID", "en": "RFID" },
+        "title": {
+          "es": "Identificación individual por RFID: qué se gana",
+          "en": "Individual RFID identification: what you gain"
+        },
+        "excerpt": {
+          "es": "Del conteo manual a la lectura automática: precisión de inventario y reducción de pérdidas en cada ciclo.",
+          "en": "From manual counting to automatic reading: inventory accuracy and loss reduction in every cycle."
+        },
+        "date": { "es": "5 mayo 2026", "en": "5 May 2026" },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Lectura RFID de prendas para inventario automático",
+          "en": "RFID reading of garments for automatic inventory"
+        },
+        "to": "/articulo"
+      },
+      {
+        "category": { "es": "Indicadores", "en": "Indicators" },
+        "title": {
+          "es": "Seis indicadores que toda operación textil debería medir",
+          "en": "Six indicators every textile operation should measure"
+        },
+        "excerpt": {
+          "es": "Merma, rotación por área, ciclos de lavado, vida útil, cumplimiento e inventario real como base de decisión.",
+          "en": "Shrinkage, turnover by area, wash cycles, service life, compliance and real inventory as a basis for decisions."
+        },
+        "date": { "es": "28 abril 2026", "en": "28 April 2026" },
+        "image": "/img/ecosistema.jpg",
+        "imageAlt": {
+          "es": "Indicadores y datos de la operación textil en un tablero",
+          "en": "Textile operation indicators and data on a dashboard"
+        },
+        "to": "/articulo"
+      },
+      {
+        "category": { "es": "Trazabilidad", "en": "Traceability" },
+        "title": {
+          "es": "Trazabilidad de extremo a extremo en la lavandería",
+          "en": "End-to-end traceability in the laundry"
+        },
+        "excerpt": {
+          "es": "Cómo seguir cada prenda desde la entrega hasta el retorno y por qué importa para la auditoría.",
+          "en": "How to follow each garment from delivery to return and why it matters for auditing."
+        },
+        "date": { "es": "21 abril 2026", "en": "21 April 2026" },
+        "image": "/img/asis-idtrak.jpg",
+        "imageAlt": {
+          "es": "Trazabilidad del textil desde la entrega hasta el retorno",
+          "en": "Textile traceability from delivery to return"
+        },
+        "to": "/articulo"
+      },
+      {
+        "category": { "es": "Operación", "en": "Operations" },
+        "title": {
+          "es": "Disponibilidad textil: el costo de quedarse sin stock",
+          "en": "Textile availability: the cost of running out of stock"
+        },
+        "excerpt": {
+          "es": "Planificar la rotación para que la operación no se detenga, sin sobredimensionar el inventario.",
+          "en": "Planning turnover so the operation never stops, without oversizing inventory."
+        },
+        "date": { "es": "14 abril 2026", "en": "14 April 2026" },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": {
+          "es": "Operación textil planificada para asegurar disponibilidad",
+          "en": "Textile operation planned to ensure availability"
+        },
+        "to": "/articulo"
+      },
+      {
+        "category": { "es": "Operación", "en": "Operations" },
+        "title": {
+          "es": "Auditoría operacional: convertir datos en decisiones",
+          "en": "Operational auditing: turning data into decisions"
+        },
+        "excerpt": {
+          "es": "Dashboards y KPIs que conectan la planta con la dirección y el área de cumplimiento.",
+          "en": "Dashboards and KPIs that connect the plant with management and the compliance area."
+        },
+        "date": { "es": "7 abril 2026", "en": "7 April 2026" },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": {
+          "es": "Auditoría operacional del textil con dashboards y KPIs",
+          "en": "Operational textile auditing with dashboards and KPIs"
+        },
+        "to": "/articulo"
+      }
+    ]
+  },
+  "pagination": {
+    "label": { "es": "Paginación", "en": "Pagination" },
+    "prevLabel": { "es": "← Anterior", "en": "← Previous" },
+    "nextLabel": { "es": "Siguiente →", "en": "Next →" },
+    "current": 1,
+    "pages": [1, 2, 3]
+  },
+  "finalCta": {
+    "title": {
+      "es": "¿Quiere aplicar esto a su operación?",
+      "en": "Want to apply this to your operation?"
+    },
+    "lead": {
+      "es": "Evaluamos su operación textil y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your textile operation and design the ecosystem solution that fits you."
+    }
+  }
+}

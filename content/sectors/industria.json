@@ -1,0 +1,195 @@
+{
+  "slug": "industria",
+  "order": 3,
+  "icon": "cog",
+  "published": true,
+  "ctaConvention": "evaluacion",
+  "name": { "es": "Industria", "en": "Industry" },
+  "summary": {
+    "es": "Cumplimiento, uniformes y EPP textiles gestionados por trabajador en manufactura, agroindustria, logística y laboratorios.",
+    "en": "Compliance, uniforms and textile PPE managed per worker in manufacturing, agribusiness, logistics and laboratories."
+  },
+  "seo": {
+    "title": {
+      "es": "Sector Industria — Soluciones del ecosistema | Grupo Higienissa",
+      "en": "Industry Sector — Ecosystem solutions | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Soluciones del ecosistema Higienissa para el sector industria: cumplimiento, uniformes y EPP textiles por trabajador en manufactura, agroindustria, logística y laboratorios.",
+      "en": "Higienissa ecosystem solutions for the industry sector: compliance, uniforms and textile PPE managed per worker in manufacturing, agribusiness, logistics and laboratories."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Sectores · Industria", "en": "Sectors · Industry" },
+    "title": {
+      "es": "Cumplimiento, uniformes y EPP textiles gestionados por trabajador.",
+      "en": "Compliance, uniforms and textile PPE managed per worker."
+    },
+    "lead": {
+      "es": "Soluciones del ecosistema Higienissa para manufactura, agroindustria, logística y laboratorios, donde el textil técnico y el EPP son parte del cumplimiento operativo y de la seguridad de cada trabajador.",
+      "en": "Higienissa ecosystem solutions for manufacturing, agribusiness, logistics and laboratories, where technical textiles and PPE are part of operational compliance and the safety of every worker."
+    },
+    "image": "/img/sector-industria.jpg",
+    "imageAlt": {
+      "es": "Operación industrial con uniformes y EPP textiles gestionados por trabajador",
+      "en": "Industrial operation with uniforms and textile PPE managed per worker"
+    }
+  },
+  "context": {
+    "eyebrow": { "es": "El contexto", "en": "The context" },
+    "title": {
+      "es": "El desafío real del sector industria",
+      "en": "The real challenge of the industry sector"
+    },
+    "lead": {
+      "es": "Los textiles son parte del cumplimiento normativo y la seguridad laboral; sin trazabilidad no se controla la asignación, la frecuencia de lavado, el desgaste ni el cumplimiento.",
+      "en": "Textiles are part of regulatory compliance and workplace safety; without traceability there is no control over assignment, wash frequency, wear or compliance."
+    },
+    "pillars": [
+      {
+        "icon": "check",
+        "title": { "es": "Cumplimiento normativo", "en": "Regulatory compliance" },
+        "text": {
+          "es": "Los textiles son parte del cumplimiento normativo y la seguridad laboral de la operación.",
+          "en": "Textiles are part of the operation's regulatory compliance and workplace safety."
+        }
+      },
+      {
+        "icon": "shield",
+        "title": { "es": "Seguridad laboral", "en": "Workplace safety" },
+        "text": {
+          "es": "Uniformes y EPP textiles asignados por trabajador deben mantenerse disponibles y en condiciones de uso.",
+          "en": "Uniforms and textile PPE assigned per worker must stay available and in usable condition."
+        }
+      },
+      {
+        "icon": "scan",
+        "title": { "es": "Trazabilidad", "en": "Traceability" },
+        "text": {
+          "es": "Sin trazabilidad no se controla la asignación, la frecuencia de lavado, el desgaste ni el cumplimiento.",
+          "en": "Without traceability there is no control over assignment, wash frequency, wear or compliance."
+        }
+      }
+    ]
+  },
+  "risks": {
+    "eyebrow": { "es": "Riesgos operativos", "en": "Operational risks" },
+    "title": { "es": "Lo que está en juego sin control", "en": "What is at stake without control" },
+    "items": [
+      { "es": "Uso indebido de uniformes y EPP textiles.", "en": "Improper use of uniforms and textile PPE." },
+      { "es": "Pérdida de uniformes.", "en": "Loss of uniforms." },
+      { "es": "Incumplimiento interno.", "en": "Internal non-compliance." },
+      { "es": "Falta de trazabilidad por trabajador.", "en": "Lack of traceability per worker." }
+    ]
+  },
+  "whatChanges": {
+    "eyebrow": { "es": "Qué cambia", "en": "What changes" },
+    "title": {
+      "es": "Qué cambia con la solución del grupo",
+      "en": "What changes with the group's solution"
+    },
+    "lead": {
+      "es": "El ecosistema articula operación y trazabilidad para convertir uniformes y EPP textiles en activos gestionados por trabajador, auditables y siempre disponibles.",
+      "en": "The ecosystem connects operation and traceability to turn uniforms and textile PPE into worker-managed assets that are auditable and always available."
+    },
+    "items": [
+      { "es": "Asignación digital por colaborador.", "en": "Digital assignment per employee." },
+      { "es": "Registro por turno.", "en": "Per-shift logging." },
+      { "es": "Control de lavado y reposición.", "en": "Wash / replacement control." },
+      { "es": "Reportes auditables para cumplimiento.", "en": "Auditable reports for compliance." },
+      { "es": "Optimización logística.", "en": "Logistics optimization." }
+    ]
+  },
+  "indicators": {
+    "eyebrow": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
+    "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "items": [
+      { "es": "Uniformes activos por trabajador", "en": "Active uniforms per worker" },
+      { "es": "Rotación por turno", "en": "Rotation per shift" },
+      { "es": "Vida útil promedio", "en": "Average service life" },
+      { "es": "Cumplimiento interno", "en": "Internal compliance" },
+      { "es": "Costos de reposición", "en": "Replacement costs" }
+    ]
+  },
+  "impactByRole": {
+    "eyebrow": { "es": "Impacto por rol", "en": "Impact by role" },
+    "title": { "es": "Qué resuelve en cada nivel", "en": "What it solves at each level" },
+    "items": [
+      {
+        "title": { "es": "Gerencia de operaciones", "en": "Operations management" },
+        "text": {
+          "es": "Optimización logística y control de costos de reposición con datos por turno.",
+          "en": "Logistics optimization and replacement cost control with per-shift data."
+        }
+      },
+      {
+        "title": { "es": "Seguridad / Cumplimiento", "en": "Safety / Compliance" },
+        "text": {
+          "es": "Reportes auditables y trazabilidad por trabajador para demostrar el cumplimiento interno.",
+          "en": "Auditable reports and per-worker traceability to demonstrate internal compliance."
+        }
+      },
+      {
+        "title": { "es": "RR.HH.", "en": "HR" },
+        "text": {
+          "es": "Asignación digital por colaborador y control de lavado y reposición de cada uniforme.",
+          "en": "Digital assignment per employee and wash and replacement control for each uniform."
+        }
+      }
+    ]
+  },
+  "brands": {
+    "eyebrow": { "es": "Marcas relevantes", "en": "Relevant brands" },
+    "title": { "es": "Marcas del ecosistema para Industria", "en": "Ecosystem brands for Industry" },
+    "lead": {
+      "es": "Para el sector industria, las tres marcas del ecosistema articulan operación de uniformes y EPP textiles, trazabilidad por trabajador y, según el caso, procesamiento en planta.",
+      "en": "For the industry sector, all three ecosystem brands connect the operation of uniforms and textile PPE, traceability per worker and, where applicable, in-plant processing."
+    },
+    "items": [
+      {
+        "name": { "es": "Operissa", "en": "Operissa" },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": { "es": "Operissa — operación y logística textil en planta", "en": "Operissa — textile operation and logistics on site" },
+        "desc": {
+          "es": "Operación y gestión especializada de uniformes, ropería y logística textil en planta.",
+          "en": "Specialized operation and management of uniforms, textile services and textile logistics on site."
+        },
+        "to": "/marca-operissa",
+        "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+      },
+      {
+        "name": { "es": "Trazatex", "en": "Trazatex" },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": { "es": "Trazatex — RFID, software y data para trazabilidad textil", "en": "Trazatex — RFID, software and data for textile traceability" },
+        "desc": {
+          "es": "RFID, software, auditoría y data para la trazabilidad individual de cada uniforme y EPP textil.",
+          "en": "RFID, software, auditing and data for individual traceability of each uniform and textile PPE."
+        },
+        "to": "/marca-trazatex",
+        "linkLabel": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+      },
+      {
+        "name": { "es": "Pacífica", "en": "Pacífica" },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
+        "desc": {
+          "es": "Lavandería industrial inteligente para el procesamiento de uniformes y ropa de trabajo cuando la operación lo requiere.",
+          "en": "Smart industrial laundry for processing uniforms and workwear when the operation requires it."
+        },
+        "to": "/marca-pacifica",
+        "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+      }
+    ],
+    "note": {
+      "es": "Nota: en industria suele predominar el modelo tercerizado (Operissa + Trazatex); Pacífica procesa en planta según el caso.",
+      "en": "Note: industry tends to favor the outsourced model (Operissa + Trazatex); Pacífica processes in-plant on a case-by-case basis."
+    }
+  },
+  "finalCta": {
+    "title": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+    "lead": {
+      "es": "Evaluamos su operación industrial y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your industrial operation and design the ecosystem solution that fits it."
+    }
+  }
+}

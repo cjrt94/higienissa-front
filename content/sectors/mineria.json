@@ -1,0 +1,234 @@
+{
+  "slug": "mineria",
+  "order": 4,
+  "icon": "mountain",
+  "status": "published",
+  "published": true,
+  "name": { "es": "Minería", "en": "Mining" },
+  "summary": {
+    "es": "Entornos exigentes y operaciones remotas.",
+    "en": "Demanding environments and remote operations."
+  },
+  "ctaConvention": "evaluacion",
+  "seo": {
+    "title": {
+      "es": "Sector Minería — Soluciones del ecosistema | Grupo Higienissa",
+      "en": "Mining Sector — Ecosystem solutions | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Soluciones del ecosistema Higienissa para el sector minería: operación textil en campamentos, operaciones remotas y proyectos temporales, en entornos exigentes y alejados.",
+      "en": "Higienissa ecosystem solutions for the mining sector: textile operations at camps, remote operations and temporary projects, in demanding and remote environments."
+    }
+  },
+  "hero": {
+    "eyebrow": { "es": "Sectores · Minería", "en": "Sectors · Mining" },
+    "title": {
+      "es": "Operación textil confiable para entornos exigentes y alejados.",
+      "en": "Reliable textile operations for demanding and remote environments."
+    },
+    "lead": {
+      "es": "Soluciones del ecosistema Higienissa para campamentos, operaciones remotas y proyectos temporales, donde la distancia y las condiciones extremas exigen una operación textil que aguanta a distancia, sin depender de infraestructura cercana.",
+      "en": "Higienissa ecosystem solutions for camps, remote operations and temporary projects, where distance and extreme conditions demand a textile operation that holds up at a distance, without relying on nearby infrastructure."
+    },
+    "image": "/img/sector-mineria.jpg",
+    "imageAlt": {
+      "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas",
+      "en": "Mining sector: textiles and PPE for demanding environments and remote operations"
+    }
+  },
+  "context": {
+    "kicker": { "es": "El contexto", "en": "The context" },
+    "title": {
+      "es": "El desafío real del sector minería",
+      "en": "The real challenge of the mining sector"
+    },
+    "lead": {
+      "es": "Campamentos, operaciones remotas y proyectos temporales funcionan en ubicaciones alejadas y bajo condiciones exigentes. La operación textil debe sostenerse a distancia, sin depender de infraestructura cercana ni interrumpir la actividad.",
+      "en": "Camps, remote operations and temporary projects run in remote locations and under demanding conditions. The textile operation must hold up at a distance, without depending on nearby infrastructure or interrupting activity."
+    },
+    "pillars": [
+      {
+        "title": { "es": "Campamentos", "en": "Camps" },
+        "text": {
+          "es": "Ropa de cama y faena disponible para personal en faena, con recambio sostenido en el tiempo.",
+          "en": "Bedding and workwear available for on-site personnel, with sustained replacement over time."
+        }
+      },
+      {
+        "title": { "es": "Operaciones remotas", "en": "Remote operations" },
+        "text": {
+          "es": "Operación textil confiable en ubicaciones alejadas, sin depender de infraestructura local.",
+          "en": "Reliable textile operations in remote locations, without depending on local infrastructure."
+        }
+      },
+      {
+        "title": { "es": "Proyectos temporales", "en": "Temporary projects" },
+        "text": {
+          "es": "Montaje y desmontaje de la operación textil según la duración y escala de cada proyecto.",
+          "en": "Setup and teardown of the textile operation according to the duration and scale of each project."
+        }
+      }
+    ]
+  },
+  "risks": {
+    "kicker": { "es": "Riesgos operativos", "en": "Operational risks" },
+    "title": {
+      "es": "Lo que está en juego sin control",
+      "en": "What is at stake without control"
+    },
+    "items": [
+      {
+        "es": "Quiebres de disponibilidad textil en faenas alejadas, sin reposición cercana.",
+        "en": "Textile availability breakdowns at remote sites, with no nearby resupply."
+      },
+      {
+        "es": "Logística compleja y costosa para entornos remotos y de difícil acceso.",
+        "en": "Complex and costly logistics for remote and hard-to-reach environments."
+      },
+      {
+        "es": "Operación textil que no resiste las condiciones exigentes del entorno.",
+        "en": "Textile operations that do not withstand the demanding conditions of the environment."
+      },
+      {
+        "es": "Dificultad para montar y desmontar la operación en proyectos temporales.",
+        "en": "Difficulty setting up and tearing down the operation in temporary projects."
+      },
+      {
+        "es": "Mermas y reposiciones no controladas que elevan el costo operativo.",
+        "en": "Uncontrolled losses and replacements that raise operating costs."
+      }
+    ]
+  },
+  "whatChanges": {
+    "kicker": { "es": "Qué cambia", "en": "What changes" },
+    "title": {
+      "es": "Qué cambia con la solución del grupo",
+      "en": "What changes with the group's solution"
+    },
+    "lead": {
+      "es": "El ecosistema articula procesamiento y operación especializada para sostener el textil de faena en entornos exigentes y alejados, con una operación que se adapta a cada proyecto.",
+      "en": "The ecosystem coordinates specialized processing and operation to sustain on-site textiles in demanding and remote environments, with an operation that adapts to each project."
+    },
+    "cards": [
+      {
+        "title": { "es": "Procesamiento con estándar", "en": "Standardized processing" },
+        "desc": {
+          "es": "Pacífica procesa el textil de faena bajo un estándar controlado, pensado para operaciones que no pueden detenerse.",
+          "en": "Pacífica processes on-site textiles under a controlled standard, designed for operations that cannot stop."
+        }
+      },
+      {
+        "title": { "es": "Operación especializada", "en": "Specialized operation" },
+        "desc": {
+          "es": "Operissa gestiona la operación textil en terreno, con personas y procesos adaptados al entorno remoto.",
+          "en": "Operissa manages the textile operation on the ground, with people and processes adapted to the remote environment."
+        }
+      },
+      {
+        "title": { "es": "Disponibilidad sostenida", "en": "Sustained availability" },
+        "desc": {
+          "es": "El ecosistema asegura que la ropa de faena esté disponible en ubicaciones alejadas, sin quiebres.",
+          "en": "The ecosystem ensures that workwear is available in remote locations, without breakdowns."
+        }
+      }
+    ]
+  },
+  "indicators": {
+    "kicker": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
+    "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "items": [
+      { "es": "Nivel de merma textil", "en": "Textile loss rate" },
+      { "es": "Rotación por campamento o faena", "en": "Turnover per camp or site" },
+      { "es": "Ciclos de lavado por activo", "en": "Wash cycles per asset" },
+      { "es": "Vida útil del textil", "en": "Textile service life" },
+      { "es": "Continuidad de la operación en terreno", "en": "Continuity of the on-site operation" },
+      { "es": "Inventario real disponible", "en": "Actual available inventory" }
+    ]
+  },
+  "impactByRole": {
+    "kicker": { "es": "Impacto por rol", "en": "Impact by role" },
+    "title": { "es": "Qué resuelve en cada nivel", "en": "What it solves at each level" },
+    "cards": [
+      {
+        "title": { "es": "Dirección", "en": "Management" },
+        "desc": {
+          "es": "Control de costos textiles y previsibilidad de la operación en faenas alejadas.",
+          "en": "Control of textile costs and predictability of the operation at remote sites."
+        }
+      },
+      {
+        "title": { "es": "Operación en terreno", "en": "Field operations" },
+        "desc": {
+          "es": "Disponibilidad textil sin quiebres y procesos que resisten el entorno exigente.",
+          "en": "Textile availability without breakdowns and processes that withstand the demanding environment."
+        }
+      },
+      {
+        "title": { "es": "Logística", "en": "Logistics" },
+        "desc": {
+          "es": "Operación textil que se monta y sostiene en ubicaciones remotas y proyectos temporales.",
+          "en": "A textile operation that is set up and sustained in remote locations and temporary projects."
+        }
+      }
+    ]
+  },
+  "brands": {
+    "kicker": { "es": "Marcas relevantes", "en": "Relevant brands" },
+    "title": { "es": "Marcas del ecosistema para Minería", "en": "Ecosystem brands for Mining" },
+    "lead": {
+      "es": "Para el sector minería, las tres marcas del ecosistema articulan procesamiento, trazabilidad y operación textil en entornos exigentes y alejados.",
+      "en": "For the mining sector, all three ecosystem brands coordinate processing, traceability and textile operation in demanding and remote environments."
+    },
+    "items": [
+      {
+        "name": "Pacífica",
+        "desc": {
+          "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse, también en faena.",
+          "en": "Smart industrial laundry for operations that cannot stop, including on site."
+        },
+        "image": "/img/marca-pacifica.jpg",
+        "imageAlt": {
+          "es": "Lavandería industrial Pacífica para operaciones en faena",
+          "en": "Pacífica industrial laundry for on-site operations"
+        },
+        "to": "/marca-pacifica",
+        "cta": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+      },
+      {
+        "name": "Operissa",
+        "desc": {
+          "es": "Operación y gestión especializada en terreno, con personas y procesos para entornos remotos.",
+          "en": "Specialized on-the-ground operation and management, with people and processes for remote environments."
+        },
+        "image": "/img/marca-operissa.jpg",
+        "imageAlt": {
+          "es": "Operissa: operación textil especializada en terreno para entornos remotos",
+          "en": "Operissa: specialized on-site textile operation for remote environments"
+        },
+        "to": "/marca-operissa",
+        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+      },
+      {
+        "name": "Trazatex",
+        "desc": {
+          "es": "RFID, software, auditoría y data para la trazabilidad individual del textil de faena, incluso en operaciones remotas.",
+          "en": "RFID, software, auditing and data for individual traceability of on-site textiles, even in remote operations."
+        },
+        "image": "/img/marca-trazatex.jpg",
+        "imageAlt": {
+          "es": "Trazatex: RFID y data para la trazabilidad del textil de faena",
+          "en": "Trazatex: RFID and data for on-site textile traceability"
+        },
+        "to": "/marca-trazatex",
+        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+      }
+    ]
+  },
+  "finalCta": {
+    "title": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+    "lead": {
+      "es": "Evaluamos su operación en faena y diseñamos la solución del ecosistema que le corresponde.",
+      "en": "We assess your on-site operation and design the ecosystem solution that fits you."
+    }
+  }
+}

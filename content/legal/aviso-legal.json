@@ -1,0 +1,44 @@
+{
+  "slug": "aviso-legal",
+  "template": "legal",
+  "status": "draft",
+  "title": {
+    "es": "Aviso legal",
+    "en": "Legal notice"
+  },
+  "hero": {
+    "eyebrow": {
+      "es": "Legal",
+      "en": "Legal"
+    },
+    "title": {
+      "es": "Aviso legal",
+      "en": "Legal notice"
+    },
+    "lead": {
+      "es": "Contenido en preparación. El texto legal definitivo —titularidad del sitio, condiciones de uso y limitación de responsabilidad— se publicará antes del lanzamiento.",
+      "en": "Content in preparation. The final legal text —site ownership, terms of use and limitation of liability— will be published before launch."
+    }
+  },
+  "disclaimer": {
+    "before": {
+      "es": "Borrador / pendiente de redacción legal. Para consultas, escriba a",
+      "en": "Draft / pending legal drafting. For inquiries, write to"
+    },
+    "email": "contacto@higienissa.com",
+    "after": {
+      "es": ".",
+      "en": "."
+    }
+  },
+  "seo": {
+    "title": {
+      "es": "Aviso legal | Grupo Higienissa",
+      "en": "Legal notice | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Aviso legal de Grupo Higienissa.",
+      "en": "Legal notice for Grupo Higienissa."
+    }
+  }
+}
