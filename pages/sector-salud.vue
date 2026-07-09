@@ -84,6 +84,7 @@ const roleItems = computed(() =>
             <h2>{{ t(page.risks.title) }}</h2>
             <p class="lead">{{ t(page.risks.lead) }}</p>
           </div>
+          <p class="problem-punch risk-punch">{{ t(page.risks.punch) }}</p>
         </div>
         <div class="risk-groups">
           <div v-for="(g, gi) in page.risks.groups" :key="gi" class="risk-group">
@@ -183,6 +184,9 @@ const roleItems = computed(() =>
 
 <style scoped>
 .context-unknowns-label { font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: var(--space-6) 0 var(--space-3); }
+
+/* Refuerzo al pie de la columna sticky de Riesgos: ancla la asimetría del split */
+.risk-punch { margin-top: var(--space-6); }
 
 /* Riesgos agrupados por dimensión (jerarquía) */
 .risk-groups { display: flex; flex-direction: column; gap: var(--space-6); }

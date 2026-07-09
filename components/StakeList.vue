@@ -34,7 +34,7 @@ const isRich = (it) => it && typeof it === 'object' && !('es' in it) && ('title'
 .stake-row { display: flex; gap: var(--space-4); align-items: flex-start; padding: var(--space-4) 0; border-top: 1px solid var(--line); }
 .stake-row:first-child { border-top: 0; }
 .stake-marker { flex: none; width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid currentColor; font: 700 15px/1 var(--font-body); margin-top: 2px; }
-.marker-risk .stake-marker { color: var(--gris-marca); }
+.marker-risk .stake-marker { color: var(--azul); }
 .marker-gain .stake-marker { color: var(--azul); }
 .marker-number .stake-marker { color: #fff; background: var(--azul); border-color: var(--azul); }
 .marker-icon .stake-marker { color: var(--azul); background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); border: 0; width: 46px; height: 46px; border-radius: 13px; }

@@ -14,7 +14,6 @@ const t = useT()
     <div class="ft-before">
       <span class="ft-tag">{{ t(from.label) }}</span>
       <p class="ft-statement">{{ t(from.statement) }}</p>
-      <div class="ft-strike" aria-hidden="true" />
     </div>
 
     <div class="ft-arrow" aria-hidden="true">
@@ -39,10 +38,9 @@ const t = useT()
 .fromto { display: grid; grid-template-columns: .95fr auto 1.5fr; align-items: center; gap: clamp(var(--space-4), 3vw, var(--space-7)); }
 
 /* ANTES — recesivo, oscuro, apagado */
-.ft-before { position: relative; background: var(--bg-deep); color: rgba(255,255,255,.62); border-radius: var(--radius); padding: var(--space-6); }
+.ft-before { display: flex; flex-direction: column; justify-content: center; background: var(--bg-deep); color: rgba(255,255,255,.72); border-radius: var(--radius); padding: clamp(var(--space-6), 3vw, var(--space-7)); min-height: 220px; }
 .ft-before .ft-tag { display: inline-block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: var(--space-3); }
 .ft-statement { margin: 0; font-size: 1.05rem; line-height: 1.55; }
-.ft-strike { position: absolute; left: var(--space-6); right: var(--space-6); top: 50%; height: 1px; background: repeating-linear-gradient(90deg, rgba(255,255,255,.25) 0 8px, transparent 8px 16px); opacity: .5; }
 
 /* Flecha de transición */
 .ft-arrow { color: var(--electrico); }

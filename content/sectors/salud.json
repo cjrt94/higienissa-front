@@ -68,6 +68,10 @@
       "es": "Sin trazabilidad por servicio, la operación textil suma riesgos clínicos, de cumplimiento y de costo.",
       "en": "Without traceability by service, textile operations accumulate clinical, compliance and cost risks."
     },
+    "punch": {
+      "es": "Tres dimensiones de riesgo — clínico, cumplimiento y costo — que hoy dependen de conteos manuales.",
+      "en": "Three dimensions of risk — clinical, compliance and cost — that today rely on manual counts."
+    },
     "groups": [
       {
         "label": { "es": "Clínico", "en": "Clinical" },

@@ -43,7 +43,7 @@
 .feature-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-3); }
 
 /* --- Split con encabezado sticky (ledger editorial: título izq fijo + filas der) --- */
-.split-sticky { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(var(--space-6), 5vw, var(--space-9)); align-items: start; }
+.split-sticky { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: start; }
 .split-sticky .sticky-head { position: sticky; top: calc(var(--header-h) + 28px); }
 .split-sticky .sticky-head .section-head { margin: 0; max-width: none; text-align: left; }
 @media (max-width: 900px) {
@@ -61,7 +61,7 @@
 .marker-list.cols-2 { grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); }
 .marker-list li { position: relative; padding-left: 34px; margin: 0; color: var(--text); }
 .marker-list li::before { position: absolute; left: 0; top: 1px; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid currentColor; border-radius: 50%; font: 700 13px/1 var(--font-body); }
-.marker-list.risk li::before { content: "!"; color: var(--gris-marca); }
+.marker-list.risk li::before { content: "!"; color: var(--azul); }
 .marker-list.gain li::before { content: "\2713"; color: var(--azul); }
 .marker-list.ask li::before { content: "?"; color: var(--celeste); }
 .marker-list.less li::before { content: "\2212"; color: var(--gris-marca); }
