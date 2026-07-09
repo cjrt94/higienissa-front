@@ -14,7 +14,7 @@ const t = useT()
 </script>
 
 <template>
-  <section class="image-band" :class="[`align-${align}`, { 'no-image': !image }]">
+  <section class="image-band" :class="[`align-${align}`, { 'no-image': !image, 'bg-motion': !image }]">
     <img v-if="image" :src="image" :alt="t(title) || ''" loading="lazy">
     <div class="ib-overlay" aria-hidden="true" />
     <div class="container ib-inner">

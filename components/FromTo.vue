@@ -35,19 +35,19 @@ const t = useT()
 </template>
 
 <style scoped>
-.fromto { display: grid; grid-template-columns: .95fr auto 1.5fr; align-items: center; gap: clamp(var(--space-4), 3vw, var(--space-7)); }
+.fromto { display: grid; grid-template-columns: .95fr auto 1.5fr; align-items: stretch; gap: clamp(var(--space-4), 3vw, var(--space-7)); }
 
-/* ANTES — recesivo, oscuro, apagado */
-.ft-before { display: flex; flex-direction: column; justify-content: center; background: var(--bg-deep); color: rgba(255,255,255,.72); border-radius: var(--radius); padding: clamp(var(--space-6), 3vw, var(--space-7)); min-height: 220px; }
-.ft-before .ft-tag { display: inline-block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: var(--space-3); }
+/* ANTES — recesivo, claro y apagado (mismo alto que "ahora", sin elevación) */
+.ft-before { display: flex; flex-direction: column; justify-content: center; background: var(--bg-alt); color: var(--muted); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(var(--space-6), 3vw, var(--space-7)); min-height: 220px; }
+.ft-before .ft-tag { display: inline-block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-3); }
 .ft-statement { margin: 0; font-size: 1.05rem; line-height: 1.55; }
 
 /* Flecha de transición */
-.ft-arrow { color: var(--electrico); }
+.ft-arrow { color: var(--electrico); align-self: center; }
 .ft-arrow svg { width: 40px; height: 40px; display: block; }
 
 /* AHORA — dominante, branded, elevado */
-.ft-after { position: relative; background: var(--bg); border: 1px solid var(--line); border-top: 4px solid var(--electrico); border-radius: var(--radius); padding: clamp(var(--space-6), 3vw, var(--space-7)); box-shadow: var(--shadow-lg); }
+.ft-after { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(var(--space-6), 3vw, var(--space-7)); box-shadow: var(--shadow-lg); }
 .ft-tag-strong { display: inline-block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--electrico); margin-bottom: var(--space-4); }
 .ft-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
 .ft-list li { display: flex; gap: var(--space-3); align-items: center; color: var(--ink); font: 600 1.1rem var(--font-body); }

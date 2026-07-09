@@ -262,9 +262,30 @@ li { margin-bottom: var(--space-2); }
 /* ============================================================
    CTA FINAL
    ============================================================ */
-.cta-band { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--azul) 0%, #253bb0 100%); color:#fff; text-align:center; }
-.cta-band::before { content:""; position:absolute; inset:0; background: radial-gradient(60% 120% at 50% -20%, rgba(78,167,225,.35), transparent 60%); }
-.cta-band .container { position: relative; }
+/* ===== Movimiento de fondo · utilidad para superficies NAVY =====
+   Uso: agregar la clase `bg-motion` a un contenedor con fondo navy (en el template).
+   Aporta una capa de glows que derivan suavemente (deriva/olas). El contenido (en flujo o
+   posicionado) queda por encima. Afinable por sección con custom props:
+     --motion-dur : velocidad (una pasada); --m1/--m2/--m3 : intensidad de cada glow. */
+.bg-motion { position: relative; overflow: hidden; isolation: isolate; }
+.bg-motion::before {
+  content:""; position:absolute; inset:-40%; z-index:-1; pointer-events:none; will-change: transform;
+  background:
+    radial-gradient(28% 36% at 26% 30%, rgba(78,167,225, var(--m1, .40)), transparent 60%),
+    radial-gradient(26% 34% at 72% 42%, rgba(58,120,255, var(--m2, .34)), transparent 62%),
+    radial-gradient(34% 44% at 54% 80%, rgba(37,59,176, var(--m3, .52)), transparent 66%);
+  animation: bg-drift var(--motion-dur, 18s) ease-in-out infinite alternate;
+}
+@keyframes bg-drift {
+  0%   { transform: translate3d(-6%, -4%, 0) scale(1.14); }
+  50%  { transform: translate3d(5%,   4%, 0) scale(1.2); }
+  100% { transform: translate3d(-2%,  7%, 0) scale(1.14); }
+}
+@media (prefers-reduced-motion: reduce) { .bg-motion::before { animation: none; } }
+
+/* Banner "Solicitar evaluación": base navy de marca (el movimiento lo da .bg-motion en el template) */
+.cta-band { background: linear-gradient(135deg, #0F1836 0%, #1C2A87 55%, #22347f 100%); color:#fff; text-align:center; }
+.cta-band .container { position: relative; z-index: 1; }
 .cta-band h2 { color:#fff; }
 .cta-band .lead { color: rgba(255,255,255,.88); margin: 0 auto var(--space-6); }
 .cta-actions { display:flex; gap: var(--space-3); justify-content:center; flex-wrap: wrap; }

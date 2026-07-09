@@ -20,7 +20,6 @@ useSeoMeta({
     <DivisionsGrid :data="page.divisions" />
     <PillarsGrid :data="page.pillars" />
     <SectorsGrid :data="page.sectorsBlock" />
-    <AsisStrip :data="page.asis" />
     <FinalCta :data="page.finalCta" />
   </div>
 </template>

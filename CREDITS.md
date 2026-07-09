@@ -5,9 +5,9 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | Archivo | Fuente | Autor | Licencia | Atribución requerida |
 |---------|--------|-------|----------|----------------------|
 | `hero-lavanderia.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=190690373) | Laundrykhalas | CC BY 4.0 | **Sí** |
-| `marca-pacifica.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=189600855) | PattayaPatrol | CC BY-SA 4.0 | **Sí + share-alike** |
-| `marca-trazatex.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=48297280) | Polarbear24 | CC BY-SA 4.0 | **Sí + share-alike** |
-| `marca-operissa.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Industrial_laundry_linen_press,_exit.jpg) | Samuli Lintula (Turun Tekstiilihuolto Oy) | CC BY 3.0 | **Sí** |
+| `marca-pacifica.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=20646089) | Thatsme2 | CC BY-SA 3.0 | **Sí + share-alike** |
+| `marca-trazatex.jpg` | [Pexels](https://www.pexels.com/photo/4483942/) | Tiger Lily | Pexels License | No (opcional) |
+| `marca-operissa.jpg` | [Pexels](https://www.pexels.com/photo/8774570/) | Tima Miroshnichenko | Pexels License | No (opcional) |
 | `sector-salud.jpg` | [Pexels](https://www.pexels.com/photo/two-white-towels-1304110/) | Rodolpho Zanardo | Pexels License | No (opcional) |
 | `sector-hoteleria.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg) | Tony Webster | CC BY 2.0 | **Sí** |
 | `sector-industria.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg) | Shixart1985 | CC BY 2.0 | **Sí** |
@@ -18,9 +18,9 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 ## Líneas de atribución listas para pegar
 
 - "Industrial flatwork ironer for hotel linens" by Laundrykhalas — CC BY 4.0, via Wikimedia Commons.
-- Photo by PattayaPatrol — CC BY-SA 4.0, via Wikimedia Commons.
-- "RFID tag textile front-through-back" by Polarbear24 — CC BY-SA 4.0.
-- Photo by Samuli Lintula (Turun Tekstiilihuolto Oy) — CC BY 3.0, via Wikimedia Commons.
+- Photo by Thatsme2 — CC BY-SA 3.0, via Wikimedia Commons.
+- Photo by Tiger Lily on Pexels.
+- Photo by Tima Miroshnichenko on Pexels.
 - Photo by Rodolpho Zanardo on Pexels.
 - "Hotel Room Bed" by Tony Webster — CC BY 2.0, via Wikimedia Commons.
 - Photo by Shixart1985 — CC BY 2.0, via Wikimedia Commons.

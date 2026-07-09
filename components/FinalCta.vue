@@ -4,7 +4,7 @@ const t = useT()
 </script>
 
 <template>
-  <section class="section cta-band">
+  <section class="section cta-band bg-motion">
     <div class="container">
       <h2>{{ t(data.title) }}</h2>
       <p class="lead">{{ t(data.lead) }}</p>
