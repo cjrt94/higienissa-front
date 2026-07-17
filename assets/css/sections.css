@@ -42,6 +42,24 @@
 .feature ul { margin: var(--space-1) 0 0; padding-left: var(--space-5); font-size: .95rem; color: var(--text); }
 .feature-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-3); }
 
+/* --- Value columns: valores/pilares como columnas editoriales con regla superior (NO cards).
+   Reemplaza los grids de `.pillar`/`.feature` repetidos. Usado en Home, Institucional, marcas. --- */
+.value-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(var(--space-6), 4vw, var(--space-8)); }
+.value-cols.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.value-col { padding-top: var(--space-5); border-top: 2px solid var(--ink); }
+.value-col .v-icon { display: inline-flex; width: 46px; height: 46px; align-items: center; justify-content: center; border-radius: 13px; background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-4); }
+.value-col h3 { font-size: clamp(1.25rem, 1.8vw, 1.5rem); margin-bottom: var(--space-3); }
+.value-col p { margin: 0; color: var(--text); }
+@media (max-width: 1000px) { .value-cols.cols-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 760px) { .value-cols { grid-template-columns: 1fr; gap: var(--space-6); } }
+
+/* --- Def-cols: lista de definición densa a 2 columnas (reemplaza grids de cards de "capacidades") --- */
+.def-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5) clamp(var(--space-7), 6vw, var(--space-9)); margin: 0; }
+.def-item { border-top: 1px solid var(--line); padding-top: var(--space-4); }
+.def-item dt { font: 600 1.05rem var(--font-body); color: var(--ink); margin-bottom: 6px; }
+.def-item dd { margin: 0; color: var(--text); font-size: .95rem; line-height: 1.55; }
+@media (max-width: 760px) { .def-cols { grid-template-columns: 1fr; gap: var(--space-4); } }
+
 /* --- Split con encabezado sticky (ledger editorial: título izq fijo + filas der) --- */
 .split-sticky { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: start; }
 .split-sticky .sticky-head { position: sticky; top: calc(var(--header-h) + 28px); }

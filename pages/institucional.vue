@@ -14,7 +14,6 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'cog']
 const diffIcons = ['users', 'shield', 'activity', 'scan']
 </script>
 
@@ -114,13 +113,12 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
           <h2>{{ t(page.capabilities.title) }}</h2>
           <p class="lead mx-auto">{{ t(page.capabilities.lead) }}</p>
         </div>
-        <div class="feature-grid cols-3 reveal">
-          <div v-for="(cap, i) in page.capabilities.items" :key="i" class="feature">
-            <span class="feature-icon"><BaseIcon :name="capIcons[i] || 'check'" /></span>
-            <h3><span v-for="(ln, j) in splitTwo(cap.title)" :key="j">{{ ln }}</span></h3>
-            <p>{{ t(cap.desc) }}</p>
+        <dl class="def-cols reveal">
+          <div v-for="(cap, i) in page.capabilities.items" :key="i" class="def-item">
+            <dt>{{ t(cap.title) }}</dt>
+            <dd>{{ t(cap.desc) }}</dd>
           </div>
-        </div>
+        </dl>
       </div>
     </section>
 
@@ -149,12 +147,12 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
           <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
           <h2>{{ t(page.differentiators.title) }}</h2>
         </div>
-        <div class="pillars cols-4 reveal">
-          <div v-for="(d, i) in page.differentiators.items" :key="i" class="pillar">
-            <span class="pillar-icon"><BaseIcon :name="diffIcons[i] || 'check'" /></span>
-            <h3><span v-for="(ln, j) in splitTwo(d.title)" :key="j">{{ ln }}</span></h3>
+        <div class="value-cols cols-4 reveal">
+          <article v-for="(d, i) in page.differentiators.items" :key="i" class="value-col">
+            <span class="v-icon"><BaseIcon :name="diffIcons[i] || 'check'" :size="24" /></span>
+            <h3>{{ t(d.title) }}</h3>
             <p>{{ t(d.text) }}</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -202,7 +200,7 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
 </template>
 
 <style scoped>
-.h-label span, .feature h3 span, .pillar h3 span { display: block; }
+.h-label span { display: block; }
 .eco-mother { max-width: 60ch; text-align: center; color: var(--muted); margin: 0 0 var(--space-7); }
 .eco-mother strong { color: var(--ink); }
 </style>
