@@ -32,6 +32,10 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    // /soluciones se retiró: su historia RFID vive en /marca-trazatex (canónica). Redirige (preserva enlaces).
+    '/soluciones': { redirect: { to: '/marca-trazatex', statusCode: 301 } },
+    '/es/soluciones': { redirect: { to: '/es/marca-trazatex', statusCode: 301 } },
+    '/en/soluciones': { redirect: { to: '/en/marca-trazatex', statusCode: 301 } },
     '/**': { prerender: true },
     '/admin/**': { ssr: false, prerender: false, robots: false, index: false },
   },

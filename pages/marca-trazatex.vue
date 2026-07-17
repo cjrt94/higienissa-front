@@ -3,7 +3,6 @@ const page = useBrandContent('trazatex')
 const t = useT()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
-const splitTwo = useSplitTwo()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -31,7 +30,6 @@ const solutionItems = computed(() =>
 )
 
 const techIcons = ['cog', 'chart', 'users']
-const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'chart', 'activity']
 </script>
 
 <template>
@@ -99,15 +97,6 @@ const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'cha
             </div>
           </div>
         </div>
-        <div class="grid cols-4 reveal" style="margin-top:var(--space-7)">
-          <div v-for="h in page.whoWeAre.highlights" :key="h.label.es" class="highlight">
-            <span class="h-icon"><BaseIcon :name="h.icon" :size="22" /></span>
-            <span>
-              <span class="h-label"><span v-for="(ln, i) in splitTwo(h.label)" :key="i">{{ ln }}</span></span>
-              <p>{{ t(h.text) }}</p>
-            </span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -118,11 +107,6 @@ const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'cha
         :title="page.solutions.title"
         :items="solutionItems"
       />
-      <div class="container" style="margin-top: calc(-1 * var(--space-6)); padding-bottom: var(--space-8)">
-        <p class="center">
-          <NuxtLink class="link-arrow" :to="localePath(page.solutions.moreLink.to)">{{ t(page.solutions.moreLink.label) }}</NuxtLink>
-        </p>
-      </div>
     </div>
 
     <!-- 5 · MODELO DE 4 CAPAS (flujo numerado) -->
@@ -186,13 +170,12 @@ const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'cha
             <p class="lead">{{ t(page.infoGenerated.lead) }}</p>
           </div>
         </div>
-        <div class="grid cols-4 reveal">
-          <article v-for="(it, i) in page.infoGenerated.items" :key="i" class="data-card">
-            <span class="feature-icon"><BaseIcon :name="infoIcons[i] || 'chart'" :size="22" /></span>
-            <h3>{{ t(it.title) }}</h3>
-            <p>{{ t(it.desc) }}</p>
-          </article>
-        </div>
+        <dl class="def-cols reveal">
+          <div v-for="(it, i) in page.infoGenerated.items" :key="i" class="def-item">
+            <dt>{{ t(it.title) }}</dt>
+            <dd>{{ t(it.desc) }}</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -331,11 +314,10 @@ const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'cha
 </template>
 
 <style scoped>
-.h-label span { display: block; }
 
 /* El problema — jerarquia + sintomas numerados (numeros celeste serif, como el bento) */
 .problem-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.6; margin: var(--space-4) 0 0; max-width: 44ch; }
-.problem-conclusion { margin-top: var(--space-6); font-size: 1.2rem; line-height: 1.4; color: var(--ink); border-left: 4px solid var(--azul); padding-left: var(--space-5); max-width: 44ch; }
+.problem-conclusion { margin-top: var(--space-6); font-size: 1.2rem; line-height: 1.4; color: var(--ink); max-width: 44ch; }
 .problem-conclusion strong { color: var(--azul); font-weight: 700; }
 .symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-4); }
 .problem-symptoms :deep(.marker-number .stake-marker) { background: transparent; border: 0; width: 2.2rem; height: auto; color: var(--celeste); font: 400 1.5rem/1 var(--font-display); margin-top: 0; justify-content: flex-start; }
@@ -383,7 +365,7 @@ const infoIcons = ['chart', 'activity', 'droplet', 'target', 'scan', 'cog', 'cha
 @media (max-width: 640px) { .ti-close { flex-direction: column; align-items: flex-start; gap: var(--space-4); } }
 
 /* Respaldo — nota legal en la columna del intro */
-.respaldo-note { margin: var(--space-4) 0 0; font-size: var(--fs-small); line-height: 1.55; color: var(--muted); border-left: 3px solid var(--gris-marca); padding-left: var(--space-4); }
+.respaldo-note { margin: var(--space-4) 0 0; font-size: var(--fs-small); line-height: 1.55; color: var(--muted); }
 
 /* Base instalada — regiones con divisor rotulado + cards por grupo con conteo */
 .region-block { margin-top: var(--space-8); }
