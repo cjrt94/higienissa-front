@@ -3,11 +3,6 @@ const page = useLegalContent('aviso-legal')
 const t = useT()
 const { t: $t } = useI18n()
 
-const crumbs = computed(() => [
-  { label: $t('nav.home'), to: '/' },
-  { label: $t('footer.legalNotice') },
-])
-
 useSeoMeta({
   title: () => t(page.seo.title),
   description: () => t(page.seo.description),
@@ -19,8 +14,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <Breadcrumb :items="crumbs" />
-
     <PageHero
       :eyebrow="page.hero.eyebrow"
       :title="page.hero.title"

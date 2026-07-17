@@ -207,7 +207,7 @@
           "en": "Pacífica industrial laundry for on-site operations"
         },
         "to": "/marca-pacifica",
-        "cta": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+        "cta": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Operissa",
@@ -221,7 +221,7 @@
           "en": "Operissa: specialized on-site textile operation for remote environments"
         },
         "to": "/marca-operissa",
-        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+        "cta": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Trazatex",
@@ -235,7 +235,7 @@
           "en": "Trazatex: RFID and data for on-site textile traceability"
         },
         "to": "/marca-trazatex",
-        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+        "cta": { "es": "Ver más", "en": "See more" }
       }
     ]
   },

@@ -15,17 +15,11 @@ useSeoMeta({
 })
 
 const diffIcons = ['users', 'shield', 'activity', 'scan']
+const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'cog']
 </script>
 
 <template>
   <div>
-    <Breadcrumb
-      :items="[
-        { label: $t('nav.home'), to: '/' },
-        { label: $t('nav.about') },
-      ]"
-    />
-
     <!-- 1 · HERO rico (foto + badge) -->
     <section class="hero">
       <div class="container hero-grid">
@@ -79,46 +73,43 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
       </div>
     </section>
 
-    <!-- 3 · TESIS DEL ECOSISTEMA (banda a sangre + cards de división) -->
-    <ImageBand
-      :image="page.ecosystem.image"
+    <!-- 3 · ECOSISTEMA HIGIENISSA — mismo pipeline de las páginas de marca.
+         Al ser la página del grupo, no hay nodo "actual" (current=""): las tres
+         marcas se muestran por igual, todas enlazadas. alt=false para separarse
+         del "Quiénes somos" (gris) de arriba y de "Qué integramos" (gris) de abajo. -->
+    <EcosystemPipeline
       :eyebrow="page.ecosystem.eyebrow"
       :title="page.ecosystem.title"
-      :statement="page.ecosystem.lead"
-      align="center"
+      :lead="page.ecosystem.lead"
+      :alt="false"
+      current=""
     />
-    <section id="ecosistema" class="section">
-      <div class="container">
-        <p class="eco-mother mx-auto"><strong>{{ t(page.ecosystem.mother.name) }}</strong> — {{ t(page.ecosystem.mother.desc) }}</p>
-        <div class="grid cols-3 reveal">
-          <article v-for="node in page.ecosystem.nodes" :key="node.brand" class="card">
-            <div class="card-media">
-              <img :src="node.image" :alt="t(node.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>{{ t(node.name) }}</h3>
-              <p class="card-desc">{{ t(node.desc) }}</p>
-              <NuxtLink class="link-arrow" :to="localePath(node.to)">{{ $t('cta.know') }} {{ node.brand }}</NuxtLink>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- 4 · QUÉ INTEGRAMOS / CAPACIDADES (feature cards con icono) -->
+    <!-- 4 · QUÉ INTEGRAMOS — split editorial: encabezado + dato ancla (izq, sticky) y
+         las capacidades como lista con divisores (der). Comunica el valor ("una sola
+         interlocución") y admite cualquier número de ítems sin dejar huecos. Neutro. -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <span class="kicker">{{ t(page.capabilities.eyebrow) }}</span>
-          <h2>{{ t(page.capabilities.title) }}</h2>
-          <p class="lead mx-auto">{{ t(page.capabilities.lead) }}</p>
-        </div>
-        <dl class="def-cols reveal">
-          <div v-for="(cap, i) in page.capabilities.items" :key="i" class="def-item">
-            <dt>{{ t(cap.title) }}</dt>
-            <dd>{{ t(cap.desc) }}</dd>
+        <div class="integrate-grid">
+          <div class="integrate-head">
+            <span class="kicker">{{ t(page.capabilities.eyebrow) }}</span>
+            <h2>{{ t(page.capabilities.title) }}</h2>
+            <p class="lead">{{ t(page.capabilities.lead) }}</p>
+            <div class="integrate-metric">
+              <span class="im-num">{{ page.capabilities.items.length }}</span>
+              <span class="im-text">{{ t(page.capabilities.metric) }}</span>
+            </div>
           </div>
-        </dl>
+          <ul class="integrate-list reveal">
+            <li v-for="(cap, i) in page.capabilities.items" :key="i" class="integrate-item">
+              <span class="ii-icon"><BaseIcon :name="capIcons[i] || 'check'" :size="20" /></span>
+              <div class="ii-body">
+                <h3>{{ t(cap.title) }}</h3>
+                <p>{{ t(cap.desc) }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -132,7 +123,7 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
         </div>
         <ul class="steps cols-4 reveal">
           <li v-for="(step, i) in page.methodology.steps" :key="i" class="step">
-            <span class="step-num">{{ step.num }}</span>
+            <span class="step-num">{{ String(step.num).padStart(2, '0') }}</span>
             <h3>{{ t(step.title) }}</h3>
             <p>{{ t(step.text) }}</p>
           </li>
@@ -183,9 +174,6 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
       </div>
     </section>
 
-    <!-- 8 · RESPALDO ASIS -->
-    <AsisStrip :data="page.asis" />
-
     <!-- 9 · CTA final -->
     <section class="section cta-band bg-motion">
       <div class="container">
@@ -201,6 +189,26 @@ const diffIcons = ['users', 'shield', 'activity', 'scan']
 
 <style scoped>
 .h-label span { display: block; }
-.eco-mother { max-width: 60ch; text-align: center; color: var(--muted); margin: 0 0 var(--space-7); }
-.eco-mother strong { color: var(--ink); }
+
+/* Qué integramos — split editorial (neutro, sin azul ni gradiente):
+   encabezado + dato ancla a la izquierda; capacidades como lista a la derecha. */
+.integrate-grid { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: clamp(var(--space-7), 6vw, var(--space-9)); align-items: start; }
+.integrate-head { position: sticky; top: calc(var(--header-h) + var(--space-5)); }
+.integrate-head h2 { margin: 0; }
+.integrate-head .lead { margin: var(--space-4) 0 0; max-width: 38ch; }
+.integrate-metric { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--line); }
+.im-num { flex: none; font: 600 clamp(2.6rem, 4vw, 3.4rem)/1 var(--font-display); color: var(--azul); letter-spacing: -0.02em; }
+.im-text { color: var(--text); font-size: var(--fs-body-sm); line-height: 1.5; max-width: 26ch; }
+
+.integrate-list { list-style: none; margin: 0; padding: 0; }
+.integrate-item { display: flex; gap: var(--space-4); align-items: flex-start; padding: var(--space-5) 0; border-top: 1px solid var(--line); }
+.integrate-item:first-child { border-top: 0; padding-top: 0; }
+.ii-icon { flex: none; display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); color: var(--azul); }
+.ii-body h3 { font-size: 1.15rem; margin: 0 0 4px; }
+.ii-body p { margin: 0; color: var(--muted); font-size: var(--fs-body-sm); line-height: 1.55; }
+
+@media (max-width: 900px) {
+  .integrate-grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  .integrate-head { position: static; }
+}
 </style>

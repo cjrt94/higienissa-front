@@ -170,7 +170,7 @@
           "en": "Specialized operation and management of uniforms, textile services and textile logistics on site."
         },
         "to": "/marca-operissa",
-        "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": { "es": "Trazatex", "en": "Trazatex" },
@@ -181,7 +181,7 @@
           "en": "RFID, software, auditing and data for individual traceability of each uniform and textile PPE."
         },
         "to": "/marca-trazatex",
-        "linkLabel": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": { "es": "Pacífica", "en": "Pacífica" },
@@ -192,7 +192,7 @@
           "en": "Smart industrial laundry for processing uniforms and workwear when the operation requires it."
         },
         "to": "/marca-pacifica",
-        "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       }
     ],
     "note": {

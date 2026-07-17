@@ -7,12 +7,6 @@ const config = useRuntimeConfig()
 
 const readLabel = { es: 'Leer', en: 'Read' }
 
-const crumbs = computed(() => [
-  { label: $t('nav.home'), to: '/' },
-  { label: $t('nav.resources'), to: '/recursos' },
-  { label: t({ es: 'Artículo', en: 'Article' }) },
-])
-
 useSeoMeta({
   title: () => t(page.seo.title),
   description: () => t(page.seo.description),
@@ -25,8 +19,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <Breadcrumb :items="crumbs" />
-
     <!-- 1 · Cabecera del artículo + portada -->
     <section class="section article-top">
       <div class="container article-head">

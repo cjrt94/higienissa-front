@@ -15,7 +15,6 @@ const telHref = computed(() => `tel:${settings.contact.phone.replace(/\s+/g, '')
 
 <template>
   <div>
-    <Breadcrumb :items="[{ label: $t('nav.home'), to: '/' }, { label: $t('nav.contact') }]" />
     <PageHero :eyebrow="page.hero.eyebrow" :title="page.hero.title" :lead="page.hero.lead" />
     <section class="section" style="padding-top:0">
       <div class="container">

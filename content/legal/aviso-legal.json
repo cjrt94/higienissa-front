@@ -22,8 +22,8 @@
   },
   "disclaimer": {
     "before": {
-      "es": "Borrador / pendiente de redacción legal. Para consultas, escriba a",
-      "en": "Draft / pending legal drafting. For inquiries, write to"
+      "es": "Para consultas, escriba a",
+      "en": "For inquiries, write to"
     },
     "email": "contacto@higienissa.com",
     "after": {

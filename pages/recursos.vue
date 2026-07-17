@@ -16,8 +16,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <Breadcrumb :items="[{ label: $t('nav.home'), to: '/' }, { label: $t('nav.resources') }]" />
-
     <!-- Hero editorial (título izq / lead der); las post-cards con thumbnail son el payload visual -->
     <section class="page-hero">
       <div class="container">

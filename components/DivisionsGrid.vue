@@ -21,7 +21,7 @@ const localePath = useLocalePath()
             <h3>{{ item.name }}</h3>
             <p class="card-desc">{{ t(item.desc) }}</p>
             <NuxtLink class="link-arrow" :to="localePath(item.to)">
-              {{ $t('cta.know') }} {{ item.name }}
+              {{ $t('cta.viewMore') }}
             </NuxtLink>
           </div>
         </article>

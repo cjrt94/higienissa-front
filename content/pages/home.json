@@ -98,6 +98,12 @@
   "pillars": {
     "eyebrow": { "es": "Lo que nos define", "en": "What defines us" },
     "title": { "es": "Lavandería, inteligencia y excelencia operacional", "en": "Laundry, intelligence and operational excellence" },
+    "lead": {
+      "es": "Tres capacidades que trabajan como una sola: procesamos el textil, lo convertimos en información gestionable y lo operamos en terreno. Así sostenemos la disponibilidad del activo textil crítico bajo un mismo estándar.",
+      "en": "Three capabilities working as one: we process the textile, turn it into manageable information and operate it on-site. That's how we sustain the availability of critical textile assets under a single standard."
+    },
+    "image": "/img/operissa-proceso.jpg",
+    "imageAlt": { "es": "Operación en terreno del ecosistema Higienissa", "en": "On-site operations of the Higienissa ecosystem" },
     "items": [
       { "icon": "droplet", "title": { "es": "Lavandería", "en": "Laundry" }, "text": { "es": "Donde empieza la disponibilidad del textil en cada operación.", "en": "Where textile availability begins in every operation." } },
       { "icon": "target", "title": { "es": "Inteligencia y precisión", "en": "Intelligence and precision" }, "text": { "es": "Cada decisión y cada activo, respaldados por datos y trazabilidad individual.", "en": "Every decision and every asset, backed by data and individual traceability." } },

@@ -21,7 +21,9 @@
     "knowGroup": "Conocer el grupo",
     "seeSector": "Ver sector",
     "knowMore": "Conocer más",
-    "know": "Conocer"
+    "know": "Conocer",
+    "viewMore": "Ver más",
+    "youAreHere": "Estás aquí"
   },
   "a11y": {
     "skip": "Saltar al contenido",

@@ -196,7 +196,7 @@
           "en": "Pacífica industrial laundry: machines and washing process at scale"
         },
         "to": "/marca-pacifica",
-        "cta": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+        "cta": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Trazatex",
@@ -212,7 +212,7 @@
           "en": "Trazatex: RFID technology and data applied to every textile asset"
         },
         "to": "/marca-trazatex",
-        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+        "cta": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Operissa",
@@ -228,7 +228,7 @@
           "en": "Operissa: teams and processes for specialized on-site textile operations"
         },
         "to": "/marca-operissa",
-        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+        "cta": { "es": "Ver más", "en": "See more" }
       }
     ]
   },

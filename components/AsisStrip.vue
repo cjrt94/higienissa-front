@@ -21,7 +21,7 @@ const localePath = useLocalePath()
         </div>
         <p style="margin-top:var(--space-4)">
           <NuxtLink class="link-arrow" :to="localePath('/marca-trazatex')">
-            {{ $t('cta.know') }} Trazatex
+            {{ $t('cta.viewMore') }}
           </NuxtLink>
         </p>
       </div>

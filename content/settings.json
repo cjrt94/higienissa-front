@@ -16,5 +16,39 @@
       "en": "In technological partnership with ASIS IDTRAK (Spain) · 30+ years in textile RFID"
     },
     "link": "/marca-trazatex#respaldo"
+  },
+  "ecosystem": {
+    "pipeline": [
+      {
+        "slug": "pacifica",
+        "name": "Pacífica",
+        "role": { "es": "Procesa", "en": "Processes" },
+        "desc": {
+          "es": "Lavandería industrial inteligente: el punto donde empieza la disponibilidad del textil.",
+          "en": "Smart industrial laundry: the point where textile availability begins."
+        },
+        "to": "/marca-pacifica"
+      },
+      {
+        "slug": "trazatex",
+        "name": "Trazatex",
+        "role": { "es": "Traza", "en": "Traces" },
+        "desc": {
+          "es": "RFID, software, auditoría y data para el control individual de cada activo textil.",
+          "en": "RFID, software, auditing and data for individual control of every textile asset."
+        },
+        "to": "/marca-trazatex"
+      },
+      {
+        "slug": "operissa",
+        "name": "Operissa",
+        "role": { "es": "Opera", "en": "Operates" },
+        "desc": {
+          "es": "Operación y gestión textil especializada en terreno, para que su operación no se detenga.",
+          "en": "Specialized on-site textile operation and management, so your operation never stops."
+        },
+        "to": "/marca-operissa"
+      }
+    ]
   }
 }

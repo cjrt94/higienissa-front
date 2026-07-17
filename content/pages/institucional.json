@@ -98,8 +98,8 @@
   },
   "ecosystem": {
     "eyebrow": {
-      "es": "Cómo trabajamos",
-      "en": "How we work"
+      "es": "Ecosistema HIGIENISSA",
+      "en": "HIGIENISSA Ecosystem"
     },
     "title": {
       "es": "Procesa, traza y opera — bajo un mismo estándar",
@@ -190,6 +190,10 @@
     "lead": {
       "es": "Una sola interlocución reúne las capacidades que normalmente exigen múltiples proveedores.",
       "en": "A single point of contact brings together the capabilities that normally require multiple suppliers."
+    },
+    "metric": {
+      "es": "capacidades reunidas bajo una sola interlocución, en vez de repartirlas entre varios proveedores.",
+      "en": "capabilities brought together under a single point of contact, instead of split across multiple suppliers."
     },
     "items": [
       {

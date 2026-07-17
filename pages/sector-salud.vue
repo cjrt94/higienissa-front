@@ -19,14 +19,6 @@ const roleItems = computed(() =>
 
 <template>
   <div>
-    <Breadcrumb
-      :items="[
-        { label: $t('nav.home'), to: '/' },
-        { label: $t('nav.sectors'), to: '/sectores' },
-        { label: t(page.name) },
-      ]"
-    />
-
     <!-- 1 · HERO (foto derecha + badge) -->
     <section class="hero">
       <div class="container hero-grid">

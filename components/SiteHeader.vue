@@ -12,7 +12,6 @@ const nav = [
   { to: '/marca-pacifica', key: 'pacifica' },
   { to: '/marca-trazatex', key: 'trazatex' },
   { to: '/marca-operissa', key: 'operissa' },
-  { to: '/sectores', key: 'sectors' },
   { to: '/institucional', key: 'about' },
   { to: '/recursos', key: 'resources' },
 ]

@@ -13,17 +13,10 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-const crumbs = computed(() => [
-  { label: t({ es: 'Inicio', en: 'Home' }), to: '/' },
-  { label: t({ es: 'Sectores', en: 'Sectors' }), to: '/sectores' },
-  { label: t(page.name) },
-])
 </script>
 
 <template>
   <div>
-    <Breadcrumb :items="crumbs" />
-
     <!-- 1 · HERO rico (foto + badge) -->
     <section class="hero">
       <div class="container hero-grid">

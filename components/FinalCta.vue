@@ -10,7 +10,7 @@ const t = useT()
       <p class="lead">{{ t(data.lead) }}</p>
       <div class="cta-actions">
         <BaseButton to="/contacto" variant="light">{{ $t('cta.evaluation') }}</BaseButton>
-        <BaseButton to="/institucional" variant="ghost" style="color:#fff;border-color:rgba(255,255,255,.5)">
+        <BaseButton to="/institucional" variant="ghost">
           {{ $t('cta.knowGroup') }}
         </BaseButton>
       </div>

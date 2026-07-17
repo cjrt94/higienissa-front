@@ -13,8 +13,6 @@ useSeoMeta({
 
 <template>
   <div>
-    <Breadcrumb :items="[{ label: $t('nav.home'), to: '/' }, { label: t(page.hero.title) }]" />
-
     <PageHero
       :eyebrow="page.hero.eyebrow"
       :title="page.hero.title"

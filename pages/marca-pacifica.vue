@@ -14,11 +14,6 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-const crumbs = computed(() => [
-  { label: t({ es: 'Inicio', en: 'Home' }), to: '/' },
-  { label: page.name },
-])
-
 // Soluciones normalizadas al contrato de <SolutionsShowcase>
 const solutionIcons = ['droplet', 'chart', 'scan', 'cog']
 const solutionItems = computed(() =>
@@ -33,8 +28,6 @@ const solutionItems = computed(() =>
 
 <template>
   <div>
-    <Breadcrumb :items="crumbs" />
-
     <!-- 1 · HERO rico (foto enmarcada + badge flotante) -->
     <section class="hero">
       <div class="container hero-grid">
@@ -122,14 +115,25 @@ const solutionItems = computed(() =>
       </div>
     </section>
 
-    <!-- 5 · NUESTRA DIFERENCIA -->
+    <!-- 5 · NUESTRA DIFERENCIA — header split título+foto (imagen izq, reverse)
+         + key points editoriales CON icono debajo (misma estructura .value-cols). -->
     <section class="section">
       <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
-          <h2>{{ t(page.differentiators.title) }}</h2>
+        <div class="intro-split reverse">
+          <div class="intro-copy">
+            <div class="section-head left">
+              <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
+              <h2>{{ t(page.differentiators.title) }}</h2>
+              <p class="lead">{{ t(page.differentiators.lead) }}</p>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
+              <img :src="page.differentiators.image" :alt="t(page.differentiators.imageAlt)" width="1000" height="800" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="value-cols cols-4 reveal">
+        <div class="value-cols cols-4 reveal" style="margin-top:var(--space-7)">
           <article v-for="d in page.differentiators.items" :key="d.title.es" class="value-col">
             <span class="v-icon"><BaseIcon :name="d.icon" :size="24" /></span>
             <h3>{{ t(d.title) }}</h3>
@@ -139,30 +143,13 @@ const solutionItems = computed(() =>
       </div>
     </section>
 
-    <!-- 6 · ECOSISTEMA — tesis como banda a sangre con foto + cards de marca -->
-    <ImageBand
-      :image="page.ecosystem.image"
+    <!-- 6 · ECOSISTEMA HIGIENISSA — pipeline de 3 marcas (Pacífica actual). -->
+    <EcosystemPipeline
       :eyebrow="page.ecosystem.eyebrow"
       :title="page.ecosystem.title"
-      :statement="page.ecosystem.lead"
-      align="center"
+      :lead="page.ecosystem.lead"
+      current="pacifica"
     />
-    <section id="ecosistema" class="section">
-      <div class="container">
-        <div class="grid cols-2 reveal">
-          <article v-for="b in page.ecosystem.items" :key="b.name" class="card">
-            <div class="card-media">
-              <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>{{ b.name }}</h3>
-              <p class="card-desc">{{ t(b.desc) }}</p>
-              <NuxtLink class="link-arrow" :to="localePath(b.to)">{{ t(b.cta) }}</NuxtLink>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- 7 · CTA final -->
     <section class="section cta-band bg-motion">

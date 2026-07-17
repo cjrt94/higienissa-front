@@ -223,6 +223,12 @@
   "differentiators": {
     "eyebrow": { "es": "Nuestra diferencia", "en": "Our difference" },
     "title": { "es": "Más que una lavandería tradicional", "en": "More than a traditional laundry" },
+    "image": "/img/ecosistema.jpg",
+    "imageAlt": { "es": "Ecosistema Higienissa que respalda a Pacífica", "en": "Higienissa ecosystem backing Pacífica" },
+    "lead": {
+      "es": "No solo procesamos textiles: sostenemos operaciones que no pueden detenerse. Pensamos como operadores y trabajamos respaldados por el ecosistema Higienissa, con infraestructura y trazabilidad que una lavandería tradicional no puede ofrecer.",
+      "en": "We don't just process textiles: we sustain operations that can't stop. We think like operators and work backed by the Higienissa ecosystem, with infrastructure and traceability a traditional laundry can't offer."
+    },
     "items": [
       {
         "icon": "users",
@@ -270,14 +276,23 @@
       "es": "Nave de lavandería industrial Pacífica operando a escala",
       "en": "Pacífica industrial laundry floor operating at scale"
     },
+    "self": {
+      "name": "Pacífica",
+      "role": { "es": "Procesa", "en": "Processes" },
+      "desc": {
+        "es": "Lavandería industrial inteligente: el punto donde empieza la disponibilidad del textil.",
+        "en": "Smart industrial laundry: the point where textile availability begins."
+      }
+    },
     "items": [
       {
         "name": "Trazatex",
+        "role": { "es": "Traza", "en": "Traces" },
         "desc": {
           "es": "RFID, software, auditoría y data para el control individual de cada activo textil.",
           "en": "RFID, software, auditing and data for individual control of every textile asset."
         },
-        "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" },
+        "cta": { "es": "Ver más", "en": "See more" },
         "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
@@ -287,11 +302,12 @@
       },
       {
         "name": "Operissa",
+        "role": { "es": "Opera", "en": "Operates" },
         "desc": {
           "es": "Operación y gestión especializada para que su operación no se detenga.",
           "en": "Specialized operation and management so your operation never stops."
         },
-        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" },
+        "cta": { "es": "Ver más", "en": "See more" },
         "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: equipos y procesos de operación textil especializada en terreno",

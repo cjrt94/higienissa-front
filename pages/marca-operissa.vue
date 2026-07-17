@@ -14,11 +14,6 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-const crumbs = computed(() => [
-  { label: t({ es: 'Inicio', en: 'Home' }), to: '/' },
-  { label: page.name },
-])
-
 // Soluciones normalizadas al contrato de <SolutionsShowcase> (con groups)
 // Orden + layout del bento de soluciones (pedido del cliente):
 //   fila 1: Laundry | Housekeeping · fila 2: Ropería (fila completa) · fila 3: Outsourcing | Logistics
@@ -40,8 +35,6 @@ const solutionItems = computed(() =>
 
 <template>
   <div>
-    <Breadcrumb :items="crumbs" />
-
     <!-- 1 · HERO rico (foto + badge flotante) -->
     <section class="hero">
       <div class="container hero-grid">
@@ -138,7 +131,7 @@ const solutionItems = computed(() =>
         </div>
         <ul class="steps cols-4 reveal">
           <li v-for="(step, i) in page.methodology.steps" :key="i" class="step">
-            <span class="step-num">{{ step.num }}</span>
+            <span class="step-num">{{ String(step.num).padStart(2, '0') }}</span>
             <h3>{{ t(step.title) }}</h3>
             <p>{{ t(step.text) }}</p>
           </li>
@@ -146,30 +139,13 @@ const solutionItems = computed(() =>
       </div>
     </section>
 
-    <!-- 6 · ECOSISTEMA — banda a sangre con foto + cards de marca -->
-    <ImageBand
-      :image="page.ecosystem.image"
+    <!-- 6 · ECOSISTEMA HIGIENISSA — pipeline de 3 marcas (Operissa actual). -->
+    <EcosystemPipeline
       :eyebrow="page.ecosystem.eyebrow"
       :title="page.ecosystem.title"
-      :statement="page.ecosystem.lead"
-      align="center"
+      :lead="page.ecosystem.lead"
+      current="operissa"
     />
-    <section id="ecosistema" class="section">
-      <div class="container">
-        <div class="grid cols-2 reveal">
-          <article v-for="b in page.ecosystem.items" :key="b.name" class="card">
-            <div class="card-media">
-              <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>{{ b.name }}</h3>
-              <p class="card-desc">{{ t(b.desc) }}</p>
-              <NuxtLink class="link-arrow" :to="localePath(b.to)">{{ $t('cta.know') }} {{ b.name }}</NuxtLink>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- 7 · CTA final -->
     <section class="section cta-band bg-motion">

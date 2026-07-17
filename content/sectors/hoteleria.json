@@ -160,7 +160,7 @@
           "en": "Smart industrial laundry that processes linen and bed-linen while protecting the textiles and the experience."
         },
         "to": "/marca-pacifica",
-        "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Trazatex",
@@ -174,7 +174,7 @@
           "en": "RFID, software, auditing and data for individual traceability and loss control of each textile asset."
         },
         "to": "/marca-trazatex",
-        "linkLabel": { "es": "Conocer Trazatex", "en": "Discover Trazatex" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       },
       {
         "name": "Operissa",
@@ -188,7 +188,7 @@
           "en": "Specialized operation and management of the hotel's textile circuit, to sustain availability and the guest experience."
         },
         "to": "/marca-operissa",
-        "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }
+        "linkLabel": { "es": "Ver más", "en": "See more" }
       }
     ]
   },

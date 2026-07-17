@@ -9,7 +9,6 @@ defineProps({
   items: { type: Array, default: () => [] },
 })
 const t = useT()
-const pad = (n) => String(n).padStart(2, '0')
 const splitTwo = useSplitTwo()
 </script>
 
@@ -28,7 +27,6 @@ const splitTwo = useSplitTwo()
             <div class="sol-main">
               <div class="sol-top">
                 <span class="sol-icon"><BaseIcon :name="s.icon" :size="26" /></span>
-                <span class="sol-num">{{ pad(idx + 1) }}</span>
               </div>
               <h3><span v-for="(ln, i) in splitTwo(s.title)" :key="i">{{ ln }}</span></h3>
               <p class="sol-desc">{{ t(s.desc) }}</p>
@@ -45,7 +43,6 @@ const splitTwo = useSplitTwo()
           <article v-else class="sol-card">
             <div class="sol-top">
               <span class="sol-icon"><BaseIcon :name="s.icon" :size="24" /></span>
-              <span class="sol-num sm">{{ pad(idx + 1) }}</span>
             </div>
             <h3><span v-for="(ln, i) in splitTwo(s.title)" :key="i">{{ ln }}</span></h3>
             <p class="sol-desc">{{ t(s.desc) }}</p>
@@ -66,7 +63,6 @@ const splitTwo = useSplitTwo()
         <article v-for="(s, idx) in items" :key="idx" class="sol-card">
           <div class="sol-top">
             <span class="sol-icon"><BaseIcon :name="s.icon" :size="24" /></span>
-            <span class="sol-num sm">{{ pad(idx + 1) }}</span>
           </div>
           <h3><span v-for="(ln, i) in splitTwo(s.title)" :key="i">{{ ln }}</span></h3>
           <p class="sol-desc">{{ t(s.desc) }}</p>
@@ -88,8 +84,6 @@ const splitTwo = useSplitTwo()
 /* Icono en tile gradiente (mismo lenguaje que .pillar-icon / .feature-icon) */
 .sol-icon { display: inline-flex; width: 48px; height: 48px; flex: none; align-items: center; justify-content: center; border-radius: 13px; background: linear-gradient(150deg, rgba(58,120,255,.14), rgba(78,167,225,.10)); color: var(--azul); }
 .sol-top { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
-.sol-num { font: 400 1.9rem/1 var(--font-display); color: var(--celeste); letter-spacing: .02em; }
-.sol-num.sm { font-size: 1.4rem; }
 .sol-desc { color: var(--text); margin: 0 0 var(--space-4); }
 
 /* Grupos + checklist */
@@ -102,7 +96,7 @@ const splitTwo = useSplitTwo()
 
 /* Destacada full-width */
 .sol-featured { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: center; background: linear-gradient(150deg, rgba(58,120,255,.06), rgba(78,167,225,.045)); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 4vw, var(--space-8)); margin-bottom: var(--space-5); }
-.sol-featured h3 { font-family: var(--font-body); font-weight: 600; letter-spacing: -0.01em; font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1.25; margin-bottom: var(--space-4); }
+.sol-featured h3 { font-family: var(--font-body); font-weight: 600; letter-spacing: -0.01em; font-size: 1.12rem; line-height: 1.35; margin-bottom: var(--space-4); }
 .sol-featured .sol-desc { font-size: 1.05rem; }
 .sol-aside { align-self: stretch; }
 

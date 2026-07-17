@@ -121,6 +121,20 @@
       "es": "Tecnología, datos y experiencia que hacen posible la trazabilidad",
       "en": "The technology, data and expertise that make traceability possible"
     },
+    "gallery": [
+      {
+        "image": "/img/trazatex-cabina-rfid.jpg",
+        "alt": { "es": "Cabina de lectura RFID instalada en planta de lavandería", "en": "RFID reading cabin installed on the laundry floor" }
+      },
+      {
+        "image": "/img/trazatex-kiosco-fourseasons.jpg",
+        "alt": { "es": "Kiosco de dispensación de uniformes con lector RFID en Four Seasons Hotel Madrid", "en": "Uniform dispensing kiosk with RFID reader at Four Seasons Hotel Madrid" }
+      },
+      {
+        "image": "/img/trazatex-cabina-dispensacion.jpg",
+        "alt": { "es": "Cabina de dispensación y devolución de textil con pantalla táctil y RFID", "en": "Textile dispensing and return cabin with touchscreen and RFID" }
+      }
+    ],
     "lead": {
       "es": "La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado.",
       "en": "The Trazatex solution combines technology infrastructure, operational intelligence and specialized services to turn textile management into a controlled, measurable and optimized process."
@@ -229,8 +243,8 @@
       "en": "Trazatex traceability strengthens the rest of the ecosystem: it integrates data into Pacífica's laundry and into Operissa's on-site operation."
     },
     "items": [
-      { "name": "Pacífica", "desc": { "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.", "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle." }, "image": "/img/pacifica-hero.jpg", "imageAlt": { "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa", "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem" }, "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }, "to": "/marca-pacifica" },
-      { "name": "Operissa", "desc": { "es": "Operación y gestión especializada. Los datos de Trazatex respaldan el control en terreno.", "en": "Specialized operation and management. Trazatex data supports on-site control." }, "image": "/img/operissa-hero.jpg", "imageAlt": { "es": "Operissa, operación y gestión textil especializada en terreno", "en": "Operissa, specialized on-site textile operation and management" }, "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }, "to": "/marca-operissa" }
+      { "name": "Pacífica", "desc": { "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.", "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle." }, "image": "/img/pacifica-hero.jpg", "imageAlt": { "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa", "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem" }, "linkLabel": { "es": "Ver más", "en": "See more" }, "to": "/marca-pacifica" },
+      { "name": "Operissa", "desc": { "es": "Operación y gestión especializada. Los datos de Trazatex respaldan el control en terreno.", "en": "Specialized operation and management. Trazatex data supports on-site control." }, "image": "/img/operissa-hero.jpg", "imageAlt": { "es": "Operissa, operación y gestión textil especializada en terreno", "en": "Operissa, specialized on-site textile operation and management" }, "linkLabel": { "es": "Ver más", "en": "See more" }, "to": "/marca-operissa" }
     ]
   },
   "asisStrip": {
@@ -251,8 +265,8 @@
       "en": "Trazatex integrates the textile RFID technology of ASIS IDTRAK (Spain), with over 30 years of experience. Its installed base reflects the real reach of that technology."
     },
     "disclaimer": {
-      "es": "Encuadre: las instalaciones listadas a continuación son instalaciones de nuestro socio tecnológico ASIS IDTRAK, no clientes propios de Grupo Higienissa. Se presentan como evidencia del alcance de la tecnología que integra Trazatex. (Pendiente: confirmar autorización de difusión y marcas de terceros.)",
-      "en": "Framing: the installations listed below are installations of our technology partner ASIS IDTRAK, not clients of Grupo Higienissa. They are shown as evidence of the reach of the technology that Trazatex integrates. (Pending: confirm disclosure authorization and third-party brands.)"
+      "es": "Encuadre: las instalaciones listadas a continuación son instalaciones de nuestro socio tecnológico ASIS IDTRAK, no clientes propios de Grupo Higienissa. Se presentan como evidencia del alcance de la tecnología que integra Trazatex.",
+      "en": "Framing: the installations listed below are installations of our technology partner ASIS IDTRAK, not clients of Grupo Higienissa. They are shown as evidence of the reach of the technology that Trazatex integrates."
     },
     "regions": [
       {

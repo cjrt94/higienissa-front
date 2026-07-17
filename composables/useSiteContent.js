@@ -11,7 +11,6 @@ import settingsRaw from '../content/settings.json?raw'
 
 import homeRaw from '../content/pages/home.json?raw'
 import contactoRaw from '../content/pages/contacto.json?raw'
-import sectoresRaw from '../content/pages/sectores.json?raw'
 import solucionesRaw from '../content/pages/soluciones.json?raw'
 import institucionalRaw from '../content/pages/institucional.json?raw'
 import recursosRaw from '../content/pages/recursos.json?raw'
@@ -33,7 +32,7 @@ import privacidadRaw from '../content/legal/privacidad.json?raw'
 const P = (s) => JSON.parse(s)
 const settings = P(settingsRaw)
 const pages = {
-  home: P(homeRaw), contacto: P(contactoRaw), sectores: P(sectoresRaw), soluciones: P(solucionesRaw),
+  home: P(homeRaw), contacto: P(contactoRaw), soluciones: P(solucionesRaw),
   institucional: P(institucionalRaw), recursos: P(recursosRaw), articulo: P(articuloRaw), creditos: P(creditosRaw),
 }
 const brands = { pacifica: P(pacificaRaw), trazatex: P(trazatexRaw), operissa: P(operissaRaw) }

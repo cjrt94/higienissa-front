@@ -12,11 +12,6 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-const breadcrumb = computed(() => [
-  { label: t({ es: 'Inicio', en: 'Home' }), to: '/' },
-  { label: page.name },
-])
-
 // Soluciones al contrato de <SolutionsShowcase> (sin groups: solo titulo + desc)
 const solutionIcons = ['scan', 'chart', 'shield', 'target', 'activity', 'cog']
 const solutionItems = computed(() =>
@@ -29,12 +24,13 @@ const solutionItems = computed(() =>
 )
 
 const techIcons = ['cog', 'chart', 'users']
+
+// Divide un texto en torno a "ASIS IDTRAK" para renderizar la marca como link en negrita.
+const splitAsis = (val) => t(val).split(/(ASIS IDTRAK)/)
 </script>
 
 <template>
   <div>
-    <Breadcrumb :items="breadcrumb" />
-
     <!-- 1 · HERO rico (foto + badge ASIS flotante que enlaza al respaldo) -->
     <section class="hero">
       <div class="container hero-grid">
@@ -60,7 +56,7 @@ const techIcons = ['cog', 'chart', 'users']
     </section>
 
     <!-- 2 · EL PROBLEMA (split: encuadre fijo + sintomas ordenados) -->
-    <section class="section">
+    <section class="section section-alt">
       <div class="container split-sticky">
         <div class="sticky-head">
           <div class="section-head">
@@ -118,6 +114,12 @@ const techIcons = ['cog', 'chart', 'users']
             <p class="lead">{{ t(page.techInfra.lead) }}</p>
             <p class="ti-body">{{ t(page.techInfra.body) }}</p>
           </div>
+        </div>
+        <!-- Galería: hardware RFID real en instalaciones (prueba tangible de la infraestructura) -->
+        <div v-if="page.techInfra.gallery" class="tech-gallery reveal">
+          <figure v-for="(g, i) in page.techInfra.gallery" :key="i" class="tg-item">
+            <img :src="g.image" :alt="t(g.alt)" width="900" height="1600" loading="lazy">
+          </figure>
         </div>
         <div class="feature-grid cols-3 reveal">
           <div v-for="(col, i) in page.techInfra.columns" :key="i" class="feature">
@@ -179,25 +181,10 @@ const techIcons = ['cog', 'chart', 'users']
       </div>
     </section>
 
-    <!-- 11 · FRANJA DE RESPALDO ASIS IDTRAK (banda oscura con foto) -->
-    <section class="asis-strip">
-      <div class="container">
-        <div class="asis-inner">
-          <div class="asis-media">
-            <div class="frame">
-              <img :src="page.asisStrip.image" :alt="t(page.asisStrip.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-          </div>
-          <div>
-            <p>{{ t(page.asisStrip.body) }}</p>
-            <a class="link-arrow" :href="page.asisStrip.to">{{ t(page.asisStrip.linkLabel) }}</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 12 · RESPALDO / BASE INSTALADA (cards por grupo) -->
-    <section id="respaldo" class="section section-alt">
+    <!-- 12 · RESPALDO / BASE INSTALADA (cards por grupo). Superficie blanca:
+         al retirar la franja ASIS, queda pegado al Retorno (gris) — así se separa.
+         "ASIS IDTRAK" se refuerza en el copy (negrita + link a su web). -->
+    <section id="respaldo" class="section">
       <div class="container">
         <div class="ti-head">
           <div class="ti-head-title">
@@ -205,8 +192,8 @@ const techIcons = ['cog', 'chart', 'users']
             <h2>{{ t(page.respaldo.title) }}</h2>
           </div>
           <div class="ti-head-copy">
-            <p class="lead">{{ t(page.respaldo.lead) }}</p>
-            <p class="respaldo-note">{{ t(page.respaldo.disclaimer) }}</p>
+            <p class="lead"><template v-for="(part, i) in splitAsis(page.respaldo.lead)" :key="i"><a v-if="part === 'ASIS IDTRAK'" class="asis-brand-link" href="https://asisidtrak.com/" target="_blank" rel="noopener noreferrer">ASIS IDTRAK</a><template v-else>{{ part }}</template></template></p>
+            <p class="respaldo-note"><template v-for="(part, i) in splitAsis(page.respaldo.disclaimer)" :key="i"><a v-if="part === 'ASIS IDTRAK'" class="asis-brand-link" href="https://asisidtrak.com/" target="_blank" rel="noopener noreferrer">ASIS IDTRAK</a><template v-else>{{ part }}</template></template></p>
           </div>
         </div>
 
@@ -227,6 +214,15 @@ const techIcons = ['cog', 'chart', 'users']
       </div>
     </section>
 
+    <!-- 12b · ECOSISTEMA HIGIENISSA — pipeline de 3 marcas (Trazatex actual).
+         Gris (alt por defecto): separa del Respaldo, que ahora es blanco. -->
+    <EcosystemPipeline
+      :eyebrow="page.ecosystem.kicker"
+      :title="page.ecosystem.title"
+      :lead="page.ecosystem.lead"
+      current="trazatex"
+    />
+
     <!-- 13 · CTA FINAL -->
     <section class="section cta-band bg-motion">
       <div class="container">
@@ -242,24 +238,35 @@ const techIcons = ['cog', 'chart', 'users']
 
 <style scoped>
 
-/* El problema — jerarquia + sintomas numerados (numeros celeste serif, como el bento) */
+/* El problema — jerarquia + sintomas numerados (badge azul en degradado, como el home) */
 .problem-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.6; margin: var(--space-4) 0 0; max-width: 44ch; }
 .problem-conclusion { margin-top: var(--space-6); font-size: 1.2rem; line-height: 1.4; color: var(--ink); max-width: 44ch; }
 .problem-conclusion strong { color: var(--azul); font-weight: 700; }
 .symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-4); }
-.problem-symptoms :deep(.marker-number .stake-marker) { background: transparent; border: 0; width: 2.2rem; height: auto; color: var(--celeste); font: 400 1.5rem/1 var(--font-display); margin-top: 0; justify-content: flex-start; }
+.problem-symptoms :deep(.marker-number .stake-marker) {
+  width: 2.6rem; height: 2.6rem; border: 0; border-radius: 12px; margin-top: 0;
+  color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent);
+  font: 600 1.1rem/1 var(--font-display); letter-spacing: .01em;
+}
 
-/* 4 capas — flujo numerado (numero grande celeste serif) */
+/* 4 capas — flujo numerado (mismo badge del home "Lo que nos define") */
 .layer-card { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow-xs); transition: box-shadow .2s var(--ease), transform .2s var(--ease); }
 .layer-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-.layer-num { display: block; font: 400 2.4rem/1 var(--font-display); color: var(--celeste); margin-bottom: var(--space-3); }
+.layer-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 3rem; height: 3rem; border-radius: 14px; margin-bottom: var(--space-4);
+  color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent);
+  font: 600 1.35rem/1 var(--font-display); letter-spacing: .01em;
+}
 .layer-card h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
 .layer-card p { margin: 0; color: var(--text); font-size: .95rem; }
 
-/* Checklist con ✓ (infraestructura + base instalada) */
+/* Checklist con ✓ (infraestructura + base instalada) — check alineado a la 1.ª línea */
 .check-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: var(--space-2); }
-.check-list li { position: relative; padding-left: 26px; margin: 0; font-size: .93rem; line-height: 1.5; color: var(--text); }
-.check-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 18px; height: 1.5em; display: inline-flex; align-items: center; justify-content: center; font: 700 12px/1 var(--font-body); color: var(--azul); }
+.check-list li { display: flex; gap: 10px; align-items: flex-start; margin: 0; font-size: .93rem; line-height: 1.5; color: var(--text); }
+.check-list li::before { content: "\2713"; flex: none; color: var(--azul); font-weight: 700; }
 
 /* Qué información genera — cards con tile de icono */
 .data-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow-xs); transition: box-shadow .2s var(--ease), transform .2s var(--ease), border-color .2s var(--ease); }
@@ -285,12 +292,23 @@ const techIcons = ['cog', 'chart', 'users']
 .ti-head-title h2 { margin: 0; }
 .ti-head-copy .lead { margin: 0 0 var(--space-4); max-width: none; }
 .ti-body { margin: 0; color: var(--muted); }
+
+/* Galería de infraestructura RFID (fotos reales en instalaciones) */
+.tech-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-bottom: clamp(var(--space-7), 5vw, var(--space-8)); }
+.tg-item { margin: 0; position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 3/4; background: var(--bg-alt); }
+.tg-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.tg-item:hover img { transform: scale(1.04); }
+@media (max-width: 760px) { .tech-gallery { grid-template-columns: 1fr; gap: var(--space-3); } }
 .info-in-retorno { margin-top: var(--space-10); }
 .ti-close { display: flex; align-items: center; gap: clamp(var(--space-4), 3vw, var(--space-6)); margin-top: var(--space-7); padding: clamp(var(--space-5), 3vw, var(--space-6)); background: linear-gradient(150deg, rgba(58,120,255,.06), rgba(78,167,225,.045)); border: 1px solid var(--line); border-radius: var(--radius-lg); }
 .ti-close-icon { flex: none; width: 52px; height: 52px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); color: var(--azul); display: inline-flex; align-items: center; justify-content: center; }
 .ti-close p { margin: 0; color: var(--text); }
 @media (max-width: 860px) { .ti-head { grid-template-columns: 1fr; gap: var(--space-4); } }
 @media (max-width: 640px) { .ti-close { flex-direction: column; align-items: flex-start; gap: var(--space-4); } }
+
+/* ASIS IDTRAK reforzado en el copy del respaldo: negrita + link a su web */
+.asis-brand-link { color: var(--azul); font-weight: 700; text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--azul) 35%, transparent); transition: border-color .18s var(--ease); }
+.asis-brand-link:hover { border-bottom-color: var(--azul); }
 
 /* Respaldo — nota legal en la columna del intro */
 .respaldo-note { margin: var(--space-4) 0 0; font-size: var(--fs-small); line-height: 1.55; color: var(--muted); }
