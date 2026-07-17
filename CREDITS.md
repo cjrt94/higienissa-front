@@ -8,8 +8,8 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `marca-pacifica.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=20646089) | Thatsme2 | CC BY-SA 3.0 | **Sí + share-alike** |
 | `marca-trazatex.jpg` | [Pexels](https://www.pexels.com/photo/4483942/) | Tiger Lily | Pexels License | No (opcional) |
 | `marca-operissa.jpg` | [Pexels](https://www.pexels.com/photo/8774570/) | Tima Miroshnichenko | Pexels License | No (opcional) |
-| `sector-salud.jpg` | [Pexels](https://www.pexels.com/photo/two-white-towels-1304110/) | Rodolpho Zanardo | Pexels License | No (opcional) |
-| `sector-hoteleria.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg) | Tony Webster | CC BY 2.0 | **Sí** |
+| `sector-salud.jpg` | reusa `salud-hero.jpg` (habitación clínica) | — | ⚠️ **sin crédito registrado** | verificar / reemplazar |
+| `sector-hoteleria.jpg` | [Pexels](https://www.pexels.com/photo/2736388/) | Engin Akyurt | Pexels License | No (opcional) |
 | `sector-industria.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg) | Shixart1985 | CC BY 2.0 | **Sí** |
 | `sector-mineria.jpg` | [Pexels](https://www.pexels.com/photo/a-coal-miner-17839774/) | neneqo | Pexels License | No (opcional) |
 | `ecosistema.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg) | HanSangYoon | CC BY-SA | **Sí + share-alike** |
@@ -45,11 +45,12 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 - Photo by Thatsme2 — CC BY-SA 3.0, via Wikimedia Commons.
 - Photo by Tiger Lily on Pexels.
 - Photo by Tima Miroshnichenko on Pexels.
-- Photo by Rodolpho Zanardo on Pexels.
-- "Hotel Room Bed" by Tony Webster — CC BY 2.0, via Wikimedia Commons.
+- Photo by Engin Akyurt on Pexels (Sector Hotelería).
 - Photo by Shixart1985 — CC BY 2.0, via Wikimedia Commons.
 - Photo by neneqo on Pexels.
 - Photo by HanSangYoon — CC BY-SA, via Wikimedia Commons.
 - Photo by Maschinenjunge — CC BY-SA 3.0, via Wikimedia Commons.
 
 > Nota: por ser fotos de banco genérico, son un **placeholder de calidad** para el rediseño. Para producción final conviene reemplazar por fotografía propia de las plantas/operaciones reales de Grupo Higienissa (elimina la obligación de atribución y sube la autenticidad).
+>
+> ⚠️ Pendiente: `salud-hero.jpg` (y `salud-contexto.jpg`, `salud-band.jpg`) **no tienen crédito registrado** — hueco pre-existente. `sector-salud.jpg` ahora reusa `salud-hero.jpg`; verificar su fuente/licencia o reemplazar por foto propia antes de producción.

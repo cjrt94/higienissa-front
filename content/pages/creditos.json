@@ -64,18 +64,9 @@
       }
     },
     {
-      "author": "Rodolpho Zanardo",
+      "author": "Engin Akyurt",
       "license": "Pexels License",
-      "source": "https://www.pexels.com/photo/two-white-towels-1304110/",
-      "use": {
-        "es": "Sector Salud",
-        "en": "Health sector"
-      }
-    },
-    {
-      "author": "Tony Webster",
-      "license": "CC BY 2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg",
+      "source": "https://www.pexels.com/photo/2736388/",
       "use": {
         "es": "Sector Hotelería",
         "en": "Hospitality sector"
