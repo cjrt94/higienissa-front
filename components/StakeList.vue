@@ -13,7 +13,7 @@ const isRich = (it) => it && typeof it === 'object' && !('es' in it) && ('title'
 <template>
   <ol class="stake-list" :class="`marker-${marker}`">
     <li v-for="(it, i) in items" :key="i" class="stake-row">
-      <span class="stake-marker" aria-hidden="true">
+      <span v-if="marker !== 'none'" class="stake-marker" aria-hidden="true">
         <span v-if="marker === 'number'" class="num">{{ i + 1 }}</span>
         <BaseIcon v-else-if="marker === 'icon' && it.icon" :name="it.icon" :size="22" />
         <span v-else class="glyph" />

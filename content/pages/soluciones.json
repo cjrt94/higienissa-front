@@ -13,20 +13,40 @@
     }
   },
   "hero": {
-    "eyebrow": { "es": "Trazatex · Solución", "en": "Trazatex · Solution" },
-    "title": { "es": "Trazabilidad textil RFID", "en": "RFID textile traceability" },
+    "eyebrow": {
+      "es": "Trazatex · Solución",
+      "en": "Trazatex · Solution"
+    },
+    "title": {
+      "es": "Trazabilidad textil RFID",
+      "en": "RFID textile traceability"
+    },
     "lead": {
       "es": "Identificación individual de cada activo textil con RFID, lectura automatizada y una plataforma de gestión que convierte cada prenda en un dato auditable. Los textiles no son solo insumos. Son activos.",
       "en": "Individual RFID identification of every textile asset, automated reading and a management platform that turns each garment into auditable data. Textiles are not just supplies. They are assets."
     },
-    "image": "/img/marca-trazatex.jpg",
+    "image": "/img/trazatex-hero.jpg",
     "imageAlt": {
-      "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
-      "en": "Trazatex: RFID technology and data applied to every textile asset"
+      "es": "Operario escaneando activos textiles con lector RFID de mano",
+      "en": "Operator scanning textile assets with an RFID handheld reader"
+    },
+    "badge": {
+      "icon": "scan",
+      "title": {
+        "es": "Trazabilidad por prenda",
+        "en": "Per-garment traceability"
+      },
+      "sub": {
+        "es": "cada activo, un dato auditable",
+        "en": "each asset, one auditable data point"
+      }
     }
   },
   "problem": {
-    "kicker": { "es": "El problema", "en": "The problem" },
+    "kicker": {
+      "es": "El problema",
+      "en": "The problem"
+    },
     "title": {
       "es": "Los textiles son activos críticos. ¿Están realmente bajo control?",
       "en": "Textiles are critical assets. Are they really under control?"
@@ -40,15 +60,33 @@
       "en": "What manual management generates"
     },
     "items": [
-      { "es": "Pérdidas no identificadas.", "en": "Unidentified losses." },
-      { "es": "Ineficiencias operativas.", "en": "Operational inefficiencies." },
-      { "es": "Manipulación innecesaria de las prendas.", "en": "Unnecessary handling of garments." },
-      { "es": "Falta de información para tomar decisiones.", "en": "Lack of information to make decisions." },
-      { "es": "Dificultades en auditorías.", "en": "Difficulties in audits." }
+      {
+        "es": "Pérdidas no identificadas.",
+        "en": "Unidentified losses."
+      },
+      {
+        "es": "Ineficiencias operativas.",
+        "en": "Operational inefficiencies."
+      },
+      {
+        "es": "Manipulación innecesaria de las prendas.",
+        "en": "Unnecessary handling of garments."
+      },
+      {
+        "es": "Falta de información para tomar decisiones.",
+        "en": "Lack of information to make decisions."
+      },
+      {
+        "es": "Dificultades en auditorías.",
+        "en": "Difficulties in audits."
+      }
     ]
   },
   "solutionDetail": {
-    "kicker": { "es": "Detalle de la solución", "en": "Solution detail" },
+    "kicker": {
+      "es": "Detalle de la solución",
+      "en": "Solution detail"
+    },
     "title": {
       "es": "Control individual de cada activo textil",
       "en": "Individual control of every textile asset"
@@ -57,42 +95,101 @@
       "es": "Cada prenda recibe una identidad única que la acompaña en todo su ciclo de vida: ingreso, uso, lavado, reposición y baja. La operación deja de gestionar lotes y pasa a gestionar activos.",
       "en": "Each garment receives a unique identity that follows it throughout its entire life cycle: intake, use, washing, replacement and retirement. Operations stop managing batches and start managing assets."
     },
-    "includesTitle": { "es": "Incluye", "en": "Includes" },
+    "includesTitle": {
+      "es": "Incluye",
+      "en": "Includes"
+    },
     "items": [
-      { "es": "Identificación individual con tags RFID industriales de larga vida.", "en": "Individual identification with long-life industrial RFID tags." },
-      { "es": "Infraestructura de lectura en puntos clave de la operación.", "en": "Reading infrastructure at key points of the operation." },
-      { "es": "Plataforma de gestión con dashboards y KPIs.", "en": "Management platform with dashboards and KPIs." },
-      { "es": "Trazabilidad por activo, área y ciclo de lavado.", "en": "Traceability by asset, area and wash cycle." },
-      { "es": "Control de pérdidas e inventarios inteligentes.", "en": "Loss control and intelligent inventories." },
-      { "es": "Auditoría operacional y cumplimiento interno.", "en": "Operational auditing and internal compliance." },
-      { "es": "Integración con la operación de lavandería y terreno.", "en": "Integration with laundry and on-site operations." }
-    ]
+      {
+        "es": "Identificación individual con tags RFID industriales de larga vida.",
+        "en": "Individual identification with long-life industrial RFID tags."
+      },
+      {
+        "es": "Infraestructura de lectura en puntos clave de la operación.",
+        "en": "Reading infrastructure at key points of the operation."
+      },
+      {
+        "es": "Plataforma de gestión con dashboards y KPIs.",
+        "en": "Management platform with dashboards and KPIs."
+      },
+      {
+        "es": "Trazabilidad por activo, área y ciclo de lavado.",
+        "en": "Traceability by asset, area and wash cycle."
+      },
+      {
+        "es": "Control de pérdidas e inventarios inteligentes.",
+        "en": "Loss control and intelligent inventories."
+      },
+      {
+        "es": "Auditoría operacional y cumplimiento interno.",
+        "en": "Operational auditing and internal compliance."
+      },
+      {
+        "es": "Integración con la operación de lavandería y terreno.",
+        "en": "Integration with laundry and on-site operations."
+      }
+    ],
+    "image": "/img/trazatex-datos.jpg",
+    "imageAlt": {
+      "es": "Plataforma de gestión con dashboards y KPIs del activo textil",
+      "en": "Management platform with dashboards and KPIs for the textile asset"
+    }
   },
   "layers": {
-    "kicker": { "es": "Cómo funciona", "en": "How it works" },
-    "title": { "es": "Cuatro capas, un mismo dato", "en": "Four layers, one data" },
+    "kicker": {
+      "es": "Cómo funciona",
+      "en": "How it works"
+    },
+    "title": {
+      "es": "Cuatro capas, un mismo dato",
+      "en": "Four layers, one data"
+    },
     "lead": {
       "es": "La trazabilidad no es un dispositivo: es un modelo de capas que conecta el activo físico con la decisión operativa. Cada capa habilita a la siguiente.",
       "en": "Traceability is not a device: it is a layered model that connects the physical asset with the operational decision. Each layer enables the next."
     },
     "items": [
       {
-        "step": { "es": "Capa 01", "en": "Layer 01" },
-        "title": { "es": "Infraestructura de lectura", "en": "Reading infrastructure" },
+        "step": {
+          "es": "Capa 01",
+          "en": "Layer 01"
+        },
+        "title": {
+          "es": "Infraestructura de lectura",
+          "en": "Reading infrastructure"
+        },
         "text": {
           "es": "La tecnología se integra al flujo operativo sin interrumpir procesos críticos.",
           "en": "The technology integrates into the operational flow without interrupting critical processes."
         },
         "points": [
-          { "es": "Túneles RFID", "en": "RFID tunnels" },
-          { "es": "Cabinas de lectura", "en": "Reading cabins" },
-          { "es": "Lectores portátiles", "en": "Handheld readers" },
-          { "es": "Estaciones adaptadas al flujo", "en": "Stations adapted to the flow" }
+          {
+            "es": "Túneles RFID",
+            "en": "RFID tunnels"
+          },
+          {
+            "es": "Cabinas de lectura",
+            "en": "Reading cabins"
+          },
+          {
+            "es": "Lectores portátiles",
+            "en": "Handheld readers"
+          },
+          {
+            "es": "Estaciones adaptadas al flujo",
+            "en": "Stations adapted to the flow"
+          }
         ]
       },
       {
-        "step": { "es": "Capa 02", "en": "Layer 02" },
-        "title": { "es": "Identificación individual", "en": "Individual identification" },
+        "step": {
+          "es": "Capa 02",
+          "en": "Layer 02"
+        },
+        "title": {
+          "es": "Identificación individual",
+          "en": "Individual identification"
+        },
         "text": {
           "es": "Cada activo textil incorpora un tag RFID que permite su identificación única y lectura masiva, sin conteo manual.",
           "en": "Each textile asset incorporates an RFID tag that enables its unique identification and bulk reading, without manual counting."
@@ -100,22 +197,46 @@
         "points": []
       },
       {
-        "step": { "es": "Capa 03", "en": "Layer 03" },
-        "title": { "es": "Plataforma de gestión", "en": "Management platform" },
+        "step": {
+          "es": "Capa 03",
+          "en": "Layer 03"
+        },
+        "title": {
+          "es": "Plataforma de gestión",
+          "en": "Management platform"
+        },
         "text": {
           "es": "El dato se consolida en un sistema digital de decisión.",
           "en": "The data is consolidated into a digital decision system."
         },
         "points": [
-          { "es": "Visualización en tiempo real", "en": "Real-time visualization" },
-          { "es": "Control por área", "en": "Control by area" },
-          { "es": "Reportes históricos y KPIs", "en": "Historical reports and KPIs" },
-          { "es": "Auditoría digital", "en": "Digital auditing" }
+          {
+            "es": "Visualización en tiempo real",
+            "en": "Real-time visualization"
+          },
+          {
+            "es": "Control por área",
+            "en": "Control by area"
+          },
+          {
+            "es": "Reportes históricos y KPIs",
+            "en": "Historical reports and KPIs"
+          },
+          {
+            "es": "Auditoría digital",
+            "en": "Digital auditing"
+          }
         ]
       },
       {
-        "step": { "es": "Capa 04", "en": "Layer 04" },
-        "title": { "es": "Integración operativa", "en": "Operational integration" },
+        "step": {
+          "es": "Capa 04",
+          "en": "Layer 04"
+        },
+        "title": {
+          "es": "Integración operativa",
+          "en": "Operational integration"
+        },
         "text": {
           "es": "El modelo se diseña según el flujo real de cada organización para garantizar adopción y sostenibilidad, e integra el dato a la lavandería y la operación en terreno.",
           "en": "The model is designed around each organization's real flow to guarantee adoption and sustainability, and integrates the data into laundry and on-site operations."
@@ -125,105 +246,203 @@
     ]
   },
   "indicators": {
-    "kicker": { "es": "Indicadores", "en": "Indicators" },
-    "title": { "es": "Lo que pasa a ser gestionable", "en": "What becomes manageable" },
+    "kicker": {
+      "es": "Indicadores",
+      "en": "Indicators"
+    },
+    "title": {
+      "es": "Lo que pasa a ser gestionable",
+      "en": "What becomes manageable"
+    },
     "items": [
       {
-        "title": { "es": "Nivel de merma", "en": "Shrinkage level" },
-        "desc": { "es": "Pérdidas y bajas visibles por activo, no estimadas por lote.", "en": "Losses and retirements visible by asset, not estimated by batch." }
+        "title": {
+          "es": "Nivel de merma",
+          "en": "Shrinkage level"
+        },
+        "desc": {
+          "es": "Pérdidas y bajas visibles por activo, no estimadas por lote.",
+          "en": "Losses and retirements visible by asset, not estimated by batch."
+        }
       },
       {
-        "title": { "es": "Rotación por área", "en": "Rotation by area" },
-        "desc": { "es": "Movimiento real de textiles entre áreas y servicios.", "en": "Real movement of textiles between areas and services." }
+        "title": {
+          "es": "Rotación por área",
+          "en": "Rotation by area"
+        },
+        "desc": {
+          "es": "Movimiento real de textiles entre áreas y servicios.",
+          "en": "Real movement of textiles between areas and services."
+        }
       },
       {
-        "title": { "es": "Ciclos de lavado", "en": "Wash cycles" },
-        "desc": { "es": "Conteo individual de procesos por prenda.", "en": "Individual count of processes per garment." }
+        "title": {
+          "es": "Ciclos de lavado",
+          "en": "Wash cycles"
+        },
+        "desc": {
+          "es": "Conteo individual de procesos por prenda.",
+          "en": "Individual count of processes per garment."
+        }
       },
       {
-        "title": { "es": "Vida útil", "en": "Service life" },
-        "desc": { "es": "Proyección de reposición basada en uso real.", "en": "Replacement projection based on real usage." }
+        "title": {
+          "es": "Vida útil",
+          "en": "Service life"
+        },
+        "desc": {
+          "es": "Proyección de reposición basada en uso real.",
+          "en": "Replacement projection based on real usage."
+        }
       },
       {
-        "title": { "es": "Inventario real", "en": "Real inventory" },
-        "desc": { "es": "Stock disponible verificable en cualquier momento.", "en": "Verifiable available stock at any moment." }
+        "title": {
+          "es": "Inventario real",
+          "en": "Real inventory"
+        },
+        "desc": {
+          "es": "Stock disponible verificable en cualquier momento.",
+          "en": "Verifiable available stock at any moment."
+        }
       },
       {
-        "title": { "es": "Cumplimiento interno", "en": "Internal compliance" },
-        "desc": { "es": "Auditoría y evidencia sobre cada proceso.", "en": "Auditing and evidence on every process." }
+        "title": {
+          "es": "Cumplimiento interno",
+          "en": "Internal compliance"
+        },
+        "desc": {
+          "es": "Auditoría y evidencia sobre cada proceso.",
+          "en": "Auditing and evidence on every process."
+        }
       }
     ]
   },
   "sectorsBlock": {
-    "kicker": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
-    "title": { "es": "Dónde aplica la trazabilidad RFID", "en": "Where RFID traceability applies" },
+    "kicker": {
+      "es": "Sectores que atendemos",
+      "en": "Sectors we serve"
+    },
+    "title": {
+      "es": "Dónde aplica la trazabilidad RFID",
+      "en": "Where RFID traceability applies"
+    },
     "items": [
       {
-        "name": { "es": "Salud", "en": "Healthcare" },
+        "name": {
+          "es": "Salud",
+          "en": "Healthcare"
+        },
         "desc": {
           "es": "Control de activos textiles clínicos con foco en bioseguridad, auditoría y trazabilidad por servicio.",
           "en": "Control of clinical textile assets with a focus on biosafety, auditing and traceability by service."
         },
-        "to": "/sector-salud"
+        "to": "/sector-salud",
+        "image": "/img/sector-salud.jpg",
+        "imageAlt": {
+          "es": "Sector salud: entorno hospitalario",
+          "en": "Health sector: hospital environment"
+        }
       },
       {
-        "name": { "es": "Hotelería", "en": "Hospitality" },
+        "name": {
+          "es": "Hotelería",
+          "en": "Hospitality"
+        },
         "desc": {
           "es": "Gestión de blancos y lencería por ubicación, con reducción de mermas y reposición basada en datos.",
           "en": "Management of linens by location, with reduced shrinkage and data-based replacement."
         },
-        "to": "/sector-hoteleria"
+        "to": "/sector-hoteleria",
+        "image": "/img/sector-hoteleria.jpg",
+        "imageAlt": {
+          "es": "Sector hotelería: blancos y lencería",
+          "en": "Hospitality sector: linens and bedding"
+        }
       },
       {
-        "name": { "es": "Industria", "en": "Industry" },
+        "name": {
+          "es": "Industria",
+          "en": "Industry"
+        },
         "desc": {
           "es": "Control de uniformes y EPP por trabajador, con registro de lavado y reportes auditables.",
           "en": "Control of uniforms and PPE by worker, with wash records and auditable reports."
         },
-        "to": "/sector-industria"
+        "to": "/sector-industria",
+        "image": "/img/sector-industria.jpg",
+        "imageAlt": {
+          "es": "Sector industria: uniformes y EPP textil",
+          "en": "Industry sector: uniforms and textile PPE"
+        }
       }
     ]
   },
   "ecosystem": {
-    "kicker": { "es": "Ecosistema", "en": "Ecosystem" },
-    "title": { "es": "Una capacidad que se integra", "en": "A capability that integrates" },
+    "kicker": {
+      "es": "Ecosistema",
+      "en": "Ecosystem"
+    },
+    "title": {
+      "es": "Una capacidad que se integra",
+      "en": "A capability that integrates"
+    },
     "lead": {
       "es": "La trazabilidad textil RFID es una capacidad de Trazatex que potencia al resto del ecosistema Higienissa.",
       "en": "RFID textile traceability is a Trazatex capability that strengthens the rest of the Higienissa ecosystem."
     },
     "items": [
       {
-        "title": { "es": "Se integra en Pacífica", "en": "Integrates with Pacífica" },
+        "title": {
+          "es": "Se integra en Pacífica",
+          "en": "Integrates with Pacífica"
+        },
         "desc": {
           "es": "La trazabilidad alimenta la lavandería industrial: control de activos en cada proceso.",
           "en": "Traceability feeds industrial laundry: asset control in every process."
         },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
           "en": "Pacífica industrial laundry: machines and washing process at scale"
         },
-        "cta": { "es": "Conocer Pacífica", "en": "Discover Pacífica" },
+        "cta": {
+          "es": "Conocer Pacífica",
+          "en": "Discover Pacífica"
+        },
         "to": "/marca-pacifica"
       },
       {
-        "title": { "es": "Se integra en Operissa", "en": "Integrates with Operissa" },
+        "title": {
+          "es": "Se integra en Operissa",
+          "en": "Integrates with Operissa"
+        },
         "desc": {
           "es": "El dato RFID respalda la operación en terreno: ropería, logística y outsourcing.",
           "en": "RFID data backs on-site operations: linen rooms, logistics and outsourcing."
         },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: equipos y procesos de operación textil especializada en terreno",
           "en": "Operissa: teams and processes for specialized on-site textile operations"
         },
-        "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" },
+        "cta": {
+          "es": "Conocer Operissa",
+          "en": "Discover Operissa"
+        },
         "to": "/marca-operissa"
       }
-    ]
+    ],
+    "image": "/img/trazatex-band.jpg",
+    "imageAlt": {
+      "es": "La trazabilidad RFID integrada al ecosistema Higienissa",
+      "en": "RFID traceability integrated into the Higienissa ecosystem"
+    }
   },
   "finalCta": {
-    "title": { "es": "Solicitar diagnóstico", "en": "Request a diagnosis" },
+    "title": {
+      "es": "Solicitar diagnóstico",
+      "en": "Request a diagnosis"
+    },
     "lead": {
       "es": "Evaluamos su operación textil y definimos cómo la trazabilidad RFID convierte sus insumos en activos gestionables.",
       "en": "We assess your textile operation and define how RFID traceability turns your supplies into manageable assets."

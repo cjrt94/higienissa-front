@@ -3,30 +3,362 @@
   "template": "creditos",
   "status": "published",
   "seo": {
-    "title": { "es": "Créditos de fotografía — Grupo Higienissa", "en": "Photo credits — Grupo Higienissa" },
-    "description": { "es": "Atribución de las imágenes de banco usadas en el sitio.", "en": "Attribution of the stock images used on this site." }
+    "title": {
+      "es": "Créditos de fotografía — Grupo Higienissa",
+      "en": "Photo credits — Grupo Higienissa"
+    },
+    "description": {
+      "es": "Atribución de las imágenes de banco usadas en el sitio.",
+      "en": "Attribution of the stock images used on this site."
+    }
   },
   "hero": {
-    "eyebrow": { "es": "Créditos", "en": "Credits" },
-    "title": { "es": "Créditos de fotografía", "en": "Photo credits" },
+    "eyebrow": {
+      "es": "Créditos",
+      "en": "Credits"
+    },
+    "title": {
+      "es": "Créditos de fotografía",
+      "en": "Photo credits"
+    },
     "lead": {
       "es": "Imágenes de banco gratuito usadas en este sitio, con su autor y licencia.",
       "en": "Free stock images used on this site, with author and license."
     }
   },
   "items": [
-    { "author": "Laundrykhalas", "license": "CC BY 4.0", "source": "https://commons.wikimedia.org/w/index.php?curid=190690373", "use": { "es": "Home — hero", "en": "Home — hero" } },
-    { "author": "Thatsme2", "license": "CC BY-SA 3.0", "source": "https://commons.wikimedia.org/w/index.php?curid=20646089", "use": { "es": "Pacífica", "en": "Pacífica" } },
-    { "author": "Tiger Lily", "license": "Pexels License", "source": "https://www.pexels.com/photo/4483942/", "use": { "es": "Trazatex", "en": "Trazatex" } },
-    { "author": "Tima Miroshnichenko", "license": "Pexels License", "source": "https://www.pexels.com/photo/8774570/", "use": { "es": "Operissa", "en": "Operissa" } },
-    { "author": "Rodolpho Zanardo", "license": "Pexels License", "source": "https://www.pexels.com/photo/two-white-towels-1304110/", "use": { "es": "Sector Salud", "en": "Health sector" } },
-    { "author": "Tony Webster", "license": "CC BY 2.0", "source": "https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg", "use": { "es": "Sector Hotelería", "en": "Hospitality sector" } },
-    { "author": "Shixart1985", "license": "CC BY 2.0", "source": "https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg", "use": { "es": "Sector Industria", "en": "Industry sector" } },
-    { "author": "neneqo", "license": "Pexels License", "source": "https://www.pexels.com/photo/a-coal-miner-17839774/", "use": { "es": "Sector Minería", "en": "Mining sector" } },
-    { "author": "HanSangYoon", "license": "CC BY-SA", "source": "https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg", "use": { "es": "Ecosistema", "en": "Ecosystem" } },
-    { "author": "Maschinenjunge", "license": "CC BY-SA 3.0", "source": "https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG", "use": { "es": "Respaldo ASIS IDTRAK", "en": "ASIS IDTRAK backing" } },
-    { "author": "Wnkwdy", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:Sanfine_International_Hospital_Ward_01.jpg", "use": { "es": "Sector Salud — hero", "en": "Health sector — hero" } },
-    { "author": "juan pinales", "license": "Pexels License", "source": "https://www.pexels.com/photo/31902663/", "use": { "es": "Sector Salud — contexto", "en": "Health sector — context" } },
-    { "author": "Infrogmation of New Orleans", "license": "CC BY-SA 4.0", "source": "https://commons.wikimedia.org/wiki/File:University_Medical_Center_New_Orleans_interior_Feb_2020_17.jpg", "use": { "es": "Sector Salud — banda", "en": "Health sector — band" } }
+    {
+      "author": "Laundrykhalas",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/w/index.php?curid=190690373",
+      "use": {
+        "es": "Home — hero",
+        "en": "Home — hero"
+      }
+    },
+    {
+      "author": "Thatsme2",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/w/index.php?curid=20646089",
+      "use": {
+        "es": "Pacífica",
+        "en": "Pacífica"
+      }
+    },
+    {
+      "author": "Tiger Lily",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/4483942/",
+      "use": {
+        "es": "Trazatex",
+        "en": "Trazatex"
+      }
+    },
+    {
+      "author": "Tima Miroshnichenko",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/8774570/",
+      "use": {
+        "es": "Operissa",
+        "en": "Operissa"
+      }
+    },
+    {
+      "author": "Rodolpho Zanardo",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/two-white-towels-1304110/",
+      "use": {
+        "es": "Sector Salud",
+        "en": "Health sector"
+      }
+    },
+    {
+      "author": "Tony Webster",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hotel_Room_Bed_(40144499253).jpg",
+      "use": {
+        "es": "Sector Hotelería",
+        "en": "Hospitality sector"
+      }
+    },
+    {
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg",
+      "use": {
+        "es": "Sector Industria",
+        "en": "Industry sector"
+      }
+    },
+    {
+      "author": "neneqo",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/a-coal-miner-17839774/",
+      "use": {
+        "es": "Sector Minería",
+        "en": "Mining sector"
+      }
+    },
+    {
+      "author": "HanSangYoon",
+      "license": "CC BY-SA",
+      "source": "https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg",
+      "use": {
+        "es": "Ecosistema",
+        "en": "Ecosystem"
+      }
+    },
+    {
+      "author": "Maschinenjunge",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG",
+      "use": {
+        "es": "Respaldo ASIS IDTRAK",
+        "en": "ASIS IDTRAK backing"
+      }
+    },
+    {
+      "author": "Wnkwdy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanfine_International_Hospital_Ward_01.jpg",
+      "use": {
+        "es": "Sector Salud — hero",
+        "en": "Health sector — hero"
+      }
+    },
+    {
+      "author": "juan pinales",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/31902663/",
+      "use": {
+        "es": "Sector Salud — contexto",
+        "en": "Health sector — context"
+      }
+    },
+    {
+      "author": "Infrogmation of New Orleans",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:University_Medical_Center_New_Orleans_interior_Feb_2020_17.jpg",
+      "use": {
+        "es": "Sector Salud — banda",
+        "en": "Health sector — band"
+      }
+    },
+    {
+      "author": "Tima Miroshnichenko",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/8774376/",
+      "use": {
+        "es": "Pacífica — hero",
+        "en": "Pacífica — hero"
+      }
+    },
+    {
+      "author": "Tima Miroshnichenko",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/8774570/",
+      "use": {
+        "es": "Pacífica — proceso",
+        "en": "Pacífica — process"
+      }
+    },
+    {
+      "author": "Tima Miroshnichenko",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/8774643/",
+      "use": {
+        "es": "Pacífica — banda",
+        "en": "Pacífica — band"
+      }
+    },
+    {
+      "author": "EqualStock IN",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/31259205/",
+      "use": {
+        "es": "Operissa — hero",
+        "en": "Operissa — hero"
+      }
+    },
+    {
+      "author": "Tiger Lily",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/4487365/",
+      "use": {
+        "es": "Operissa — proceso",
+        "en": "Operissa — process"
+      }
+    },
+    {
+      "author": "EqualStock IN",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/31047154/",
+      "use": {
+        "es": "Operissa — banda",
+        "en": "Operissa — band"
+      }
+    },
+    {
+      "author": "Tiger Lily",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/4483942/",
+      "use": {
+        "es": "Trazatex — hero",
+        "en": "Trazatex — hero"
+      }
+    },
+    {
+      "author": "Jakub Zerdzicki",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/36950598/",
+      "use": {
+        "es": "Trazatex — datos",
+        "en": "Trazatex — data"
+      }
+    },
+    {
+      "author": "Egor Komarov",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/27141307/",
+      "use": {
+        "es": "Trazatex — banda",
+        "en": "Trazatex — band"
+      }
+    },
+    {
+      "author": "Engin Akyurt",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/2736388/",
+      "use": {
+        "es": "Hotelería — hero",
+        "en": "Hospitality — hero"
+      }
+    },
+    {
+      "author": "Liliana Drew",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/9462336/",
+      "use": {
+        "es": "Hotelería — contexto",
+        "en": "Hospitality — context"
+      }
+    },
+    {
+      "author": "Quang Nguyen Vinh",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/14036253/",
+      "use": {
+        "es": "Hotelería — banda",
+        "en": "Hospitality — band"
+      }
+    },
+    {
+      "author": "Sergey Sergeev",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/32845680/",
+      "use": {
+        "es": "Industria — hero",
+        "en": "Industry — hero"
+      }
+    },
+    {
+      "author": "EqualStock IN",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/31112254/",
+      "use": {
+        "es": "Industria — contexto",
+        "en": "Industry — context"
+      }
+    },
+    {
+      "author": "Tiger Lily",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/4483773/",
+      "use": {
+        "es": "Industria — banda",
+        "en": "Industry — band"
+      }
+    },
+    {
+      "author": "Manuel Garcia",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/32594486/",
+      "use": {
+        "es": "Minería — hero",
+        "en": "Mining — hero"
+      }
+    },
+    {
+      "author": "Safi Erneste",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/35082155/",
+      "use": {
+        "es": "Minería — contexto",
+        "en": "Mining — context"
+      }
+    },
+    {
+      "author": "Volker Braun",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/32325794/",
+      "use": {
+        "es": "Minería — banda",
+        "en": "Mining — band"
+      }
+    },
+    {
+      "author": "Chikawaztla",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/31902663/",
+      "use": {
+        "es": "Blog — activos textiles",
+        "en": "Blog — textile assets"
+      }
+    },
+    {
+      "author": "Imin Technology",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/12935075/",
+      "use": {
+        "es": "Blog — RFID",
+        "en": "Blog — RFID"
+      }
+    },
+    {
+      "author": "AlphaTradeZone",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/5833793/",
+      "use": {
+        "es": "Blog — indicadores",
+        "en": "Blog — indicators"
+      }
+    },
+    {
+      "author": "Matreding",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/10344208/",
+      "use": {
+        "es": "Blog — lavandería",
+        "en": "Blog — laundry"
+      }
+    },
+    {
+      "author": "Pixabay",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/236748/",
+      "use": {
+        "es": "Blog — disponibilidad",
+        "en": "Blog — availability"
+      }
+    },
+    {
+      "author": "cottonbro studio",
+      "license": "Pexels License",
+      "source": "https://www.pexels.com/photo/8369207/",
+      "use": {
+        "es": "Blog — auditoría / Artículo",
+        "en": "Blog — audit / Article"
+      }
+    }
   ]
 }

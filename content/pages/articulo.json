@@ -13,15 +13,32 @@
     }
   },
   "hero": {
-    "kicker": { "es": "Gestión textil", "en": "Textile management" },
+    "kicker": {
+      "es": "Gestión textil",
+      "en": "Textile management"
+    },
     "title": {
       "es": "Trazabilidad textil: por qué los blancos son activos, no insumos",
       "en": "Textile traceability: why linens are assets, not supplies"
     },
     "meta": {
-      "category": { "es": "Categoría: Gestión textil", "en": "Category: Textile management" },
-      "date": { "es": "3 de junio de 2026", "en": "June 3, 2026" },
-      "author": { "es": "Por Equipo Editorial Higienissa", "en": "By the Higienissa Editorial Team" }
+      "category": {
+        "es": "Categoría: Gestión textil",
+        "en": "Category: Textile management"
+      },
+      "date": {
+        "es": "3 de junio de 2026",
+        "en": "June 3, 2026"
+      },
+      "author": {
+        "es": "Por Equipo Editorial Higienissa",
+        "en": "By the Higienissa Editorial Team"
+      }
+    },
+    "image": "/img/blog-activos.jpg",
+    "imageAlt": {
+      "es": "Textil institucional gestionado como activo, no como insumo",
+      "en": "Institutional textile managed as an asset, not a supply"
     }
   },
   "body": {
@@ -32,7 +49,10 @@
     "blocks": [
       {
         "type": "heading",
-        "text": { "es": "De insumo a activo gestionable", "en": "From supply to manageable asset" }
+        "text": {
+          "es": "De insumo a activo gestionable",
+          "en": "From supply to manageable asset"
+        }
       },
       {
         "type": "paragraph",
@@ -78,30 +98,63 @@
         "type": "list",
         "items": [
           {
-            "term": { "es": "Nivel de merma", "en": "Loss level" },
-            "desc": { "es": "pérdidas reales por área en lugar de promedios globales.", "en": "real losses by area instead of global averages." }
+            "term": {
+              "es": "Nivel de merma",
+              "en": "Loss level"
+            },
+            "desc": {
+              "es": "pérdidas reales por área en lugar de promedios globales.",
+              "en": "real losses by area instead of global averages."
+            }
           },
           {
-            "term": { "es": "Rotación por área", "en": "Rotation by area" },
-            "desc": { "es": "cómo circula el textil entre puntos de uso y procesamiento.", "en": "how textiles circulate between points of use and processing." }
+            "term": {
+              "es": "Rotación por área",
+              "en": "Rotation by area"
+            },
+            "desc": {
+              "es": "cómo circula el textil entre puntos de uso y procesamiento.",
+              "en": "how textiles circulate between points of use and processing."
+            }
           },
           {
-            "term": { "es": "Ciclos de lavado", "en": "Wash cycles" },
-            "desc": { "es": "desgaste acumulado por prenda como base de la reposición.", "en": "accumulated wear per garment as the basis for replacement." }
+            "term": {
+              "es": "Ciclos de lavado",
+              "en": "Wash cycles"
+            },
+            "desc": {
+              "es": "desgaste acumulado por prenda como base de la reposición.",
+              "en": "accumulated wear per garment as the basis for replacement."
+            }
           },
           {
-            "term": { "es": "Vida útil", "en": "Service life" },
-            "desc": { "es": "el momento óptimo de retiro antes de que el deterioro afecte el servicio.", "en": "the optimal moment to retire a garment before deterioration affects service." }
+            "term": {
+              "es": "Vida útil",
+              "en": "Service life"
+            },
+            "desc": {
+              "es": "el momento óptimo de retiro antes de que el deterioro afecte el servicio.",
+              "en": "the optimal moment to retire a garment before deterioration affects service."
+            }
           },
           {
-            "term": { "es": "Inventario real", "en": "Real inventory" },
-            "desc": { "es": "existencias verificables, no estimadas.", "en": "verifiable stock, not estimated." }
+            "term": {
+              "es": "Inventario real",
+              "en": "Real inventory"
+            },
+            "desc": {
+              "es": "existencias verificables, no estimadas.",
+              "en": "verifiable stock, not estimated."
+            }
           }
         ]
       },
       {
         "type": "heading",
-        "text": { "es": "Trazabilidad como base de la auditoría", "en": "Traceability as the basis for auditing" }
+        "text": {
+          "es": "Trazabilidad como base de la auditoría",
+          "en": "Traceability as the basis for auditing"
+        }
       },
       {
         "type": "paragraph",
@@ -119,7 +172,10 @@
       },
       {
         "type": "heading",
-        "text": { "es": "De la medición a la decisión", "en": "From measurement to decision" }
+        "text": {
+          "es": "De la medición a la decisión",
+          "en": "From measurement to decision"
+        }
       },
       {
         "type": "paragraph",
@@ -138,18 +194,30 @@
     ]
   },
   "finalCta": {
-    "title": { "es": "¿Quiere aplicar esto a su operación?", "en": "Want to apply this to your operation?" },
+    "title": {
+      "es": "¿Quiere aplicar esto a su operación?",
+      "en": "Want to apply this to your operation?"
+    },
     "lead": {
       "es": "Evaluamos su operación textil y diseñamos la solución del ecosistema que le corresponde.",
       "en": "We assess your textile operation and design the ecosystem solution that fits you."
     }
   },
   "related": {
-    "kicker": { "es": "Recursos", "en": "Resources" },
-    "title": { "es": "Artículos relacionados", "en": "Related articles" },
+    "kicker": {
+      "es": "Recursos",
+      "en": "Resources"
+    },
+    "title": {
+      "es": "Artículos relacionados",
+      "en": "Related articles"
+    },
     "items": [
       {
-        "chip": { "es": "Gestión textil", "en": "Textile management" },
+        "chip": {
+          "es": "Gestión textil",
+          "en": "Textile management"
+        },
         "title": {
           "es": "RFID en lavandería industrial: qué medir desde el primer día",
           "en": "RFID in industrial laundry: what to measure from day one"
@@ -158,7 +226,7 @@
           "es": "Los indicadores que conviene seguir al iniciar un proyecto de trazabilidad.",
           "en": "The indicators worth tracking when starting a traceability project."
         },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/blog-rfid.jpg",
         "imageAlt": {
           "es": "RFID aplicado a la lavandería industrial para trazabilidad textil",
           "en": "RFID applied to industrial laundry for textile traceability"
@@ -166,7 +234,10 @@
         "to": "/articulo"
       },
       {
-        "chip": { "es": "Auditoría", "en": "Auditing" },
+        "chip": {
+          "es": "Auditoría",
+          "en": "Auditing"
+        },
         "title": {
           "es": "Auditoría continua: del control puntual al registro objetivo",
           "en": "Continuous auditing: from one-off control to objective records"
@@ -175,7 +246,7 @@
           "es": "Cómo la lectura individual transforma el cumplimiento interno.",
           "en": "How individual reading transforms internal compliance."
         },
-        "image": "/img/asis-idtrak.jpg",
+        "image": "/img/blog-indicadores.jpg",
         "imageAlt": {
           "es": "Lectura individual de activos textiles como base del registro objetivo",
           "en": "Individual reading of textile assets as the basis for objective records"
@@ -183,7 +254,10 @@
         "to": "/articulo"
       },
       {
-        "chip": { "es": "Operación", "en": "Operations" },
+        "chip": {
+          "es": "Operación",
+          "en": "Operations"
+        },
         "title": {
           "es": "Vida útil del textil: cuándo conviene retirar una prenda",
           "en": "Textile service life: when to retire a garment"
@@ -192,7 +266,7 @@
           "es": "Ciclos de lavado y reposición basados en datos, no en estimaciones.",
           "en": "Wash cycles and replacement based on data, not estimates."
         },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/blog-lavanderia.jpg",
         "imageAlt": {
           "es": "Textil limpio en lavandería industrial, base de la decisión de reposición",
           "en": "Clean textiles in industrial laundry, the basis for replacement decisions"

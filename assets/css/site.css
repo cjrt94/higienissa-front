@@ -39,7 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-height: 1.12; margin: 0 0 var(--space-3); font-weight: 400; letter-spacing: -0.01em; }
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); line-height: 1.12; margin: 0 0 var(--space-3); font-weight: 400; letter-spacing: -0.01em; text-wrap: balance; }
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: clamp(1.7rem, 2.6vw, 2.35rem); }
 h3 { font-size: var(--fs-h3); }
@@ -80,11 +80,13 @@ li { margin-bottom: var(--space-2); }
 /* --- Secciones --- */
 .section { padding: clamp(var(--space-8), 8vw, var(--space-10)) 0; }
 .section-alt { background: var(--bg-alt); }
-.section-head { max-width: 60ch; margin: 0 auto var(--space-7); }
+.section-head { max-width: 60ch; margin: 0 auto var(--space-7); text-align: center; }
 .section-head.left { margin-left: 0; text-align: left; }
 .section-head h2 { margin-bottom: var(--space-3); }
 .section-head .lead { margin: 0 auto; }
 .section-head.left .lead { margin: 0; }
+/* Parrafo intro extra bajo el header (centrado, ancho legible) */
+.section-body { max-width: 68ch; margin: calc(-1 * var(--space-4)) auto var(--space-7); text-align: center; color: var(--muted); }
 
 /* ============================================================
    BOTONES

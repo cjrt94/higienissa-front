@@ -29,10 +29,15 @@
       "es": "Soluciones del ecosistema Higienissa para manufactura, agroindustria, logística y laboratorios, donde el textil técnico y el EPP son parte del cumplimiento operativo y de la seguridad de cada trabajador.",
       "en": "Higienissa ecosystem solutions for manufacturing, agribusiness, logistics and laboratories, where technical textiles and PPE are part of operational compliance and the safety of every worker."
     },
-    "image": "/img/sector-industria.jpg",
+    "image": "/img/industria-hero.jpg",
     "imageAlt": {
-      "es": "Operación industrial con uniformes y EPP textiles gestionados por trabajador",
-      "en": "Industrial operation with uniforms and textile PPE managed per worker"
+      "es": "Trabajadora industrial con uniforme, casco y EPP en planta",
+      "en": "Industrial worker with uniform, helmet and PPE on the plant floor"
+    },
+    "badge": {
+      "icon": "shield",
+      "title": { "es": "Trazabilidad por trabajador", "en": "Traceability per worker" },
+      "sub": { "es": "uniformes y EPP auditables", "en": "auditable uniforms and PPE" }
     }
   },
   "context": {
@@ -44,6 +49,11 @@
     "lead": {
       "es": "Los textiles son parte del cumplimiento normativo y la seguridad laboral; sin trazabilidad no se controla la asignación, la frecuencia de lavado, el desgaste ni el cumplimiento.",
       "en": "Textiles are part of regulatory compliance and workplace safety; without traceability there is no control over assignment, wash frequency, wear or compliance."
+    },
+    "image": "/img/industria-contexto.jpg",
+    "imageAlt": {
+      "es": "Personal industrial con uniforme operando en planta",
+      "en": "Industrial staff in uniform operating on the plant floor"
     },
     "pillars": [
       {
@@ -91,6 +101,11 @@
     "lead": {
       "es": "El ecosistema articula operación y trazabilidad para convertir uniformes y EPP textiles en activos gestionados por trabajador, auditables y siempre disponibles.",
       "en": "The ecosystem connects operation and traceability to turn uniforms and textile PPE into worker-managed assets that are auditable and always available."
+    },
+    "image": "/img/industria-band.jpg",
+    "imageAlt": {
+      "es": "Nave logística industrial donde el textil de trabajo es parte de la operación",
+      "en": "Industrial logistics warehouse where workwear is part of the operation"
     },
     "items": [
       { "es": "Asignación digital por colaborador.", "en": "Digital assignment per employee." },
@@ -148,7 +163,7 @@
     "items": [
       {
         "name": { "es": "Operissa", "en": "Operissa" },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": { "es": "Operissa — operación y logística textil en planta", "en": "Operissa — textile operation and logistics on site" },
         "desc": {
           "es": "Operación y gestión especializada de uniformes, ropería y logística textil en planta.",
@@ -159,7 +174,7 @@
       },
       {
         "name": { "es": "Trazatex", "en": "Trazatex" },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero.jpg",
         "imageAlt": { "es": "Trazatex — RFID, software y data para trazabilidad textil", "en": "Trazatex — RFID, software and data for textile traceability" },
         "desc": {
           "es": "RFID, software, auditoría y data para la trazabilidad individual de cada uniforme y EPP textil.",
@@ -170,7 +185,7 @@
       },
       {
         "name": { "es": "Pacífica", "en": "Pacífica" },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
         "desc": {
           "es": "Lavandería industrial inteligente para el procesamiento de uniformes y ropa de trabajo cuando la operación lo requiere.",

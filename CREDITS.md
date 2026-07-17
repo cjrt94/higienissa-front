@@ -14,6 +14,30 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `sector-mineria.jpg` | [Pexels](https://www.pexels.com/photo/a-coal-miner-17839774/) | neneqo | Pexels License | No (opcional) |
 | `ecosistema.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg) | HanSangYoon | CC BY-SA | **Sí + share-alike** |
 | `asis-idtrak.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG) | Maschinenjunge | CC BY-SA 3.0 | **Sí + share-alike** |
+| `pacifica-hero.jpg` | [Pexels](https://www.pexels.com/photo/washing-machines-in-a-laundry-shop-8774376/) | Tima Miroshnichenko | Pexels License | No (opcional) |
+| `pacifica-proceso.jpg` | [Pexels](https://www.pexels.com/photo/8774570/) | Tima Miroshnichenko | Pexels License | No (opcional) |
+| `pacifica-band.jpg` | [Pexels](https://www.pexels.com/photo/8774643/) | Tima Miroshnichenko | Pexels License | No (opcional) |
+| `operissa-hero.jpg` | [Pexels](https://www.pexels.com/photo/31259205/) | EqualStock IN | Pexels License | No (opcional) |
+| `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/two-workers-in-a-warehouse-4487365/) | Tiger Lily | Pexels License | No (opcional) |
+| `operissa-band.jpg` | [Pexels](https://www.pexels.com/photo/31047154/) | EqualStock IN | Pexels License | No (opcional) |
+| `trazatex-hero.jpg` | [Pexels](https://www.pexels.com/photo/4483942/) | Tiger Lily | Pexels License | No (opcional) |
+| `trazatex-datos.jpg` | [Pexels](https://www.pexels.com/photo/36950598/) | Jakub Zerdzicki | Pexels License | No (opcional) |
+| `trazatex-band.jpg` | [Pexels](https://www.pexels.com/photo/27141307/) | Egor Komarov | Pexels License | No (opcional) |
+| `hoteleria-hero.jpg` | [Pexels](https://www.pexels.com/photo/2736388/) | Engin Akyurt | Pexels License | No (opcional) |
+| `hoteleria-contexto.jpg` | [Pexels](https://www.pexels.com/photo/9462336/) | Liliana Drew | Pexels License | No (opcional) |
+| `hoteleria-band.jpg` | [Pexels](https://www.pexels.com/photo/14036253/) | Quang Nguyen Vinh | Pexels License | No (opcional) |
+| `industria-hero.jpg` | [Pexels](https://www.pexels.com/photo/32845680/) | Sergey Sergeev | Pexels License | No (opcional) |
+| `industria-contexto.jpg` | [Pexels](https://www.pexels.com/photo/31112254/) | EqualStock IN | Pexels License | No (opcional) |
+| `industria-band.jpg` | [Pexels](https://www.pexels.com/photo/4483773/) | Tiger Lily | Pexels License | No (opcional) |
+| `mineria-hero.jpg` | [Pexels](https://www.pexels.com/photo/32594486/) | Manuel Garcia | Pexels License | No (opcional) |
+| `mineria-contexto.jpg` | [Pexels](https://www.pexels.com/photo/35082155/) | Safi Erneste | Pexels License | No (opcional) |
+| `mineria-band.jpg` | [Pexels](https://www.pexels.com/photo/32325794/) | Volker Braun | Pexels License | No (opcional) |
+| `blog-activos.jpg` | [Pexels](https://www.pexels.com/photo/31902663/) | Chikawaztla | Pexels License | No (opcional) |
+| `blog-rfid.jpg` | [Pexels](https://www.pexels.com/photo/12935075/) | Imin Technology | Pexels License | No (opcional) |
+| `blog-indicadores.jpg` | [Pexels](https://www.pexels.com/photo/5833793/) | AlphaTradeZone | Pexels License | No (opcional) |
+| `blog-lavanderia.jpg` | [Pexels](https://www.pexels.com/photo/10344208/) | Matreding | Pexels License | No (opcional) |
+| `blog-disponibilidad.jpg` | [Pexels](https://www.pexels.com/photo/236748/) | Pixabay | Pexels License | No (opcional) |
+| `blog-auditoria.jpg` | [Pexels](https://www.pexels.com/photo/8369207/) | cottonbro studio | Pexels License | No (opcional) |
 
 ## Líneas de atribución listas para pegar
 

@@ -3,6 +3,7 @@ const page = useBrandContent('pacifica')
 const t = useT()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
+const splitTwo = useSplitTwo()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -17,117 +18,138 @@ const crumbs = computed(() => [
   { label: t({ es: 'Inicio', en: 'Home' }), to: '/' },
   { label: page.name },
 ])
+
+// Soluciones normalizadas al contrato de <SolutionsShowcase>
+const solutionIcons = ['droplet', 'chart', 'scan', 'cog']
+const solutionItems = computed(() =>
+  page.solutions.map((s, i) => ({
+    icon: solutionIcons[i] || 'check',
+    title: s.title,
+    desc: s.description,
+    groups: s.items && s.items.length ? [{ label: s.listLabel, items: s.items }] : [],
+  })),
+)
 </script>
 
 <template>
   <div>
     <Breadcrumb :items="crumbs" />
 
-    <PageHero
-      :eyebrow="page.hero.eyebrow"
-      :title="page.hero.claim"
-      :lead="page.hero.lead"
-      :image="page.hero.image"
-      :image-alt="page.hero.imageAlt"
-      cta-to="/contacto"
-      :cta-label="$t('cta.evaluation')"
-    />
+    <!-- 1 · HERO rico (foto enmarcada + badge flotante) -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+          <h1 class="display">{{ t(page.hero.claim) }}</h1>
+          <p class="lead">{{ t(page.hero.lead) }}</p>
+          <div class="hero-actions">
+            <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
+            <BaseButton href="#soluciones" variant="ghost">{{ $t('cta.knowMore') }}</BaseButton>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="frame">
+            <img :src="page.hero.image" :alt="t(page.hero.imageAlt)" width="1200" height="1020">
+          </div>
+          <div v-if="page.hero.badge" class="hero-badge">
+            <span class="hb-icon"><BaseIcon :name="page.hero.badge.icon" :size="22" /></span>
+            <span><b>{{ t(page.hero.badge.title) }}</b><span>{{ t(page.hero.badge.sub) }}</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Quiénes somos -->
+    <!-- 2 · QUIÉNES SOMOS (split con foto + highlights) -->
     <section class="section section-alt">
-      <div class="container intro-split">
-        <div class="intro-copy">
-          <div class="section-head">
-            <span class="kicker">{{ t(page.whoWeAre.eyebrow) }}</span>
-            <h2>{{ t(page.whoWeAre.title) }}</h2>
-            <p class="lead">{{ t(page.whoWeAre.body) }}</p>
-          </div>
-        </div>
-        <div class="highlight-stack">
-          <div v-for="h in page.whoWeAre.highlights" :key="h.label.es" class="highlight">
-            <span class="h-icon"><BaseIcon :name="h.icon" /></span>
-            <div>
-              <span class="h-label">{{ t(h.label) }}</span>
-              <p>{{ t(h.text) }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Soluciones -->
-    <section class="section">
       <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.solutionsBlock.eyebrow) }}</span>
-          <h2>{{ t(page.solutionsBlock.title) }}</h2>
-        </div>
-        <div class="grid cols-2">
-          <article v-for="sol in page.solutions" :key="sol.order" class="card">
-            <div class="card-body">
-              <span v-if="sol.executedBy" class="card-eyebrow">{{ t(sol.executedBy.label) }}</span>
-              <h3>{{ t(sol.title) }}</h3>
-              <p class="card-desc">{{ t(sol.description) }}</p>
-              <span class="card-eyebrow">{{ t(sol.listLabel) }}</span>
-              <ul class="chips">
-                <li v-for="(it, i) in sol.items" :key="i" class="chip">{{ t(it) }}</li>
-              </ul>
+        <div class="intro-split">
+          <div class="intro-copy">
+            <div class="section-head left">
+              <span class="kicker">{{ t(page.whoWeAre.eyebrow) }}</span>
+              <h2>{{ t(page.whoWeAre.title) }}</h2>
+              <p class="lead">{{ t(page.whoWeAre.body) }}</p>
             </div>
-          </article>
+          </div>
+          <div class="hero-media">
+            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
+              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="grid cols-3 reveal" style="margin-top:var(--space-7)">
+          <div v-for="h in page.whoWeAre.highlights" :key="h.label.es" class="highlight">
+            <span class="h-icon"><BaseIcon :name="h.icon" :size="22" /></span>
+            <span>
+              <span class="h-label"><span v-for="(ln, i) in splitTwo(h.label)" :key="i">{{ ln }}</span></span>
+              <p>{{ t(h.text) }}</p>
+            </span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Sectores que atendemos -->
+    <!-- 3 · SOLUCIONES (bento: destacada + fila con icono/pill/checklist) -->
+    <div id="soluciones">
+      <SolutionsShowcase
+        :eyebrow="page.solutionsBlock.eyebrow"
+        :title="page.solutionsBlock.title"
+        :items="solutionItems"
+      />
+    </div>
+
+    <!-- 4 · SECTORES QUE ATENDEMOS (cards a sangre con overlay) -->
     <section class="section section-alt">
       <div class="container">
         <div class="section-head center">
           <span class="kicker">{{ t(page.sectorsApplied.eyebrow) }}</span>
           <h2>{{ t(page.sectorsApplied.title) }}</h2>
         </div>
-        <div class="grid cols-4">
+        <div class="grid cols-4 reveal">
           <NuxtLink
             v-for="s in page.sectorsApplied.items"
             :key="s.to"
-            class="card"
+            class="sector-card"
             :to="localePath(s.to)"
           >
-            <div class="card-body">
+            <img :src="s.image" :alt="t(s.imageAlt)" width="600" height="800" loading="lazy">
+            <span class="sc-body">
               <h3>{{ t(s.name) }}</h3>
-              <p class="card-desc">{{ t(s.desc) }}</p>
-              <span class="link-arrow">{{ $t('cta.seeSector') }}</span>
-            </div>
+              <p>{{ t(s.desc) }}</p>
+              <span class="sc-link">{{ $t('cta.seeSector') }}</span>
+            </span>
           </NuxtLink>
         </div>
       </div>
     </section>
 
-    <!-- Nuestra diferencia -->
+    <!-- 5 · NUESTRA DIFERENCIA -->
     <section class="section">
       <div class="container">
         <div class="section-head center">
           <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
           <h2>{{ t(page.differentiators.title) }}</h2>
         </div>
-        <div class="pillars cols-4">
+        <div class="pillars cols-4 reveal">
           <div v-for="d in page.differentiators.items" :key="d.title.es" class="pillar">
             <span class="pillar-icon"><BaseIcon :name="d.icon" /></span>
-            <h3>{{ t(d.title) }}</h3>
+            <h3><span v-for="(ln, i) in splitTwo(d.title)" :key="i">{{ ln }}</span></h3>
             <p>{{ t(d.text) }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Ecosistema HIGIENISSA -->
-    <section id="ecosistema" class="section section-alt">
+    <!-- 6 · ECOSISTEMA — tesis como banda a sangre con foto + cards de marca -->
+    <ImageBand
+      :image="page.ecosystem.image"
+      :eyebrow="page.ecosystem.eyebrow"
+      :title="page.ecosystem.title"
+      :statement="page.ecosystem.lead"
+      align="center"
+    />
+    <section id="ecosistema" class="section">
       <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.ecosystem.eyebrow) }}</span>
-          <h2>{{ t(page.ecosystem.title) }}</h2>
-          <p class="lead">{{ t(page.ecosystem.lead) }}</p>
-        </div>
-        <div class="grid cols-2">
+        <div class="grid cols-2 reveal">
           <article v-for="b in page.ecosystem.items" :key="b.name" class="card">
             <div class="card-media">
               <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
@@ -142,8 +164,8 @@ const crumbs = computed(() => [
       </div>
     </section>
 
-    <!-- CTA final -->
-    <section class="section cta-band">
+    <!-- 7 · CTA final -->
+    <section class="section cta-band bg-motion">
       <div class="container">
         <h2>{{ t(page.finalCta.title) }}</h2>
         <p class="lead">{{ t(page.finalCta.lead) }}</p>
@@ -154,3 +176,9 @@ const crumbs = computed(() => [
     </section>
   </div>
 </template>
+
+<style scoped>
+/* Titulos de cards a 2 lineas balanceadas (misma logica que SolutionsShowcase) */
+.pillar h3 span,
+.h-label span { display: block; }
+</style>

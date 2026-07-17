@@ -25,10 +25,15 @@
       "es": "Operación y gestión especializada para entornos de alta exigencia. Personas. Procesos. Resultados.",
       "en": "Specialized operations and management for high-demand environments. People. Processes. Results."
     },
-    "image": "/img/marca-operissa.jpg",
+    "image": "/img/operissa-hero.jpg",
     "imageAlt": {
-      "es": "Equipos y procesos de operación textil especializada de Operissa en terreno",
-      "en": "Operissa teams and processes for specialized on-site textile operations"
+      "es": "Equipo de Operissa operando y supervisando en planta textil",
+      "en": "Operissa team operating and supervising on the textile floor"
+    },
+    "badge": {
+      "icon": "cog",
+      "title": { "es": "Operación que no se detiene", "en": "Operations that never stop" },
+      "sub": { "es": "Personas. Procesos. Resultados.", "en": "People. Processes. Results." }
     }
   },
   "whoWeAre": {
@@ -38,8 +43,14 @@
       "es": "Muchas organizaciones tienen infraestructura y recursos, pero enfrentan problemas de productividad, control, supervisión y continuidad. Operissa cierra esa brecha: no cubrimos posiciones, administramos operaciones.",
       "en": "Many organizations have the infrastructure and resources, but face challenges in productivity, control, supervision and continuity. Operissa closes that gap: we don't fill positions, we manage operations."
     },
+    "image": "/img/operissa-proceso.jpg",
+    "imageAlt": {
+      "es": "Supervisión de la operación en terreno: personal y control de proceso",
+      "en": "On-site operation supervision: staff and process control"
+    },
     "highlights": [
       {
+        "icon": "cog",
         "label": { "es": "Administramos, no cubrimos", "en": "We manage, we don't just staff" },
         "text": {
           "es": "Gestionamos la operación completa, no solo dotamos personal por posición.",
@@ -47,6 +58,7 @@
         }
       },
       {
+        "icon": "users",
         "label": { "es": "Personas + procesos", "en": "People + processes" },
         "text": {
           "es": "Talento especializado y entrenado bajo procedimientos claros y medibles.",
@@ -54,6 +66,7 @@
         }
       },
       {
+        "icon": "activity",
         "label": { "es": "Mejora continua", "en": "Continuous improvement" },
         "text": {
           "es": "Supervisión permanente, indicadores visibles y optimización sostenida.",
@@ -210,7 +223,9 @@
           "es": "Hospitales, clínicas y laboratorios donde el textil impacta directamente en la bioseguridad, la auditoría y la continuidad de la atención.",
           "en": "Hospitals, clinics and laboratories where textiles directly impact biosecurity, auditing and continuity of care."
         },
-        "to": "/sector-salud"
+        "to": "/sector-salud",
+        "image": "/img/sector-salud.jpg",
+        "imageAlt": { "es": "Sector salud: entorno hospitalario", "en": "Health sector: hospital environment" }
       },
       {
         "name": { "es": "Hotelería", "en": "Hospitality" },
@@ -218,7 +233,9 @@
           "es": "Hoteles, resorts y apart hoteles donde los blancos y la lencería son parte de la experiencia del huésped y un costo a controlar.",
           "en": "Hotels, resorts and apart-hotels where linens and bedding are part of the guest experience and a cost to control."
         },
-        "to": "/sector-hoteleria"
+        "to": "/sector-hoteleria",
+        "image": "/img/sector-hoteleria.jpg",
+        "imageAlt": { "es": "Sector hotelería: blancos y lencería de hotel", "en": "Hospitality sector: hotel linens and bedding" }
       },
       {
         "name": { "es": "Industria", "en": "Industry" },
@@ -226,7 +243,9 @@
           "es": "Manufactura, agroindustria y logística donde los uniformes y el EPP textil forman parte del cumplimiento y la seguridad laboral.",
           "en": "Manufacturing, agribusiness and logistics where uniforms and textile PPE are part of compliance and workplace safety."
         },
-        "to": "/sector-industria"
+        "to": "/sector-industria",
+        "image": "/img/sector-industria.jpg",
+        "imageAlt": { "es": "Sector industria: uniformes y EPP textil", "en": "Industry sector: uniforms and textile PPE" }
       },
       {
         "name": { "es": "Minería", "en": "Mining" },
@@ -234,7 +253,9 @@
           "es": "Campamentos, operaciones remotas y proyectos temporales en entornos exigentes y alejados de los centros urbanos.",
           "en": "Camps, remote operations and temporary projects in demanding environments far from urban centers."
         },
-        "to": "/sector-mineria"
+        "to": "/sector-mineria",
+        "image": "/img/sector-mineria.jpg",
+        "imageAlt": { "es": "Sector minería: operaciones remotas exigentes", "en": "Mining sector: demanding remote operations" }
       }
     ]
   },
@@ -248,11 +269,16 @@
       "es": "Operissa opera en terreno con el respaldo de Pacífica y la trazabilidad de Trazatex. Cada marca potencia a las otras.",
       "en": "Operissa operates on site backed by Pacífica and the traceability of Trazatex. Each brand strengthens the others."
     },
+    "image": "/img/operissa-band.jpg",
+    "imageAlt": {
+      "es": "Operación textil de Operissa a escala en planta",
+      "en": "Operissa textile operation at scale on the floor"
+    },
     "items": [
       {
         "name": "Pacífica",
         "desc": { "es": "Lavandería industrial inteligente.", "en": "Intelligent industrial laundry." },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
           "en": "Pacífica industrial laundry: machines and washing process at scale"
@@ -262,7 +288,7 @@
       {
         "name": "Trazatex",
         "desc": { "es": "RFID, software, auditoría y data.", "en": "RFID, software, auditing and data." },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
           "en": "Trazatex: RFID technology and data applied to every textile asset"

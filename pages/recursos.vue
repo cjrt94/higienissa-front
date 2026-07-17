@@ -18,11 +18,14 @@ useSeoMeta({
   <div>
     <Breadcrumb :items="[{ label: $t('nav.home'), to: '/' }, { label: $t('nav.resources') }]" />
 
-    <PageHero
-      :eyebrow="page.hero.eyebrow"
-      :title="page.hero.title"
-      :lead="page.hero.lead"
-    />
+    <!-- Hero centrado (las post-cards con thumbnail son el payload visual) -->
+    <section class="hero">
+      <div class="container hub-hero">
+        <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+        <h1 class="display">{{ t(page.hero.title) }}</h1>
+        <p class="lead mx-auto">{{ t(page.hero.lead) }}</p>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container">
@@ -40,8 +43,8 @@ useSeoMeta({
           </button>
         </div>
 
-        <div class="grid cols-3" style="margin-top: var(--space-6)">
-          <article v-for="(post, i) in page.posts.items" :key="i" class="card">
+        <div class="grid cols-3 reveal" style="margin-top: var(--space-6)">
+          <NuxtLink v-for="(post, i) in page.posts.items" :key="i" :to="localePath(post.to)" class="card post-card">
             <div class="card-media">
               <img :src="post.image" :alt="t(post.imageAlt)" width="640" height="400" loading="lazy">
             </div>
@@ -49,10 +52,12 @@ useSeoMeta({
               <span class="card-eyebrow">{{ t(post.category) }}</span>
               <h3>{{ t(post.title) }}</h3>
               <p class="card-desc">{{ t(post.excerpt) }}</p>
-              <p class="muted">{{ t(post.date) }}</p>
-              <NuxtLink :to="localePath(post.to)" class="link-arrow">{{ t(page.posts.readLabel) }}</NuxtLink>
+              <div class="post-foot">
+                <span class="post-date">{{ t(post.date) }}</span>
+                <span class="link-arrow">{{ t(page.posts.readLabel) }}</span>
+              </div>
             </div>
-          </article>
+          </NuxtLink>
         </div>
 
         <nav class="pagination" :aria-label="t(page.pagination.label)">
@@ -69,3 +74,11 @@ useSeoMeta({
     <FinalCta :data="page.finalCta" />
   </div>
 </template>
+
+<style scoped>
+.hub-hero { max-width: 780px; margin: 0 auto; text-align: center; }
+.hub-hero .lead { margin: 0 auto; }
+.post-card .card-body { flex: 1; }
+.post-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: auto; padding-top: var(--space-3); }
+.post-date { font-size: var(--fs-small); color: var(--muted); }
+</style>

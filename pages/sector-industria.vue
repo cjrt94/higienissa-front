@@ -2,6 +2,7 @@
 const page = useSectorContent('industria')
 const t = useT()
 const localePath = useLocalePath()
+const config = useRuntimeConfig()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -9,6 +10,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
+  ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
 const crumbs = computed(() => [
@@ -22,27 +24,50 @@ const crumbs = computed(() => [
   <div>
     <Breadcrumb :items="crumbs" />
 
-    <PageHero
-      :eyebrow="page.hero.eyebrow"
-      :title="page.hero.title"
-      :lead="page.hero.lead"
-      :image="page.hero.image"
-      :image-alt="page.hero.imageAlt"
-      cta-to="/contacto"
-      :cta-label="$t('cta.evaluation')"
-    />
+    <!-- 1 · HERO rico (foto + badge) -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+          <h1 class="display">{{ t(page.hero.title) }}</h1>
+          <p class="lead">{{ t(page.hero.lead) }}</p>
+          <div class="hero-actions">
+            <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
+            <BaseButton href="#marcas" variant="ghost">{{ $t('cta.knowMore') }}</BaseButton>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="frame">
+            <img :src="page.hero.image" :alt="t(page.hero.imageAlt)" width="1200" height="1020">
+          </div>
+          <div v-if="page.hero.badge" class="hero-badge">
+            <span class="hb-icon"><BaseIcon :name="page.hero.badge.icon" :size="22" /></span>
+            <span><b>{{ t(page.hero.badge.title) }}</b><span>{{ t(page.hero.badge.sub) }}</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- El contexto / desafío real -->
+    <!-- 2 · CONTEXTO (split foto + pilares) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.context.eyebrow) }}</span>
-          <h2>{{ t(page.context.title) }}</h2>
-          <p class="lead">{{ t(page.context.lead) }}</p>
+        <div class="intro-split reverse">
+          <div class="intro-copy">
+            <div class="section-head left">
+              <span class="kicker">{{ t(page.context.eyebrow) }}</span>
+              <h2>{{ t(page.context.title) }}</h2>
+              <p class="lead">{{ t(page.context.lead) }}</p>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="frame" style="aspect-ratio:4/3.4;box-shadow:var(--shadow-md)">
+              <img :src="page.context.image" :alt="t(page.context.imageAlt)" width="1000" height="850" loading="lazy">
+            </div>
+          </div>
         </div>
-        <div class="pillars cols-3">
+        <div class="pillars cols-3 reveal" style="margin-top:var(--space-7)">
           <div v-for="(p, i) in page.context.pillars" :key="i" class="pillar">
-            <span class="pillar-icon"><BaseIcon :name="p.icon" :size="26" /></span>
+            <span v-if="p.icon" class="pillar-icon"><BaseIcon :name="p.icon" :size="26" /></span>
             <h3>{{ t(p.title) }}</h3>
             <p>{{ t(p.text) }}</p>
           </div>
@@ -50,76 +75,78 @@ const crumbs = computed(() => [
       </div>
     </section>
 
-    <!-- Riesgos operativos -->
+    <!-- 3 · RIESGOS OPERATIVOS -->
     <section class="section">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head left">
           <span class="kicker">{{ t(page.risks.eyebrow) }}</span>
           <h2>{{ t(page.risks.title) }}</h2>
         </div>
-        <ul class="marker-list risk cols-2" :aria-label="t(page.risks.title)">
-          <li v-for="(r, i) in page.risks.items" :key="i">{{ t(r) }}</li>
+        <ul class="marker-list risk cols-2 reveal" :aria-label="t(page.risks.title)">
+          <li v-for="(it, i) in page.risks.items" :key="i">{{ t(it) }}</li>
         </ul>
       </div>
     </section>
 
-    <!-- Qué cambia con la solución del grupo -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.whatChanges.eyebrow) }}</span>
-          <h2>{{ t(page.whatChanges.title) }}</h2>
-          <p class="lead">{{ t(page.whatChanges.lead) }}</p>
-        </div>
-        <ul class="marker-list gain cols-2" :aria-label="t(page.whatChanges.title)">
-          <li v-for="(w, i) in page.whatChanges.items" :key="i">{{ t(w) }}</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Indicadores gestionables -->
+    <!-- 4 · QUÉ CAMBIA — banda a sangre con foto + ganancias -->
+    <ImageBand
+      :image="page.whatChanges.image"
+      :eyebrow="page.whatChanges.eyebrow"
+      :title="page.whatChanges.title"
+      :statement="page.whatChanges.lead"
+      align="center"
+    />
     <section class="section">
       <div class="container">
-        <div class="section-head center">
+        <ul class="marker-list gain cols-2 reveal" :aria-label="t(page.whatChanges.title)">
+          <li v-for="(it, i) in page.whatChanges.items" :key="i">{{ t(it) }}</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 5 · INDICADORES GESTIONABLES -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head left">
           <span class="kicker">{{ t(page.indicators.eyebrow) }}</span>
           <h2>{{ t(page.indicators.title) }}</h2>
         </div>
-        <div class="chips" :aria-label="t(page.indicators.title)">
-          <span v-for="(ind, i) in page.indicators.items" :key="i" class="chip">{{ t(ind) }}</span>
-        </div>
+        <ul class="chips" :aria-label="t(page.indicators.title)">
+          <li v-for="(it, i) in page.indicators.items" :key="i" class="chip">{{ t(it) }}</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Impacto por rol -->
-    <section class="section section-alt">
+    <!-- 6 · IMPACTO POR ROL -->
+    <section class="section">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head left">
           <span class="kicker">{{ t(page.impactByRole.eyebrow) }}</span>
           <h2>{{ t(page.impactByRole.title) }}</h2>
         </div>
-        <div class="grid cols-3">
-          <article v-for="(role, i) in page.impactByRole.items" :key="i" class="card">
+        <div class="grid cols-3 reveal">
+          <article v-for="(c, i) in page.impactByRole.items" :key="i" class="card">
             <div class="card-body">
-              <h3>{{ t(role.title) }}</h3>
-              <p class="card-desc">{{ t(role.text) }}</p>
+              <h3>{{ t(c.title) }}</h3>
+              <p class="card-desc">{{ t(c.text) }}</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Marcas relevantes para Industria -->
-    <section id="marcas" class="section">
+    <!-- 7 · MARCAS RELEVANTES -->
+    <section id="marcas" class="section section-alt">
       <div class="container">
         <div class="section-head center">
           <span class="kicker">{{ t(page.brands.eyebrow) }}</span>
           <h2>{{ t(page.brands.title) }}</h2>
-          <p class="lead">{{ t(page.brands.lead) }}</p>
+          <p class="lead mx-auto">{{ t(page.brands.lead) }}</p>
         </div>
-        <div class="grid cols-3">
+        <div class="grid cols-3 reveal">
           <article v-for="(b, i) in page.brands.items" :key="i" class="card">
             <div class="card-media">
-              <img :src="b.image" :alt="t(b.imageAlt)" width="600" height="375" loading="lazy">
+              <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
             </div>
             <div class="card-body">
               <h3>{{ t(b.name) }}</h3>
@@ -128,7 +155,7 @@ const crumbs = computed(() => [
             </div>
           </article>
         </div>
-        <p class="disclaimer">{{ t(page.brands.note) }}</p>
+        <p v-if="page.brands.note" class="disclaimer" style="margin-top:var(--space-6)">{{ t(page.brands.note) }}</p>
       </div>
     </section>
 

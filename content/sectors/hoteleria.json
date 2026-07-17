@@ -30,10 +30,15 @@
       "es": "Soluciones del ecosistema Higienissa para hoteles, resorts, apart hoteles y complejos turísticos, donde el textil sostiene la experiencia del huésped y representa un costo que debe gestionarse.",
       "en": "Higienissa ecosystem solutions for hotels, resorts, apart hotels and tourist complexes, where textiles uphold the guest experience and represent a cost that must be managed."
     },
-    "image": "/img/sector-hoteleria.jpg",
+    "image": "/img/hoteleria-hero.jpg",
     "imageAlt": {
-      "es": "Sector hotelería: blancos y lencería para la experiencia del huésped",
-      "en": "Hospitality sector: linen and bed-linen for the guest experience"
+      "es": "Habitación de hotel con blancos y lencería impecables",
+      "en": "Hotel room with impeccable linen and bed-linen"
+    },
+    "badge": {
+      "icon": "target",
+      "title": { "es": "Control por ubicación", "en": "Control by location" },
+      "sub": { "es": "de cada blanco y lencería", "en": "of every linen and bed-linen" }
     }
   },
   "context": {
@@ -45,6 +50,11 @@
     "lead": {
       "es": "La alta rotación de blancos y lencería genera mermas constantes, sobrecompra preventiva e inventarios inexactos. Sin trazabilidad individual, el gasto se acumula año a año como un costo oculto que nadie llega a cuantificar.",
       "en": "High turnover of linen and bed-linen drives constant losses, preventive overbuying and inaccurate inventories. Without individual traceability, the spend builds up year after year as a hidden cost that no one manages to quantify."
+    },
+    "image": "/img/hoteleria-contexto.jpg",
+    "imageAlt": {
+      "es": "Housekeeping hotelero: personal preparando la habitación con blancos limpios",
+      "en": "Hotel housekeeping: staff preparing the room with clean linens"
     },
     "hiddenCostLabel": {
       "es": "El costo oculto sin trazabilidad",
@@ -78,6 +88,11 @@
     "lead": {
       "es": "El ecosistema articula procesamiento, trazabilidad y operación para convertir los blancos y la lencería en un activo gestionado, disponible y al servicio de la experiencia del huésped.",
       "en": "The ecosystem brings together processing, traceability and operations to turn linen and bed-linen into a managed, available asset that serves the guest experience."
+    },
+    "image": "/img/hoteleria-band.jpg",
+    "imageAlt": {
+      "es": "Hotel de alta gama donde el textil sostiene la experiencia del huésped",
+      "en": "Upscale hotel where textiles uphold the guest experience"
     },
     "items": [
       { "es": "Control por ubicación de cada activo textil.", "en": "Control by location of each textile asset." },
@@ -135,7 +150,7 @@
     "items": [
       {
         "name": "Pacífica",
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Pacífica: lavandería industrial inteligente para hotelería",
           "en": "Pacífica: smart industrial laundry for hospitality"
@@ -149,7 +164,7 @@
       },
       {
         "name": "Trazatex",
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: RFID y data para la trazabilidad del textil hotelero",
           "en": "Trazatex: RFID and data for hotel textile traceability"
@@ -163,7 +178,7 @@
       },
       {
         "name": "Operissa",
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: operación del circuito textil del hotel",
           "en": "Operissa: operation of the hotel's textile circuit"

@@ -26,10 +26,15 @@
       "es": "Lavandería industrial inteligente con el respaldo del ecosistema Grupo Higienissa: procesos especializados, trazabilidad y disponibilidad garantizada.",
       "en": "Smart industrial laundry backed by the Grupo Higienissa ecosystem: specialized processes, traceability and guaranteed availability."
     },
-    "image": "/img/marca-pacifica.jpg",
+    "image": "/img/pacifica-hero.jpg",
     "imageAlt": {
-      "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
-      "en": "Pacífica industrial laundry: machines and washing process at scale"
+      "es": "Planta de lavandería industrial Pacífica: proceso de lavado a escala",
+      "en": "Pacífica industrial laundry plant: washing process at scale"
+    },
+    "badge": {
+      "icon": "activity",
+      "title": { "es": "Disponibilidad garantizada", "en": "Guaranteed availability" },
+      "sub": { "es": "Operaciones que no se detienen", "en": "Operations that never stop" }
     }
   },
   "whoWeAre": {
@@ -41,6 +46,11 @@
     "body": {
       "es": "Pacífica transforma la lavandería en una herramienta estratégica: detrás de cada sábana hospitalaria, uniforme o blanco hotelero hay una operación que depende de su disponibilidad. Nuestro compromiso no es solo procesar textiles, sino sostener el funcionamiento de quienes confían en nosotros.",
       "en": "Pacífica turns laundry into a strategic tool: behind every hospital sheet, uniform or hotel linen there is an operation that depends on its availability. Our commitment is not just to process textiles, but to sustain the operations of those who rely on us."
+    },
+    "image": "/img/pacifica-proceso.jpg",
+    "imageAlt": {
+      "es": "Proceso textil de Pacífica: ropa institucional lista y controlada",
+      "en": "Pacífica textile process: institutional linens ready and controlled"
     },
     "highlights": [
       {
@@ -174,7 +184,9 @@
           "es": "Hospitales, clínicas y laboratorios donde el textil impacta directamente en la bioseguridad, la auditoría y la continuidad de la atención.",
           "en": "Hospitals, clinics and laboratories where textiles directly impact biosecurity, auditing and continuity of care."
         },
-        "to": "/sector-salud"
+        "to": "/sector-salud",
+        "image": "/img/sector-salud.jpg",
+        "imageAlt": { "es": "Sector salud: entorno hospitalario", "en": "Health sector: hospital environment" }
       },
       {
         "name": { "es": "Hotelería", "en": "Hospitality" },
@@ -182,7 +194,9 @@
           "es": "Hoteles, resorts y apart hoteles donde los blancos y la lencería son parte de la experiencia del huésped y un costo a controlar.",
           "en": "Hotels, resorts and apart-hotels where linens and bedding are part of the guest experience and a cost to control."
         },
-        "to": "/sector-hoteleria"
+        "to": "/sector-hoteleria",
+        "image": "/img/sector-hoteleria.jpg",
+        "imageAlt": { "es": "Sector hotelería: blancos y lencería de hotel", "en": "Hospitality sector: hotel linens and bedding" }
       },
       {
         "name": { "es": "Industria", "en": "Industry" },
@@ -190,7 +204,9 @@
           "es": "Manufactura, agroindustria y logística donde los uniformes y el EPP textil forman parte del cumplimiento y la seguridad laboral.",
           "en": "Manufacturing, agribusiness and logistics where uniforms and textile PPE are part of compliance and workplace safety."
         },
-        "to": "/sector-industria"
+        "to": "/sector-industria",
+        "image": "/img/sector-industria.jpg",
+        "imageAlt": { "es": "Sector industria: uniformes y EPP textil", "en": "Industry sector: uniforms and textile PPE" }
       },
       {
         "name": { "es": "Minería", "en": "Mining" },
@@ -198,7 +214,9 @@
           "es": "Campamentos, operaciones remotas y proyectos temporales en entornos exigentes y alejados de los centros urbanos.",
           "en": "Camps, remote operations and temporary projects in demanding environments far from urban centers."
         },
-        "to": "/sector-mineria"
+        "to": "/sector-mineria",
+        "image": "/img/sector-mineria.jpg",
+        "imageAlt": { "es": "Sector minería: operaciones remotas exigentes", "en": "Mining sector: demanding remote operations" }
       }
     ]
   },
@@ -247,6 +265,11 @@
       "es": "Pacífica procesa. Trazatex aporta datos y trazabilidad. Operissa opera en terreno. Cada marca potencia a las otras.",
       "en": "Pacífica processes. Trazatex provides data and traceability. Operissa operates on-site. Each brand strengthens the others."
     },
+    "image": "/img/pacifica-band.jpg",
+    "imageAlt": {
+      "es": "Nave de lavandería industrial Pacífica operando a escala",
+      "en": "Pacífica industrial laundry floor operating at scale"
+    },
     "items": [
       {
         "name": "Trazatex",
@@ -255,7 +278,7 @@
           "en": "RFID, software, auditing and data for individual control of every textile asset."
         },
         "cta": { "es": "Conocer Trazatex", "en": "Discover Trazatex" },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
           "en": "Trazatex: RFID technology and data applied to every textile asset"
@@ -269,7 +292,7 @@
           "en": "Specialized operation and management so your operation never stops."
         },
         "cta": { "es": "Conocer Operissa", "en": "Discover Operissa" },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: equipos y procesos de operación textil especializada en terreno",
           "en": "Operissa: teams and processes for specialized on-site textile operations"

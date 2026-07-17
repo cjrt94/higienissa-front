@@ -18,7 +18,9 @@
   "hero": {
     "eyebrow": { "es": "Trazatex", "en": "Trazatex" },
     "badge": {
+      "icon": "scan",
       "label": { "es": "Powered by ASIS IDTRAK", "en": "Powered by ASIS IDTRAK" },
+      "sub": { "es": "+30 años en RFID textil", "en": "30+ years in textile RFID" },
       "to": "#respaldo"
     },
     "title": {
@@ -29,10 +31,10 @@
       "es": "Los textiles no son solo insumos. Son activos. Trazatex los convierte en información gestionable: identificación individual, datos en tiempo real y control sobre cada ciclo.",
       "en": "Textiles are not just supplies. They are assets. Trazatex turns them into manageable information: individual identification, real-time data and control over every cycle."
     },
-    "image": "/img/marca-trazatex.jpg",
+    "image": "/img/trazatex-hero.jpg",
     "imageAlt": {
-      "es": "Tecnología RFID de Trazatex aplicada a la trazabilidad de activos textiles",
-      "en": "Trazatex RFID technology applied to the traceability of textile assets"
+      "es": "Operario de Trazatex escaneando activos textiles con lector RFID de mano",
+      "en": "Trazatex operator scanning textile assets with an RFID handheld reader"
     },
     "ctaPrimary": { "to": "/contacto" },
     "ctaSecondary": { "label": { "es": "Explorar soluciones", "en": "Explore solutions" }, "to": "#soluciones" }
@@ -74,11 +76,16 @@
       "es": "Trazatex es la división de inteligencia y trazabilidad del Grupo Higienissa. Integramos identificación RFID, plataformas de gestión y auditoría operacional para que cada prenda sea visible, medible y controlable a lo largo de su vida útil. Esa trazabilidad genera datos en tiempo real —información crítica para la gestión del textil hospitalario, hotelero e industrial.",
       "en": "Trazatex is the intelligence and traceability division of Grupo Higienissa. We integrate RFID identification, management platforms and operational auditing so that every garment is visible, measurable and controllable throughout its useful life. That traceability generates real-time data —critical information for managing hospital, hospitality and industrial textiles."
     },
+    "image": "/img/trazatex-datos.jpg",
+    "imageAlt": {
+      "es": "Plataforma de datos de Trazatex: dashboards y analítica del activo textil",
+      "en": "Trazatex data platform: dashboards and analytics for the textile asset"
+    },
     "highlights": [
-      { "label": { "es": "Aplicada a lo real", "en": "Applied to the real world" }, "text": { "es": "Tecnología probada en operaciones reales, no dispositivos aislados.", "en": "Technology proven in real operations, not isolated devices." } },
-      { "label": { "es": "Integrada al ecosistema", "en": "Integrated into the ecosystem" }, "text": { "es": "Se conecta con la lavandería de Pacífica y la operación de Operissa.", "en": "It connects with Pacífica's laundry and Operissa's operation." } },
-      { "label": { "es": "SmartHub demostrativo", "en": "Demonstrative SmartHub" }, "text": { "es": "Un espacio donde la trazabilidad se ve funcionando antes de implementarla.", "en": "A space where traceability is seen working before implementing it." } },
-      { "label": { "es": "Respaldo internacional", "en": "International backing" }, "text": { "es": "En alianza con ASIS IDTRAK (España), +30 años en RFID textil.", "en": "In partnership with ASIS IDTRAK (Spain), 30+ years in textile RFID." } }
+      { "icon": "target", "label": { "es": "Aplicada a lo real", "en": "Applied to the real world" }, "text": { "es": "Tecnología probada en operaciones reales, no dispositivos aislados.", "en": "Technology proven in real operations, not isolated devices." } },
+      { "icon": "activity", "label": { "es": "Integrada al ecosistema", "en": "Integrated into the ecosystem" }, "text": { "es": "Se conecta con la lavandería de Pacífica y la operación de Operissa.", "en": "It connects with Pacífica's laundry and Operissa's operation." } },
+      { "icon": "scan", "label": { "es": "SmartHub demostrativo", "en": "Demonstrative SmartHub" }, "text": { "es": "Un espacio donde la trazabilidad se ve funcionando antes de implementarla.", "en": "A space where traceability is seen working before implementing it." } },
+      { "icon": "shield", "label": { "es": "Respaldo internacional", "en": "International backing" }, "text": { "es": "En alianza con ASIS IDTRAK (España), +30 años en RFID textil.", "en": "In partnership with ASIS IDTRAK (Spain), 30+ years in textile RFID." } }
     ]
   },
   "solutions": {
@@ -165,6 +172,11 @@
       "es": "Trazatex no solo identifica prendas: produce la información que hoy falta para gestionar el textil como un activo. Algunos de los datos que genera:",
       "en": "Trazatex doesn't just identify garments: it produces the information that's missing today to manage textiles as an asset. Some of the data it generates:"
     },
+    "image": "/img/trazatex-band.jpg",
+    "imageAlt": {
+      "es": "Datos y analítica de trazabilidad textil generados por Trazatex",
+      "en": "Textile traceability data and analytics generated by Trazatex"
+    },
     "items": [
       { "title": { "es": "Inventario por servicio", "en": "Inventory by service" }, "desc": { "es": "Cuántas prendas hay y dónde, desglosado por servicio o área.", "en": "How many garments there are and where, broken down by service or area." } },
       { "title": { "es": "Consumo por piso", "en": "Consumption by floor" }, "desc": { "es": "Qué consume cada piso o unidad, para asignar costos reales.", "en": "What each floor or unit consumes, to assign real costs." } },
@@ -203,10 +215,10 @@
     "kicker": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
     "title": { "es": "Dónde aporta Trazatex", "en": "Where Trazatex adds value" },
     "items": [
-      { "name": { "es": "Salud", "en": "Healthcare" }, "desc": { "es": "Trazabilidad de activos textiles clínicos con foco en bioseguridad, auditoría y control por servicio.", "en": "Traceability of clinical textile assets focused on biosecurity, auditing and control by service." }, "to": "/sector-salud" },
-      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Control de blancos y lencería por ubicación, con reducción de mermas y reposición basada en datos.", "en": "Control of linens and bedding by location, with reduced shrinkage and data-driven replenishment." }, "to": "/sector-hoteleria" },
-      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Trazabilidad de uniformes y EPP por trabajador, con registro de lavado y reportes auditables.", "en": "Traceability of uniforms and PPE by worker, with wash records and auditable reports." }, "to": "/sector-industria" },
-      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Control del textil de faena en campamentos y operaciones remotas, con inventario real a distancia.", "en": "Control of work textiles in camps and remote operations, with real inventory at a distance." }, "to": "/sector-mineria" }
+      { "name": { "es": "Salud", "en": "Healthcare" }, "desc": { "es": "Trazabilidad de activos textiles clínicos con foco en bioseguridad, auditoría y control por servicio.", "en": "Traceability of clinical textile assets focused on biosecurity, auditing and control by service." }, "to": "/sector-salud", "image": "/img/sector-salud.jpg", "imageAlt": { "es": "Sector salud: entorno hospitalario", "en": "Health sector: hospital environment" } },
+      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Control de blancos y lencería por ubicación, con reducción de mermas y reposición basada en datos.", "en": "Control of linens and bedding by location, with reduced shrinkage and data-driven replenishment." }, "to": "/sector-hoteleria", "image": "/img/sector-hoteleria.jpg", "imageAlt": { "es": "Sector hotelería: blancos y lencería de hotel", "en": "Hospitality sector: hotel linens and bedding" } },
+      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Trazabilidad de uniformes y EPP por trabajador, con registro de lavado y reportes auditables.", "en": "Traceability of uniforms and PPE by worker, with wash records and auditable reports." }, "to": "/sector-industria", "image": "/img/sector-industria.jpg", "imageAlt": { "es": "Sector industria: uniformes y EPP textil", "en": "Industry sector: uniforms and textile PPE" } },
+      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Control del textil de faena en campamentos y operaciones remotas, con inventario real a distancia.", "en": "Control of work textiles in camps and remote operations, with real inventory at a distance." }, "to": "/sector-mineria", "image": "/img/sector-mineria.jpg", "imageAlt": { "es": "Sector minería: operaciones remotas exigentes", "en": "Mining sector: demanding remote operations" } }
     ]
   },
   "ecosystem": {
@@ -217,8 +229,8 @@
       "en": "Trazatex traceability strengthens the rest of the ecosystem: it integrates data into Pacífica's laundry and into Operissa's on-site operation."
     },
     "items": [
-      { "name": "Pacífica", "desc": { "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.", "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle." }, "image": "/img/marca-pacifica.jpg", "imageAlt": { "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa", "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem" }, "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }, "to": "/marca-pacifica" },
-      { "name": "Operissa", "desc": { "es": "Operación y gestión especializada. Los datos de Trazatex respaldan el control en terreno.", "en": "Specialized operation and management. Trazatex data supports on-site control." }, "image": "/img/marca-operissa.jpg", "imageAlt": { "es": "Operissa, operación y gestión textil especializada en terreno", "en": "Operissa, specialized on-site textile operation and management" }, "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }, "to": "/marca-operissa" }
+      { "name": "Pacífica", "desc": { "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.", "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle." }, "image": "/img/pacifica-hero.jpg", "imageAlt": { "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa", "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem" }, "linkLabel": { "es": "Conocer Pacífica", "en": "Discover Pacífica" }, "to": "/marca-pacifica" },
+      { "name": "Operissa", "desc": { "es": "Operación y gestión especializada. Los datos de Trazatex respaldan el control en terreno.", "en": "Specialized operation and management. Trazatex data supports on-site control." }, "image": "/img/operissa-hero.jpg", "imageAlt": { "es": "Operissa, operación y gestión textil especializada en terreno", "en": "Operissa, specialized on-site textile operation and management" }, "linkLabel": { "es": "Conocer Operissa", "en": "Discover Operissa" }, "to": "/marca-operissa" }
     ]
   },
   "asisStrip": {
@@ -261,12 +273,12 @@
           {
             "heading": { "es": "Hoteles (Madrid)", "en": "Hotels (Madrid)" },
             "items": [
-              { "es": "Four Seasons 5★", "en": "Four Seasons 5★" },
-              { "es": "Palace 5★", "en": "Palace 5★" },
-              { "es": "Marriott 5★", "en": "Marriott 5★" },
-              { "es": "Only You Boutique 5★", "en": "Only You Boutique 5★" },
-              { "es": "Meliá Ciudad de las Artes 5★", "en": "Meliá Ciudad de las Artes 5★" },
-              { "es": "Meliá Valdebebas 4★", "en": "Meliá Valdebebas 4★" }
+              { "es": "Four Seasons 5 estrellas", "en": "Four Seasons 5 stars" },
+              { "es": "Palace 5 estrellas", "en": "Palace 5 stars" },
+              { "es": "Marriott 5 estrellas", "en": "Marriott 5 stars" },
+              { "es": "Only You Boutique 5 estrellas", "en": "Only You Boutique 5 stars" },
+              { "es": "Meliá Ciudad de las Artes 5 estrellas", "en": "Meliá Ciudad de las Artes 5 stars" },
+              { "es": "Meliá Valdebebas 4 estrellas", "en": "Meliá Valdebebas 4 stars" }
             ]
           },
           {

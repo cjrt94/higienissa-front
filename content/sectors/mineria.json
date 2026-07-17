@@ -30,10 +30,15 @@
       "es": "Soluciones del ecosistema Higienissa para campamentos, operaciones remotas y proyectos temporales, donde la distancia y las condiciones extremas exigen una operación textil que aguanta a distancia, sin depender de infraestructura cercana.",
       "en": "Higienissa ecosystem solutions for camps, remote operations and temporary projects, where distance and extreme conditions demand a textile operation that holds up at a distance, without relying on nearby infrastructure."
     },
-    "image": "/img/sector-mineria.jpg",
+    "image": "/img/mineria-hero.jpg",
     "imageAlt": {
-      "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas",
-      "en": "Mining sector: textiles and PPE for demanding environments and remote operations"
+      "es": "Operaria minera con casco, chaleco reflectante y EPP en faena",
+      "en": "Mining worker with helmet, reflective vest and PPE on site"
+    },
+    "badge": {
+      "icon": "target",
+      "title": { "es": "Operación a distancia", "en": "Operation at a distance" },
+      "sub": { "es": "textil de faena sin quiebres", "en": "on-site textiles without breakdowns" }
     }
   },
   "context": {
@@ -45,6 +50,11 @@
     "lead": {
       "es": "Campamentos, operaciones remotas y proyectos temporales funcionan en ubicaciones alejadas y bajo condiciones exigentes. La operación textil debe sostenerse a distancia, sin depender de infraestructura cercana ni interrumpir la actividad.",
       "en": "Camps, remote operations and temporary projects run in remote locations and under demanding conditions. The textile operation must hold up at a distance, without depending on nearby infrastructure or interrupting activity."
+    },
+    "image": "/img/mineria-contexto.jpg",
+    "imageAlt": {
+      "es": "Operación minera en faena con personal y uniforme de trabajo",
+      "en": "Mining operation on site with personnel and workwear"
     },
     "pillars": [
       {
@@ -108,6 +118,11 @@
     "lead": {
       "es": "El ecosistema articula procesamiento y operación especializada para sostener el textil de faena en entornos exigentes y alejados, con una operación que se adapta a cada proyecto.",
       "en": "The ecosystem coordinates specialized processing and operation to sustain on-site textiles in demanding and remote environments, with an operation that adapts to each project."
+    },
+    "image": "/img/mineria-band.jpg",
+    "imageAlt": {
+      "es": "Faena minera a cielo abierto en un entorno exigente y alejado",
+      "en": "Open-pit mining site in a demanding and remote environment"
     },
     "cards": [
       {
@@ -186,7 +201,7 @@
           "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse, también en faena.",
           "en": "Smart industrial laundry for operations that cannot stop, including on site."
         },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica para operaciones en faena",
           "en": "Pacífica industrial laundry for on-site operations"
@@ -200,7 +215,7 @@
           "es": "Operación y gestión especializada en terreno, con personas y procesos para entornos remotos.",
           "en": "Specialized on-the-ground operation and management, with people and processes for remote environments."
         },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: operación textil especializada en terreno para entornos remotos",
           "en": "Operissa: specialized on-site textile operation for remote environments"
@@ -214,7 +229,7 @@
           "es": "RFID, software, auditoría y data para la trazabilidad individual del textil de faena, incluso en operaciones remotas.",
           "en": "RFID, software, auditing and data for individual traceability of on-site textiles, even in remote operations."
         },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: RFID y data para la trazabilidad del textil de faena",
           "en": "Trazatex: RFID and data for on-site textile traceability"
