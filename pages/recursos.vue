@@ -18,12 +18,18 @@ useSeoMeta({
   <div>
     <Breadcrumb :items="[{ label: $t('nav.home'), to: '/' }, { label: $t('nav.resources') }]" />
 
-    <!-- Hero centrado (las post-cards con thumbnail son el payload visual) -->
-    <section class="hero">
-      <div class="container hub-hero">
-        <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
-        <h1 class="display">{{ t(page.hero.title) }}</h1>
-        <p class="lead mx-auto">{{ t(page.hero.lead) }}</p>
+    <!-- Hero editorial (título izq / lead der); las post-cards con thumbnail son el payload visual -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="hub-head">
+          <div>
+            <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+            <h1 class="display">{{ t(page.hero.title) }}</h1>
+          </div>
+          <div class="hub-head-aside">
+            <p class="lead">{{ t(page.hero.lead) }}</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -76,8 +82,6 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.hub-hero { max-width: 780px; margin: 0 auto; text-align: center; }
-.hub-hero .lead { margin: 0 auto; }
 .post-card .card-body { flex: 1; }
 .post-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: auto; padding-top: var(--space-3); }
 .post-date { font-size: var(--fs-small); color: var(--muted); }
