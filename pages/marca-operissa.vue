@@ -20,14 +20,21 @@ const crumbs = computed(() => [
 ])
 
 // Soluciones normalizadas al contrato de <SolutionsShowcase> (con groups)
-const solutionIcons = ['cog', 'menu', 'check', 'users', 'activity']
+// Orden + layout del bento de soluciones (pedido del cliente):
+//   fila 1: Laundry | Housekeeping · fila 2: Ropería (fila completa) · fila 3: Outsourcing | Logistics
+const solutionIcons = ['cog', 'shield', 'menu', 'users', 'activity']
+const solutionOrder = [0, 2, 1, 3, 4] // reordena a: Laundry, Housekeeping, Ropería, Outsourcing, Logistics
 const solutionItems = computed(() =>
-  page.solutions.items.map((s, i) => ({
-    icon: solutionIcons[i] || 'check',
-    title: s.title,
-    desc: s.desc,
-    groups: (s.groups || []).map((g) => ({ label: g.label, items: g.items })),
-  })),
+  solutionOrder.map((src, i) => {
+    const s = page.solutions.items[src]
+    return {
+      icon: solutionIcons[i] || 'check',
+      title: s.title,
+      desc: s.desc,
+      groups: (s.groups || []).map((g) => ({ label: g.label, items: g.items })),
+      wide: i === 2, // Ropería ocupa la fila completa
+    }
+  }),
 )
 </script>
 

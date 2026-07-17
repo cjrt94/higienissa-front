@@ -21,46 +21,45 @@ const splitTwo = useSplitTwo()
         <h2>{{ t(title) }}</h2>
       </div>
 
-      <!-- Bento: destacada + resto (hasta 5 items; la fila del resto cierra sin huerfano) -->
-      <template v-if="items.length && items.length <= 5">
-        <article class="sol-featured reveal">
-          <div class="sol-main">
-            <div class="sol-top">
-              <span class="sol-icon"><BaseIcon :name="items[0].icon" :size="26" /></span>
-              <span class="sol-num">{{ pad(1) }}</span>
+      <!-- Bento: 2 columnas; los items `wide` ocupan la fila completa (layout horizontal copy | checklist) -->
+      <div v-if="items.length && items.length <= 5" class="sol-bento reveal">
+        <template v-for="(s, idx) in items" :key="idx">
+          <article v-if="s.wide" class="sol-featured b-full">
+            <div class="sol-main">
+              <div class="sol-top">
+                <span class="sol-icon"><BaseIcon :name="s.icon" :size="26" /></span>
+                <span class="sol-num">{{ pad(idx + 1) }}</span>
+              </div>
+              <h3><span v-for="(ln, i) in splitTwo(s.title)" :key="i">{{ ln }}</span></h3>
+              <p class="sol-desc">{{ t(s.desc) }}</p>
             </div>
-            <h3><span v-for="(ln, i) in splitTwo(items[0].title)" :key="i">{{ ln }}</span></h3>
-            <p class="sol-desc">{{ t(items[0].desc) }}</p>
-          </div>
-          <div v-if="items[0].groups && items[0].groups.length" class="sol-aside">
-            <div v-for="(g, gi) in items[0].groups" :key="gi" class="sol-group">
-              <span v-if="g.label" class="sol-list-label">{{ t(g.label) }}</span>
-              <ul class="sol-list" :class="{ two: g.items.length > 5 }">
-                <li v-for="(e, i) in g.items" :key="i">{{ t(e) }}</li>
-              </ul>
+            <div v-if="s.groups && s.groups.length" class="sol-aside">
+              <div v-for="(g, gi) in s.groups" :key="gi" class="sol-group">
+                <span v-if="g.label" class="sol-list-label">{{ t(g.label) }}</span>
+                <ul class="sol-list" :class="{ two: g.items.length > 3 }">
+                  <li v-for="(e, i) in g.items" :key="i">{{ t(e) }}</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </article>
-
-        <div v-if="items.length > 1" class="sol-grid reveal">
-          <article v-for="(s, idx) in items.slice(1)" :key="idx" class="sol-card">
+          </article>
+          <article v-else class="sol-card">
             <div class="sol-top">
               <span class="sol-icon"><BaseIcon :name="s.icon" :size="24" /></span>
-              <span class="sol-num sm">{{ pad(idx + 2) }}</span>
+              <span class="sol-num sm">{{ pad(idx + 1) }}</span>
             </div>
             <h3><span v-for="(ln, i) in splitTwo(s.title)" :key="i">{{ ln }}</span></h3>
             <p class="sol-desc">{{ t(s.desc) }}</p>
             <div v-if="s.groups && s.groups.length" class="sol-includes">
               <div v-for="(g, gi) in s.groups" :key="gi" class="sol-group">
                 <span v-if="g.label" class="sol-list-label">{{ t(g.label) }}</span>
-                <ul class="sol-list">
+                <ul class="sol-list" :class="{ two: g.items.length > 4 }">
                   <li v-for="(e, i) in g.items" :key="i">{{ t(e) }}</li>
                 </ul>
               </div>
             </div>
           </article>
-        </div>
-      </template>
+        </template>
+      </div>
 
       <!-- Grid uniforme (6+ items): filas parejas, sin card flotando -->
       <div v-else-if="items.length" class="sol-grid uniform reveal">
@@ -118,6 +117,12 @@ const splitTwo = useSplitTwo()
 .sol-featured h3 span, .sol-card h3 span { display: block; }
 .sol-card .sol-desc { font-size: .93rem; }
 .sol-includes { margin-top: auto; padding-top: var(--space-4); }
+
+/* Bento: 2 columnas; `.b-full` ocupa la fila completa (fila horizontal blanca, no destacada) */
+.sol-bento { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(var(--space-5), 3vw, var(--space-6)); align-items: stretch; }
+.sol-bento .sol-includes { margin-top: var(--space-5); }
+.sol-bento .b-full { grid-column: 1 / -1; margin-bottom: 0; background: var(--bg); align-self: start; }
+@media (max-width: 700px) { .sol-bento { grid-template-columns: 1fr; } .sol-bento .b-full { grid-column: 1; } }
 
 @media (max-width: 900px) {
   .sol-featured { grid-template-columns: 1fr; }
