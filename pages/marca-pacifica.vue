@@ -129,12 +129,12 @@ const solutionItems = computed(() =>
           <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
           <h2>{{ t(page.differentiators.title) }}</h2>
         </div>
-        <div class="pillars cols-4 reveal">
-          <div v-for="d in page.differentiators.items" :key="d.title.es" class="pillar">
-            <span class="pillar-icon"><BaseIcon :name="d.icon" /></span>
-            <h3><span v-for="(ln, i) in splitTwo(d.title)" :key="i">{{ ln }}</span></h3>
+        <div class="value-cols cols-4 reveal">
+          <article v-for="d in page.differentiators.items" :key="d.title.es" class="value-col">
+            <span class="v-icon"><BaseIcon :name="d.icon" :size="24" /></span>
+            <h3>{{ t(d.title) }}</h3>
             <p>{{ t(d.text) }}</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -179,6 +179,5 @@ const solutionItems = computed(() =>
 
 <style scoped>
 /* Titulos de cards a 2 lineas balanceadas (misma logica que SolutionsShowcase) */
-.pillar h3 span,
 .h-label span { display: block; }
 </style>
