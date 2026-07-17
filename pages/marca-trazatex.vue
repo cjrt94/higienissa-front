@@ -2,7 +2,6 @@
 const page = useBrandContent('trazatex')
 const t = useT()
 const config = useRuntimeConfig()
-const localePath = useLocalePath()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -80,26 +79,6 @@ const techIcons = ['cog', 'chart', 'users']
       </div>
     </section>
 
-    <!-- 3 · QUIÉNES SOMOS (split con foto + highlights) -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="intro-split">
-          <div class="intro-copy">
-            <div class="section-head left">
-              <span class="kicker">{{ t(page.whoWeAre.kicker) }}</span>
-              <h2>{{ t(page.whoWeAre.title) }}</h2>
-              <p class="lead">{{ t(page.whoWeAre.lead) }}</p>
-            </div>
-          </div>
-          <div class="hero-media">
-            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
-              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 4 · SOLUCIONES (bento) -->
     <div id="soluciones">
       <SolutionsShowcase
@@ -158,29 +137,8 @@ const techIcons = ['cog', 'chart', 'users']
       </div>
     </section>
 
-    <!-- 7 · QUÉ INFORMACIÓN GENERA — intro editorial 2 columnas + grid de datos con icono -->
-    <section id="informacion" class="section section-alt">
-      <div class="container">
-        <div class="ti-head">
-          <div class="ti-head-title">
-            <span class="kicker">{{ t(page.infoGenerated.kicker) }}</span>
-            <h2>{{ t(page.infoGenerated.title) }}</h2>
-          </div>
-          <div class="ti-head-copy">
-            <p class="lead">{{ t(page.infoGenerated.lead) }}</p>
-          </div>
-        </div>
-        <dl class="def-cols reveal">
-          <div v-for="(it, i) in page.infoGenerated.items" :key="i" class="def-item">
-            <dt>{{ t(it.title) }}</dt>
-            <dd>{{ t(it.desc) }}</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- 8 · EL RETORNO (paneles con contraste: menos recesivo / mas dominante) -->
-    <section class="section">
+    <!-- 7+8 · EL RETORNO (con "Qué información genera" fusionado) -->
+    <section class="section section-alt">
       <div class="container">
         <div class="section-head">
           <span class="kicker">{{ t(page.retorno.kicker) }}</span>
@@ -201,54 +159,23 @@ const techIcons = ['cog', 'chart', 'users']
             </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- 9 · SECTORES QUE ATENDEMOS (cards a sangre) -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.sectorsBlock.kicker) }}</span>
-          <h2>{{ t(page.sectorsBlock.title) }}</h2>
+        <!-- "Qué información genera" fusionado dentro de El retorno -->
+        <div id="informacion" class="ti-head info-in-retorno">
+          <div class="ti-head-title">
+            <span class="kicker">{{ t(page.infoGenerated.kicker) }}</span>
+            <h2>{{ t(page.infoGenerated.title) }}</h2>
+          </div>
+          <div class="ti-head-copy">
+            <p class="lead">{{ t(page.infoGenerated.lead) }}</p>
+          </div>
         </div>
-        <div class="grid cols-4 reveal">
-          <NuxtLink
-            v-for="(s, i) in page.sectorsBlock.items"
-            :key="i"
-            class="sector-card"
-            :to="localePath(s.to)"
-          >
-            <img :src="s.image" :alt="t(s.imageAlt)" width="600" height="800" loading="lazy">
-            <span class="sc-body">
-              <h3>{{ t(s.name) }}</h3>
-              <p>{{ t(s.desc) }}</p>
-              <span class="sc-link">{{ $t('cta.seeSector') }}</span>
-            </span>
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10 · ECOSISTEMA HIGIENISSA -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.ecosystem.kicker) }}</span>
-          <h2>{{ t(page.ecosystem.title) }}</h2>
-          <p class="lead mx-auto">{{ t(page.ecosystem.lead) }}</p>
-        </div>
-        <div class="grid cols-2 reveal">
-          <article v-for="(b, i) in page.ecosystem.items" :key="i" class="card">
-            <div class="card-media">
-              <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>{{ b.name }}</h3>
-              <p class="card-desc">{{ t(b.desc) }}</p>
-              <NuxtLink class="link-arrow" :to="localePath(b.to)">{{ t(b.linkLabel) }}</NuxtLink>
-            </div>
-          </article>
-        </div>
+        <dl class="def-cols reveal">
+          <div v-for="(it, i) in page.infoGenerated.items" :key="i" class="def-item">
+            <dt>{{ t(it.title) }}</dt>
+            <dd>{{ t(it.desc) }}</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -358,6 +285,7 @@ const techIcons = ['cog', 'chart', 'users']
 .ti-head-title h2 { margin: 0; }
 .ti-head-copy .lead { margin: 0 0 var(--space-4); max-width: none; }
 .ti-body { margin: 0; color: var(--muted); }
+.info-in-retorno { margin-top: var(--space-10); }
 .ti-close { display: flex; align-items: center; gap: clamp(var(--space-4), 3vw, var(--space-6)); margin-top: var(--space-7); padding: clamp(var(--space-5), 3vw, var(--space-6)); background: linear-gradient(150deg, rgba(58,120,255,.06), rgba(78,167,225,.045)); border: 1px solid var(--line); border-radius: var(--radius-lg); }
 .ti-close-icon { flex: none; width: 52px; height: 52px; border-radius: 14px; background: var(--bg); border: 1px solid var(--line); color: var(--azul); display: inline-flex; align-items: center; justify-content: center; }
 .ti-close p { margin: 0; color: var(--text); }
