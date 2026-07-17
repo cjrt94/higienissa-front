@@ -9,7 +9,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
-  ogImage: `${config.public.siteUrl}/img/hero-lavanderia.jpg`,
+  ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 </script>
 

@@ -2,6 +2,7 @@
 const page = useSectorContent('salud')
 const t = useT()
 const localePath = useLocalePath()
+const config = useRuntimeConfig()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -9,6 +10,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
+  ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
 // roles como filas ricas (StakeList espera { icon, title, desc })

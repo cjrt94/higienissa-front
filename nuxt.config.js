@@ -40,6 +40,11 @@ export default defineNuxtConfig({
     '/admin/**': { ssr: false, prerender: false, robots: false, index: false },
   },
 
+  nitro: {
+    // Emite el sitemap dinámico como archivo estático en el build (SSG).
+    prerender: { routes: ['/sitemap.xml'] },
+  },
+
   runtimeConfig: {
     // Solo server (no expuesto al cliente)
     firebaseServiceAccount: process.env.FIREBASE_SERVICE_ACCOUNT || '',
