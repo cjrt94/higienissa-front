@@ -28,7 +28,7 @@
 .prose { max-width: 70ch; }
 .prose h2 { margin-top: var(--space-7); }
 .prose h3 { margin-top: var(--space-5); }
-.prose blockquote { border-left: 3px solid var(--celeste); margin: var(--space-5) 0; padding-left: var(--space-5); font-style: italic; color: var(--ink); font-size: 1.15rem; }
+.prose blockquote { margin: var(--space-5) 0; padding: var(--space-5) var(--space-6); background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); font-style: italic; color: var(--ink); font-size: 1.15rem; }
 .section-head-lg { max-width: 60ch; margin: 0 auto var(--space-7); text-align: center; }
 .section-head-lg.left { margin-left: 0; text-align: left; }
 
@@ -79,13 +79,13 @@
 .stat span { font-size: var(--fs-small); color: var(--muted); }
 
 /* --- Statement / gancho --- */
-.statement { max-width: 62ch; border-left: 4px solid var(--celeste); padding-left: var(--space-6); }
+.statement { max-width: 62ch; }
 .statement .statement-q { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; color: var(--ink); margin-bottom: var(--space-4); }
-.problem-punch { font-size: 1.25rem; color: var(--ink); margin: 0; max-width: 64ch; border-left: 4px solid var(--azul); padding-left: var(--space-6); }
+.problem-punch { font-size: 1.25rem; color: var(--ink); margin: 0; max-width: 64ch; }
 .problem-punch strong { color: var(--azul); }
 
 /* --- Disclaimer --- */
-.disclaimer { font-size: var(--fs-small); color: var(--muted); border-left: 3px solid var(--gris-marca); background: var(--bg-alt); padding: var(--space-4); border-radius: var(--radius-sm); }
+.disclaimer { font-size: var(--fs-small); color: var(--muted); border: 1px solid var(--line); background: var(--bg-alt); padding: var(--space-4); border-radius: var(--radius-sm); }
 
 /* --- Formularios (contacto) --- */
 .form-panel { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(var(--space-5), 4vw, var(--space-7)); background: var(--bg); box-shadow: var(--shadow-sm); max-width: 780px; }

@@ -39,7 +39,7 @@
   --fs-display: clamp(2rem, 4vw, 3.25rem);
   --fs-h1: clamp(1.6rem, 3vw, 2.25rem);
   --fs-h2: 1.5rem;
-  --fs-h3: 1.15rem;
+  --fs-h3: 1.3rem;
   --fs-body: 1rem;
   --fs-small: 0.85rem;
   --fs-kicker: 0.72rem; /* uppercase tracked */
@@ -50,7 +50,7 @@
   --maxw: 1200px;       /* ancho de contenido */
   --radius: 10px;
   --radius-sm: 6px;
-  --header-h: 64px;
+  --header-h: 72px;
 }
 
 /* Helpers sugeridos (Claude Code puede ampliar en wireframe.css) */
