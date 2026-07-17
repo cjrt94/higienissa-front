@@ -149,7 +149,7 @@ li { margin-bottom: var(--space-2); }
     radial-gradient(50% 70% at 0% 100%, rgba(58,120,255,.06), transparent 55%);
 }
 .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(var(--space-6), 5vw, var(--space-9)); align-items: center; }
-.hero h1, .hero .display { font-size: var(--fs-display); font-weight: 600; margin-bottom: var(--space-4); }
+.hero h1, .hero .display { font-size: calc(var(--fs-display) * 0.85); font-weight: 600; margin-bottom: var(--space-4); }
 .hero .lead { margin-bottom: var(--space-6); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6); }
 

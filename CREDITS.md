@@ -4,7 +4,8 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 
 | Archivo | Fuente | Autor | Licencia | Atribución requerida |
 |---------|--------|-------|----------|----------------------|
-| `hero-lavanderia.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=190690373) | Laundrykhalas | CC BY 4.0 | **Sí** |
+| `hero-planta.jpg` | [Pexels](https://www.pexels.com/photo/38362010/) | — | Pexels License | No (opcional) |
+| `hero-lavanderia.jpg` _(en desuso)_ | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=190690373) | Laundrykhalas | CC BY 4.0 | **Sí** |
 | `marca-pacifica.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=20646089) | Thatsme2 | CC BY-SA 3.0 | **Sí + share-alike** |
 | `marca-trazatex.jpg` | [Pexels](https://www.pexels.com/photo/4483942/) | Tiger Lily | Pexels License | No (opcional) |
 | `marca-operissa.jpg` | [Pexels](https://www.pexels.com/photo/8774570/) | Tima Miroshnichenko | Pexels License | No (opcional) |
