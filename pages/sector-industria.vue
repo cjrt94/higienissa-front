@@ -65,12 +65,12 @@ const crumbs = computed(() => [
             </div>
           </div>
         </div>
-        <div class="pillars cols-3 reveal" style="margin-top:var(--space-7)">
-          <div v-for="(p, i) in page.context.pillars" :key="i" class="pillar">
-            <span v-if="p.icon" class="pillar-icon"><BaseIcon :name="p.icon" :size="26" /></span>
+        <div class="value-cols reveal" style="margin-top:var(--space-7)">
+          <article v-for="(p, i) in page.context.pillars" :key="i" class="value-col">
+            <span v-if="p.icon" class="v-icon"><BaseIcon :name="p.icon" :size="24" /></span>
             <h3>{{ t(p.title) }}</h3>
             <p>{{ t(p.text) }}</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>

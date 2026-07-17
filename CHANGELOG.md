@@ -6,6 +6,7 @@ Formato: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) + [Semantic Ve
 
 ## [Unreleased]
 
+- style: **sectores Industria y Minería** — el grid "El contexto" de 3 `pillar`-cards con icono → **columnas editoriales** `.value-cols` (eran los últimos grids de cards repetidos del sitio; Salud y Hotelería ya usaban componentes editoriales, sin cambios). Con esto `.pillar`/`.pillars` queda **sin uso** en toda la app (prunable de `site.css`). Verificado en vivo
 - style: **Contacto** — el form (panel de 780px) flotaba a la izquierda dejando **toda la mitad derecha del viewport vacía**. Ahora **2 columnas**: riel de contacto a la izq (email/teléfono/ciudad + nota ASIS, datos reales de `settings`, `mailto`/`tel` clickeables) + form a la derecha ocupando su columna. Apila en mobile. Sin inventar copy. Verificado desktop + mobile
 - style: **Sectores + Recursos (hubs)** — el hero era un bloque centrado de 780px flotando en ~500px de vacío blanco (se leía como error de render). Ahora **header editorial a 2 columnas** (título display izq / lead + CTA der) que llena el ancho, vía clase reutilizable `.hub-head` sobre `.page-hero`. Verificado en vivo
 - style: **Pacífica** — "Nuestra diferencia" (4 `pillar`-cards con icono) → **columnas editoriales** `.value-cols` (consistente con Home/Institucional). **Operissa** revisada: su estructura ya está variada (bento + sector-cards + pasos numerados), no tiene grid de cards repetido → sin cambios. Verificado en vivo
