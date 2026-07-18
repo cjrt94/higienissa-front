@@ -2,6 +2,7 @@
 const page = useLegalContent('aviso-legal')
 const t = useT()
 const { t: $t } = useI18n()
+const draftBadge = { es: 'En preparación', en: 'In preparation' }
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -15,6 +16,7 @@ useSeoMeta({
 <template>
   <div>
     <PageHero
+      :badge="page.status === 'draft' ? draftBadge : ''"
       :eyebrow="page.hero.eyebrow"
       :title="page.hero.title"
       :lead="page.hero.lead"

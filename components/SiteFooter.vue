@@ -27,7 +27,7 @@ const companyCol = [
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/logos/lockup-horizontal-blanco.png" alt="Grupo Higienissa">
+          <img src="/logos/lockup-horizontal-blanco.png" width="192" height="46" alt="Grupo Higienissa">
           <p>{{ t('tagline') }}</p>
           <div class="footer-social" :aria-label="t('footer.social')">
             <a :href="settings.social.linkedin" aria-label="LinkedIn">LinkedIn</a>
@@ -67,7 +67,7 @@ const companyCol = [
           <h3>{{ t('footer.contact') }}</h3>
           <ul>
             <li><a :href="`mailto:${settings.contact.email}`">{{ settings.contact.email }}</a></li>
-            <li>{{ settings.contact.phone }}</li>
+            <li><a :href="`tel:${settings.contact.phone.replace(/\s+/g, '')}`">{{ settings.contact.phone }}</a></li>
             <li>{{ tt(settings.contact.city) }}</li>
           </ul>
           <p class="muted">
@@ -78,9 +78,9 @@ const companyCol = [
 
       <div class="footer-bottom">
         <span>{{ t('footer.rights') }}</span>
-        <span>
-          <NuxtLink :to="localePath('/aviso-legal')">{{ t('footer.legalNotice') }}</NuxtLink> ·
-          <NuxtLink :to="localePath('/privacidad')">{{ t('footer.privacy') }}</NuxtLink> ·
+        <span class="footer-legal">
+          <NuxtLink :to="localePath('/aviso-legal')">{{ t('footer.legalNotice') }}</NuxtLink>
+          <NuxtLink :to="localePath('/privacidad')">{{ t('footer.privacy') }}</NuxtLink>
           <NuxtLink :to="localePath('/creditos')">{{ t('footer.credits') }}</NuxtLink>
         </span>
       </div>

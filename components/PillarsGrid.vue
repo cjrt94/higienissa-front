@@ -20,13 +20,13 @@ const pad = (n) => String(n).padStart(2, '0')
           </div>
         </div>
         <div class="hero-media">
-          <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
-            <img :src="data.image" :alt="t(data.imageAlt)" width="1000" height="800" loading="lazy">
+          <div class="frame frame--portrait">
+            <img :src="data.image" :alt="t(data.imageAlt)" width="1000" height="800" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
 
-      <ol class="keypoints reveal">
+      <ol class="keypoints reveal stagger">
         <li v-for="(p, i) in data.items" :key="i" class="keypoint">
           <span class="kp-num" aria-hidden="true">{{ pad(i + 1) }}</span>
           <h3>{{ t(p.title) }}</h3>

@@ -11,6 +11,7 @@
     "resources": "Resources",
     "contact": "Contact",
     "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "mainNav": "Main navigation",
     "langSwitch": "Language selector"
   },
@@ -62,6 +63,8 @@
     "submit": "Send request",
     "sending": "Sending…",
     "success": "Thank you! An ecosystem specialist will contact you shortly.",
+    "successBody": "We received your message. An ecosystem specialist will review your request and contact you shortly.",
+    "backHome": "Back to home",
     "error": "Could not send. Please try again or email us.",
     "required": "Fields marked with * are required."
   }

@@ -25,7 +25,7 @@ const roleItems = computed(() =>
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+          <span class="kicker sector-kicker"><BaseIcon v-if="page.icon" :name="page.icon" :size="15" />{{ t(page.hero.eyebrow) }}</span>
           <h1 class="display">{{ t(page.hero.title) }}</h1>
           <p class="lead">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions">

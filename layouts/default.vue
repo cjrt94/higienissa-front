@@ -51,5 +51,6 @@ useHead({
       <slot />
     </main>
     <SiteFooter />
+    <ClientOnly><ToastHost /></ClientOnly>
   </div>
 </template>

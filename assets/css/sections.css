@@ -24,10 +24,21 @@
 .page-hero .frame { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 4/3.2; background: var(--bg-alt); }
 .page-hero .frame img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Encuadre de foto editorial (retrato 4/3.2) — reemplaza los estilos inline
+   duplicados en las páginas de marca ("Quiénes somos" / "Nuestra diferencia").
+   Se escribe como `.frame.frame--portrait` para ganar a `.hero-media .frame`
+   (misma especificidad, pero sections.css carga después de site.css). */
+.frame.frame--portrait { aspect-ratio: 4/3.2; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--bg-alt); }
+.frame.frame--portrait img { width: 100%; height: 100%; object-fit: cover; }
+
 /* --- Prose / texto largo --- */
 .prose { max-width: 70ch; }
-.prose h2 { margin-top: var(--space-7); }
-.prose h3 { margin-top: var(--space-5); }
+/* scroll-margin para que los anclas a h2/h3 no queden bajo el header sticky */
+.prose h2 { margin-top: var(--space-7); scroll-margin-top: calc(var(--header-h) + var(--space-5)); }
+.prose h3 { margin-top: var(--space-5); scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
+/* Ritmo de lectura long-form para el cuerpo del artículo */
+.article-body .prose p { font-size: 1.0625rem; line-height: 1.8; margin-bottom: var(--space-5); }
+.article-body .prose h2 { margin-top: var(--space-8); }
 .prose blockquote { margin: var(--space-5) 0; padding: var(--space-5) var(--space-6); background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); font-style: italic; color: var(--ink); font-size: 1.15rem; }
 .section-head-lg { max-width: 60ch; margin: 0 auto var(--space-7); text-align: center; }
 .section-head-lg.left { margin-left: 0; text-align: left; }
@@ -37,17 +48,17 @@
 .feature-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
 .feature { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow-xs); display: flex; flex-direction: column; gap: var(--space-2); transition: box-shadow .2s var(--ease), transform .2s var(--ease); }
 .feature:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
-.feature .feature-kicker { font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--celeste); }
+.feature .feature-kicker { font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .1em; text-transform: uppercase; color: var(--kicker-color); }
 .feature h3 { margin-bottom: var(--space-1); }
 .feature ul { margin: var(--space-1) 0 0; padding-left: var(--space-5); font-size: var(--fs-body-sm); color: var(--text); }
-.feature-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-3); }
+.feature-icon { display: inline-flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: var(--radius-chip); background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-3); }
 
 /* --- Value columns: valores/pilares como columnas editoriales con regla superior (NO cards).
    Reemplaza los grids de `.pillar`/`.feature` repetidos. Usado en Home, Institucional, marcas. --- */
 .value-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(var(--space-6), 4vw, var(--space-8)); }
 .value-cols.cols-4 { grid-template-columns: repeat(4, 1fr); }
 .value-col { padding-top: var(--space-5); border-top: 1px solid var(--line); }
-.value-col .v-icon { display: inline-flex; width: 46px; height: 46px; align-items: center; justify-content: center; border-radius: 13px; background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-4); }
+.value-col .v-icon { display: inline-flex; width: 46px; height: 46px; align-items: center; justify-content: center; border-radius: var(--radius-chip); background: linear-gradient(150deg, rgba(58,120,255,.12), rgba(78,167,225,.10)); color: var(--azul); margin-bottom: var(--space-4); }
 .value-col h3 { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
 .value-col p { margin: 0; color: var(--text); }
 @media (max-width: 1000px) { .value-cols.cols-4 { grid-template-columns: repeat(2, 1fr); } }
@@ -88,11 +99,17 @@
 .marker-list.cols-2 { grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-6); }
 .marker-list li { position: relative; padding-left: 34px; margin: 0; color: var(--text); }
 .marker-list li::before { position: absolute; left: 0; top: 1px; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid currentColor; border-radius: 50%; font: 700 13px/1 var(--font-body); }
-.marker-list.risk li::before { content: "!"; color: var(--azul); }
+/* Riesgo vs. ganancia deben leerse distinto (antes ambos azules): el riesgo va
+   con anillo neutro cálido, la ganancia con el azul de marca (problema → solución). */
+.marker-list.risk li::before { content: "!"; color: var(--gris-marca); }
 .marker-list.gain li::before { content: "\2713"; color: var(--azul); }
 .marker-list.ask li::before { content: "?"; color: var(--celeste); }
 .marker-list.less li::before { content: "\2212"; color: var(--gris-marca); }
 .marker-list.more li::before { content: "+"; color: var(--azul); }
+
+/* Eyebrow de sector con ícono de wayfinding (Salud/Hotelería/Industria/Minería) */
+.sector-kicker { display: inline-flex; align-items: center; gap: 7px; }
+.sector-kicker svg { color: var(--celeste); }
 
 /* --- Chips --- */
 .chips { display: flex; flex-wrap: wrap; gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
@@ -111,8 +128,8 @@
 .problem-punch { font-size: 1.25rem; color: var(--ink); margin: 0; max-width: 64ch; }
 .problem-punch strong { color: var(--azul); }
 
-/* --- Disclaimer --- */
-.disclaimer { font-size: var(--fs-small); color: var(--muted); border: 1px solid var(--line); background: var(--bg-alt); padding: var(--space-4); border-radius: var(--radius-sm); }
+/* --- Disclaimer (páginas legales en borrador) --- */
+.disclaimer { font-size: var(--fs-body-sm); color: var(--muted); border: 1px solid var(--line); background: var(--bg-alt); padding: var(--space-5) var(--space-6); border-radius: var(--radius); max-width: 60ch; margin: var(--space-5) auto 0; text-align: center; }
 
 /* --- Formularios (contacto) --- */
 .form-panel { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(var(--space-5), 4vw, var(--space-7)); background: var(--bg); box-shadow: var(--shadow-sm); max-width: 780px; }
@@ -120,15 +137,31 @@
 .form-field { display: flex; flex-direction: column; gap: 6px; }
 .form-field.full { grid-column: 1 / -1; }
 .form-field label { font: 600 var(--fs-small) var(--font-body); color: var(--ink); }
-.form-field input, .form-field select, .form-field textarea { font: var(--fs-body) var(--font-body); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 11px 12px; background: var(--bg); }
+.form-field input, .form-field select, .form-field textarea { font: var(--fs-body) var(--font-body); color: var(--ink); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 11px 12px; background: var(--bg); transition: border-color var(--dur) var(--ease); }
 .form-field textarea { min-height: 120px; resize: vertical; }
-.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: 2px solid var(--electrico); outline-offset: 1px; border-color: var(--electrico); }
+/* Anillo de foco unificado con el resto del sitio (--focus-ring), + borde eléctrico de refuerzo */
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: var(--focus-ring); outline-offset: var(--focus-offset); border-color: var(--electrico); }
+/* Estado inválido visible (no solo el texto rojo de abajo) */
+.form-field input[aria-invalid="true"], .form-field select[aria-invalid="true"], .form-field textarea[aria-invalid="true"] { border-color: #c0392b; }
+.form-field input[aria-invalid="true"]:focus, .form-field select[aria-invalid="true"]:focus, .form-field textarea[aria-invalid="true"]:focus { outline-color: #c0392b; border-color: #c0392b; }
 .form-field .field-error { color: #c0392b; font-size: var(--fs-small); }
 .req { color: var(--electrico); font-weight: 700; }
-.form-check { grid-column: 1 / -1; display: flex; align-items: flex-start; gap: var(--space-3); }
+.form-check { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-3); }
 .form-check input { width: 18px; height: 18px; margin-top: 2px; flex: none; }
+.form-check input[aria-invalid="true"] { outline: 2px solid #c0392b; outline-offset: 2px; border-radius: 3px; }
 .form-check label { font-size: var(--fs-small); color: var(--text); }
+/* El error del consentimiento se alinea bajo el texto del checkbox, no en una fila suelta */
+.form-check .field-error { flex-basis: 100%; margin-left: calc(18px + var(--space-3)); }
 .form-actions { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4); }
+/* Contador de caracteres y spinner de envío */
+.char-count { font-size: var(--fs-small); color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.btn-spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,.45); border-top-color: #fff; animation: btn-spin .7s linear infinite; flex: none; }
+@keyframes btn-spin { to { transform: rotate(360deg); } }
+/* Pantalla de éxito del formulario */
+.form-success { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); padding: var(--space-4) 0; }
+.form-success .fs-badge { width: 64px; height: 64px; border-radius: 50%; background: var(--bg-alt); color: var(--azul); display: inline-flex; align-items: center; justify-content: center; }
+.form-success h3 { margin: 0; }
+.form-success p { margin: 0; color: var(--text); max-width: 46ch; }
 
 /* --- Pagination --- */
 .pagination { display: flex; gap: var(--space-2); justify-content: center; margin-top: var(--space-6); }
@@ -144,4 +177,9 @@
   .form-grid { grid-template-columns: 1fr; }
   .marker-list.cols-2 { grid-template-columns: 1fr; }
   .installed-base { grid-template-columns: 1fr; }
+}
+/* Paso intermedio en tablet: grids de 3 (feature/value) muestran 2 columnas
+   antes de colapsar a 1, para no quedar con tarjetas gigantes y aire muerto. */
+@media (min-width: 761px) and (max-width: 900px) {
+  .feature-grid, .value-cols { grid-template-columns: repeat(2, 1fr); }
 }

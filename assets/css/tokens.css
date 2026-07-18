@@ -36,10 +36,13 @@
   --font-body: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; /* cuerpo */
 
   /* --- Escala tipográfica --- */
+  /* Escala descendente estricta: display > h1 > h2 > h3 > h4. (Antes h2 > h1: corregido.) */
   --fs-display: clamp(2rem, 4vw, 3.25rem);          /* 32–52px */
-  --fs-h1: clamp(1.6rem, 3vw, 2.25rem);             /* 26–36px */
-  --fs-h2: clamp(1.7rem, 2.6vw, 2.35rem);           /* 27–38px — títulos de sección */
-  --fs-h3: 1.375rem;                                /* 22px — titulares de card/columna */
+  --fs-h1: clamp(2rem, 3.4vw, 2.6rem);              /* 32–41.6px — título de página */
+  --fs-h2: clamp(1.65rem, 2.6vw, 2.15rem);          /* 26.4–34.4px — títulos de sección */
+  --fs-h3: clamp(1.25rem, 1.8vw, 1.5rem);           /* 20–24px — titulares de card/columna */
+  --fs-h4: 1.125rem;                                /* 18px — subtítulos menores */
+  --fs-lead: clamp(1.0625rem, 1.6vw, 1.25rem);      /* 17–20px — bajadas / párrafo de entrada */
   --fs-body: 1rem;                                  /* 16px */
   --fs-body-sm: 0.9375rem;                          /* 15px — cuerpo secundario / labels */
   --fs-small: 0.875rem;                             /* 14px */
@@ -51,13 +54,24 @@
   --maxw: 1200px;       /* ancho de contenido */
   --radius: 10px;
   --radius-sm: 6px;
+  --radius-chip: 12px;  /* radio canónico de "chips de ícono" (hb/h/feature/v-icon) */
   --header-h: 72px;
+
+  /* --- Rótulos (eyebrows / kickers): un solo color canónico en superficies claras --- */
+  --kicker-color: var(--azul);
+
+  /* --- Motion: duraciones y curvas tokenizadas --- */
+  --dur-fast: .16s;   /* micro-interacciones (hover de link) */
+  --dur: .22s;        /* base (botones, cards, header) */
+  --dur-slow: .5s;    /* escalas de imagen, transiciones amplias */
+  --ease-out: cubic-bezier(.16,.84,.44,1); /* entradas */
+
+  /* --- Anillo de foco único (usado en :focus-visible y en inputs) --- */
+  --focus-ring: 3px solid var(--electrico);
+  --focus-offset: 2px;
 }
 
-/* Helpers sugeridos (Claude Code puede ampliar en wireframe.css) */
+/* Helper mínimo. Los selectores de componente (.kicker, .btn-*, .placeholder-img,
+   .section-alt) viven en site.css como fuente ÚNICA — antes estaban duplicados aquí
+   con otra geometría y competían por especificidad. */
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-5); }
-.kicker { font: 700 var(--fs-kicker)/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--azul); }
-.placeholder-img { background: var(--block); border-radius: var(--radius-sm); }
-.section-alt { background: var(--bg-alt); }
-.btn-primary { background: var(--electrico); color: #fff; border: 0; border-radius: var(--radius-sm); padding: 12px 20px; font: 600 var(--fs-body) var(--font-body); }
-.btn-ghost { background: transparent; color: var(--azul); border: 1px solid var(--azul); border-radius: var(--radius-sm); padding: 11px 19px; }

@@ -71,8 +71,8 @@ const solutionItems = computed(() =>
             </div>
           </div>
           <div class="hero-media">
-            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
-              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy">
+            <div class="frame frame--portrait">
+              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy" decoding="async">
             </div>
           </div>
         </div>

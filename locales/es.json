@@ -11,6 +11,7 @@
     "resources": "Recursos",
     "contact": "Contacto",
     "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
     "mainNav": "Navegación principal",
     "langSwitch": "Selector de idioma"
   },
@@ -62,6 +63,8 @@
     "submit": "Enviar solicitud",
     "sending": "Enviando…",
     "success": "¡Gracias! Un especialista del ecosistema le contactará a la brevedad.",
+    "successBody": "Recibimos su mensaje. Un especialista del ecosistema revisará su solicitud y le contactará a la brevedad.",
+    "backHome": "Volver al inicio",
     "error": "No se pudo enviar. Intente nuevamente o escríbanos por correo.",
     "required": "Los campos con * son obligatorios."
   }

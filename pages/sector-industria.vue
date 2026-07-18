@@ -4,6 +4,9 @@ const t = useT()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
+// Impacto por rol → filas editoriales (StakeList espera { title, desc })
+const roleItems = computed(() => (page.impactByRole?.items || []).map((c) => ({ title: c.title, desc: c.text })))
+
 useSeoMeta({
   title: () => t(page.seo.title),
   description: () => t(page.seo.description),
@@ -21,7 +24,7 @@ useSeoMeta({
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
+          <span class="kicker sector-kicker"><BaseIcon v-if="page.icon" :name="page.icon" :size="15" />{{ t(page.hero.eyebrow) }}</span>
           <h1 class="display">{{ t(page.hero.title) }}</h1>
           <p class="lead">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions">
@@ -75,9 +78,7 @@ useSeoMeta({
           <span class="kicker">{{ t(page.risks.eyebrow) }}</span>
           <h2>{{ t(page.risks.title) }}</h2>
         </div>
-        <ul class="marker-list risk cols-2 reveal" :aria-label="t(page.risks.title)">
-          <li v-for="(it, i) in page.risks.items" :key="i">{{ t(it) }}</li>
-        </ul>
+        <StakeList :items="page.risks.items" marker="risk" :aria-label="t(page.risks.title)" />
       </div>
     </section>
 
@@ -104,8 +105,8 @@ useSeoMeta({
           <span class="kicker">{{ t(page.indicators.eyebrow) }}</span>
           <h2>{{ t(page.indicators.title) }}</h2>
         </div>
-        <ul class="chips" :aria-label="t(page.indicators.title)">
-          <li v-for="(it, i) in page.indicators.items" :key="i" class="chip">{{ t(it) }}</li>
+        <ul class="marker-list gain cols-2 reveal" :aria-label="t(page.indicators.title)">
+          <li v-for="(it, i) in page.indicators.items" :key="i">{{ t(it) }}</li>
         </ul>
       </div>
     </section>
@@ -117,14 +118,7 @@ useSeoMeta({
           <span class="kicker">{{ t(page.impactByRole.eyebrow) }}</span>
           <h2>{{ t(page.impactByRole.title) }}</h2>
         </div>
-        <div class="grid cols-3 reveal">
-          <article v-for="(c, i) in page.impactByRole.items" :key="i" class="card">
-            <div class="card-body">
-              <h3>{{ t(c.title) }}</h3>
-              <p class="card-desc">{{ t(c.text) }}</p>
-            </div>
-          </article>
-        </div>
+        <StakeList :items="roleItems" marker="number" />
       </div>
     </section>
 

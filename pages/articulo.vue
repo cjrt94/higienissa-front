@@ -6,6 +6,22 @@ const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
 const readLabel = { es: 'Leer', en: 'Read' }
+const backLabel = { es: '← Recursos', en: '← Resources' }
+const minLabel = { es: 'min de lectura', en: 'min read' }
+
+// Tiempo de lectura estimado (≈200 palabras/min) sobre el cuerpo del artículo
+const readingMinutes = computed(() => {
+  const blocks = page.body?.blocks || []
+  let words = t(page.body?.lead || '').split(/\s+/).filter(Boolean).length
+  for (const b of blocks) {
+    if (b.type === 'paragraph' || b.type === 'heading' || b.type === 'quote') {
+      words += t(b.text || '').split(/\s+/).filter(Boolean).length
+    } else if (b.type === 'list') {
+      for (const it of b.items || []) words += (t(it.term || '') + ' ' + t(it.desc || '')).split(/\s+/).filter(Boolean).length
+    }
+  }
+  return Math.max(1, Math.round(words / 200))
+})
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -22,12 +38,15 @@ useSeoMeta({
     <!-- 1 · Cabecera del artículo + portada -->
     <section class="section article-top">
       <div class="container article-head">
+        <NuxtLink class="article-back" :to="localePath('/recursos')">{{ t(backLabel) }}</NuxtLink>
         <span class="kicker">{{ t(page.hero.kicker) }}</span>
         <h1>{{ t(page.hero.title) }}</h1>
         <p class="article-meta">
           <span>{{ t(page.hero.meta.author) }}</span>
           <span aria-hidden="true" class="sep">·</span>
           <span>{{ t(page.hero.meta.date) }}</span>
+          <span aria-hidden="true" class="sep">·</span>
+          <span>{{ readingMinutes }} {{ t(minLabel) }}</span>
         </p>
       </div>
       <div class="container">
@@ -92,6 +111,8 @@ useSeoMeta({
 <style scoped>
 .article-top { padding-bottom: 0; }
 .article-head { max-width: 760px; margin: 0 auto var(--space-7); text-align: center; }
+.article-back { display: inline-block; margin-bottom: var(--space-4); font: 600 var(--fs-small) var(--font-body); color: var(--muted); }
+.article-back:hover { color: var(--azul); }
 .article-head h1 { font-size: var(--fs-h1); margin-bottom: var(--space-4); }
 .article-meta { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-2); font-size: var(--fs-small); color: var(--muted); margin: 0; }
 .article-meta .sep { color: var(--line); }

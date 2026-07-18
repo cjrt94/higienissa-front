@@ -3,6 +3,10 @@
 const props = defineProps({
   name: { type: String, required: true },
   size: { type: [Number, String], default: 24 },
+  // Si se pasa `label`, el ícono deja de ser decorativo y expone nombre accesible
+  // (para íconos que son el único contenido de un control). Sin label = aria-hidden.
+  label: { type: String, default: '' },
+  strokeWidth: { type: [Number, String], default: 1.6 },
 })
 const paths = {
   droplet: '<path d="M12 3s6 6.2 6 10.2a6 6 0 0 1-12 0C6 9.2 12 3 12 3z"/><path d="M9.5 13a2.5 2.5 0 0 0 2.5 2.5"/>',
@@ -15,6 +19,9 @@ const paths = {
   check: '<path d="M20 6L9 17l-5-5"/>',
   users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
   menu: '<path d="M3 12h18M3 6h18M3 18h18"/>',
+  close: '<path d="M18 6L6 18M6 6l12 12"/>',
+  hotel: '<path d="M3 21h18"/><path d="M5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16"/><path d="M15 21V9h4a1 1 0 0 1 1 1v11"/><path d="M8 8h2M8 12h2M8 16h2"/>',
+  mountain: '<path d="M3 20h18L14.5 7.5l-3 4.8-2-2.6L3 20z"/><circle cx="17" cy="6" r="1.4"/>',
 }
 const inner = computed(() => paths[props.name] || '')
 const dim = computed(() => `${parseInt(props.size, 10) || 24}px`)
@@ -23,7 +30,8 @@ const dim = computed(() => `${parseInt(props.size, 10) || 24}px`)
 <template>
   <svg
     :style="{ width: dim, height: dim }" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
-    aria-hidden="true" v-html="inner"
+    stroke="currentColor" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"
+    :role="label ? 'img' : undefined" :aria-label="label || undefined"
+    :aria-hidden="label ? undefined : 'true'" v-html="inner"
   />
 </template>

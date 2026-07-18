@@ -1,6 +1,7 @@
 <script setup>
 const page = useLegalContent('privacidad')
 const t = useT()
+const draftBadge = { es: 'En preparación', en: 'In preparation' }
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -14,6 +15,7 @@ useSeoMeta({
 <template>
   <div>
     <PageHero
+      :badge="page.status === 'draft' ? draftBadge : ''"
       :eyebrow="page.hero.eyebrow"
       :title="page.hero.title"
       :lead="page.hero.lead"

@@ -21,6 +21,9 @@ const solutionItems = computed(() =>
     icon: solutionIcons[i] || 'check',
     title: s.title,
     desc: s.description,
+    // La solución insignia (índice 0, con checklist largo) ocupa fila completa,
+    // como el servicio destacado de Operissa.
+    wide: i === 0,
     groups: s.items && s.items.length ? [{ label: s.listLabel, items: s.items }] : [],
   })),
 )
@@ -64,8 +67,8 @@ const solutionItems = computed(() =>
             </div>
           </div>
           <div class="hero-media">
-            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
-              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy">
+            <div class="frame frame--portrait">
+              <img :src="page.whoWeAre.image" :alt="t(page.whoWeAre.imageAlt)" width="1000" height="800" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -128,8 +131,8 @@ const solutionItems = computed(() =>
             </div>
           </div>
           <div class="hero-media">
-            <div class="frame" style="aspect-ratio:4/3.2;box-shadow:var(--shadow-md)">
-              <img :src="page.differentiators.image" :alt="t(page.differentiators.imageAlt)" width="1000" height="800" loading="lazy">
+            <div class="frame frame--portrait">
+              <img :src="page.differentiators.image" :alt="t(page.differentiators.imageAlt)" width="1000" height="800" loading="lazy" decoding="async">
             </div>
           </div>
         </div>

@@ -11,9 +11,9 @@ const localePath = useLocalePath()
         <span class="kicker">{{ t(data.eyebrow) }}</span>
         <h2>{{ t(data.title) }}</h2>
       </div>
-      <div class="grid cols-4 reveal">
+      <div class="grid cols-4 reveal stagger">
         <NuxtLink v-for="item in data.items" :key="item.to" class="sector-card" :to="localePath(item.to)">
-          <img :src="item.image" :alt="t(item.imageAlt)" width="600" height="800" loading="lazy">
+          <img :src="item.image" :alt="t(item.imageAlt)" width="600" height="800" loading="lazy" decoding="async">
           <span class="sc-body">
             <h3>{{ t(item.name) }}</h3>
             <p>{{ t(item.desc) }}</p>

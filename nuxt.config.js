@@ -63,6 +63,8 @@ export default defineNuxtConfig({
   },
 
   app: {
+    // Fade sutil entre rutas (CSS .page-* en site.css, gateado por prefers-reduced-motion)
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'es' },
       meta: [

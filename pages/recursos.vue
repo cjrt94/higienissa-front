@@ -12,6 +12,17 @@ useSeoMeta({
   ogType: 'website',
   ogImage: `${config.public.siteUrl}/img/ecosistema.jpg`,
 })
+
+// Filtro por categoría en cliente. índice 0 = "Todos" → muestra todo.
+const activeFilter = ref(0)
+const filteredPosts = computed(() => {
+  if (activeFilter.value === 0) return page.posts.items
+  const cat = t(page.filters.items[activeFilter.value].label)
+  return page.posts.items.filter((p) => t(p.category) === cat)
+})
+// La paginación solo tiene sentido si hay más posts que una página.
+const PAGE_SIZE = 9
+const showPagination = computed(() => page.posts.items.length > PAGE_SIZE)
 </script>
 
 <template>
@@ -33,24 +44,24 @@ useSeoMeta({
 
     <section class="section">
       <div class="container">
-        <div class="chips" role="list" :aria-label="t(page.filters.label)">
+        <div class="chips" role="group" :aria-label="t(page.filters.label)">
           <button
             v-for="(f, i) in page.filters.items"
             :key="i"
             type="button"
-            role="listitem"
             class="chip"
-            :class="{ active: f.active }"
-            :aria-pressed="f.active ? 'true' : 'false'"
+            :class="{ active: activeFilter === i }"
+            :aria-pressed="activeFilter === i ? 'true' : 'false'"
+            @click="activeFilter = i"
           >
             {{ t(f.label) }}
           </button>
         </div>
 
-        <div class="grid cols-3 reveal" style="margin-top: var(--space-6)">
-          <NuxtLink v-for="(post, i) in page.posts.items" :key="i" :to="localePath(post.to)" class="card post-card">
+        <div class="grid cols-3 reveal stagger" style="margin-top: var(--space-6)">
+          <NuxtLink v-for="(post, i) in filteredPosts" :key="post.to || i" :to="localePath(post.to)" class="card post-card">
             <div class="card-media">
-              <img :src="post.image" :alt="t(post.imageAlt)" width="640" height="400" loading="lazy">
+              <img :src="post.image" :alt="t(post.imageAlt)" width="640" height="400" loading="lazy" decoding="async">
             </div>
             <div class="card-body">
               <span class="card-eyebrow">{{ t(post.category) }}</span>
@@ -64,7 +75,7 @@ useSeoMeta({
           </NuxtLink>
         </div>
 
-        <nav class="pagination" :aria-label="t(page.pagination.label)">
+        <nav v-if="showPagination" class="pagination" :aria-label="t(page.pagination.label)">
           <span class="page-prev" aria-disabled="true">{{ t(page.pagination.prevLabel) }}</span>
           <template v-for="p in page.pagination.pages" :key="p">
             <span v-if="p === page.pagination.current" class="current" aria-current="page">{{ p }}</span>
