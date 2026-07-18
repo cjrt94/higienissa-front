@@ -13,11 +13,11 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `sector-hoteleria.jpg` | [Pexels](https://www.pexels.com/photo/2736388/) | Engin Akyurt | Pexels License | No (opcional) |
 | `sector-industria.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg) | Shixart1985 | CC BY 2.0 | **Sí** |
 | `sector-mineria.jpg` | [Pexels](https://www.pexels.com/photo/a-coal-miner-17839774/) | neneqo | Pexels License | No (opcional) |
-| `ecosistema.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg) | HanSangYoon | CC BY-SA | **Sí + share-alike** |
+| `ecosistema.jpg` | **Foto propia** — planta de Grupo Higienissa | Grupo Higienissa | Propietaria | No |
 | `asis-idtrak.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG) | Maschinenjunge | CC BY-SA 3.0 | **Sí + share-alike** |
-| `pacifica-hero.jpg` | [Pexels](https://www.pexels.com/photo/washing-machines-in-a-laundry-shop-8774376/) | Tima Miroshnichenko | Pexels License | No (opcional) |
-| `pacifica-proceso.jpg` | [Pexels](https://www.pexels.com/photo/8774570/) | Tima Miroshnichenko | Pexels License | No (opcional) |
-| `pacifica-band.jpg` | [Pexels](https://www.pexels.com/photo/8774643/) | Tima Miroshnichenko | Pexels License | No (opcional) |
+| `pacifica-hero.jpg` | **Foto propia** — planta de Grupo Higienissa (línea de alimentación/planchado) | Grupo Higienissa | Propietaria | No |
+| `pacifica-proceso.jpg` | **Foto propia** — planta de Grupo Higienissa (calandra) | Grupo Higienissa | Propietaria | No |
+| `pacifica-band.jpg` | **Foto propia** — planta de Grupo Higienissa (línea de alimentadoras) | Grupo Higienissa | Propietaria | No |
 | `operissa-hero.jpg` | [Pexels](https://www.pexels.com/photo/31259205/) | EqualStock IN | Pexels License | No (opcional) |
 | `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/two-workers-in-a-warehouse-4487365/) | Tiger Lily | Pexels License | No (opcional) |
 | `operissa-band.jpg` | [Pexels](https://www.pexels.com/photo/31047154/) | EqualStock IN | Pexels License | No (opcional) |

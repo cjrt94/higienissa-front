@@ -28,8 +28,8 @@
     },
     "image": "/img/pacifica-hero.jpg",
     "imageAlt": {
-      "es": "Planta de lavandería industrial Pacífica: proceso de lavado a escala",
-      "en": "Pacífica industrial laundry plant: washing process at scale"
+      "es": "Planta de lavandería industrial Pacífica: línea de alimentación y planchado operando a escala",
+      "en": "Pacífica industrial laundry plant: feeding and ironing line operating at scale"
     },
     "badge": {
       "icon": "activity",
@@ -224,7 +224,7 @@
     "eyebrow": { "es": "Nuestra diferencia", "en": "Our difference" },
     "title": { "es": "Más que una lavandería tradicional", "en": "More than a traditional laundry" },
     "image": "/img/ecosistema.jpg",
-    "imageAlt": { "es": "Ecosistema Higienissa que respalda a Pacífica", "en": "Higienissa ecosystem backing Pacífica" },
+    "imageAlt": { "es": "Calandra de planchado industrial de Pacífica, respaldada por el ecosistema Higienissa", "en": "Pacífica industrial ironing machine, backed by the Higienissa ecosystem" },
     "lead": {
       "es": "No solo procesamos textiles: sostenemos operaciones que no pueden detenerse. Pensamos como operadores y trabajamos respaldados por el ecosistema Higienissa, con infraestructura y trazabilidad que una lavandería tradicional no puede ofrecer.",
       "en": "We don't just process textiles: we sustain operations that can't stop. We think like operators and work backed by the Higienissa ecosystem, with infrastructure and traceability a traditional laundry can't offer."
