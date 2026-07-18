@@ -10,7 +10,7 @@ watch(() => route.fullPath, () => { open.value = false })
 // Navbar transparente arriba SOLO en el home con el hero "flow" (fondo claro).
 // Al scrollear (o abrir el menú móvil) vuelve el navy sólido.
 const scrolled = ref(false)
-const flowHero = computed(() => route.path === localePath('/') && route.query.hero === 'flow')
+const flowHero = computed(() => route.path === localePath('/') && ['flow', 'kinetic'].includes(route.query.hero))
 const isTransparent = computed(() => flowHero.value && !scrolled.value && !open.value)
 const logoSrc = computed(() =>
   isTransparent.value ? '/logos/lockup-horizontal-azul.png' : '/logos/lockup-horizontal-blanco.png',

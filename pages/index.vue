@@ -19,12 +19,14 @@ useSeoMeta({
 const heroComponents = {
   '': resolveComponent('HeroHome'),
   flow: resolveComponent('HeroFlow'),
+  kinetic: resolveComponent('HeroKinetic'),
 }
 const heroComponent = computed(() => heroComponents[route.query.hero] || heroComponents[''])
 const previewMode = computed(() => route.query.hero != null)
 const heroOptions = [
   { key: 'actual', label: 'Actual' },
   { key: 'flow', label: 'Flujo' },
+  { key: 'kinetic', label: 'Kinético' },
 ]
 </script>
 
