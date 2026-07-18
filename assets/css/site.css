@@ -123,7 +123,22 @@ li { margin-bottom: var(--space-2); }
   -webkit-backdrop-filter: saturate(140%) blur(10px);
   backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.10);
+  transition: background .28s ease, border-color .28s ease;
 }
+/* Transparente sobre el hero "flow" (fondo claro): logo de color + texto oscuro */
+.site-header.is-transparent {
+  background: transparent;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+.site-header.is-transparent .main-nav > a { color: var(--ink); }
+.site-header.is-transparent .main-nav > a:hover { color: var(--azul); background: rgba(28,42,135,.06); }
+.site-header.is-transparent .main-nav > a[aria-current="page"] { color: var(--azul); background: rgba(28,42,135,.08); }
+.site-header.is-transparent .lang-switch a { color: var(--muted); }
+.site-header.is-transparent .lang-switch a.active,
+.site-header.is-transparent .lang-switch a[aria-current="true"] { color: var(--azul); }
+.site-header.is-transparent .lang-switch .sep { color: var(--line); }
+.site-header.is-transparent .nav-toggle { color: var(--ink); border-color: rgba(21,32,59,.25); }
 .site-header .container { display: flex; align-items: center; gap: var(--space-5); min-height: 72px; }
 .brand-logo img { height: 40px; width: auto; }
 .main-nav { display: flex; align-items: center; gap: 4px; margin-left: auto; }

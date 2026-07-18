@@ -7,6 +7,18 @@ const route = useRoute()
 // cerrar el menú móvil al navegar
 watch(() => route.fullPath, () => { open.value = false })
 
+// Navbar transparente arriba SOLO en el home con el hero "flow" (fondo claro).
+// Al scrollear (o abrir el menú móvil) vuelve el navy sólido.
+const scrolled = ref(false)
+const flowHero = computed(() => route.path === localePath('/') && route.query.hero === 'flow')
+const isTransparent = computed(() => flowHero.value && !scrolled.value && !open.value)
+const logoSrc = computed(() =>
+  isTransparent.value ? '/logos/lockup-horizontal-azul.png' : '/logos/lockup-horizontal-blanco.png',
+)
+const onScroll = () => { scrolled.value = window.scrollY > 24 }
+onMounted(() => { onScroll(); window.addEventListener('scroll', onScroll, { passive: true }) })
+onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
+
 const nav = [
   { to: '/', key: 'home' },
   { to: '/marca-pacifica', key: 'pacifica' },
@@ -18,10 +30,10 @@ const nav = [
 </script>
 
 <template>
-  <header class="site-header">
+  <header class="site-header" :class="{ 'is-transparent': isTransparent }">
     <div class="container">
       <NuxtLink class="brand-logo" :to="localePath('/')" :aria-label="t('a11y.homeLink')">
-        <img src="/logos/lockup-horizontal-blanco.png" alt="Grupo Higienissa">
+        <img :src="logoSrc" alt="Grupo Higienissa">
       </NuxtLink>
 
       <button
