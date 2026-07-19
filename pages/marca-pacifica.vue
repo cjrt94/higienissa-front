@@ -21,9 +21,10 @@ const solutionItems = computed(() =>
     icon: solutionIcons[i] || 'check',
     title: s.title,
     desc: s.description,
-    // La solución insignia (índice 0, con checklist largo) ocupa fila completa,
-    // como el servicio destacado de Operissa.
-    wide: i === 0,
+    // Ocupan fila completa (dos columnas): la insignia (índice 0, checklist largo)
+    // y "Operación Integral de Lavanderías" (índice 3). El bento queda simétrico:
+    // fila completa / par / fila completa.
+    wide: i === 0 || i === 3,
     groups: s.items && s.items.length ? [{ label: s.listLabel, items: s.items }] : [],
   })),
 )

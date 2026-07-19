@@ -202,6 +202,154 @@
       { "title": { "es": "Tendencia de pérdidas", "en": "Loss trend" }, "desc": { "es": "Cómo evoluciona la merma a lo largo del tiempo.", "en": "How shrinkage evolves over time." } }
     ]
   },
+  "platform":   {
+    "kicker": {
+      "es": "La plataforma en vivo",
+      "en": "The platform, live"
+    },
+    "title": {
+      "es": "El panel que convierte cada lectura RFID en decisiones",
+      "en": "The panel that turns every RFID read into decisions"
+    },
+    "lead": {
+      "es": "El software de nuestro socio tecnológico lee el tag de cada prenda y lo transforma en estado, movimiento y tendencia, en tiempo real. Esto es lo que ve un cliente de Trazatex cada día.",
+      "en": "Our technology partner's software reads each garment's tag and turns it into status, movement and trend, in real time. This is what a Trazatex client sees every day."
+    },
+    "shots": [
+      {
+        "src": "/img/plataforma-operaciones.jpg",
+        "tag": {
+          "es": "Operaciones",
+          "en": "Operations"
+        },
+        "alt": {
+          "es": "Vista de operaciones: tarjetas por estado con variación y filtros por cliente, sucursal, prenda y talla.",
+          "en": "Operations view: cards per status with variation and filters by client, branch, garment and size."
+        },
+        "caption": {
+          "es": "Cada estado con su conteo de prendas y variación; filtros por cliente, sucursal, prenda y talla.",
+          "en": "Each status with its garment count and variation; filters by client, branch, garment and size."
+        }
+      },
+      {
+        "src": "/img/plataforma-distribucion.jpg",
+        "tag": {
+          "es": "Resumen",
+          "en": "Overview"
+        },
+        "alt": {
+          "es": "Distribución del inventario textil por estado.",
+          "en": "Distribution of textile inventory by status."
+        },
+        "caption": {
+          "es": "Distribución del inventario entre estados, de un vistazo.",
+          "en": "Inventory distribution across statuses, at a glance."
+        }
+      },
+      {
+        "src": "/img/plataforma-detalle.jpg",
+        "tag": {
+          "es": "Resumen",
+          "en": "Overview"
+        },
+        "alt": {
+          "es": "Detalle por estado: tags actuales frente al periodo anterior, variación y porcentaje.",
+          "en": "Detail by status: current tags vs. previous period, variation and percentage."
+        },
+        "caption": {
+          "es": "Detalle por estado: tags actuales vs. periodo anterior, variación y peso.",
+          "en": "Detail by status: current tags vs. previous period, variation and weight."
+        }
+      },
+      {
+        "src": "/img/plataforma-comparativa.jpg",
+        "tag": {
+          "es": "Resumen",
+          "en": "Overview"
+        },
+        "alt": {
+          "es": "Comparativa del periodo actual frente al anterior, estado por estado.",
+          "en": "Current vs. previous period comparison, status by status."
+        },
+        "caption": {
+          "es": "Comparativa de periodos para leer la tendencia, no solo la foto del día.",
+          "en": "Period comparison to read the trend, not just today's snapshot."
+        }
+      },
+      {
+        "src": "/img/plataforma-asistente.jpg",
+        "tag": {
+          "es": "Asistente IA",
+          "en": "AI Assistant"
+        },
+        "alt": {
+          "es": "Asistente de datos: consulta en lenguaje natural con respuestas y gráficos al instante.",
+          "en": "Data assistant: natural-language queries with instant answers and charts."
+        },
+        "caption": {
+          "es": "Consulta en lenguaje natural: preguntas en español con respuestas y gráficos al instante.",
+          "en": "Natural-language queries: questions in Spanish with instant answers and charts."
+        }
+      }
+    ],
+    "features": [
+      {
+        "icon": "scan",
+        "title": {
+          "es": "Trazabilidad por prenda",
+          "en": "Per-garment traceability"
+        },
+        "desc": {
+          "es": "Cada activo textil tiene estado propio leído por RFID, no estimado.",
+          "en": "Each textile asset has its own status read by RFID, not estimated."
+        }
+      },
+      {
+        "icon": "chart",
+        "title": {
+          "es": "Analítica que anticipa",
+          "en": "Analytics that anticipate"
+        },
+        "desc": {
+          "es": "Mapas de calor, control de stock y predicción de fin de vida para reponer antes del quiebre.",
+          "en": "Heat maps, stock control and end-of-life prediction to restock before running out."
+        }
+      },
+      {
+        "icon": "users",
+        "title": {
+          "es": "Operación medible",
+          "en": "Measurable operation"
+        },
+        "desc": {
+          "es": "Productividad por trabajador, incidencias, albaranes y facturas: todo deja rastro auditable.",
+          "en": "Productivity per worker, incidents, delivery notes and invoices: everything leaves an auditable trail."
+        }
+      },
+      {
+        "icon": "activity",
+        "title": {
+          "es": "Asistente de IA",
+          "en": "AI assistant"
+        },
+        "desc": {
+          "es": "Consultas en español con respuestas y gráficos al instante.",
+          "en": "Queries in Spanish with instant answers and charts."
+        }
+      }
+    ],
+    "note": {
+      "es": "Plataforma de nuestro socio tecnológico ASIS IDTRAK (Made in Spain), hoy en operación en cadenas hoteleras internacionales y lavanderías industriales.",
+      "en": "Platform by our technology partner ASIS IDTRAK (Made in Spain), currently in operation across international hotel chains and industrial laundries."
+    },
+    "cta": {
+      "to": "/contacto",
+      "label": {
+        "es": "Solicitar una demo",
+        "en": "Request a demo"
+      }
+    }
+  },
   "retorno": {
     "kicker": { "es": "Resultados", "en": "Results" },
     "title": { "es": "Menos pérdidas, más control", "en": "Less loss, more control" },

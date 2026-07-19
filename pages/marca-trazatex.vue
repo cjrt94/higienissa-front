@@ -139,6 +139,9 @@ const splitAsis = (val) => t(val).split(/(ASIS IDTRAK)/)
       </div>
     </section>
 
+    <!-- 6b · LA PLATAFORMA EN VIVO (showcase con pestañas del panel del socio ASIS) -->
+    <PlatformShowcase v-if="page.platform" :data="page.platform" />
+
     <!-- 7+8 · EL RETORNO (con "Qué información genera" fusionado) -->
     <section class="section section-alt">
       <div class="container">
