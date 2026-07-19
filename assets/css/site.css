@@ -340,20 +340,44 @@ li { margin-bottom: var(--space-2); }
    posicionado) queda por encima. Afinable por sección con custom props:
      --motion-dur : velocidad (una pasada); --m1/--m2/--m3 : intensidad de cada glow. */
 .bg-motion { position: relative; overflow: hidden; isolation: isolate; }
+/* Capa 1 · glows que derivan suavemente (profundidad ambiental) */
 .bg-motion::before {
-  content:""; position:absolute; inset:-40%; z-index:-1; pointer-events:none; will-change: transform;
+  content:""; position:absolute; inset:-40%; z-index:-2; pointer-events:none; will-change: transform;
   background:
     radial-gradient(28% 36% at 26% 30%, rgba(78,167,225, var(--m1, .40)), transparent 60%),
     radial-gradient(26% 34% at 72% 42%, rgba(58,120,255, var(--m2, .34)), transparent 62%),
     radial-gradient(34% 44% at 54% 80%, rgba(37,59,176, var(--m3, .52)), transparent 66%);
-  animation: bg-drift var(--motion-dur, 18s) ease-in-out infinite alternate;
+  animation: bg-drift var(--motion-dur, 24s) ease-in-out infinite alternate;
+}
+/* Capa 2 · remolino CIRCULAR tipo tambor de lavadora: un disco (conic recortado con
+   máscara radial) centrado que gira en un solo sentido (linear + lento = fluido, nunca
+   brusco). height + aspect-ratio 1 → círculo real, independiente del ancho de la banda. */
+.bg-motion::after {
+  content:""; position:absolute; left:50%; top:50%; z-index:-1; pointer-events:none; will-change: transform;
+  height: 190%; aspect-ratio: 1;
+  background: conic-gradient(from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(78,167,225, var(--sw1, .18)) 55deg,
+    transparent 125deg,
+    rgba(58,120,255, var(--sw2, .15)) 205deg,
+    transparent 275deg,
+    rgba(78,167,225, var(--sw1, .18)) 345deg,
+    transparent 360deg);
+  -webkit-mask: radial-gradient(circle at 50% 50%, #000 30%, rgba(0,0,0,.5) 52%, transparent 70%);
+          mask: radial-gradient(circle at 50% 50%, #000 30%, rgba(0,0,0,.5) 52%, transparent 70%);
+  mix-blend-mode: screen; opacity: .9;
+  transform: translate(-50%, -50%);
+  animation: bg-swirl var(--swirl-dur, 60s) linear infinite;
 }
 @keyframes bg-drift {
   0%   { transform: translate3d(-6%, -4%, 0) scale(1.14); }
   50%  { transform: translate3d(5%,   4%, 0) scale(1.2); }
   100% { transform: translate3d(-2%,  7%, 0) scale(1.14); }
 }
-@media (prefers-reduced-motion: reduce) { .bg-motion::before { animation: none; } }
+@keyframes bg-swirl { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .bg-motion::before, .bg-motion::after { animation: none; }
+}
 
 /* Banner "Solicitar evaluación": base navy de marca (el movimiento lo da .bg-motion en el template) */
 .cta-band { background: linear-gradient(135deg, #0F1836 0%, #1C2A87 55%, #22347f 100%); color:#fff; text-align:center; }
