@@ -2,38 +2,22 @@
 const page = useLegalContent('privacidad')
 const t = useT()
 
+// Mientras el documento conserve placeholders [ASÍ] (email legal/DPO, responsable,
+// razón social, RUC... sin completar), la política está en borrador y NO debe
+// indexarse: el visitante no podría ejercer sus derechos ARCO. Al reemplazarlos por
+// los datos reales, el noindex desaparece solo. Ver reporte de Rowena, punto 1.
+const isDraft = /\[[^\]]+\]/.test(JSON.stringify(page.sections))
+
 useSeoMeta({
   title: () => t(page.seo.title),
   description: () => t(page.seo.description),
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
+  robots: isDraft ? 'noindex, nofollow' : undefined,
 })
 </script>
 
 <template>
-  <div>
-    <PageHero
-      :eyebrow="page.hero.eyebrow"
-      :title="page.hero.title"
-      :lead="page.hero.lead"
-    />
-
-    <section class="section">
-      <div class="container">
-        <div class="prose legal-prose">
-          <template v-for="(sec, i) in page.sections" :key="i">
-            <h2>{{ t(sec.heading) }}</h2>
-            <p v-for="(par, j) in sec.body" :key="j">{{ t(par) }}</p>
-          </template>
-        </div>
-      </div>
-    </section>
-  </div>
+  <LegalDoc :page="page" />
 </template>
-
-<style scoped>
-.legal-prose h2 { font-size: var(--fs-h4, 1.25rem); }
-.legal-prose h2:first-child { margin-top: 0; }
-.legal-prose p { margin-bottom: var(--space-4); color: var(--text); line-height: 1.7; }
-</style>

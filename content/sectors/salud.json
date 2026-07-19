@@ -142,11 +142,6 @@
   "impactByRole": {
     "kicker": { "es": "Impacto por rol", "en": "Impact by role" },
     "title": { "es": "Qué resuelve en cada nivel", "en": "What it solves at each level" },
-    "image": "/img/salud-band.jpg",
-    "imageAlt": {
-      "es": "Entorno clínico donde el textil es parte de la operación de cada nivel",
-      "en": "Clinical environment where textiles are part of every level's operation"
-    },
     "items": [
       {
         "icon": "chart",

@@ -74,6 +74,10 @@
       "es": "Sin control del textil, el costo y la experiencia del huésped quedan expuestos.",
       "en": "Without textile control, both cost and the guest experience are left exposed."
     },
+    "punch": {
+      "es": "Cinco frentes — merma, disponibilidad, estado del textil, ritmo de housekeeping y medición — que hoy dependen de controles manuales.",
+      "en": "Five fronts — loss, availability, textile condition, housekeeping pace and measurement — that today rely on manual controls."
+    },
     "items": [
       { "es": "Mermas de blancos y lencería sin trazabilidad que elevan el costo de reposición.", "en": "Untraceable linen and bed-linen losses that raise replacement costs." },
       { "es": "Quiebres de disponibilidad textil que afectan el armado de habitaciones.", "en": "Textile availability gaps that disrupt room setup." },
@@ -105,12 +109,13 @@
   "indicators": {
     "kicker": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
     "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "source": "Trazatex · data",
     "items": [
-      { "es": "Merma por mes", "en": "Loss per month" },
-      { "es": "Rotación por piso / área", "en": "Rotation by floor / area" },
-      { "es": "Tiempo en circulación", "en": "Time in circulation" },
-      { "es": "Inventario óptimo", "en": "Optimal inventory" },
-      { "es": "ROI por implementación", "en": "ROI per implementation" }
+      { "icon": "chart", "label": { "es": "Merma por mes", "en": "Loss per month" }, "state": { "es": "medible por mes", "en": "measurable monthly" } },
+      { "icon": "target", "label": { "es": "Rotación por piso / área", "en": "Rotation by floor / area" }, "state": { "es": "por área", "en": "by area" } },
+      { "icon": "activity", "label": { "es": "Tiempo en circulación", "en": "Time in circulation" }, "state": { "es": "en tiempo real", "en": "in real time" } },
+      { "icon": "scan", "label": { "es": "Inventario óptimo", "en": "Optimal inventory" }, "state": { "es": "por ubicación", "en": "by location" } },
+      { "icon": "shield", "label": { "es": "ROI por implementación", "en": "ROI per implementation" }, "state": { "es": "cuantificable", "en": "quantifiable" } }
     ]
   },
   "impactByRole": {
@@ -150,6 +155,8 @@
     "items": [
       {
         "name": "Pacífica",
+        "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
+        "role": { "es": "Procesamiento del blanco", "en": "Linen processing" },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Pacífica: lavandería industrial inteligente para hotelería",
@@ -164,6 +171,8 @@
       },
       {
         "name": "Trazatex",
+        "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
+        "role": { "es": "Control de mermas", "en": "Loss control" },
         "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: RFID y data para la trazabilidad del textil hotelero",
@@ -178,6 +187,8 @@
       },
       {
         "name": "Operissa",
+        "eyebrow": { "es": "Opera · en terreno", "en": "Operates · on site" },
+        "role": { "es": "Disponibilidad en terreno", "en": "On-site availability" },
         "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: operación del circuito textil del hotel",

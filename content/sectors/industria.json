@@ -85,6 +85,14 @@
   "risks": {
     "eyebrow": { "es": "Riesgos operativos", "en": "Operational risks" },
     "title": { "es": "Lo que está en juego sin control", "en": "What is at stake without control" },
+    "lead": {
+      "es": "Sin trazabilidad por trabajador, el uniforme y el EPP textil se vuelven un punto ciego de cumplimiento y costo.",
+      "en": "Without traceability per worker, uniforms and textile PPE become a blind spot for compliance and cost."
+    },
+    "punch": {
+      "es": "Cuatro frentes — uso, pérdida, cumplimiento y trazabilidad — que hoy nadie puede auditar en tiempo real.",
+      "en": "Four fronts — use, loss, compliance and traceability — that today no one can audit in real time."
+    },
     "items": [
       { "es": "Uso indebido de uniformes y EPP textiles.", "en": "Improper use of uniforms and textile PPE." },
       { "es": "Pérdida de uniformes.", "en": "Loss of uniforms." },
@@ -118,12 +126,13 @@
   "indicators": {
     "eyebrow": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
     "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "source": "Trazatex · data",
     "items": [
-      { "es": "Uniformes activos por trabajador", "en": "Active uniforms per worker" },
-      { "es": "Rotación por turno", "en": "Rotation per shift" },
-      { "es": "Vida útil promedio", "en": "Average service life" },
-      { "es": "Cumplimiento interno", "en": "Internal compliance" },
-      { "es": "Costos de reposición", "en": "Replacement costs" }
+      { "icon": "scan", "label": { "es": "Uniformes activos por trabajador", "en": "Active uniforms per worker" }, "state": { "es": "por trabajador", "en": "per worker" } },
+      { "icon": "target", "label": { "es": "Rotación por turno", "en": "Rotation per shift" }, "state": { "es": "por turno", "en": "per shift" } },
+      { "icon": "activity", "label": { "es": "Vida útil promedio", "en": "Average service life" }, "state": { "es": "por prenda", "en": "per garment" } },
+      { "icon": "shield", "label": { "es": "Cumplimiento interno", "en": "Internal compliance" }, "state": { "es": "auditable", "en": "auditable" } },
+      { "icon": "chart", "label": { "es": "Costos de reposición", "en": "Replacement costs" }, "state": { "es": "cuantificable", "en": "quantifiable" } }
     ]
   },
   "impactByRole": {
@@ -163,6 +172,8 @@
     "items": [
       {
         "name": { "es": "Operissa", "en": "Operissa" },
+        "eyebrow": { "es": "Opera · en terreno", "en": "Operates · on site" },
+        "role": { "es": "Operación de uniformes", "en": "Uniform operation" },
         "image": "/img/operissa-hero.jpg",
         "imageAlt": { "es": "Operissa — operación y logística textil en planta", "en": "Operissa — textile operation and logistics on site" },
         "desc": {
@@ -174,6 +185,8 @@
       },
       {
         "name": { "es": "Trazatex", "en": "Trazatex" },
+        "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
+        "role": { "es": "Trazabilidad por trabajador", "en": "Traceability per worker" },
         "image": "/img/trazatex-hero.jpg",
         "imageAlt": { "es": "Trazatex — RFID, software y data para trazabilidad textil", "en": "Trazatex — RFID, software and data for textile traceability" },
         "desc": {
@@ -185,6 +198,8 @@
       },
       {
         "name": { "es": "Pacífica", "en": "Pacífica" },
+        "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
+        "role": { "es": "Procesamiento en planta", "en": "In-plant processing" },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
         "desc": {

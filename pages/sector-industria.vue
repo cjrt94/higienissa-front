@@ -1,11 +1,9 @@
 <script setup>
 const page = useSectorContent('industria')
+// Hero de tope = foto oscura a sangre → el navbar transparente va en blanco (contraste AA).
+definePageMeta({ darkHero: true })
 const t = useT()
-const localePath = useLocalePath()
 const config = useRuntimeConfig()
-
-// Impacto por rol → filas editoriales (StakeList espera { title, desc })
-const roleItems = computed(() => (page.impactByRole?.items || []).map((c) => ({ title: c.title, desc: c.text })))
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -16,135 +14,87 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
+// Acento de sector (azul estructural, cumplimiento).
+const accent = {
+  '--sector': '#3D57C4',
+  '--sector-ink': '#1C2A87',
+  '--sector-soft': 'rgba(61,87,196,.12)',
+}
+
+const contextItems = computed(() =>
+  page.context.pillars.map((p) => ({ title: p.title, text: p.text, icon: p.icon })),
+)
+const shiftItems = computed(() => page.whatChanges.items.map((x) => ({ text: x })))
+const roleItems = computed(() => page.impactByRole.items.map((c) => ({ title: c.title, desc: c.text })))
+const brandItems = computed(() =>
+  page.brands.items.map((b) => ({
+    name: b.name, eyebrow: b.eyebrow, role: b.role, desc: b.desc,
+    image: b.image, imageAlt: b.imageAlt, to: b.to, link: b.linkLabel,
+  })),
+)
 </script>
 
 <template>
-  <div>
-    <!-- 1 · HERO rico (foto + badge) -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="kicker sector-kicker"><BaseIcon v-if="page.icon" :name="page.icon" :size="15" />{{ t(page.hero.eyebrow) }}</span>
-          <h1 class="display">{{ t(page.hero.title) }}</h1>
-          <p class="lead">{{ t(page.hero.lead) }}</p>
-          <div class="hero-actions">
-            <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
-            <BaseButton href="#marcas" variant="ghost">{{ $t('cta.knowMore') }}</BaseButton>
-          </div>
-        </div>
-        <div class="hero-media">
-          <div class="frame">
-            <img :src="page.hero.image" :alt="t(page.hero.imageAlt)" width="1200" height="1020">
-          </div>
-          <div v-if="page.hero.badge" class="hero-badge">
-            <span class="hb-icon"><BaseIcon :name="page.hero.badge.icon" :size="22" /></span>
-            <span><b>{{ t(page.hero.badge.title) }}</b><span>{{ t(page.hero.badge.sub) }}</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="sector-page" :style="accent">
+    <SectorHero
+      :icon="page.icon"
+      :eyebrow="page.hero.eyebrow"
+      :title="page.hero.title"
+      :lead="page.hero.lead"
+      :image="page.hero.image"
+      :image-alt="page.hero.imageAlt"
+      :badge="page.hero.badge"
+    />
 
-    <!-- 2 · CONTEXTO (split foto + pilares) -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="intro-split reverse">
-          <div class="intro-copy">
-            <div class="section-head left">
-              <span class="kicker">{{ t(page.context.eyebrow) }}</span>
-              <h2>{{ t(page.context.title) }}</h2>
-              <p class="lead">{{ t(page.context.lead) }}</p>
-            </div>
-          </div>
-          <div class="hero-media">
-            <div class="frame" style="aspect-ratio:4/3.4;box-shadow:var(--shadow-md)">
-              <img :src="page.context.image" :alt="t(page.context.imageAlt)" width="1000" height="850" loading="lazy">
-            </div>
-          </div>
-        </div>
-        <div class="value-cols reveal" style="margin-top:var(--space-7)">
-          <article v-for="(p, i) in page.context.pillars" :key="i" class="value-col">
-            <span v-if="p.icon" class="v-icon"><BaseIcon :name="p.icon" :size="24" /></span>
-            <h3>{{ t(p.title) }}</h3>
-            <p>{{ t(p.text) }}</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <SectorContext
+      :kicker="page.context.eyebrow"
+      :title="page.context.title"
+      :lead="page.context.lead"
+      :image="page.context.image"
+      :image-alt="page.context.imageAlt"
+      :items="contextItems"
+      variant="pillar"
+    />
 
-    <!-- 3 · RIESGOS OPERATIVOS -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <span class="kicker">{{ t(page.risks.eyebrow) }}</span>
-          <h2>{{ t(page.risks.title) }}</h2>
-        </div>
-        <StakeList :items="page.risks.items" marker="risk" :aria-label="t(page.risks.title)" />
-      </div>
-    </section>
+    <SectorRisks
+      :kicker="page.risks.eyebrow"
+      :title="page.risks.title"
+      :lead="page.risks.lead"
+      :punch="page.risks.punch"
+      :items="page.risks.items"
+    />
 
-    <!-- 4 · QUÉ CAMBIA — banda a sangre con foto + ganancias -->
-    <ImageBand
-      :image="page.whatChanges.image"
+    <SectorShift
+      :icon="page.icon"
       :eyebrow="page.whatChanges.eyebrow"
       :title="page.whatChanges.title"
       :statement="page.whatChanges.lead"
-      align="center"
+      :image="page.whatChanges.image"
+      :image-alt="page.whatChanges.imageAlt"
+      :items="shiftItems"
     />
-    <section class="section">
-      <div class="container">
-        <ul class="marker-list gain cols-2 reveal" :aria-label="t(page.whatChanges.title)">
-          <li v-for="(it, i) in page.whatChanges.items" :key="i">{{ t(it) }}</li>
-        </ul>
-      </div>
-    </section>
 
-    <!-- 5 · INDICADORES GESTIONABLES -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head left">
-          <span class="kicker">{{ t(page.indicators.eyebrow) }}</span>
-          <h2>{{ t(page.indicators.title) }}</h2>
-        </div>
-        <ul class="marker-list gain cols-2 reveal" :aria-label="t(page.indicators.title)">
-          <li v-for="(it, i) in page.indicators.items" :key="i">{{ t(it) }}</li>
-        </ul>
-      </div>
-    </section>
+    <SectorMetrics
+      :kicker="page.indicators.eyebrow"
+      :title="page.indicators.title"
+      :source="page.indicators.source"
+      :items="page.indicators.items"
+    />
 
-    <!-- 6 · IMPACTO POR ROL -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <span class="kicker">{{ t(page.impactByRole.eyebrow) }}</span>
-          <h2>{{ t(page.impactByRole.title) }}</h2>
-        </div>
-        <StakeList :items="roleItems" marker="number" />
-      </div>
-    </section>
+    <SectorRoles
+      :kicker="page.impactByRole.eyebrow"
+      :title="page.impactByRole.title"
+      :icon="page.icon"
+      :items="roleItems"
+    />
 
-    <!-- 7 · MARCAS RELEVANTES -->
-    <section id="marcas" class="section section-alt">
-      <div class="container">
-        <div class="section-head center">
-          <span class="kicker">{{ t(page.brands.eyebrow) }}</span>
-          <h2>{{ t(page.brands.title) }}</h2>
-          <p class="lead mx-auto">{{ t(page.brands.lead) }}</p>
-        </div>
-        <div class="grid cols-3 reveal">
-          <article v-for="(b, i) in page.brands.items" :key="i" class="card">
-            <div class="card-media">
-              <img :src="b.image" :alt="t(b.imageAlt)" width="800" height="500" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>{{ t(b.name) }}</h3>
-              <p class="card-desc">{{ t(b.desc) }}</p>
-              <NuxtLink class="link-arrow" :to="localePath(b.to)">{{ t(b.linkLabel) }}</NuxtLink>
-            </div>
-          </article>
-        </div>
-        <p v-if="page.brands.note" class="disclaimer" style="margin-top:var(--space-6)">{{ t(page.brands.note) }}</p>
-      </div>
-    </section>
+    <SectorBrands
+      :kicker="page.brands.eyebrow"
+      :title="page.brands.title"
+      :lead="page.brands.lead"
+      :items="brandItems"
+      :note="page.brands.note"
+    />
 
     <FinalCta :data="page.finalCta" />
   </div>

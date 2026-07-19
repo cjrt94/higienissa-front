@@ -67,5 +67,8 @@
     "backHome": "Back to home",
     "error": "Could not send. Please try again or email us.",
     "required": "Fields marked with * are required."
+  },
+  "sectorUi": {
+    "measurementPanel": "Measurement panel"
   }
 }

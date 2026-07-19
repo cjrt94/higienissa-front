@@ -86,6 +86,14 @@
       "es": "Lo que está en juego sin control",
       "en": "What is at stake without control"
     },
+    "lead": {
+      "es": "En faenas remotas, cada quiebre textil se paga caro: la reposición no está a la vuelta de la esquina.",
+      "en": "At remote sites, every textile breakdown is costly: resupply is never around the corner."
+    },
+    "punch": {
+      "es": "Cinco frentes — disponibilidad, logística, resistencia, montaje y merma — que la distancia solo agrava.",
+      "en": "Five fronts — availability, logistics, durability, setup and loss — that distance only makes worse."
+    },
     "items": [
       {
         "es": "Quiebres de disponibilidad textil en faenas alejadas, sin reposición cercana.",
@@ -151,13 +159,14 @@
   "indicators": {
     "kicker": { "es": "Indicadores gestionables", "en": "Manageable indicators" },
     "title": { "es": "Lo que pasa a ser medible", "en": "What becomes measurable" },
+    "source": "Trazatex · data",
     "items": [
-      { "es": "Nivel de merma textil", "en": "Textile loss rate" },
-      { "es": "Rotación por campamento o faena", "en": "Turnover per camp or site" },
-      { "es": "Ciclos de lavado por activo", "en": "Wash cycles per asset" },
-      { "es": "Vida útil del textil", "en": "Textile service life" },
-      { "es": "Continuidad de la operación en terreno", "en": "Continuity of the on-site operation" },
-      { "es": "Inventario real disponible", "en": "Actual available inventory" }
+      { "icon": "chart", "label": { "es": "Nivel de merma textil", "en": "Textile loss rate" }, "state": { "es": "medible", "en": "measurable" } },
+      { "icon": "target", "label": { "es": "Rotación por campamento o faena", "en": "Turnover per camp or site" }, "state": { "es": "por faena", "en": "per site" } },
+      { "icon": "activity", "label": { "es": "Ciclos de lavado por activo", "en": "Wash cycles per asset" }, "state": { "es": "por activo", "en": "per asset" } },
+      { "icon": "check", "label": { "es": "Vida útil del textil", "en": "Textile service life" }, "state": { "es": "por prenda", "en": "per garment" } },
+      { "icon": "shield", "label": { "es": "Continuidad de la operación en terreno", "en": "Continuity of the on-site operation" }, "state": { "es": "en tiempo real", "en": "in real time" } },
+      { "icon": "scan", "label": { "es": "Inventario real disponible", "en": "Actual available inventory" }, "state": { "es": "real, no estimado", "en": "real, not estimated" } }
     ]
   },
   "impactByRole": {
@@ -197,6 +206,8 @@
     "items": [
       {
         "name": "Pacífica",
+        "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
+        "role": { "es": "Procesamiento con estándar", "en": "Standardized processing" },
         "desc": {
           "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse, también en faena.",
           "en": "Smart industrial laundry for operations that cannot stop, including on site."
@@ -211,6 +222,8 @@
       },
       {
         "name": "Operissa",
+        "eyebrow": { "es": "Opera · en terreno", "en": "Operates · on site" },
+        "role": { "es": "Operación en terreno", "en": "On-the-ground operation" },
         "desc": {
           "es": "Operación y gestión especializada en terreno, con personas y procesos para entornos remotos.",
           "en": "Specialized on-the-ground operation and management, with people and processes for remote environments."
@@ -225,6 +238,8 @@
       },
       {
         "name": "Trazatex",
+        "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
+        "role": { "es": "Trazabilidad de faena", "en": "On-site traceability" },
         "desc": {
           "es": "RFID, software, auditoría y data para la trazabilidad individual del textil de faena, incluso en operaciones remotas.",
           "en": "RFID, software, auditing and data for individual traceability of on-site textiles, even in remote operations."

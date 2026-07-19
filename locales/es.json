@@ -67,5 +67,8 @@
     "backHome": "Volver al inicio",
     "error": "No se pudo enviar. Intente nuevamente o escríbanos por correo.",
     "required": "Los campos con * son obligatorios."
+  },
+  "sectorUi": {
+    "measurementPanel": "Panel de medición"
   }
 }
