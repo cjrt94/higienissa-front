@@ -2,7 +2,6 @@
 const page = usePageContent('home')
 const t = useT()
 const config = useRuntimeConfig()
-const route = useRoute()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -13,35 +12,29 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-// --- Preview de hero por query param (?hero=flow) ---
-// Sin param → hero actual (visitantes normales). El switcher solo aparece en preview.
-// resolveComponent porque <component :is="string"> no lo resuelve el auto-import de Nuxt.
-const heroComponents = {
-  '': resolveComponent('HeroHome'),
-  flow: resolveComponent('HeroFlow'),
-  kinetic: resolveComponent('HeroKinetic'),
-}
-const heroComponent = computed(() => heroComponents[route.query.hero] || heroComponents[''])
-const previewMode = computed(() => route.query.hero != null)
-const heroOptions = [
-  { key: 'actual', label: 'Actual' },
-  { key: 'flow', label: 'Flujo' },
-  { key: 'kinetic', label: 'Kinético' },
-]
+// ── HERO PREVIEW · FEATURE TEMPORAL (ver composables/useHeroPreview.js) ──────
+// Toda la lógica (variantes + persistencia en localStorage) vive en el composable.
+// Para quitarlo: borrar el composable, este bloque, el <div.hero-switcher> del
+// template y sus estilos, y dejar <HeroHome :data="page.hero" />.
+const { heroComponent, previewMode, options: heroOptions, activeOption } = useHeroPreview()
+// ── /HERO PREVIEW ────────────────────────────────────────────────────────────
 </script>
 
 <template>
   <div>
+    <!-- HERO PREVIEW · componente dinámico (al quitar el feature → <HeroHome :data="page.hero" />) -->
     <component :is="heroComponent" :data="page.hero" />
 
+    <!-- HERO PREVIEW · switcher flotante (temporal) -->
     <div v-if="previewMode" class="hero-switcher" role="navigation" aria-label="Vista previa de heros">
       <span class="hs-label">Hero:</span>
       <NuxtLink
         v-for="opt in heroOptions" :key="opt.key"
         :to="{ query: { hero: opt.key } }"
-        class="hs-btn" :class="{ 'is-active': (route.query.hero || 'actual') === opt.key }"
+        class="hs-btn" :class="{ 'is-active': activeOption === opt.key }"
       >{{ opt.label }}</NuxtLink>
     </div>
+    <!-- /HERO PREVIEW -->
     <GroupIntro :data="page.groupIntro" />
     <DivisionsGrid :data="page.divisions" />
     <PillarsGrid :data="page.pillars" />
