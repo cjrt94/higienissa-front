@@ -1,7 +1,6 @@
 {
   "slug": "aviso-legal",
   "template": "legal",
-  "status": "draft",
   "title": {
     "es": "Aviso legal",
     "en": "Legal notice"
@@ -16,29 +15,132 @@
       "en": "Legal notice"
     },
     "lead": {
-      "es": "Contenido en preparación. El texto legal definitivo —titularidad del sitio, condiciones de uso y limitación de responsabilidad— se publicará antes del lanzamiento.",
-      "en": "Content in preparation. The final legal text —site ownership, terms of use and limitation of liability— will be published before launch."
+      "es": "Condiciones que rigen el acceso y uso de este sitio web, titularidad, propiedad intelectual y régimen de responsabilidad.",
+      "en": "Terms governing access to and use of this website, ownership, intellectual property and liability regime."
     }
   },
-  "disclaimer": {
-    "before": {
-      "es": "Para consultas, escriba a",
-      "en": "For inquiries, write to"
+  "sections": [
+    {
+      "heading": {
+        "es": "1. Identificación del titular",
+        "en": "1. Identification of the owner"
+      },
+      "body": [
+        {
+          "es": "En cumplimiento del deber de información, se hace constar que el presente sitio web es titularidad de [RAZÓN SOCIAL], con Registro Único de Contribuyentes (RUC) N.° [RUC] y domicilio fiscal en [DOMICILIO FISCAL], Perú (en adelante, «Grupo Higienissa» o «el Titular»).",
+          "en": "In fulfilment of the duty to inform, it is stated that this website is owned by [RAZÓN SOCIAL], holding Peruvian Taxpayer Registration Number (RUC) No. [RUC] and with registered tax address at [DOMICILIO FISCAL], Peru (hereinafter, “Grupo Higienissa” or “the Owner”)."
+        },
+        {
+          "es": "Para cualquier consulta relacionada con el sitio web puede contactar al Titular a través del correo electrónico contacto@higienissa.com.",
+          "en": "For any query relating to the website you may contact the Owner by email at contacto@higienissa.com."
+        }
+      ]
     },
-    "email": "contacto@higienissa.com",
-    "after": {
-      "es": ".",
-      "en": "."
+    {
+      "heading": {
+        "es": "2. Objeto del sitio",
+        "en": "2. Purpose of the site"
+      },
+      "body": [
+        {
+          "es": "Este sitio web tiene carácter informativo e institucional. Su finalidad es dar a conocer las marcas, servicios y capacidades de Grupo Higienissa en el ámbito de la higiene y gestión textil B2B, así como facilitar el contacto comercial con clientes y potenciales clientes.",
+          "en": "This website is informational and institutional in nature. Its purpose is to present the brands, services and capabilities of Grupo Higienissa in the field of B2B textile hygiene and management, as well as to facilitate commercial contact with clients and prospective clients."
+        },
+        {
+          "es": "La información publicada no constituye una oferta contractual vinculante salvo que así se indique expresamente. Los servicios se prestan conforme a las condiciones particulares que se acuerden en cada caso con el cliente.",
+          "en": "The information published does not constitute a binding contractual offer unless expressly stated. Services are rendered in accordance with the specific terms agreed with the client in each case."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "3. Condiciones de uso",
+        "en": "3. Terms of use"
+      },
+      "body": [
+        {
+          "es": "El acceso a este sitio web atribuye la condición de usuario e implica la aceptación plena de las presentes condiciones. El usuario se compromete a utilizar el sitio y sus contenidos de forma diligente, lícita y conforme a la buena fe, la moral, el orden público y la legislación vigente.",
+          "en": "Access to this website confers the status of user and implies full acceptance of these terms. The user undertakes to use the site and its contents diligently, lawfully and in accordance with good faith, morality, public order and applicable law."
+        },
+        {
+          "es": "Queda prohibido emplear el sitio con fines ilícitos o lesivos, así como realizar cualquier acción que pueda dañar, inutilizar, sobrecargar o deteriorar el sitio web o impedir su normal utilización por otros usuarios.",
+          "en": "Use of the site for unlawful or harmful purposes is prohibited, as is any action that may damage, disable, overload or impair the website or prevent its normal use by other users."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "4. Propiedad intelectual e industrial",
+        "en": "4. Intellectual and industrial property"
+      },
+      "body": [
+        {
+          "es": "Todos los contenidos del sitio web —incluyendo, con carácter enunciativo y no limitativo, textos, fotografías, gráficos, imágenes, iconos, logotipos, marcas, nombres comerciales, diseño y software— son titularidad de Grupo Higienissa o de terceros que han autorizado su uso, y están protegidos por la normativa nacional e internacional sobre propiedad intelectual e industrial.",
+          "en": "All website contents —including, by way of example and without limitation, texts, photographs, graphics, images, icons, logos, trademarks, trade names, design and software— are owned by Grupo Higienissa or by third parties who have authorised their use, and are protected by national and international intellectual and industrial property legislation."
+        },
+        {
+          "es": "Queda prohibida la reproducción, distribución, comunicación pública, transformación o cualquier otra forma de explotación, total o parcial, de dichos contenidos sin la autorización previa y por escrito del Titular. Determinadas imágenes de banco se utilizan bajo licencias que exigen atribución; dicha atribución se detalla en la página de créditos del sitio.",
+          "en": "The reproduction, distribution, public communication, transformation or any other form of exploitation, in whole or in part, of such contents without the prior written authorisation of the Owner is prohibited. Certain stock images are used under licences requiring attribution; such attribution is detailed on the site’s credits page."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "5. Exención y limitación de responsabilidad",
+        "en": "5. Disclaimer and limitation of liability"
+      },
+      "body": [
+        {
+          "es": "Grupo Higienissa procura mantener la información del sitio actualizada y libre de errores, pero no garantiza la ausencia de imprecisiones ni la disponibilidad ininterrumpida del servicio. El Titular no se responsabiliza de los daños o perjuicios que pudieran derivarse del uso del sitio, de la falta de disponibilidad o continuidad del mismo, ni de la presencia de virus u otros elementos lesivos ajenos a su control.",
+          "en": "Grupo Higienissa endeavours to keep the site’s information up to date and free of errors, but does not guarantee the absence of inaccuracies or the uninterrupted availability of the service. The Owner shall not be liable for any damages arising from use of the site, from its unavailability or discontinuity, or from the presence of viruses or other harmful elements beyond its control."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "6. Enlaces a terceros",
+        "en": "6. Third-party links"
+      },
+      "body": [
+        {
+          "es": "El sitio puede contener enlaces a páginas web de terceros. Grupo Higienissa no ejerce control sobre dichos sitios ni asume responsabilidad alguna por sus contenidos, políticas o prácticas. La inclusión de estos enlaces no implica aprobación ni asociación con los sitios enlazados.",
+          "en": "The site may contain links to third-party websites. Grupo Higienissa exercises no control over such sites and assumes no responsibility for their contents, policies or practices. The inclusion of these links does not imply endorsement of or association with the linked sites."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "7. Ley aplicable y jurisdicción",
+        "en": "7. Applicable law and jurisdiction"
+      },
+      "body": [
+        {
+          "es": "Las presentes condiciones se rigen e interpretan conforme a la legislación de la República del Perú. Para la resolución de cualquier controversia derivada del acceso o uso del sitio web, las partes se someten a la jurisdicción de los jueces y tribunales del distrito judicial de [DISTRITO JUDICIAL / CIUDAD], renunciando a cualquier otro fuero que pudiera corresponderles.",
+          "en": "These terms are governed by and construed in accordance with the laws of the Republic of Peru. For the resolution of any dispute arising from access to or use of the website, the parties submit to the jurisdiction of the courts of the judicial district of [DISTRITO JUDICIAL / CIUDAD], waiving any other jurisdiction that may correspond to them."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "8. Contacto",
+        "en": "8. Contact"
+      },
+      "body": [
+        {
+          "es": "Para cualquier consulta, aclaración o comunicación relativa al presente aviso legal, puede dirigirse al Titular escribiendo a contacto@higienissa.com.",
+          "en": "For any query, clarification or communication regarding this legal notice, you may contact the Owner by writing to contacto@higienissa.com."
+        }
+      ]
     }
-  },
+  ],
   "seo": {
     "title": {
       "es": "Aviso legal | Grupo Higienissa",
       "en": "Legal notice | Grupo Higienissa"
     },
     "description": {
-      "es": "Aviso legal de Grupo Higienissa.",
-      "en": "Legal notice for Grupo Higienissa."
+      "es": "Aviso legal de Grupo Higienissa: titularidad del sitio, condiciones de uso, propiedad intelectual, responsabilidad y jurisdicción aplicable en Perú.",
+      "en": "Legal notice for Grupo Higienissa: site ownership, terms of use, intellectual property, liability and applicable jurisdiction in Peru."
     }
   }
 }

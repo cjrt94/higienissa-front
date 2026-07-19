@@ -1,21 +1,150 @@
 {
   "slug": "privacidad",
-  "status": "draft",
-  "seo": {
-    "title": { "es": "Política de privacidad | Grupo Higienissa", "en": "Privacy policy | Grupo Higienissa" },
-    "description": { "es": "Política de privacidad de Grupo Higienissa.", "en": "Privacy policy for Grupo Higienissa." }
+  "template": "legal",
+  "title": {
+    "es": "Política de privacidad",
+    "en": "Privacy policy"
   },
   "hero": {
-    "eyebrow": { "es": "Legal", "en": "Legal" },
-    "title": { "es": "Política de privacidad", "en": "Privacy policy" },
+    "eyebrow": {
+      "es": "Legal",
+      "en": "Legal"
+    },
+    "title": {
+      "es": "Política de privacidad",
+      "en": "Privacy policy"
+    },
     "lead": {
-      "es": "Contenido en preparación. La política definitiva —tratamiento de datos personales, finalidad, base legal y derechos del titular— se publicará antes del lanzamiento.",
-      "en": "Content in preparation. The final policy —personal data processing, purpose, legal basis and data-subject rights— will be published before launch."
+      "es": "Cómo Grupo Higienissa trata los datos personales que usted nos facilita, con qué finalidad, sobre qué base legal y qué derechos le asisten conforme a la Ley N.° 29733.",
+      "en": "How Grupo Higienissa processes the personal data you provide, for what purpose, on what legal basis and what rights you have under Peruvian Law No. 29733."
     }
   },
-  "disclaimerLead": {
-    "es": "Para consultas sobre sus datos, escriba a ",
-    "en": "For inquiries about your data, write to "
-  },
-  "contactEmail": "contacto@higienissa.com"
+  "sections": [
+    {
+      "heading": {
+        "es": "1. Responsable del tratamiento",
+        "en": "1. Data controller"
+      },
+      "body": [
+        {
+          "es": "El responsable del tratamiento de sus datos personales es [RAZÓN SOCIAL], con RUC N.° [RUC] y domicilio en [DOMICILIO FISCAL], Perú (en adelante, «Grupo Higienissa»). Para el ejercicio de sus derechos o cualquier consulta sobre privacidad puede escribir a [EMAIL DE CONTACTO LEGAL] o a contacto@higienissa.com, a la atención de [NOMBRE DEL RESPONSABLE / DPO].",
+          "en": "The controller of your personal data is [RAZÓN SOCIAL], holding RUC No. [RUC] and with address at [DOMICILIO FISCAL], Peru (hereinafter, “Grupo Higienissa”). To exercise your rights or for any privacy query you may write to [EMAIL DE CONTACTO LEGAL] or to contacto@higienissa.com, for the attention of [NOMBRE DEL RESPONSABLE / DPO]."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "2. Datos que recogemos",
+        "en": "2. Data we collect"
+      },
+      "body": [
+        {
+          "es": "A través del formulario de contacto del sitio recogemos los datos que usted nos facilita voluntariamente: nombre, empresa, cargo, correo electrónico, sector de actividad y el mensaje o consulta que decida remitirnos. No recabamos datos sensibles y le solicitamos que no los incluya en el campo de mensaje.",
+          "en": "Through the site’s contact form we collect the data you voluntarily provide: name, company, job title, email address, industry sector and the message or query you choose to send us. We do not collect sensitive data and we ask that you not include any in the message field."
+        },
+        {
+          "es": "El suministro de estos datos es voluntario; no obstante, la negativa a facilitar los datos señalados como obligatorios puede impedir que atendamos su solicitud.",
+          "en": "Providing this data is voluntary; however, refusal to supply the data marked as mandatory may prevent us from handling your request."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "3. Finalidad del tratamiento",
+        "en": "3. Purpose of processing"
+      },
+      "body": [
+        {
+          "es": "Sus datos se tratan con la finalidad de atender y responder sus consultas, gestionar la relación comercial o precontractual, elaborar propuestas y presupuestos, y, en su caso, remitirle información sobre nuestros servicios cuando usted lo haya autorizado. No se tomarán decisiones automatizadas ni se elaborarán perfiles con efectos jurídicos a partir de sus datos.",
+          "en": "Your data is processed in order to handle and respond to your queries, manage the commercial or pre-contractual relationship, prepare proposals and quotations, and, where applicable, send you information about our services when you have authorised it. No automated decisions or profiling with legal effects will be carried out on the basis of your data."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "4. Base legal",
+        "en": "4. Legal basis"
+      },
+      "body": [
+        {
+          "es": "El tratamiento de sus datos se realiza conforme a la Ley N.° 29733, Ley de Protección de Datos Personales, y su Reglamento aprobado por Decreto Supremo N.° 003-2013-JUS. La base que legitima el tratamiento es el consentimiento que usted otorga al enviar el formulario, así como la ejecución de medidas precontractuales o contractuales adoptadas a su solicitud y el interés legítimo de Grupo Higienissa en la gestión de sus consultas.",
+          "en": "The processing of your data is carried out in accordance with Law No. 29733, the Personal Data Protection Law, and its Regulations approved by Supreme Decree No. 003-2013-JUS. The legal basis legitimising the processing is the consent you grant when submitting the form, together with the performance of pre-contractual or contractual measures taken at your request and the legitimate interest of Grupo Higienissa in managing your queries."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "5. Destinatarios y encargados",
+        "en": "5. Recipients and processors"
+      },
+      "body": [
+        {
+          "es": "Sus datos no serán cedidos a terceros salvo obligación legal. Para la prestación del servicio podemos recurrir a proveedores que actúan como encargados de tratamiento (por ejemplo, servicios de alojamiento web, correo electrónico y herramientas de gestión de contactos), quienes tratan los datos únicamente conforme a nuestras instrucciones y con las garantías exigidas por la normativa. En caso de que algún proveedor implique un flujo transfronterizo de datos, se adoptarán las garantías previstas en la Ley N.° 29733 y su Reglamento.",
+          "en": "Your data will not be transferred to third parties except by legal obligation. To provide the service we may use suppliers acting as data processors (for example, web hosting, email and contact-management tools), who process the data solely in accordance with our instructions and with the safeguards required by law. Where a supplier involves a cross-border data flow, the safeguards set out in Law No. 29733 and its Regulations will be applied."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "6. Plazo de conservación",
+        "en": "6. Retention period"
+      },
+      "body": [
+        {
+          "es": "Conservaremos sus datos durante el tiempo necesario para atender su consulta y, en su caso, mantener la relación comercial, así como durante los plazos legales aplicables para atender posibles responsabilidades. Una vez cumplidas dichas finalidades, los datos serán suprimidos o anonimizados de forma segura.",
+          "en": "We will retain your data for as long as necessary to handle your query and, where applicable, to maintain the commercial relationship, as well as for the applicable legal periods to address any liabilities. Once these purposes have been fulfilled, the data will be securely deleted or anonymised."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "7. Derechos del titular de los datos",
+        "en": "7. Rights of the data subject"
+      },
+      "body": [
+        {
+          "es": "Usted tiene derecho a acceder a sus datos personales, rectificarlos cuando sean inexactos, cancelarlos y oponerse a su tratamiento (derechos ARCO), así como a revocar el consentimiento otorgado. Para ejercer estos derechos puede enviar una solicitud a [EMAIL DE CONTACTO LEGAL] o a contacto@higienissa.com, indicando el derecho que desea ejercer y adjuntando copia de un documento que acredite su identidad.",
+          "en": "You have the right to access your personal data, rectify it when inaccurate, cancel it and object to its processing (ARCO rights), as well as to withdraw the consent granted. To exercise these rights you may send a request to [EMAIL DE CONTACTO LEGAL] or to contacto@higienissa.com, stating the right you wish to exercise and attaching a copy of a document proving your identity."
+        },
+        {
+          "es": "Asimismo, si considera que sus derechos no han sido debidamente atendidos, puede presentar una reclamación ante la Autoridad Nacional de Protección de Datos Personales del Perú.",
+          "en": "Likewise, if you consider that your rights have not been duly addressed, you may file a complaint with the National Authority for the Protection of Personal Data of Peru."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "8. Cookies",
+        "en": "8. Cookies"
+      },
+      "body": [
+        {
+          "es": "Este sitio utiliza únicamente las cookies técnicas necesarias para su correcto funcionamiento. En caso de emplearse cookies analíticas o de terceros, se solicitará su consentimiento previo y se informará de ello mediante el aviso correspondiente. Puede configurar o deshabilitar las cookies desde las opciones de su navegador.",
+          "en": "This site uses only the technical cookies necessary for its proper functioning. Should analytical or third-party cookies be used, your prior consent will be requested and you will be informed by means of the corresponding notice. You can configure or disable cookies from your browser settings."
+        }
+      ]
+    },
+    {
+      "heading": {
+        "es": "9. Contacto",
+        "en": "9. Contact"
+      },
+      "body": [
+        {
+          "es": "Para cualquier consulta relativa a esta política de privacidad o al tratamiento de sus datos personales, puede escribir a contacto@higienissa.com, a la atención de [NOMBRE DEL RESPONSABLE / DPO].",
+          "en": "For any query regarding this privacy policy or the processing of your personal data, you may write to contacto@higienissa.com, for the attention of [NOMBRE DEL RESPONSABLE / DPO]."
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": {
+      "es": "Política de privacidad | Grupo Higienissa",
+      "en": "Privacy policy | Grupo Higienissa"
+    },
+    "description": {
+      "es": "Política de privacidad de Grupo Higienissa: responsable, datos recogidos, finalidad, base legal (Ley N.° 29733), conservación y derechos ARCO.",
+      "en": "Privacy policy for Grupo Higienissa: controller, data collected, purpose, legal basis (Law No. 29733), retention and ARCO rights."
+    }
+  }
 }

@@ -122,20 +122,30 @@ const solutionItems = computed(() =>
       </div>
     </section>
 
-    <!-- 5 · METODOLOGÍA -->
-    <section class="section">
+    <!-- 5 · METODOLOGÍA — timeline de fases con nodos, conector y tarjetas -->
+    <section class="section method">
       <div class="container">
         <div class="section-head center">
           <span class="kicker">{{ t(page.methodology.eyebrow) }}</span>
           <h2>{{ t(page.methodology.title) }}</h2>
         </div>
-        <ul class="steps cols-4 reveal">
-          <li v-for="(step, i) in page.methodology.steps" :key="i" class="step">
-            <span class="step-num">{{ String(step.num).padStart(2, '0') }}</span>
-            <h3>{{ t(step.title) }}</h3>
-            <p>{{ t(step.text) }}</p>
+        <ol class="method-flow reveal">
+          <li v-for="(step, i) in page.methodology.steps" :key="i" class="mphase">
+            <div class="mphase-head">
+              <span class="mphase-node">
+                <BaseIcon :name="step.icon || 'check'" :size="26" />
+              </span>
+            </div>
+            <div class="mphase-body">
+              <span class="mphase-kicker">
+                {{ t(page.methodology.phaseLabel) }} {{ String(step.num).padStart(2, '0') }}
+                <span class="mphase-total">/ {{ String(page.methodology.steps.length).padStart(2, '0') }}</span>
+              </span>
+              <h3>{{ t(step.title) }}</h3>
+              <p>{{ t(step.text) }}</p>
+            </div>
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -162,4 +172,136 @@ const solutionItems = computed(() =>
 
 <style scoped>
 .h-label span { display: block; }
+
+/* ── Metodología · timeline de fases ─────────────────────────── */
+.method-flow {
+  --node: 64px;
+  list-style: none;
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.mphase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* nodo + conector horizontal entre fases */
+.mphase-head {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-5);
+}
+.mphase-head::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--node) / 2);
+  left: 50%;
+  width: calc(100% + var(--space-6));
+  height: 2px;
+  background: var(--line);
+  z-index: 0;
+}
+.mphase:last-child .mphase-head::before { display: none; }
+
+.mphase-node {
+  position: relative;
+  z-index: 1;
+  width: var(--node);
+  height: var(--node);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--azul);
+  background: color-mix(in srgb, var(--celeste) 10%, var(--bg));
+  border: 2px solid color-mix(in srgb, var(--celeste) 32%, var(--line));
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--ease-out, .25s ease), box-shadow var(--ease-out, .25s ease);
+}
+
+/* tarjeta de la fase */
+.mphase-body {
+  flex: 1;
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--ease-out, .25s ease),
+              box-shadow var(--ease-out, .25s ease),
+              border-color var(--ease-out, .25s ease);
+}
+.mphase-body:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--celeste) 40%, var(--line));
+}
+.mphase:hover .mphase-node {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.mphase-kicker {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--fs-kicker);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--celeste);
+  margin-bottom: var(--space-2);
+}
+.mphase-total { color: var(--muted); font-weight: 500; }
+
+.mphase-body h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: var(--ink);
+  margin: 0 0 var(--space-2);
+}
+.mphase-body p {
+  font-size: var(--fs-body-sm);
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Móvil / tablet · stepper vertical con rail lateral ──────── */
+@media (max-width: 820px) {
+  .method-flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+  .mphase {
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--space-4);
+    padding-bottom: var(--space-6);
+  }
+  .mphase:last-child { padding-bottom: 0; }
+  .mphase-head {
+    flex: 0 0 var(--node);
+    margin-bottom: 0;
+    display: block;
+  }
+  .mphase-head::before {
+    top: var(--node);
+    left: calc(var(--node) / 2);
+    width: 2px;
+    height: calc(100% - var(--node) + var(--space-6));
+    transform: translateX(-50%);
+  }
+  .mphase-body {
+    text-align: left;
+    align-self: flex-start;
+  }
+}
 </style>

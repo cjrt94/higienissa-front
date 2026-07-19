@@ -1,6 +1,6 @@
 // Sitemap generado en build (SSG) y servido en /sitemap.xml.
 // Enumera las rutas públicas indexables × locales (ES/EN) con alternates hreflang.
-// Excluye: /admin/** (privado), /creditos (noindex) y /soluciones (301 → /marca-trazatex).
+// Excluye: /admin/** (privado), y /soluciones (301 → /marca-trazatex).
 // Rutas estáticas y conocidas: se listan aquí para no acoplar el sitemap al render de páginas.
 const LOCALES = ['es', 'en']
 

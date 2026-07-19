@@ -14,7 +14,6 @@ import contactoRaw from '../content/pages/contacto.json?raw'
 import institucionalRaw from '../content/pages/institucional.json?raw'
 import recursosRaw from '../content/pages/recursos.json?raw'
 import articuloRaw from '../content/pages/articulo.json?raw'
-import creditosRaw from '../content/pages/creditos.json?raw'
 
 import pacificaRaw from '../content/brands/pacifica.json?raw'
 import trazatexRaw from '../content/brands/trazatex.json?raw'
@@ -32,7 +31,7 @@ const P = (s) => JSON.parse(s)
 const settings = P(settingsRaw)
 const pages = {
   home: P(homeRaw), contacto: P(contactoRaw),
-  institucional: P(institucionalRaw), recursos: P(recursosRaw), articulo: P(articuloRaw), creditos: P(creditosRaw),
+  institucional: P(institucionalRaw), recursos: P(recursosRaw), articulo: P(articuloRaw),
 }
 const brands = { pacifica: P(pacificaRaw), trazatex: P(trazatexRaw), operissa: P(operissaRaw) }
 const sectors = { salud: P(saludRaw), hoteleria: P(hoteleriaRaw), industria: P(industriaRaw), mineria: P(mineriaRaw) }

@@ -8,11 +8,11 @@ const toggleEl = ref(null)
 // cerrar el menú móvil al navegar
 watch(() => route.fullPath, () => { open.value = false })
 
-// Navbar transparente arriba SOLO en el home con el hero "flow"/"kinetic" (fondo claro).
-// Al scrollear (o abrir el menú móvil) vuelve el navy sólido.
+// Navbar transparente arriba en TODAS las páginas (los heros son de fondo claro):
+// texto oscuro + logo de color. Al scrollear (>24px) o abrir el menú móvil vuelve
+// el navy sólido con sombra.
 const scrolled = ref(false)
-const flowHero = computed(() => route.path === localePath('/') && ['flow', 'kinetic'].includes(route.query.hero))
-const isTransparent = computed(() => flowHero.value && !scrolled.value && !open.value)
+const isTransparent = computed(() => !scrolled.value && !open.value)
 const logoSrc = computed(() =>
   isTransparent.value ? '/logos/lockup-horizontal-azul.png' : '/logos/lockup-horizontal-blanco.png',
 )

@@ -81,7 +81,6 @@ const companyCol = [
         <span class="footer-legal">
           <NuxtLink :to="localePath('/aviso-legal')">{{ t('footer.legalNotice') }}</NuxtLink>
           <NuxtLink :to="localePath('/privacidad')">{{ t('footer.privacy') }}</NuxtLink>
-          <NuxtLink :to="localePath('/creditos')">{{ t('footer.credits') }}</NuxtLink>
         </span>
       </div>
     </div>

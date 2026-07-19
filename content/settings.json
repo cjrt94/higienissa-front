@@ -1,4 +1,69 @@
 {
+  "imageCredits":   [
+    {
+      "use": {
+        "es": "Home — hero",
+        "en": "Home — hero"
+      },
+      "author": "Laundrykhalas",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/w/index.php?curid=190690373"
+    },
+    {
+      "use": {
+        "es": "Pacífica",
+        "en": "Pacífica"
+      },
+      "author": "Thatsme2",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/w/index.php?curid=20646089"
+    },
+    {
+      "use": {
+        "es": "Sector Industria",
+        "en": "Industry sector"
+      },
+      "author": "Shixart1985",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Worker_uses_machinery_to_assemble_parts_in_a_factory_setting.jpg"
+    },
+    {
+      "use": {
+        "es": "Ecosistema",
+        "en": "Ecosystem"
+      },
+      "author": "HanSangYoon",
+      "license": "CC BY-SA",
+      "source": "https://commons.wikimedia.org/wiki/File:HSY-_Folded_Towels.jpg"
+    },
+    {
+      "use": {
+        "es": "Respaldo ASIS IDTRAK",
+        "en": "ASIS IDTRAK backing"
+      },
+      "author": "Maschinenjunge",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG"
+    },
+    {
+      "use": {
+        "es": "Sector Salud — hero",
+        "en": "Health sector — hero"
+      },
+      "author": "Wnkwdy",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sanfine_International_Hospital_Ward_01.jpg"
+    },
+    {
+      "use": {
+        "es": "Sector Salud — banda",
+        "en": "Health sector — band"
+      },
+      "author": "Infrogmation of New Orleans",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:University_Medical_Center_New_Orleans_interior_Feb_2020_17.jpg"
+    }
+  ],
   "contact": {
     "email": "contacto@higienissa.com",
     "phone": "+51 1 000 0000",

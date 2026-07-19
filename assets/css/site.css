@@ -182,6 +182,25 @@ li { margin-bottom: var(--space-2); }
    HERO
    ============================================================ */
 .hero { position: relative; padding: clamp(var(--space-8), 7vw, 120px) 0 clamp(var(--space-8), 6vw, 96px); overflow: hidden; }
+
+/* Navbar transparente global: el primer hero de cada página sube por detrás del
+   header sticky (margin-top negativo) para que se vea el fondo claro del hero —no
+   la banda blanca— tras el navbar transparente. Se compensa el padding-top con
+   --header-h para que el contenido no quede tapado. El ::before (inset:0) del hero
+   pinta el gradiente también en la franja detrás del navbar. Mismo patrón que
+   HeroFlow/HeroKinetic. Solo aplica al hero cuando es el primer elemento de la página.
+   La regla usa #main (especificidad de id) para ganarle a .page-hero de sections.css. */
+#main > div > .hero:first-child,
+#main > .hero:first-child {
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: calc(var(--header-h) + clamp(var(--space-8), 7vw, 120px));
+}
+#main > div > .page-hero:first-child,
+#main > .page-hero:first-child {
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: calc(var(--header-h) + clamp(var(--space-8), 6vw, 96px));
+}
+
 .hero::before {
   content:""; position:absolute; inset:0; z-index:-1;
   background:

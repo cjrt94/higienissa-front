@@ -190,24 +190,29 @@
   "methodology": {
     "eyebrow": { "es": "Metodología", "en": "Methodology" },
     "title": { "es": "Personas. Procesos. Resultados.", "en": "People. Processes. Results." },
+    "phaseLabel": { "es": "Fase", "en": "Phase" },
     "steps": [
       {
         "num": "1",
+        "icon": "users",
         "title": { "es": "Personas", "en": "People" },
         "text": { "es": "Selección y desarrollo de equipos.", "en": "Selection and development of teams." }
       },
       {
         "num": "2",
+        "icon": "cog",
         "title": { "es": "Procesos", "en": "Processes" },
         "text": { "es": "Procedimientos claros y medibles.", "en": "Clear, measurable procedures." }
       },
       {
         "num": "3",
+        "icon": "scan",
         "title": { "es": "Supervisión", "en": "Supervision" },
         "text": { "es": "Monitoreo permanente de la operación.", "en": "Continuous monitoring of the operation." }
       },
       {
         "num": "4",
+        "icon": "chart",
         "title": { "es": "Resultados", "en": "Results" },
         "text": { "es": "Indicadores visibles y mejoras concretas.", "en": "Visible indicators and concrete improvements." }
       }
