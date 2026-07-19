@@ -11,7 +11,7 @@ const submitting = ref(false)
 const successEl = ref(null)
 
 const { handleSubmit } = useForm({
-  validationSchema: toTypedSchema(contactSchema),
+  validationSchema: toTypedSchema(contactSchema(t)),
   initialValues: { position: '', ctaContext: 'evaluacion', consent: false },
 })
 

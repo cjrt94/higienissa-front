@@ -66,7 +66,18 @@
     "successBody": "Recibimos su mensaje. Un especialista del ecosistema revisará su solicitud y le contactará a la brevedad.",
     "backHome": "Volver al inicio",
     "error": "No se pudo enviar. Intente nuevamente o escríbanos por correo.",
-    "required": "Los campos con * son obligatorios."
+    "required": "Los campos con * son obligatorios.",
+    "errors": {
+      "nameReq": "Ingrese su nombre.",
+      "lastNameReq": "Ingrese su apellido.",
+      "companyReq": "Ingrese su empresa.",
+      "sectorReq": "Elija un sector.",
+      "emailReq": "Ingrese su email.",
+      "emailInvalid": "Email inválido.",
+      "messageReq": "Escriba su mensaje.",
+      "consentReq": "Necesitamos su consentimiento.",
+      "max": "Máximo {n} caracteres."
+    }
   },
   "sectorUi": {
     "measurementPanel": "Panel de medición"

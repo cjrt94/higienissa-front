@@ -66,7 +66,18 @@
     "successBody": "We received your message. An ecosystem specialist will review your request and contact you shortly.",
     "backHome": "Back to home",
     "error": "Could not send. Please try again or email us.",
-    "required": "Fields marked with * are required."
+    "required": "Fields marked with * are required.",
+    "errors": {
+      "nameReq": "Please enter your name.",
+      "lastNameReq": "Please enter your last name.",
+      "companyReq": "Please enter your company.",
+      "sectorReq": "Please select a sector.",
+      "emailReq": "Please enter your email.",
+      "emailInvalid": "Invalid email.",
+      "messageReq": "Please enter your message.",
+      "consentReq": "We need your consent.",
+      "max": "Maximum {n} characters."
+    }
   },
   "sectorUi": {
     "measurementPanel": "Measurement panel"
