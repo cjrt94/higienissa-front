@@ -16,5 +16,81 @@
       "es": "Solicite un diagnóstico estratégico. Evaluamos su operación y diseñamos la solución del ecosistema que le corresponde.",
       "en": "Request a strategic diagnosis. We assess your operation and design the ecosystem solution that fits it."
     }
+  },
+  "aside": {
+    "kicker": { "es": "Hablemos de su operación", "en": "Let's talk about your operation" },
+    "title": {
+      "es": "Un especialista del ecosistema revisa cada solicitud",
+      "en": "An ecosystem specialist reviews every request"
+    },
+    "lead": {
+      "es": "Cuéntenos qué necesita resolver en su operación textil. Un especialista lee su mensaje, entiende el contexto y le responde con los próximos pasos.",
+      "en": "Tell us what you need to solve in your textile operation. A specialist reads your message, understands the context and replies with the next steps."
+    },
+    "channelsLabel": { "es": "Canales directos", "en": "Direct channels" },
+    "emailLabel": { "es": "Correo", "en": "Email" },
+    "phoneLabel": { "es": "Teléfono", "en": "Phone" },
+    "cityLabel": { "es": "Oficina", "en": "Office" },
+    "responseLabel": { "es": "Tiempo de respuesta", "en": "Response time" },
+    "responseValue": {
+      "es": "Revisamos su solicitud y le contactamos a la brevedad, en horario de oficina.",
+      "en": "We review your request and get back to you shortly, during business hours."
+    }
+  },
+  "process": {
+    "kicker": { "es": "Cómo trabajamos", "en": "How we work" },
+    "title": {
+      "es": "Qué pasa después de escribirnos",
+      "en": "What happens after you write to us"
+    },
+    "lead": {
+      "es": "No enviamos su mensaje a un buzón cualquiera. Cada solicitud sigue un proceso claro, de la primera conversación a la puesta en marcha.",
+      "en": "Your message does not land in a generic inbox. Every request follows a clear process, from the first conversation to going live."
+    },
+    "steps": [
+      {
+        "n": "01",
+        "title": { "es": "Conversación inicial", "en": "First conversation" },
+        "desc": {
+          "es": "Recibimos su solicitud y coordinamos una conversación para entender su operación y lo que necesita resolver.",
+          "en": "We receive your request and set up a conversation to understand your operation and what you need to solve."
+        }
+      },
+      {
+        "n": "02",
+        "title": { "es": "Evaluación de su operación", "en": "Assessing your operation" },
+        "desc": {
+          "es": "Analizamos sus procesos textiles y sus puntos críticos para dimensionar el alcance real del trabajo.",
+          "en": "We analyze your textile processes and critical points to size the real scope of the work."
+        }
+      },
+      {
+        "n": "03",
+        "title": { "es": "Diagnóstico y propuesta", "en": "Diagnosis and proposal" },
+        "desc": {
+          "es": "Le entregamos un diagnóstico y una propuesta a la medida, con las marcas del ecosistema que le corresponden.",
+          "en": "We deliver a tailored diagnosis and proposal, with the ecosystem brands that fit your case."
+        }
+      },
+      {
+        "n": "04",
+        "title": { "es": "Puesta en marcha", "en": "Going live" },
+        "desc": {
+          "es": "Implementamos la solución acordada y acompañamos su operación para que no se detenga.",
+          "en": "We implement the agreed solution and support your operation so it never stops."
+        }
+      }
+    ]
+  },
+  "ecosystem": {
+    "kicker": { "es": "Un solo interlocutor", "en": "One point of contact" },
+    "title": {
+      "es": "Detrás de su consulta, todo el ecosistema",
+      "en": "Behind your inquiry, the whole ecosystem"
+    },
+    "lead": {
+      "es": "Escríbanos por un tema puntual y accede a las tres marcas que procesan, trazan y operan su textil como un solo sistema.",
+      "en": "Reach out about a single topic and gain access to the three brands that process, trace and operate your textiles as one system."
+    }
   }
 }

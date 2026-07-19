@@ -14,13 +14,8 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-// Acento de sector (acero/pizarra, entorno exigente y alejado).
-const accent = {
-  '--sector': '#6E80A6',
-  '--sector-ink': '#3E4C69',
-  '--sector-soft': 'rgba(110,128,166,.16)',
-}
-
+// El acento de sector (--sector / --sector-ink / --sector-soft) es único para
+// los 4 sectores y se define en .sector-page (assets/css/site.css).
 const contextItems = computed(() => page.context.pillars.map((p) => ({ title: p.title, text: p.text })))
 const shiftItems = computed(() => page.whatChanges.cards.map((c) => ({ title: c.title, text: c.desc })))
 const roleItems = computed(() => page.impactByRole.cards.map((c) => ({ title: c.title, desc: c.desc })))
@@ -33,7 +28,7 @@ const brandItems = computed(() =>
 </script>
 
 <template>
-  <div class="sector-page" :style="accent">
+  <div class="sector-page">
     <SectorHero
       :icon="page.icon"
       :eyebrow="page.hero.eyebrow"

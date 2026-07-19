@@ -385,6 +385,19 @@ li { margin-bottom: var(--space-2); }
 .footer-legal a:not(:last-child)::after { content: "·"; margin-left: 10px; color: rgba(255,255,255,.4); }
 
 /* ============================================================
+   SECTOR PAGES · acento único
+   Decisión de negocio: un solo color de acento para los 4 sectores
+   (salud, hotelería, industria, minería). Antes cada página definía su
+   propio --sector inline; ahora se centraliza aquí. Los componentes
+   Sector* (glow del hero, markers del ledger, etc.) leen estas variables.
+   ============================================================ */
+.sector-page {
+  --sector: #4EA7E1;
+  --sector-ink: #1E6FA8;
+  --sector-soft: rgba(78, 167, 225, .12);
+}
+
+/* ============================================================
    MOTION  ·  reveal on scroll (respetando prefers-reduced-motion)
    ============================================================ */
 /* El plugin cliente "arma" cada .reveal (añade .reveal-armed) solo si hay IntersectionObserver;

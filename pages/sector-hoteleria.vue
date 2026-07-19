@@ -14,13 +14,8 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-// Acento de sector (temperatura cálida, hospitalidad).
-const accent = {
-  '--sector': '#C6A867',
-  '--sector-ink': '#86662A',
-  '--sector-soft': 'rgba(198,168,103,.16)',
-}
-
+// El acento de sector (--sector / --sector-ink / --sector-soft) es único para
+// los 4 sectores y se define en .sector-page (assets/css/site.css).
 const contextItems = computed(() => page.context.hiddenCost.map((x) => ({ text: x })))
 const shiftItems = computed(() => page.whatChanges.items.map((x) => ({ text: x })))
 const roleItems = computed(() => page.impactByRole.items.map((r) => ({ title: r.role, desc: r.desc })))
@@ -33,7 +28,7 @@ const brandItems = computed(() =>
 </script>
 
 <template>
-  <div class="sector-page" :style="accent">
+  <div class="sector-page">
     <SectorHero
       :icon="page.icon"
       :eyebrow="page.hero.eyebrow"

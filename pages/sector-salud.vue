@@ -14,13 +14,8 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-// Acento de sector (temperatura celeste, clínica). Se hereda por todo el árbol.
-const accent = {
-  '--sector': '#4EA7E1',
-  '--sector-ink': '#1E6FA8',
-  '--sector-soft': 'rgba(78,167,225,.12)',
-}
-
+// El acento de sector (--sector / --sector-ink / --sector-soft) es único para
+// los 4 sectores y se define en .sector-page (assets/css/site.css).
 const contextItems = computed(() => page.context.unknowns.map((u) => ({ text: u })))
 const shiftItems = computed(() => page.whatChanges.items.map((x) => ({ text: x })))
 const roleItems = computed(() => page.impactByRole.items.map((r) => ({ title: r.role, desc: r.desc })))
@@ -33,7 +28,7 @@ const brandItems = computed(() =>
 </script>
 
 <template>
-  <div class="sector-page" :style="accent">
+  <div class="sector-page">
     <SectorHero
       :icon="page.icon"
       :eyebrow="page.hero.eyebrow"

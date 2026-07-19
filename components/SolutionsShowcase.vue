@@ -95,7 +95,9 @@ const splitTwo = useSplitTwo()
 .sol-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font: 700 12px/1 var(--font-body); color: var(--azul); }
 
 /* Destacada full-width */
-.sol-featured { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: center; background: linear-gradient(150deg, rgba(58,120,255,.06), rgba(78,167,225,.045)); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 4vw, var(--space-8)); margin-bottom: var(--space-5); }
+.sol-featured { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: center; background: linear-gradient(150deg, rgba(58,120,255,.06), rgba(78,167,225,.045)); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 4vw, var(--space-8)); margin-bottom: var(--space-5); transition: box-shadow .2s var(--ease), transform .2s var(--ease), border-color .2s var(--ease); }
+/* Misma micro-animación de hover que .sol-card → todas las cards del bento reaccionan igual */
+.sol-featured:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: color-mix(in srgb, var(--celeste) 45%, var(--line)); }
 .sol-featured h3 { font-family: var(--font-body); font-weight: 600; letter-spacing: -0.01em; font-size: 1.12rem; line-height: 1.35; margin-bottom: var(--space-4); }
 .sol-featured .sol-desc { font-size: 1.05rem; }
 .sol-aside { align-self: stretch; }

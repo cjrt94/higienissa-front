@@ -14,13 +14,8 @@ useSeoMeta({
   ogImage: `${config.public.siteUrl}${page.hero.image}`,
 })
 
-// Acento de sector (azul estructural, cumplimiento).
-const accent = {
-  '--sector': '#3D57C4',
-  '--sector-ink': '#1C2A87',
-  '--sector-soft': 'rgba(61,87,196,.12)',
-}
-
+// El acento de sector (--sector / --sector-ink / --sector-soft) es único para
+// los 4 sectores y se define en .sector-page (assets/css/site.css).
 const contextItems = computed(() =>
   page.context.pillars.map((p) => ({ title: p.title, text: p.text, icon: p.icon })),
 )
@@ -35,7 +30,7 @@ const brandItems = computed(() =>
 </script>
 
 <template>
-  <div class="sector-page" :style="accent">
+  <div class="sector-page">
     <SectorHero
       :icon="page.icon"
       :eyebrow="page.hero.eyebrow"

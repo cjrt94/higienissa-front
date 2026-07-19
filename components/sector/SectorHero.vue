@@ -44,7 +44,7 @@ const t = useT()
 
 <style scoped>
 .sector-hero {
-  min-height: min(86vh, 820px);
+  min-height: min(70vh, 640px);
   display: flex;
   align-items: flex-end;
   color: #fff;
@@ -76,7 +76,7 @@ const t = useT()
   filter: drop-shadow(0 8px 40px color-mix(in srgb, var(--sector, var(--celeste)) 40%, transparent));
 }
 
-.sh-inner { position: relative; max-width: 62ch; padding-top: var(--space-8); padding-bottom: clamp(var(--space-7), 6vw, var(--space-9)); }
+.sh-inner { position: relative; max-width: 82ch; padding-top: var(--space-3); padding-bottom: clamp(var(--space-5), 4.2vw, var(--space-7)); }
 
 .sh-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: var(--space-4); }
 .sh-chip {
@@ -89,10 +89,10 @@ const t = useT()
 
 .sh-title {
   font-family: var(--font-display); font-weight: 600; letter-spacing: -.01em;
-  font-size: clamp(2.1rem, 4.6vw, 3.5rem); line-height: 1.06; margin: 0 0 var(--space-4);
+  font-size: clamp(1.85rem, 3.4vw, 2.75rem); line-height: 1.08; margin: 0 0 var(--space-4);
   color: #fff; text-wrap: balance;
 }
-.sh-lead { font-size: var(--fs-lead); line-height: 1.55; color: rgba(255,255,255,.9); max-width: 56ch; margin: 0 0 var(--space-6); text-wrap: pretty; }
+.sh-lead { font-size: var(--fs-lead); line-height: 1.55; color: rgba(255,255,255,.9); max-width: 64ch; margin: 0 0 var(--space-6); text-wrap: pretty; }
 
 .sh-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-bottom: var(--space-6); }
 
@@ -106,7 +106,7 @@ const t = useT()
 .sh-badge-text b { display: block; color: #fff; font-weight: 700; }
 
 @media (max-width: 640px) {
-  .sector-hero { min-height: min(90vh, 680px); }
+  .sector-hero { min-height: min(74vh, 560px); }
   .sh-motif { display: none; }
 }
 </style>
