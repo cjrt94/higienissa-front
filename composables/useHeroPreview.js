@@ -1,11 +1,16 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // PREVIEW DE HEROS — FEATURE TEMPORAL (fácil de quitar)
 //
-// Permite ver variantes del hero de la home vía ?hero=flow|kinetic|actual y
-// muestra un switcher flotante. La elección se PERSISTE en localStorage para que
-// se mantenga al navegar entre páginas y al recargar (solo en modo preview;
-// "Actual" lo resetea). Los visitantes normales —que nunca entraron con ?hero=—
-// ven el hero por defecto y NO ven el switcher.
+// Switcher SIEMPRE visible en la home para alternar entre variantes del hero
+// (Actual / Flujo / Kinético). También se puede fijar por URL con
+// ?hero=flow|kinetic|actual (útil para compartir un link).
+//
+// La elección se MANTIENE mientras se navega entre páginas (estado en memoria)
+// y vuelve al hero POR DEFECTO al recargar la home → el default nunca queda
+// "cambiado" de forma permanente para el visitante.
+//
+// El render lo hace pages/index.vue con <HeroFlow/HeroKinetic/HeroHome v-if…>
+// según `activeOption` (evita resolveComponent, que fallaba y dejaba el hero vacío).
 //
 // ─────────────────────────── CÓMO QUITAR EL FEATURE ───────────────────────────
 //   1. Borrar este archivo (composables/useHeroPreview.js).
@@ -13,56 +18,39 @@
 //      del <template> y los estilos .hero-switcher, y dejar el hero fijo:
 //          <HeroHome :data="page.hero" />
 // ═══════════════════════════════════════════════════════════════════════════
-const STORAGE_KEY = 'hh-hero-preview'
 const VARIANTS = ['flow', 'kinetic'] // variantes reales (aparte de "actual")
 
 export function useHeroPreview() {
   const route = useRoute()
 
-  // resolveComponent porque <component :is="string"> no lo resuelve el auto-import.
-  const components = {
-    '': resolveComponent('HeroHome'),
-    flow: resolveComponent('HeroFlow'),
-    kinetic: resolveComponent('HeroKinetic'),
-  }
+  // Selección compartida en memoria: sobrevive la navegación SPA entre páginas y se
+  // resetea al recargar (un fresh load de la home = hero por defecto).
+  const selected = useState('hero-preview', () => '')
 
-  // Elección guardada (solo cliente; null en SSR/prerender).
-  const stored = ref(null)
-  onMounted(() => { stored.value = localStorage.getItem(STORAGE_KEY) })
+  // Descarta el valor persistente de la versión anterior (localStorage), que hacía
+  // que el hero por defecto pareciera cambiado al volver a la home.
+  onMounted(() => {
+    try { localStorage.removeItem('hh-hero-preview') } catch (e) { /* noop */ }
+  })
 
-  // Lo que pide la URL: 'flow'/'kinetic' → esa variante; 'actual' → reset; nada → null.
+  // ?hero= en la URL actualiza la selección (flow/kinetic → variante; actual → default).
   const queryHero = computed(() => {
     const q = route.query.hero
     if (q == null) return null
     return VARIANTS.includes(q) ? q : 'actual'
   })
-
-  // Persistir cuando llega por URL (guardar variante o limpiar si es "actual").
   watch(queryHero, (h) => {
-    if (h == null || typeof localStorage === 'undefined') return
-    if (h === 'actual') {
-      localStorage.removeItem(STORAGE_KEY)
-      stored.value = null
-    } else {
-      localStorage.setItem(STORAGE_KEY, h)
-      stored.value = h
-    }
+    if (h == null) return
+    selected.value = h === 'actual' ? '' : h
   }, { immediate: true })
-
-  // Variante activa: manda la URL; si no trae, la guardada; si no, hero por defecto.
-  const activeKey = computed(() => queryHero.value ?? stored.value ?? '')
-  const heroComponent = computed(() => components[activeKey.value] || components[''])
-
-  // Mostrar el switcher si viene por URL o si hay algo guardado (seguimos en preview).
-  const previewMode = computed(() => route.query.hero != null || !!stored.value)
 
   const options = [
     { key: 'actual', label: 'Actual' },
     { key: 'flow', label: 'Flujo' },
     { key: 'kinetic', label: 'Kinético' },
   ]
-  // Para resaltar el botón activo: '' (default) se muestra como 'actual'.
-  const activeOption = computed(() => activeKey.value || 'actual')
+  // Variante activa: '' (default) se representa como 'actual'.
+  const activeOption = computed(() => selected.value || 'actual')
 
-  return { heroComponent, previewMode, options, activeOption }
+  return { options, activeOption }
 }

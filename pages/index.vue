@@ -16,17 +16,19 @@ useSeoMeta({
 // Toda la lógica (variantes + persistencia en localStorage) vive en el composable.
 // Para quitarlo: borrar el composable, este bloque, el <div.hero-switcher> del
 // template y sus estilos, y dejar <HeroHome :data="page.hero" />.
-const { heroComponent, previewMode, options: heroOptions, activeOption } = useHeroPreview()
+const { options: heroOptions, activeOption } = useHeroPreview()
 // ── /HERO PREVIEW ────────────────────────────────────────────────────────────
 </script>
 
 <template>
   <div>
-    <!-- HERO PREVIEW · componente dinámico (al quitar el feature → <HeroHome :data="page.hero" />) -->
-    <component :is="heroComponent" :data="page.hero" />
+    <!-- HERO PREVIEW · hero según la variante activa (al quitar el feature → dejar solo <HeroHome :data="page.hero" />) -->
+    <HeroFlow v-if="activeOption === 'flow'" :data="page.hero" />
+    <HeroKinetic v-else-if="activeOption === 'kinetic'" :data="page.hero" />
+    <HeroHome v-else :data="page.hero" />
 
-    <!-- HERO PREVIEW · switcher flotante (temporal) -->
-    <div v-if="previewMode" class="hero-switcher" role="navigation" aria-label="Vista previa de heros">
+    <!-- HERO PREVIEW · switcher flotante (temporal, siempre visible en la home) -->
+    <div class="hero-switcher" role="navigation" aria-label="Vista previa de heros">
       <span class="hs-label">Hero:</span>
       <NuxtLink
         v-for="opt in heroOptions" :key="opt.key"
