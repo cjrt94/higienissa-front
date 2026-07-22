@@ -6,6 +6,7 @@ Formato: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) + [Semantic Ve
 
 ## [Unreleased]
 
+- feat: **titular del hero de la home** — "Transformando la gestión textil" → **"Liderando la evolución de la gestión textil"** (`content/pages/home.json`, `hero.title`); SEO title alineado. Bilingüe (EN: "Leading the evolution of textile management"). Verificado en vivo
 - style: **tamaño de las bajadas ("lead") fijado en 18px** — `--fs-lead` pasa de `clamp(1.0625rem, 1.6vw, 1.25rem)` (17–20px fluido) a `1.125rem` fijo; aplica a todas las clases `*-lead` (ya unificadas). Verificado en vivo (computed = 18px)
 - style: **tamaño de fuente unificado en TODAS las bajadas ("lead") del sitio** — auditoría de las clases `*-lead`: dos divergían del token `--fs-lead` (`clamp(1.0625rem, 1.6vw, 1.25rem)`) y quedaban más chicas → `.flow-lead` (bajada del hero de la home, usaba `clamp(1rem, 1.25vw, 1.15rem)`) y `.ca-lead` (bajada del panel navy de contacto, usaba `--fs-body-sm`). Ahora las 8 clases de lead (`.lead`, `.flow-lead`, `.ca-lead`, `.sh-lead`, `.ctx-lead`, `.risk-lead`, `.br-lead` + LegalDoc) resuelven al mismo `--fs-lead`. Verificado en vivo (home + contacto)
 - style: **home hero (Flow) — el flujo de nodos se ensancha** (`.flow-track` `max-width` 920→1120px) para que los 4 nodos respiren tras sumar "Grupo Higienissa"; descripciones a 2 líneas en vez de 3, sin tocar el container (1200px)
