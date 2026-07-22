@@ -13,17 +13,28 @@ const hlTitle = computed(() =>
 // Ícono representativo por empresa + descripciones locales de largo homogéneo.
 const ICON = { pacifica: 'droplet', trazatex: 'scan', operissa: 'cog' }
 const DESC = {
-  pacifica: { es: 'Lavandería industrial inteligente: el origen de la disponibilidad del textil.', en: 'Smart industrial laundry: the origin of textile availability at scale.' },
+  pacifica: { es: '<strong>Lavandería</strong> industrial inteligente: el origen de la disponibilidad del textil.', en: 'Smart industrial <strong>laundry</strong>: the origin of textile availability at scale.' },
   trazatex: { es: 'RFID, software y data para el control individual de cada activo textil.', en: 'RFID, software and data for individual control of every textile asset.' },
   operissa: { es: 'Operación textil especializada en terreno para que nada se detenga.', en: 'Specialized on-site textile operation so your service never stops.' },
 }
-const nodes = computed(() =>
-  settings.ecosystem.pipeline.map((n) => ({
-    ...n,
+// Nodo extra SOLO del hero (no se agrega al pipeline compartido de settings.json,
+// que alimenta EcosystemPipeline en otras páginas): el grupo cierra el flujo y garantiza el ciclo.
+const EXTRA = {
+  name: 'Grupo Higienissa',
+  role: { es: 'Garantiza', en: 'Guarantees' },
+  icon: 'shield',
+  blurb: { es: 'El estándar único que integra proceso, trazabilidad y operación.', en: 'The single standard that integrates process, traceability and operation.' },
+}
+const nodes = computed(() => [
+  ...settings.ecosystem.pipeline.map((n) => ({
+    key: n.slug,
+    name: n.name,
+    role: n.role,
     icon: ICON[n.slug] || 'check',
     blurb: DESC[n.slug]?.[locale.value] || t(n.desc),
   })),
-)
+  { key: 'grupo', name: EXTRA.name, role: EXTRA.role, icon: EXTRA.icon, blurb: EXTRA.blurb[locale.value] },
+])
 </script>
 
 <template>
@@ -41,11 +52,11 @@ const nodes = computed(() =>
       <div class="flow-track">
         <span class="flow-rail" aria-hidden="true"><i /></span>
         <ol class="flow-nodes">
-          <li v-for="n in nodes" :key="n.slug" class="flow-node">
+          <li v-for="n in nodes" :key="n.key" class="flow-node">
             <span class="fn-mark"><BaseIcon :name="n.icon" :size="20" /></span>
             <span class="fn-name">{{ n.name }}</span>
             <span class="fn-role">{{ t(n.role) }}</span>
-            <span class="fn-desc">{{ n.blurb }}</span>
+            <span class="fn-desc" v-html="n.blurb" />
           </li>
         </ol>
       </div>
@@ -72,17 +83,18 @@ const nodes = computed(() =>
 
 /* Flujo de 3 nodos con riel central animado */
 .flow-track { position: relative; max-width: 920px; margin: clamp(40px, 6vh, 72px) auto 0; }
-.flow-rail { position: absolute; top: 20px; left: calc(100% / 6); right: calc(100% / 6); height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.flow-rail { position: absolute; top: 20px; left: calc(100% / 8); right: calc(100% / 8); height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .flow-rail i { position: absolute; inset: 0 auto 0 0; width: 34%; background: linear-gradient(90deg, transparent, var(--celeste), transparent); animation: flow-run 3s linear infinite; }
 @keyframes flow-run { from { transform: translateX(-100%); } to { transform: translateX(400%); } }
 @media (prefers-reduced-motion: reduce) { .flow-rail i { animation: none; width: 100%; opacity: .45; } }
 
-.flow-nodes { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); list-style: none; margin: 0; padding: 0; }
+.flow-nodes { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); list-style: none; margin: 0; padding: 0; }
 .flow-node { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .fn-mark { position: relative; z-index: 1; display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 72%, var(--azul)) 100%); box-shadow: 0 4px 14px color-mix(in srgb, var(--azul) 22%, transparent); margin-bottom: var(--space-4); }
 .fn-name { font: 600 1.35rem/1.1 var(--font-display); color: var(--ink); }
 .fn-role { font: 600 var(--fs-body-sm) var(--font-body); color: var(--celeste); margin: 3px 0 var(--space-3); }
 .fn-desc { font-size: var(--fs-body-sm); line-height: 1.5; color: var(--muted); max-width: 30ch; }
+.fn-desc :deep(strong) { font-weight: 700; color: var(--ink); }
 
 @media (max-width: 720px) {
   .flow-nodes { grid-template-columns: 1fr; gap: var(--space-6); }
