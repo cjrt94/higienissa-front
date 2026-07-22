@@ -4,8 +4,8 @@
   "status": "published",
   "seo": {
     "title": {
-      "es": "Grupo Higienissa — Un solo ecosistema. Infinitas posibilidades.",
-      "en": "Grupo Higienissa — One ecosystem. Infinite possibilities."
+      "es": "Grupo Higienissa — Transformando la gestión textil",
+      "en": "Grupo Higienissa — Transforming textile management"
     },
     "description": {
       "es": "Ecosistema de higiene textil: lavandería industrial inteligente, trazabilidad RFID con data y operación especializada para salud, hotelería, industria y minería.",
@@ -15,12 +15,12 @@
   "hero": {
     "eyebrow": { "es": "Grupo Higienissa", "en": "Grupo Higienissa" },
     "title": {
-      "es": "Un solo ecosistema.\nInfinitas posibilidades.",
-      "en": "One ecosystem.\nInfinite possibilities."
+      "es": "Transformando la gestión textil",
+      "en": "Transforming textile management"
     },
     "lead": {
-      "es": "Todo empieza en la lavandería industrial inteligente —y se potencia con datos, trazabilidad y operación especializada— para sostener la disponibilidad del textil en salud, hotelería, industria y minería.",
-      "en": "It all starts in smart industrial laundry —and is amplified with data, traceability and specialized operations— to sustain textile availability across health, hospitality, industry and mining."
+      "es": "Un ecosistema que integra lavandería industrial, trazabilidad RFID y operación especializada para garantizar la disponibilidad del activo textil crítico.",
+      "en": "An ecosystem that integrates industrial laundry, RFID traceability and specialized operations to guarantee the availability of critical textile assets."
     },
     "image": "/img/hero-planta.jpg",
     "imageAlt": {
@@ -33,14 +33,14 @@
     }
   },
   "groupIntro": {
-    "eyebrow": { "es": "Qué es el grupo", "en": "What the group is" },
+    "eyebrow": { "es": "Quiénes somos", "en": "Who we are" },
     "title": {
-      "es": "Un ecosistema que empieza en la lavandería industrial",
-      "en": "An ecosystem that starts in industrial laundry"
+      "es": "Tres marcas, una misma visión",
+      "en": "Three brands, one shared vision"
     },
     "lead": {
-      "es": "Grupo Higienissa integra tres divisiones especializadas del sector higiene, salud y saneamiento: una sola interlocución para procesar, trazar y operar el textil crítico de su operación, bajo un mismo estándar.",
-      "en": "Grupo Higienissa brings together three specialized divisions in the hygiene, health and sanitation sector: a single point of contact to process, trace and operate your operation's critical textiles, under one standard."
+      "es": "Grupo Higienissa reúne tres marcas especializadas que trabajan bajo un mismo estándar para transformar la gestión del activo textil. A través de lavandería industrial, trazabilidad RFID y operación especializada, ofrecemos una solución integral que mejora la disponibilidad, el control y la continuidad del activo textil crítico.",
+      "en": "Grupo Higienissa brings together three specialized brands that work under a single standard to transform textile asset management. Through industrial laundry, RFID traceability and specialized operations, we deliver an integral solution that improves the availability, control and continuity of critical textile assets."
     },
     "image": "/img/ecosistema.jpg",
     "imageAlt": {
@@ -96,11 +96,11 @@
     ]
   },
   "pillars": {
-    "eyebrow": { "es": "Lo que nos define", "en": "What defines us" },
+    "eyebrow": { "es": "Cómo lo hacemos", "en": "How we do it" },
     "title": { "es": "Lavandería, inteligencia y excelencia operacional", "en": "Laundry, intelligence and operational excellence" },
     "lead": {
-      "es": "Tres capacidades que trabajan como una sola: procesamos el textil, lo convertimos en información gestionable y lo operamos en terreno. Así sostenemos la disponibilidad del activo textil crítico bajo un mismo estándar.",
-      "en": "Three capabilities working as one: we process the textile, turn it into manageable information and operate it on-site. That's how we sustain the availability of critical textile assets under a single standard."
+      "es": "Procesamos el textil, lo convertimos en información estratégica y lo gestionamos en terreno. Tres capacidades que trabajan como un solo sistema para garantizar la disponibilidad, el control y la continuidad del activo textil.",
+      "en": "We process the textile, turn it into strategic information and manage it on-site. Three capabilities working as a single system to guarantee the availability, control and continuity of the textile asset."
     },
     "image": "/img/operissa-proceso.jpg",
     "imageAlt": { "es": "Operación en terreno del ecosistema Higienissa", "en": "On-site operations of the Higienissa ecosystem" },
@@ -112,12 +112,16 @@
   },
   "sectorsBlock": {
     "eyebrow": { "es": "Sectores", "en": "Sectors" },
-    "title": { "es": "Soluciones por sector", "en": "Solutions by sector" },
+    "title": { "es": "Una solución adaptada a cada sector", "en": "A solution tailored to each sector" },
+    "lead": {
+      "es": "Adaptamos nuestro ecosistema de lavandería industrial, trazabilidad y operación especializada a las necesidades específicas de cada industria.",
+      "en": "We adapt our ecosystem of industrial laundry, traceability and specialized operations to the specific needs of each industry."
+    },
     "items": [
-      { "name": { "es": "Salud", "en": "Health" }, "desc": { "es": "Bioseguridad, auditoría y disponibilidad textil.", "en": "Biosafety, auditing and textile availability." }, "image": "/img/sector-salud.jpg", "imageAlt": { "es": "Sector salud: ropa hospitalaria limpia y disponible", "en": "Health sector: clean, available hospital linens" }, "to": "/sector-salud" },
-      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Experiencia del huésped y control de blancos.", "en": "Guest experience and linen control." }, "image": "/img/sector-hoteleria.jpg", "imageAlt": { "es": "Sector hotelería: blancos y textil para la experiencia del huésped", "en": "Hospitality sector: linens and textiles for the guest experience" }, "to": "/sector-hoteleria" },
-      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Cumplimiento, uniformes y EPP por trabajador.", "en": "Compliance, uniforms and PPE per worker." }, "image": "/img/sector-industria.jpg", "imageAlt": { "es": "Sector industria: uniformes y EPP con control por trabajador", "en": "Industry sector: uniforms and PPE tracked per worker" }, "to": "/sector-industria" },
-      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Entornos exigentes y operaciones remotas.", "en": "Demanding environments and remote operations." }, "image": "/img/sector-mineria.jpg", "imageAlt": { "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas", "en": "Mining sector: textiles and PPE for demanding environments and remote operations" }, "to": "/sector-mineria" }
+      { "name": { "es": "Salud", "en": "Health" }, "desc": { "es": "Disponibilidad permanente en el textil crítico.", "en": "Permanent availability of critical textiles." }, "image": "/img/sector-salud.jpg", "imageAlt": { "es": "Sector salud: ropa hospitalaria limpia y disponible", "en": "Health sector: clean, available hospital linens" }, "to": "/sector-salud" },
+      { "name": { "es": "Hotelería", "en": "Hospitality" }, "desc": { "es": "Experiencia impecable para cada huésped.", "en": "A flawless experience for every guest." }, "image": "/img/sector-hoteleria.jpg", "imageAlt": { "es": "Sector hotelería: blancos y textil para la experiencia del huésped", "en": "Hospitality sector: linens and textiles for the guest experience" }, "to": "/sector-hoteleria" },
+      { "name": { "es": "Industria", "en": "Industry" }, "desc": { "es": "Control total de uniformes y EPP.", "en": "Total control of uniforms and PPE." }, "image": "/img/sector-industria.jpg", "imageAlt": { "es": "Sector industria: uniformes y EPP con control por trabajador", "en": "Industry sector: uniforms and PPE tracked per worker" }, "to": "/sector-industria" },
+      { "name": { "es": "Minería", "en": "Mining" }, "desc": { "es": "Continuidad operacional en entornos extremos.", "en": "Operational continuity in extreme environments." }, "image": "/img/sector-mineria.jpg", "imageAlt": { "es": "Sector minería: textil y EPP para entornos exigentes y operaciones remotas", "en": "Mining sector: textiles and PPE for demanding environments and remote operations" }, "to": "/sector-mineria" }
     ]
   },
   "asis": {
