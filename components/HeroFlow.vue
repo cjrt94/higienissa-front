@@ -82,7 +82,7 @@ const nodes = computed(() => [
 .flow-link:hover { color: var(--electrico); }
 
 /* Flujo de 3 nodos con riel central animado */
-.flow-track { position: relative; max-width: 920px; margin: clamp(40px, 6vh, 72px) auto 0; }
+.flow-track { position: relative; max-width: 1120px; margin: clamp(40px, 6vh, 72px) auto 0; }
 .flow-rail { position: absolute; top: 20px; left: calc(100% / 8); right: calc(100% / 8); height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
 .flow-rail i { position: absolute; inset: 0 auto 0 0; width: 34%; background: linear-gradient(90deg, transparent, var(--celeste), transparent); animation: flow-run 3s linear infinite; }
 @keyframes flow-run { from { transform: translateX(-100%); } to { transform: translateX(400%); } }
