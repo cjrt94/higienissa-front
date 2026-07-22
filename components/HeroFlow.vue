@@ -52,8 +52,8 @@ const nodes = computed(() => [
       <div class="flow-track">
         <span class="flow-rail" aria-hidden="true"><i /></span>
         <ol class="flow-nodes">
-          <li v-for="n in nodes" :key="n.key" class="flow-node">
-            <span class="fn-mark"><BaseIcon :name="n.icon" :size="20" /></span>
+          <li v-for="n in nodes" :key="n.key" class="flow-node" :class="{ 'is-group': n.key === 'grupo' }">
+            <span class="fn-mark"><BaseIcon :name="n.icon" :size="n.key === 'grupo' ? 24 : 20" /></span>
             <span class="fn-name">{{ n.name }}</span>
             <span class="fn-role">{{ t(n.role) }}</span>
             <span class="fn-desc" v-html="n.blurb" />
@@ -95,6 +95,19 @@ const nodes = computed(() => [
 .fn-role { font: 600 var(--fs-body-sm) var(--font-body); color: var(--celeste); margin: 3px 0 var(--space-3); }
 .fn-desc { font-size: var(--fs-body-sm); line-height: 1.5; color: var(--muted); max-width: 30ch; }
 .fn-desc :deep(strong) { font-weight: 700; color: var(--ink); }
+
+/* Nodo de cierre: Grupo Higienissa se destaca como ancla/culminación del flujo
+   (el que engloba y garantiza), sin salirse del sistema (paleta azul, sin bordes). */
+.flow-node.is-group .fn-mark {
+  width: 52px; height: 52px; margin-top: -6px; margin-bottom: calc(var(--space-4) - 6px);
+  background: var(--azul);
+  box-shadow: 0 0 0 7px color-mix(in srgb, var(--celeste) 16%, transparent),
+              0 8px 22px color-mix(in srgb, var(--azul) 28%, transparent);
+}
+.flow-node.is-group .fn-name {
+  background: linear-gradient(100deg, var(--azul) 0%, var(--celeste) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 
 @media (max-width: 720px) {
   .flow-nodes { grid-template-columns: 1fr; gap: var(--space-6); }
