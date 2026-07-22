@@ -126,7 +126,7 @@ const brands = computed(() => settings.ecosystem?.pipeline ?? [])
 }
 .ca-inner { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; padding: clamp(var(--space-5), 4vw, var(--space-7)); }
 .contact-aside h2 { color: #fff; font-size: var(--fs-h3); margin: 0 0 var(--space-3); }
-.ca-lead { color: rgba(255,255,255,.82); margin: 0 0 var(--space-6); font-size: var(--fs-body-sm); line-height: 1.6; max-width: 40ch; }
+.ca-lead { color: rgba(255,255,255,.82); margin: 0 0 var(--space-6); font-size: var(--fs-lead); line-height: 1.6; max-width: 40ch; }
 
 .ca-label { font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: #8FD0FF; margin: 0 0 var(--space-4); }
 

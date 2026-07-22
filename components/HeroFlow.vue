@@ -76,7 +76,7 @@ const nodes = computed(() => [
 .flow-kicker { display: inline-block; margin-bottom: var(--space-4); color: var(--celeste); }
 .flow-title { font: 600 clamp(2rem, 4.4vw, 3.5rem)/1.04 var(--font-display); letter-spacing: -.02em; color: var(--ink); margin: 0 auto var(--space-5); max-width: 20ch; }
 .flow-title :deep(.hl) { background: linear-gradient(100deg, var(--azul) 0%, var(--celeste) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.flow-lead { font-size: clamp(1rem, 1.25vw, 1.15rem); line-height: 1.55; color: var(--text); max-width: 58ch; margin: 0 auto var(--space-6); }
+.flow-lead { font-size: var(--fs-lead); line-height: 1.55; color: var(--text); max-width: 58ch; margin: 0 auto var(--space-6); }
 .flow-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-4); }
 .flow-link { font: 600 var(--fs-body) var(--font-body); color: var(--azul); }
 .flow-link:hover { color: var(--electrico); }
