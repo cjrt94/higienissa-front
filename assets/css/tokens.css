@@ -42,7 +42,7 @@
   --fs-h2: clamp(1.65rem, 2.6vw, 2.15rem);          /* 26.4–34.4px — títulos de sección */
   --fs-h3: clamp(1.25rem, 1.8vw, 1.5rem);           /* 20–24px — titulares de card/columna */
   --fs-h4: 1.125rem;                                /* 18px — subtítulos menores */
-  --fs-lead: clamp(1.0625rem, 1.6vw, 1.25rem);      /* 17–20px — bajadas / párrafo de entrada */
+  --fs-lead: 1.125rem;                              /* 18px — bajadas / párrafo de entrada */
   --fs-body: 1rem;                                  /* 16px */
   --fs-body-sm: 0.9375rem;                          /* 15px — cuerpo secundario / labels */
   --fs-small: 0.875rem;                             /* 14px */
