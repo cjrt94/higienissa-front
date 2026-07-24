@@ -12,6 +12,7 @@ const emit = defineEmits(['update:modelValue'])
 const { upload } = useStorage()
 const toast = useToast()
 const busy = ref(false)
+const fileInput = ref(null)
 
 async function onFile(e) {
   const file = e.target.files?.[0]
@@ -42,10 +43,10 @@ async function onFile(e) {
         placeholder="URL o ruta de imagen"
         @input="emit('update:modelValue', $event.target.value)"
       >
-      <label class="admin-btn ghost small img-upload-btn" :class="{ busy }">
+      <button type="button" class="admin-btn ghost small img-upload-btn" :disabled="busy" @click="fileInput?.click()">
         {{ busy ? 'Subiendo…' : 'Subir' }}
-        <input type="file" accept="image/*" hidden :disabled="busy" @change="onFile">
-      </label>
+      </button>
+      <input ref="fileInput" type="file" accept="image/*" hidden @change="onFile">
     </div>
   </div>
 </template>
