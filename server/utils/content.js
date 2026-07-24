@@ -14,7 +14,6 @@ import home from '../../content/pages/home.json'
 import contacto from '../../content/pages/contacto.json'
 import institucional from '../../content/pages/institucional.json'
 import recursos from '../../content/pages/recursos.json'
-import articulo from '../../content/pages/articulo.json'
 import pacifica from '../../content/brands/pacifica.json'
 import trazatex from '../../content/brands/trazatex.json'
 import operissa from '../../content/brands/operissa.json'
@@ -24,14 +23,18 @@ import industria from '../../content/sectors/industria.json'
 import mineria from '../../content/sectors/mineria.json'
 import avisoLegal from '../../content/legal/aviso-legal.json'
 import privacidad from '../../content/legal/privacidad.json'
+import { derivePostsAndCategories } from './blogSeed.mjs'
 
 const SEED = {
   settings,
-  pages: { home, contacto, institucional, recursos, articulo },
+  pages: { home, contacto, institucional, recursos },
   brands: { pacifica, trazatex, operissa },
   sectors: { salud, hoteleria, industria, mineria },
   legal: { 'aviso-legal': avisoLegal, privacidad },
 }
+
+// Blog: fallback derivado de los posts semilla de recursos.json (mismo shape que Firestore).
+const BLOG = derivePostsAndCategories(recursos)
 
 // blocks[] → { hero:{…}, groupIntro:{…}, … } (clave = block.type)
 function foldBlocks(blocks = []) {
@@ -115,4 +118,38 @@ export async function getLegal(slug) {
   const doc = await readDoc('legalPages', slug)
   if (doc) return doc
   return SEED.legal[slug] || null
+}
+
+// --- Blog ---
+export async function getPosts() {
+  try {
+    const snap = await getAdminDb().collection('posts')
+      .where('status', '==', 'published').orderBy('publishedAt', 'desc').get()
+    if (!snap.empty) return snap.docs.map((d) => ({ id: d.id, ...d.data() }))
+  } catch { /* sin config/índice o vacío → fallback */ }
+  return [...BLOG.posts].sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+}
+
+export async function getPost(slug) {
+  try {
+    const db = getAdminDb()
+    // Consulta por campo único (sin índice compuesto); el estado se filtra en código.
+    for (const field of ['slugEs', 'slugEn']) {
+      const snap = await db.collection('posts').where(field, '==', slug).limit(1).get()
+      if (!snap.empty) {
+        const d = snap.docs[0]
+        const data = d.data()
+        if (data.status === 'published') return { id: d.id, ...data }
+      }
+    }
+  } catch { /* fallback */ }
+  return BLOG.posts.find((p) => p.slugEs === slug || p.slugEn === slug) || null
+}
+
+export async function getPostCategories() {
+  try {
+    const snap = await getAdminDb().collection('postCategories').orderBy('order').get()
+    if (!snap.empty) return snap.docs.map((d) => ({ id: d.id, ...d.data() }))
+  } catch { /* fallback */ }
+  return BLOG.categories
 }

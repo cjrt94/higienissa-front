@@ -46,3 +46,19 @@ export async function useLegalContent(slug) {
   if (!data.value) throw createError({ statusCode: 404, statusMessage: `Documento legal no encontrado: ${slug}` })
   return data.value
 }
+
+export async function useAllPosts() {
+  const { data } = await useAsyncData('content:posts', () => $fetch('/api/content/posts'))
+  return data.value || []
+}
+
+export async function usePostContent(slug) {
+  const { data } = await useAsyncData(`content:post:${slug}`, () => $fetch(`/api/content/posts/${slug}`))
+  if (!data.value) throw createError({ statusCode: 404, statusMessage: `Artículo no encontrado: ${slug}` })
+  return data.value
+}
+
+export async function usePostCategories() {
+  const { data } = await useAsyncData('content:categories', () => $fetch('/api/content/categories'))
+  return data.value || []
+}

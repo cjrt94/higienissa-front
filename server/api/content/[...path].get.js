@@ -7,7 +7,7 @@
 //   GET /api/content/sectors           · GET /api/content/sectors/:slug
 //   GET /api/content/legal/:slug
 
-import { getSettings, getPage, getBrand, getBrands, getSector, getSectors, getLegal } from '../../utils/content'
+import { getSettings, getPage, getBrand, getBrands, getSector, getSectors, getLegal, getPosts, getPost, getPostCategories } from '../../utils/content'
 
 function found(value, what) {
   if (value == null) throw createError({ statusCode: 404, statusMessage: `${what} no encontrado` })
@@ -29,6 +29,10 @@ export default defineEventHandler(async (event) => {
       return slug ? found(await getSector(slug), `Sector "${slug}"`) : await getSectors()
     case 'legal':
       return found(await getLegal(slug), `Documento legal "${slug}"`)
+    case 'posts':
+      return slug ? found(await getPost(slug), `Artículo "${slug}"`) : await getPosts()
+    case 'categories':
+      return await getPostCategories()
     default:
       throw createError({ statusCode: 404, statusMessage: 'Contenido no encontrado' })
   }

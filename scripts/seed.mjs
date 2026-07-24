@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { initializeApp, cert } from 'firebase-admin/app'
 import { getFirestore, FieldValue } from 'firebase-admin/firestore'
+import { derivePostsAndCategories } from '../server/utils/blogSeed.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const DRY = process.argv.includes('--dry-run')
@@ -35,7 +36,6 @@ const PAGES = {
   contacto: 'content/pages/contacto.json',
   institucional: 'content/pages/institucional.json',
   recursos: 'content/pages/recursos.json',
-  articulo: 'content/pages/articulo.json',
 }
 const BRANDS = { pacifica: 'content/brands/pacifica.json', trazatex: 'content/brands/trazatex.json', operissa: 'content/brands/operissa.json' }
 const SECTORS = { salud: 'content/sectors/salud.json', hoteleria: 'content/sectors/hoteleria.json', industria: 'content/sectors/industria.json', mineria: 'content/sectors/mineria.json' }
@@ -90,6 +90,17 @@ async function main() {
   // legalPages/{slug}
   for (const [slug, rel] of Object.entries(LEGAL)) {
     add('legalPages', slug, { ...read(rel), status: 'published', updatedAt: stamp() }, 'documento legal')
+  }
+
+  // Blog: postCategories/{id} + posts/{slugEs} (derivados de recursos.json)
+  const { posts, categories } = derivePostsAndCategories(read('content/pages/recursos.json'))
+  for (const c of categories) {
+    const { id, ...data } = c
+    add('postCategories', id, { ...data, updatedAt: stamp() }, 'categoría de blog')
+  }
+  for (const p of posts) {
+    const { id, ...data } = p
+    add('posts', id, { ...data, publishedAt: stamp(), updatedAt: stamp() }, `post: ${p.slugEs}`)
   }
 
   console.log(`\n${DRY ? '[DRY-RUN] ' : ''}Seed de Firestore — ${writes.length} documentos:\n`)
