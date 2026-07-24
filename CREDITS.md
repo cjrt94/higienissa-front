@@ -23,6 +23,7 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/two-workers-in-a-warehouse-4487365/) | Tiger Lily | Pexels License | No (opcional) |
 | `operissa-band.jpg` | [Pexels](https://www.pexels.com/photo/31047154/) | EqualStock IN | Pexels License | No (opcional) |
 | `trazatex-hero.jpg` | Aportada por el cliente (Grupo Higienissa) | Grupo Higienissa | Propietaria | No |
+| `trazatex-hero-rfid.jpg` | Aportada por el cliente (Grupo Higienissa) — dashboard RFID en lavandería | Grupo Higienissa | Propietaria | No |
 | `trazatex-datos.jpg` | [Pexels](https://www.pexels.com/photo/36950598/) | Jakub Zerdzicki | Pexels License | No (opcional) |
 | `trazatex-band.jpg` | [Pexels](https://www.pexels.com/photo/27141307/) | Egor Komarov | Pexels License | No (opcional) |
 | `hoteleria-hero.jpg` | [Pexels](https://www.pexels.com/photo/2736388/) | Engin Akyurt | Pexels License | No (opcional) |
