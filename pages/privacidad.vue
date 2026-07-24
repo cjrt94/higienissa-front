@@ -1,6 +1,7 @@
 <script setup>
 const page = await useLegalContent('privacidad')
 const t = useT()
+const settings = await useSettings()
 
 // Mientras el documento conserve placeholders [ASÍ] (email legal/DPO, responsable,
 // razón social, RUC... sin completar), la política está en borrador y NO debe
@@ -19,5 +20,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <LegalDoc :page="page" />
+  <LegalDoc :page="page" :legal-ui="settings.legalUi" />
 </template>

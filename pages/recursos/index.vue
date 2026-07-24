@@ -17,7 +17,6 @@ useSeoMeta({
 })
 
 const slugOf = (p) => (locale.value === 'en' ? p.slugEn : p.slugEs) || p.slugEs
-const readLabel = { es: 'Leer', en: 'Read' }
 
 // Filtro por categoría (cliente). '' = todas.
 const activeCat = ref('')
@@ -49,7 +48,7 @@ const showPagination = computed(() => filteredPosts.value.length > PAGE_SIZE)
       <div class="container">
         <div class="chips" role="group" :aria-label="t(page.filters.label)">
           <button type="button" class="chip" :class="{ active: activeCat === '' }" :aria-pressed="activeCat === '' ? 'true' : 'false'" @click="activeCat = ''">
-            {{ t(page.filters.items?.[0]?.label) || 'Todos' }}
+            {{ t(page.ui.allLabel) }}
           </button>
           <button
             v-for="c in categories"
@@ -75,12 +74,12 @@ const showPagination = computed(() => filteredPosts.value.length > PAGE_SIZE)
               <p class="card-desc">{{ t(post.excerpt) }}</p>
               <div class="post-foot">
                 <span class="post-date">{{ t(post.date) }}</span>
-                <span class="link-arrow">{{ t(page.posts.readLabel) || t(readLabel) }}</span>
+                <span class="link-arrow">{{ t(page.ui.readLabel) }}</span>
               </div>
             </div>
           </NuxtLink>
         </div>
-        <p v-else style="margin-top: var(--space-6); color: var(--muted)">No hay artículos en esta categoría.</p>
+        <p v-else style="margin-top: var(--space-6); color: var(--muted)">{{ t(page.ui.emptyState) }}</p>
 
         <nav v-if="showPagination" class="pagination" :aria-label="t(page.pagination.label)">
           <span class="page-prev" aria-disabled="true">{{ t(page.pagination.prevLabel) }}</span>

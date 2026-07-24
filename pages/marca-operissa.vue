@@ -23,7 +23,7 @@ const solutionItems = computed(() =>
   solutionOrder.map((src, i) => {
     const s = page.solutions.items[src]
     return {
-      icon: solutionIcons[i] || 'check',
+      icon: s.icon || solutionIcons[i] || 'check',
       title: s.title,
       desc: s.desc,
       groups: (s.groups || []).map((g) => ({ label: g.label, items: g.items })),

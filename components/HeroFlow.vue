@@ -4,36 +4,39 @@
 const props = defineProps({ data: { type: Object, required: true } })
 const t = useT()
 const settings = await useSettings()
-const { locale } = useI18n()
 const hlTitle = computed(() =>
   t(props.data.title)
     .replace(/\n/g, '<br>')
     .replace(/(ecosistema|ecosystem)/i, '<span class="hl">$1</span>'),
 )
-// Ícono representativo por empresa + descripciones locales de largo homogéneo.
+// Ícono representativo por empresa (fallback; el nodo puede traer `icon` editable).
 const ICON = { pacifica: 'droplet', trazatex: 'scan', operissa: 'cog' }
-const DESC = {
-  pacifica: { es: '<strong>Lavandería</strong> industrial inteligente: el origen de la disponibilidad del textil.', en: 'Smart industrial <strong>laundry</strong>: the origin of textile availability at scale.' },
-  trazatex: { es: 'RFID, software y data para el control individual de cada activo textil.', en: 'RFID, software and data for individual control of every textile asset.' },
-  operissa: { es: 'Operación textil especializada en terreno para que nada se detenga.', en: 'Specialized on-site textile operation so your service never stops.' },
-}
-// Nodo extra SOLO del hero (no se agrega al pipeline compartido de settings.json,
-// que alimenta EcosystemPipeline en otras páginas): el grupo cierra el flujo y garantiza el ciclo.
+// Nodo del grupo que cierra el flujo. EDITABLE desde el contenido del hero (`data.groupNode`);
+// EXTRA es solo el fallback si el contenido no lo trae. NO se agrega al pipeline compartido de
+// settings.json (que alimenta EcosystemPipeline con 3 nodos en otras páginas).
 const EXTRA = {
   name: 'Grupo Higienissa',
   role: { es: 'Garantiza', en: 'Guarantees' },
   icon: 'shield',
   blurb: { es: 'El estándar único que integra proceso, trazabilidad y operación.', en: 'The single standard that integrates process, traceability and operation.' },
 }
+const groupNode = computed(() => props.data.groupNode || EXTRA)
 const nodes = computed(() => [
+  // Descripciones desde settings.ecosystem.pipeline (editables en /admin/settings).
   ...settings.ecosystem.pipeline.map((n) => ({
     key: n.slug,
     name: n.name,
     role: n.role,
-    icon: ICON[n.slug] || 'check',
-    blurb: DESC[n.slug]?.[locale.value] || t(n.desc),
+    icon: n.icon || ICON[n.slug] || 'check',
+    blurb: t(n.desc),
   })),
-  { key: 'grupo', name: EXTRA.name, role: EXTRA.role, icon: EXTRA.icon, blurb: EXTRA.blurb[locale.value] },
+  {
+    key: 'grupo',
+    name: groupNode.value.name,
+    role: groupNode.value.role,
+    icon: groupNode.value.icon || 'shield',
+    blurb: t(groupNode.value.blurb),
+  },
 ])
 </script>
 
@@ -56,7 +59,7 @@ const nodes = computed(() => [
             <span class="fn-mark"><BaseIcon :name="n.icon" :size="n.key === 'grupo' ? 24 : 20" /></span>
             <span class="fn-name">{{ n.name }}</span>
             <span class="fn-role">{{ t(n.role) }}</span>
-            <span class="fn-desc" v-html="n.blurb" />
+            <span class="fn-desc">{{ n.blurb }}</span>
           </li>
         </ol>
       </div>

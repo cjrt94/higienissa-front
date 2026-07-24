@@ -102,7 +102,7 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
           </div>
           <ul class="integrate-list reveal">
             <li v-for="(cap, i) in page.capabilities.items" :key="i" class="integrate-item">
-              <span class="ii-icon"><BaseIcon :name="capIcons[i] || 'check'" :size="20" /></span>
+              <span class="ii-icon"><BaseIcon :name="cap.icon || capIcons[i] || 'check'" :size="20" /></span>
               <div class="ii-body">
                 <h3>{{ t(cap.title) }}</h3>
                 <p>{{ t(cap.desc) }}</p>
@@ -140,7 +140,7 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
         </div>
         <div class="value-cols cols-4 reveal">
           <article v-for="(d, i) in page.differentiators.items" :key="i" class="value-col">
-            <span class="v-icon"><BaseIcon :name="diffIcons[i] || 'check'" :size="24" /></span>
+            <span class="v-icon"><BaseIcon :name="d.icon || diffIcons[i] || 'check'" :size="24" /></span>
             <h3>{{ t(d.title) }}</h3>
             <p>{{ t(d.text) }}</p>
           </article>

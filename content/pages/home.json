@@ -30,6 +30,15 @@
     "badge": {
       "title": { "es": "Trazabilidad individual", "en": "Individual traceability" },
       "sub": { "es": "de cada activo textil, en tiempo real", "en": "of every textile asset, in real time" }
+    },
+    "groupNode": {
+      "name": "Grupo Higienissa",
+      "role": { "es": "Garantiza", "en": "Guarantees" },
+      "icon": "shield",
+      "blurb": {
+        "es": "El estándar único que integra proceso, trazabilidad y operación.",
+        "en": "The single standard that integrates process, traceability and operation."
+      }
     }
   },
   "groupIntro": {

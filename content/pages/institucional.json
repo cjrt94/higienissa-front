@@ -204,7 +204,8 @@
         "desc": {
           "es": "Procesamiento profesional de textiles institucionales con calidad, higiene y disponibilidad garantizada.",
           "en": "Professional processing of institutional textiles with guaranteed quality, hygiene and availability."
-        }
+        },
+        "icon": "droplet"
       },
       {
         "title": {
@@ -214,7 +215,8 @@
         "desc": {
           "es": "Identificación individual de cada prenda para seguir su ubicación, uso y estado en tiempo real.",
           "en": "Individual identification of every garment to track its location, use and condition in real time."
-        }
+        },
+        "icon": "scan"
       },
       {
         "title": {
@@ -224,7 +226,8 @@
         "desc": {
           "es": "Plataformas de gestión con dashboards, KPIs e información accionable para decidir.",
           "en": "Management platforms with dashboards, KPIs and actionable information to make decisions."
-        }
+        },
+        "icon": "chart"
       },
       {
         "title": {
@@ -234,7 +237,8 @@
         "desc": {
           "es": "Verificación y control de procesos y flujos textiles, con evidencia para cumplimiento.",
           "en": "Verification and control of textile processes and flows, with evidence for compliance."
-        }
+        },
+        "icon": "shield"
       },
       {
         "title": {
@@ -244,7 +248,8 @@
         "desc": {
           "es": "Operaciones que no se detienen: disponibilidad sostenida del textil crítico.",
           "en": "Operations that never stop: sustained availability of critical textiles."
-        }
+        },
+        "icon": "activity"
       },
       {
         "title": {
@@ -254,7 +259,8 @@
         "desc": {
           "es": "Personal capacitado y supervisado para procesos que exigen control permanente.",
           "en": "Trained and supervised staff for processes that demand permanent control."
-        }
+        },
+        "icon": "users"
       },
       {
         "title": {
@@ -264,7 +270,8 @@
         "desc": {
           "es": "Procedimientos estandarizados y medibles que modernizan la operación tradicional.",
           "en": "Standardized, measurable procedures that modernize traditional operations."
-        }
+        },
+        "icon": "cog"
       }
     ]
   },
@@ -346,7 +353,8 @@
         "text": {
           "es": "Diseñamos soluciones desde la realidad de quien opera, no desde el catálogo.",
           "en": "We design solutions from the reality of those who operate, not from a catalog."
-        }
+        },
+        "icon": "users"
       },
       {
         "title": {
@@ -356,7 +364,8 @@
         "text": {
           "es": "Tres divisiones que se potencian entre sí bajo un mismo estándar.",
           "en": "Three divisions that strengthen one another under the same standard."
-        }
+        },
+        "icon": "shield"
       },
       {
         "title": {
@@ -366,7 +375,8 @@
         "text": {
           "es": "Capacidad de crecer con la operación, sin perder control.",
           "en": "The ability to grow with the operation, without losing control."
-        }
+        },
+        "icon": "activity"
       },
       {
         "title": {
@@ -376,7 +386,8 @@
         "text": {
           "es": "Tecnología y operación de alto nivel para entornos de alta exigencia.",
           "en": "High-level technology and operations for highly demanding environments."
-        }
+        },
+        "icon": "scan"
       }
     ]
   },

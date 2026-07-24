@@ -16,7 +16,10 @@
     }
   },
   "hero": {
-    "eyebrow": { "es": "Operissa", "en": "Operissa" },
+    "eyebrow": {
+      "es": "Operissa",
+      "en": "Operissa"
+    },
     "title": {
       "es": "Operamos procesos para que usted pueda enfocarse en su negocio.",
       "en": "We run your processes so you can focus on your business."
@@ -32,13 +35,25 @@
     },
     "badge": {
       "icon": "cog",
-      "title": { "es": "Operación que no se detiene", "en": "Operations that never stop" },
-      "sub": { "es": "Personas. Procesos. Resultados.", "en": "People. Processes. Results." }
+      "title": {
+        "es": "Operación que no se detiene",
+        "en": "Operations that never stop"
+      },
+      "sub": {
+        "es": "Personas. Procesos. Resultados.",
+        "en": "People. Processes. Results."
+      }
     }
   },
   "whoWeAre": {
-    "eyebrow": { "es": "Quiénes somos", "en": "Who we are" },
-    "title": { "es": "Operación que no se detiene", "en": "Operations that never stop" },
+    "eyebrow": {
+      "es": "Quiénes somos",
+      "en": "Who we are"
+    },
+    "title": {
+      "es": "Operación que no se detiene",
+      "en": "Operations that never stop"
+    },
     "lead": {
       "es": "Muchas organizaciones tienen infraestructura y recursos, pero enfrentan problemas de productividad, control, supervisión y continuidad. Operissa cierra esa brecha: no cubrimos posiciones, administramos operaciones.",
       "en": "Many organizations have the infrastructure and resources, but face challenges in productivity, control, supervision and continuity. Operissa closes that gap: we don't fill positions, we manage operations."
@@ -51,7 +66,10 @@
     "highlights": [
       {
         "icon": "cog",
-        "label": { "es": "Administramos, no cubrimos", "en": "We manage, we don't just staff" },
+        "label": {
+          "es": "Administramos, no cubrimos",
+          "en": "We manage, we don't just staff"
+        },
         "text": {
           "es": "Gestionamos la operación completa, no solo dotamos personal por posición.",
           "en": "We run the entire operation, not just supply personnel by position."
@@ -59,7 +77,10 @@
       },
       {
         "icon": "users",
-        "label": { "es": "Personas + procesos", "en": "People + processes" },
+        "label": {
+          "es": "Personas + procesos",
+          "en": "People + processes"
+        },
         "text": {
           "es": "Talento especializado y entrenado bajo procedimientos claros y medibles.",
           "en": "Specialized talent, trained under clear and measurable procedures."
@@ -67,7 +88,10 @@
       },
       {
         "icon": "activity",
-        "label": { "es": "Mejora continua", "en": "Continuous improvement" },
+        "label": {
+          "es": "Mejora continua",
+          "en": "Continuous improvement"
+        },
         "text": {
           "es": "Supervisión permanente, indicadores visibles y optimización sostenida.",
           "en": "Permanent supervision, visible indicators and sustained optimization."
@@ -76,196 +100,390 @@
     ]
   },
   "solutions": {
-    "eyebrow": { "es": "Soluciones", "en": "Solutions" },
+    "eyebrow": {
+      "es": "Soluciones",
+      "en": "Solutions"
+    },
     "title": {
       "es": "Operación y gestión especializada",
       "en": "Specialized operations and management"
     },
     "items": [
       {
-        "title": { "es": "Laundry Operations", "en": "Laundry Operations" },
+        "title": {
+          "es": "Laundry Operations",
+          "en": "Laundry Operations"
+        },
         "desc": {
           "es": "Operación integral de lavanderías propias del cliente; gestión diaria para productividad, cumplimiento y continuidad.",
           "en": "Full operation of the client's own laundries; day-to-day management for productivity, compliance and continuity."
         },
         "groups": [
           {
-            "label": { "es": "Incluye", "en": "Includes" },
+            "label": {
+              "es": "Incluye",
+              "en": "Includes"
+            },
             "items": [
-              { "es": "Operarios especializados", "en": "Specialized operators" },
-              { "es": "Supervisores", "en": "Supervisors" },
-              { "es": "Coordinadores operativos", "en": "Operations coordinators" },
-              { "es": "Gestión de producción", "en": "Production management" },
-              { "es": "Control de indicadores", "en": "Indicator monitoring" },
-              { "es": "Procedimientos estandarizados", "en": "Standardized procedures" },
-              { "es": "Reportes operativos", "en": "Operational reporting" }
+              {
+                "es": "Operarios especializados",
+                "en": "Specialized operators"
+              },
+              {
+                "es": "Supervisores",
+                "en": "Supervisors"
+              },
+              {
+                "es": "Coordinadores operativos",
+                "en": "Operations coordinators"
+              },
+              {
+                "es": "Gestión de producción",
+                "en": "Production management"
+              },
+              {
+                "es": "Control de indicadores",
+                "en": "Indicator monitoring"
+              },
+              {
+                "es": "Procedimientos estandarizados",
+                "en": "Standardized procedures"
+              },
+              {
+                "es": "Reportes operativos",
+                "en": "Operational reporting"
+              }
             ]
           },
           {
-            "label": { "es": "Ideal para", "en": "Ideal for" },
+            "label": {
+              "es": "Ideal para",
+              "en": "Ideal for"
+            },
             "items": [
-              { "es": "Hospitales", "en": "Hospitals" },
-              { "es": "Clínicas", "en": "Clinics" },
-              { "es": "Hoteles", "en": "Hotels" },
-              { "es": "Industrias con lavandería propia", "en": "Industries with in-house laundry" }
+              {
+                "es": "Hospitales",
+                "en": "Hospitals"
+              },
+              {
+                "es": "Clínicas",
+                "en": "Clinics"
+              },
+              {
+                "es": "Hoteles",
+                "en": "Hotels"
+              },
+              {
+                "es": "Industrias con lavandería propia",
+                "en": "Industries with in-house laundry"
+              }
             ]
           }
-        ]
+        ],
+        "icon": "cog"
       },
       {
-        "title": { "es": "Gestión Integral de Ropería", "en": "Comprehensive Linen Management" },
+        "title": {
+          "es": "Gestión Integral de Ropería",
+          "en": "Comprehensive Linen Management"
+        },
         "desc": {
           "es": "Administración y control de textiles institucionales en las instalaciones del cliente.",
           "en": "Administration and control of institutional textiles at the client's facilities."
         },
         "groups": [
           {
-            "label": { "es": "Incluye", "en": "Includes" },
+            "label": {
+              "es": "Incluye",
+              "en": "Includes"
+            },
             "items": [
-              { "es": "Recepción de prendas", "en": "Garment reception" },
-              { "es": "Clasificación", "en": "Sorting" },
-              { "es": "Distribución interna", "en": "Internal distribution" },
-              { "es": "Control operativo", "en": "Operational control" },
-              { "es": "Gestión de almacenes textiles", "en": "Textile warehouse management" },
-              { "es": "Coordinación de reposiciones", "en": "Replenishment coordination" }
+              {
+                "es": "Recepción de prendas",
+                "en": "Garment reception"
+              },
+              {
+                "es": "Clasificación",
+                "en": "Sorting"
+              },
+              {
+                "es": "Distribución interna",
+                "en": "Internal distribution"
+              },
+              {
+                "es": "Control operativo",
+                "en": "Operational control"
+              },
+              {
+                "es": "Gestión de almacenes textiles",
+                "en": "Textile warehouse management"
+              },
+              {
+                "es": "Coordinación de reposiciones",
+                "en": "Replenishment coordination"
+              }
             ]
           }
-        ]
+        ],
+        "icon": "shield"
       },
       {
-        "title": { "es": "Housekeeping Solutions", "en": "Housekeeping Solutions" },
+        "title": {
+          "es": "Housekeeping Solutions",
+          "en": "Housekeeping Solutions"
+        },
         "desc": {
           "es": "Servicios para establecimientos que exigen altos estándares de orden, limpieza y presentación.",
           "en": "Services for establishments that demand high standards of order, cleanliness and presentation."
         },
         "groups": [
           {
-            "label": { "es": "Incluye", "en": "Includes" },
+            "label": {
+              "es": "Incluye",
+              "en": "Includes"
+            },
             "items": [
-              { "es": "Personal operativo", "en": "Operational staff" },
-              { "es": "Supervisión", "en": "Supervision" },
-              { "es": "Coordinación", "en": "Coordination" },
-              { "es": "Control de calidad", "en": "Quality control" },
-              { "es": "Indicadores de desempeño", "en": "Performance indicators" }
+              {
+                "es": "Personal operativo",
+                "en": "Operational staff"
+              },
+              {
+                "es": "Supervisión",
+                "en": "Supervision"
+              },
+              {
+                "es": "Coordinación",
+                "en": "Coordination"
+              },
+              {
+                "es": "Control de calidad",
+                "en": "Quality control"
+              },
+              {
+                "es": "Indicadores de desempeño",
+                "en": "Performance indicators"
+              }
             ]
           },
           {
-            "label": { "es": "Aplicable a", "en": "Serves" },
+            "label": {
+              "es": "Aplicable a",
+              "en": "Serves"
+            },
             "items": [
-              { "es": "Hospitales", "en": "Hospitals" },
-              { "es": "Clínicas", "en": "Clinics" },
-              { "es": "Hoteles", "en": "Hotels" },
-              { "es": "Instalaciones corporativas", "en": "Corporate facilities" }
+              {
+                "es": "Hospitales",
+                "en": "Hospitals"
+              },
+              {
+                "es": "Clínicas",
+                "en": "Clinics"
+              },
+              {
+                "es": "Hoteles",
+                "en": "Hotels"
+              },
+              {
+                "es": "Instalaciones corporativas",
+                "en": "Corporate facilities"
+              }
             ]
           }
-        ]
+        ],
+        "icon": "menu"
       },
       {
-        "title": { "es": "Outsourcing Operativo Especializado", "en": "Specialized Operational Outsourcing" },
+        "title": {
+          "es": "Outsourcing Operativo Especializado",
+          "en": "Specialized Operational Outsourcing"
+        },
         "desc": {
           "es": "Dotación de personal capacitado para procesos críticos que requieren continuidad, control y supervisión permanente; cada proyecto se diseña a la medida.",
           "en": "Trained staffing for critical processes that require continuity, control and permanent supervision; each project is designed to measure."
         },
-        "groups": []
+        "groups": [],
+        "icon": "users"
       },
       {
-        "title": { "es": "Operissa Logistics", "en": "Operissa Logistics" },
+        "title": {
+          "es": "Operissa Logistics",
+          "en": "Operissa Logistics"
+        },
         "desc": {
           "es": "Logística textil y distribución interna.",
           "en": "Textile logistics and internal distribution."
         },
         "groups": [
           {
-            "label": { "es": "Incluye", "en": "Includes" },
+            "label": {
+              "es": "Incluye",
+              "en": "Includes"
+            },
             "items": [
-              { "es": "Flujos de abastecimiento textil", "en": "Textile supply flows" },
-              { "es": "Distribución entre áreas", "en": "Distribution between areas" },
-              { "es": "Coordinación operativa", "en": "Operational coordination" }
+              {
+                "es": "Flujos de abastecimiento textil",
+                "en": "Textile supply flows"
+              },
+              {
+                "es": "Distribución entre áreas",
+                "en": "Distribution between areas"
+              },
+              {
+                "es": "Coordinación operativa",
+                "en": "Operational coordination"
+              }
             ]
           }
-        ]
+        ],
+        "icon": "activity"
       }
     ]
   },
   "methodology": {
-    "eyebrow": { "es": "Metodología", "en": "Methodology" },
-    "title": { "es": "Personas. Procesos. Resultados.", "en": "People. Processes. Results." },
-    "phaseLabel": { "es": "Fase", "en": "Phase" },
+    "eyebrow": {
+      "es": "Metodología",
+      "en": "Methodology"
+    },
+    "title": {
+      "es": "Personas. Procesos. Resultados.",
+      "en": "People. Processes. Results."
+    },
+    "phaseLabel": {
+      "es": "Fase",
+      "en": "Phase"
+    },
     "steps": [
       {
         "num": "1",
         "icon": "users",
-        "title": { "es": "Personas", "en": "People" },
-        "text": { "es": "Selección y desarrollo de equipos.", "en": "Selection and development of teams." }
+        "title": {
+          "es": "Personas",
+          "en": "People"
+        },
+        "text": {
+          "es": "Selección y desarrollo de equipos.",
+          "en": "Selection and development of teams."
+        }
       },
       {
         "num": "2",
         "icon": "cog",
-        "title": { "es": "Procesos", "en": "Processes" },
-        "text": { "es": "Procedimientos claros y medibles.", "en": "Clear, measurable procedures." }
+        "title": {
+          "es": "Procesos",
+          "en": "Processes"
+        },
+        "text": {
+          "es": "Procedimientos claros y medibles.",
+          "en": "Clear, measurable procedures."
+        }
       },
       {
         "num": "3",
         "icon": "scan",
-        "title": { "es": "Supervisión", "en": "Supervision" },
-        "text": { "es": "Monitoreo permanente de la operación.", "en": "Continuous monitoring of the operation." }
+        "title": {
+          "es": "Supervisión",
+          "en": "Supervision"
+        },
+        "text": {
+          "es": "Monitoreo permanente de la operación.",
+          "en": "Continuous monitoring of the operation."
+        }
       },
       {
         "num": "4",
         "icon": "chart",
-        "title": { "es": "Resultados", "en": "Results" },
-        "text": { "es": "Indicadores visibles y mejoras concretas.", "en": "Visible indicators and concrete improvements." }
+        "title": {
+          "es": "Resultados",
+          "en": "Results"
+        },
+        "text": {
+          "es": "Indicadores visibles y mejoras concretas.",
+          "en": "Visible indicators and concrete improvements."
+        }
       }
     ]
   },
   "sectors": {
-    "eyebrow": { "es": "Sectores", "en": "Sectors" },
-    "title": { "es": "Sectores que atendemos", "en": "Sectors we serve" },
+    "eyebrow": {
+      "es": "Sectores",
+      "en": "Sectors"
+    },
+    "title": {
+      "es": "Sectores que atendemos",
+      "en": "Sectors we serve"
+    },
     "items": [
       {
-        "name": { "es": "Salud", "en": "Healthcare" },
+        "name": {
+          "es": "Salud",
+          "en": "Healthcare"
+        },
         "desc": {
           "es": "Hospitales, clínicas y laboratorios donde el textil impacta directamente en la bioseguridad, la auditoría y la continuidad de la atención.",
           "en": "Hospitals, clinics and laboratories where textiles directly impact biosecurity, auditing and continuity of care."
         },
         "to": "/sector-salud",
         "image": "/img/sector-salud.jpg",
-        "imageAlt": { "es": "Sector salud: entorno hospitalario", "en": "Health sector: hospital environment" }
+        "imageAlt": {
+          "es": "Sector salud: entorno hospitalario",
+          "en": "Health sector: hospital environment"
+        }
       },
       {
-        "name": { "es": "Hotelería", "en": "Hospitality" },
+        "name": {
+          "es": "Hotelería",
+          "en": "Hospitality"
+        },
         "desc": {
           "es": "Hoteles, resorts y apart hoteles donde los blancos y la lencería son parte de la experiencia del huésped y un costo a controlar.",
           "en": "Hotels, resorts and apart-hotels where linens and bedding are part of the guest experience and a cost to control."
         },
         "to": "/sector-hoteleria",
         "image": "/img/sector-hoteleria.jpg",
-        "imageAlt": { "es": "Sector hotelería: blancos y lencería de hotel", "en": "Hospitality sector: hotel linens and bedding" }
+        "imageAlt": {
+          "es": "Sector hotelería: blancos y lencería de hotel",
+          "en": "Hospitality sector: hotel linens and bedding"
+        }
       },
       {
-        "name": { "es": "Industria", "en": "Industry" },
+        "name": {
+          "es": "Industria",
+          "en": "Industry"
+        },
         "desc": {
           "es": "Manufactura, agroindustria y logística donde los uniformes y el EPP textil forman parte del cumplimiento y la seguridad laboral.",
           "en": "Manufacturing, agribusiness and logistics where uniforms and textile PPE are part of compliance and workplace safety."
         },
         "to": "/sector-industria",
         "image": "/img/sector-industria.jpg",
-        "imageAlt": { "es": "Sector industria: uniformes y EPP textil", "en": "Industry sector: uniforms and textile PPE" }
+        "imageAlt": {
+          "es": "Sector industria: uniformes y EPP textil",
+          "en": "Industry sector: uniforms and textile PPE"
+        }
       },
       {
-        "name": { "es": "Minería", "en": "Mining" },
+        "name": {
+          "es": "Minería",
+          "en": "Mining"
+        },
         "desc": {
           "es": "Campamentos, operaciones remotas y proyectos temporales en entornos exigentes y alejados de los centros urbanos.",
           "en": "Camps, remote operations and temporary projects in demanding environments far from urban centers."
         },
         "to": "/sector-mineria",
         "image": "/img/sector-mineria.jpg",
-        "imageAlt": { "es": "Sector minería: operaciones remotas exigentes", "en": "Mining sector: demanding remote operations" }
+        "imageAlt": {
+          "es": "Sector minería: operaciones remotas exigentes",
+          "en": "Mining sector: demanding remote operations"
+        }
       }
     ]
   },
   "ecosystem": {
-    "eyebrow": { "es": "Ecosistema HIGIENISSA", "en": "HIGIENISSA Ecosystem" },
+    "eyebrow": {
+      "es": "Ecosistema HIGIENISSA",
+      "en": "HIGIENISSA Ecosystem"
+    },
     "title": {
       "es": "Operamos con respaldo del ecosistema",
       "en": "We operate with the ecosystem behind us"
@@ -282,7 +500,10 @@
     "items": [
       {
         "name": "Pacífica",
-        "desc": { "es": "Lavandería industrial inteligente.", "en": "Intelligent industrial laundry." },
+        "desc": {
+          "es": "Lavandería industrial inteligente.",
+          "en": "Intelligent industrial laundry."
+        },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
@@ -292,7 +513,10 @@
       },
       {
         "name": "Trazatex",
-        "desc": { "es": "RFID, software, auditoría y data.", "en": "RFID, software, auditing and data." },
+        "desc": {
+          "es": "RFID, software, auditoría y data.",
+          "en": "RFID, software, auditing and data."
+        },
         "image": "/img/trazatex-hero.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
@@ -303,7 +527,10 @@
     ]
   },
   "finalCta": {
-    "title": { "es": "Conversemos", "en": "Let's talk" },
+    "title": {
+      "es": "Conversemos",
+      "en": "Let's talk"
+    },
     "lead": {
       "es": "Evaluamos su operación y diseñamos el modelo de gestión que le corresponde.",
       "en": "We assess your operation and design the management model that fits you."

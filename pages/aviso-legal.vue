@@ -25,5 +25,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <LegalDoc :page="page" :credits="imageCredits" />
+  <LegalDoc :page="page" :credits="imageCredits" :legal-ui="settings.legalUi" />
 </template>

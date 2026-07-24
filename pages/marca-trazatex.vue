@@ -16,7 +16,7 @@ useSeoMeta({
 const solutionIcons = ['scan', 'chart', 'shield', 'target', 'activity', 'cog']
 const solutionItems = computed(() =>
   page.solutions.items.map((s, i) => ({
-    icon: solutionIcons[i] || 'check',
+    icon: s.icon || solutionIcons[i] || 'check',
     title: s.title,
     desc: s.desc,
     groups: [],
@@ -25,8 +25,12 @@ const solutionItems = computed(() =>
 
 const techIcons = ['cog', 'chart', 'users']
 
-// Divide un texto en torno a "ASIS IDTRAK" para renderizar la marca como link en negrita.
-const splitAsis = (val) => t(val).split(/(ASIS IDTRAK)/)
+// Marca socia del respaldo: nombre + URL editables desde el contenido (fallback ASIS IDTRAK).
+const partnerName = computed(() => page.respaldo.partnerName || 'ASIS IDTRAK')
+const partnerUrl = computed(() => page.respaldo.partnerUrl || 'https://asisidtrak.com/')
+const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+// Divide un texto en torno al nombre del socio para renderizarlo como link en negrita.
+const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.value)})`))
 </script>
 
 <template>
@@ -69,7 +73,7 @@ const splitAsis = (val) => t(val).split(/(ASIS IDTRAK)/)
           </p>
         </div>
         <div class="problem-symptoms reveal">
-          <span class="symptoms-label">{{ t({ es: 'Los síntomas', en: 'The symptoms' }) }}</span>
+          <span class="symptoms-label">{{ t(page.problem.symptomsLabel) }}</span>
           <StakeList :items="page.problem.symptoms" marker="number" />
         </div>
       </div>
@@ -195,8 +199,8 @@ const splitAsis = (val) => t(val).split(/(ASIS IDTRAK)/)
             <h2>{{ t(page.respaldo.title) }}</h2>
           </div>
           <div class="ti-head-copy">
-            <p class="lead"><template v-for="(part, i) in splitAsis(page.respaldo.lead)" :key="i"><a v-if="part === 'ASIS IDTRAK'" class="asis-brand-link" href="https://asisidtrak.com/" target="_blank" rel="noopener noreferrer">ASIS IDTRAK</a><template v-else>{{ part }}</template></template></p>
-            <p class="respaldo-note"><template v-for="(part, i) in splitAsis(page.respaldo.disclaimer)" :key="i"><a v-if="part === 'ASIS IDTRAK'" class="asis-brand-link" href="https://asisidtrak.com/" target="_blank" rel="noopener noreferrer">ASIS IDTRAK</a><template v-else>{{ part }}</template></template></p>
+            <p class="lead"><template v-for="(part, i) in splitAsis(page.respaldo.lead)" :key="i"><a v-if="part === partnerName" class="asis-brand-link" :href="partnerUrl" target="_blank" rel="noopener noreferrer">{{ partnerName }}</a><template v-else>{{ part }}</template></template></p>
+            <p class="respaldo-note"><template v-for="(part, i) in splitAsis(page.respaldo.disclaimer)" :key="i"><a v-if="part === partnerName" class="asis-brand-link" :href="partnerUrl" target="_blank" rel="noopener noreferrer">{{ partnerName }}</a><template v-else>{{ part }}</template></template></p>
           </div>
         </div>
 

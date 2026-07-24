@@ -18,7 +18,7 @@ useSeoMeta({
 const solutionIcons = ['droplet', 'chart', 'scan', 'cog']
 const solutionItems = computed(() =>
   page.solutions.map((s, i) => ({
-    icon: solutionIcons[i] || 'check',
+    icon: s.icon || solutionIcons[i] || 'check',
     title: s.title,
     desc: s.description,
     // Ocupan fila completa (dos columnas): la insignia (índice 0, checklist largo)

@@ -26,6 +26,14 @@
       "en": "Articles, criteria and learnings from the ecosystem on traceability, textile asset control and laundry operations."
     }
   },
+  "ui": {
+    "allLabel": { "es": "Todos", "en": "All" },
+    "readLabel": { "es": "Leer", "en": "Read" },
+    "emptyState": { "es": "No hay artículos en esta categoría.", "en": "No articles in this category." },
+    "backLabel": { "es": "← Recursos", "en": "← Resources" },
+    "relatedLabel": { "es": "Seguí leyendo", "en": "Keep reading" },
+    "minLabel": { "es": "min de lectura", "en": "min read" }
+  },
   "filters": {
     "label": {
       "es": "Filtrar por categoría",

@@ -36,7 +36,7 @@ const brandItems = computed(() =>
       :lead="page.hero.lead"
       :image="page.hero.image"
       :image-alt="page.hero.imageAlt"
-      :badge="{ icon: 'scan', title: page.hero.badge.title, sub: page.hero.badge.sub }"
+      :badge="page.hero.badge"
     />
 
     <SectorContext

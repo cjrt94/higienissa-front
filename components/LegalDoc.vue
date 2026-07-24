@@ -9,23 +9,26 @@ const props = defineProps({
   // Créditos de imágenes (solo aviso legal). Se renderizan como sección final
   // y entran en el índice. Shape: [{ use:{es,en}, author, license, source }]
   credits: { type: Array, default: () => [] },
+  // Etiquetas de UI editables (settings.legalUi); si falta una, cae al default de abajo.
+  legalUi: { type: Object, default: () => ({}) },
 })
 
 const t = useT()
 const { locale } = useI18n()
 
-// --- Etiquetas de UI (bilingües, presentación; no tocan el texto legal) ---
-const tocLabel = { es: 'En esta página', en: 'On this page' }
-const tocAria = { es: 'Índice', en: 'Table of contents' }
-const updatedLabel = { es: 'Última actualización', en: 'Last updated' }
-const readLabel = { es: 'Documento legal', en: 'Legal document' }
-const topLabel = { es: 'Volver arriba', en: 'Back to top' }
-const creditsHeading = { es: 'Créditos de imágenes', en: 'Image credits' }
-const creditsIntro = {
+// --- Etiquetas de UI (bilingües, presentación; editables vía settings.legalUi con fallback) ---
+const L = props.legalUi || {}
+const tocLabel = L.tocLabel || { es: 'En esta página', en: 'On this page' }
+const tocAria = L.tocAria || { es: 'Índice', en: 'Table of contents' }
+const updatedLabel = L.updatedLabel || { es: 'Última actualización', en: 'Last updated' }
+const readLabel = L.docLabel || { es: 'Documento legal', en: 'Legal document' }
+const topLabel = L.topLabel || { es: 'Volver arriba', en: 'Back to top' }
+const creditsHeading = L.creditsHeading || { es: 'Créditos de imágenes', en: 'Image credits' }
+const creditsIntro = L.creditsIntro || {
   es: 'Algunas imágenes de terceros se utilizan bajo licencia Creative Commons, con atribución a sus autores:',
   en: 'Some third-party images are used under a Creative Commons license, with attribution to their authors:',
 }
-const sourceLabel = { es: 'ver fuente', en: 'view source' }
+const sourceLabel = L.sourceLabel || { es: 'ver fuente', en: 'view source' }
 
 const CREDITS_ID = 'creditos'
 

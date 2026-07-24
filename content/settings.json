@@ -65,6 +65,19 @@
     "instagram": "#",
     "youtube": "#"
   },
+  "legalUi": {
+    "tocLabel": { "es": "En esta página", "en": "On this page" },
+    "tocAria": { "es": "Índice", "en": "Table of contents" },
+    "updatedLabel": { "es": "Última actualización", "en": "Last updated" },
+    "docLabel": { "es": "Documento legal", "en": "Legal document" },
+    "topLabel": { "es": "Volver arriba", "en": "Back to top" },
+    "creditsHeading": { "es": "Créditos de imágenes", "en": "Image credits" },
+    "creditsIntro": {
+      "es": "Algunas imágenes de terceros se utilizan bajo licencia Creative Commons, con atribución a sus autores:",
+      "en": "Some third-party images are used under a Creative Commons license, with attribution to their authors:"
+    },
+    "sourceLabel": { "es": "ver fuente", "en": "view source" }
+  },
   "asisStrip": {
     "partnerName": "ASIS IDTRAK",
     "note": {

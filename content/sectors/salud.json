@@ -36,6 +36,7 @@
       "en": "Clean hospital bed linens in a clinical environment"
     },
     "badge": {
+      "icon": "scan",
       "title": { "es": "Trazabilidad por prenda", "en": "Per-garment traceability" },
       "sub": { "es": "identidad y control en cada ciclo clínico", "en": "identity and control in every clinical cycle" }
     }

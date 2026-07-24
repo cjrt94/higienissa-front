@@ -8,10 +8,8 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 
-const backLabel = { es: '← Recursos', en: '← Resources' }
-const relatedLabel = { es: 'Seguí leyendo', en: 'Keep reading' }
-const readLabel = { es: 'Leer', en: 'Read' }
-const minLabel = { es: 'min de lectura', en: 'min read' }
+// Microcopia editable desde la página Recursos (content/pages/recursos.json → ui).
+const { ui } = await usePageContent('recursos')
 
 const slugOf = (p) => (locale.value === 'en' ? p.slugEn : p.slugEs) || p.slugEs
 const paragraphs = computed(() => t(post.body || '').split(/\n{2,}/).map((s) => s.trim()).filter(Boolean))
@@ -37,7 +35,7 @@ useSeoMeta({
   <div>
     <section class="section article-top">
       <div class="container article-head">
-        <NuxtLink class="article-back" :to="localePath('/recursos')">{{ t(backLabel) }}</NuxtLink>
+        <NuxtLink class="article-back" :to="localePath('/recursos')">{{ t(ui.backLabel) }}</NuxtLink>
         <span class="kicker">{{ t(post.categorySummary?.name) }}</span>
         <h1>{{ t(post.title) }}</h1>
         <p class="article-meta">
@@ -45,7 +43,7 @@ useSeoMeta({
           <span v-if="post.date" aria-hidden="true" class="sep">·</span>
           <span v-if="post.date">{{ t(post.date) }}</span>
           <span aria-hidden="true" class="sep">·</span>
-          <span>{{ readingMinutes }} {{ t(minLabel) }}</span>
+          <span>{{ readingMinutes }} {{ t(ui.minLabel) }}</span>
         </p>
       </div>
       <div v-if="post.coverImage?.url" class="container">
@@ -67,7 +65,7 @@ useSeoMeta({
     <section v-if="related.length" class="section section-alt">
       <div class="container">
         <div class="section-head">
-          <h2>{{ t(relatedLabel) }}</h2>
+          <h2>{{ t(ui.relatedLabel) }}</h2>
         </div>
         <div class="grid cols-3 reveal">
           <NuxtLink v-for="item in related" :key="item.id" :to="localePath(`/recursos/${slugOf(item)}`)" class="card post-card">
@@ -78,7 +76,7 @@ useSeoMeta({
               <span class="card-eyebrow">{{ t(item.categorySummary?.name) }}</span>
               <h3>{{ t(item.title) }}</h3>
               <p class="card-desc">{{ t(item.excerpt) }}</p>
-              <span class="link-arrow" style="margin-top:auto">{{ t(readLabel) }}</span>
+              <span class="link-arrow" style="margin-top:auto">{{ t(ui.readLabel) }}</span>
             </div>
           </NuxtLink>
         </div>
