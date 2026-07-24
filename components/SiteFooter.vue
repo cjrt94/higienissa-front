@@ -20,6 +20,18 @@ const companyCol = [
   { to: '/recursos', key: 'resources' },
   { to: '/contacto', key: 'contact' },
 ]
+
+// Redes: URL desde settings.social (compat JSON-LD), label editable en settings.socialLabels.
+const SOCIAL = [
+  { key: 'linkedin', label: 'LinkedIn' },
+  { key: 'instagram', label: 'Instagram' },
+  { key: 'youtube', label: 'YouTube' },
+]
+const socialLinks = computed(() => SOCIAL.map((s) => ({
+  key: s.key,
+  label: settings.socialLabels?.[s.key] || s.label,
+  url: settings.social?.[s.key] || '#',
+})))
 </script>
 
 <template>
@@ -30,9 +42,7 @@ const companyCol = [
           <img src="/logos/lockup-horizontal-blanco.png" width="192" height="46" alt="Grupo Higienissa">
           <p>{{ t('tagline') }}</p>
           <div class="footer-social" :aria-label="t('footer.social')">
-            <a :href="settings.social.linkedin" aria-label="LinkedIn">LinkedIn</a>
-            <a :href="settings.social.instagram" aria-label="Instagram">Instagram</a>
-            <a :href="settings.social.youtube" aria-label="YouTube">YouTube</a>
+            <a v-for="s in socialLinks" :key="s.key" :href="s.url" :aria-label="s.label">{{ s.label }}</a>
           </div>
         </div>
 

@@ -65,6 +65,11 @@
     "instagram": "#",
     "youtube": "#"
   },
+  "socialLabels": {
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "youtube": "YouTube"
+  },
   "legalUi": {
     "tocLabel": { "es": "En esta página", "en": "On this page" },
     "tocAria": { "es": "Índice", "en": "Table of contents" },
