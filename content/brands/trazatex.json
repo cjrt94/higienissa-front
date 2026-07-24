@@ -42,8 +42,8 @@
     },
     "image": "/img/trazatex-hero.jpg",
     "imageAlt": {
-      "es": "Tags RFID textiles y etiquetas con antena: la tecnología detrás de la trazabilidad de Trazatex",
-      "en": "Textile RFID tags and antenna labels: the technology behind Trazatex's traceability"
+      "es": "Panel de inventario RFID en una lavandería: lectura de ropa etiquetada y métricas en tiempo real",
+      "en": "RFID inventory dashboard in a laundry: reading tagged linens and real-time metrics"
     },
     "ctaPrimary": {
       "to": "/contacto"
