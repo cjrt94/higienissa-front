@@ -157,7 +157,7 @@
         "name": "Pacífica",
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento del blanco", "en": "Linen processing" },
-        "image": "/img/pacifica-hero.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": {
           "es": "Pacífica: lavandería industrial inteligente para hotelería",
           "en": "Pacífica: smart industrial laundry for hospitality"
@@ -173,7 +173,7 @@
         "name": "Trazatex",
         "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
         "role": { "es": "Control de mermas", "en": "Loss control" },
-        "image": "/img/trazatex-hero.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": {
           "es": "Trazatex: RFID y data para la trazabilidad del textil hotelero",
           "en": "Trazatex: RFID and data for hotel textile traceability"

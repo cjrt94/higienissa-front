@@ -131,7 +131,7 @@
           "en": "Intelligent industrial laundry: where textile availability begins."
         },
         "to": "/marca-pacifica",
-        "image": "/img/pacifica-hero.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": {
           "es": "Pacífica · Procesa — división del ecosistema Higienissa",
           "en": "Pacífica · Process — Higienissa ecosystem division"
@@ -148,7 +148,7 @@
           "en": "RFID, software, auditing and data that turn the asset into information."
         },
         "to": "/marca-trazatex",
-        "image": "/img/trazatex-hero.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": {
           "es": "Trazatex · Traza — división del ecosistema Higienissa",
           "en": "Trazatex · Track — Higienissa ecosystem division"

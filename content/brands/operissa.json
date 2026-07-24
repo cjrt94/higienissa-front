@@ -504,7 +504,7 @@
           "es": "Lavandería industrial inteligente.",
           "en": "Intelligent industrial laundry."
         },
-        "image": "/img/pacifica-hero.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
           "en": "Pacífica industrial laundry: machines and washing process at scale"
@@ -517,7 +517,7 @@
           "es": "RFID, software, auditoría y data.",
           "en": "RFID, software, auditing and data."
         },
-        "image": "/img/trazatex-hero.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
           "en": "Trazatex: RFID technology and data applied to every textile asset"

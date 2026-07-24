@@ -187,7 +187,7 @@
         "name": { "es": "Trazatex", "en": "Trazatex" },
         "eyebrow": { "es": "Traza · RFID · data", "en": "Traces · RFID · data" },
         "role": { "es": "Trazabilidad por trabajador", "en": "Traceability per worker" },
-        "image": "/img/trazatex-hero.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": { "es": "Trazatex — RFID, software y data para trazabilidad textil", "en": "Trazatex — RFID, software and data for textile traceability" },
         "desc": {
           "es": "RFID, software, auditoría y data para la trazabilidad individual de cada uniforme y EPP textil.",
@@ -200,7 +200,7 @@
         "name": { "es": "Pacífica", "en": "Pacífica" },
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento en planta", "en": "In-plant processing" },
-        "image": "/img/pacifica-hero.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
         "desc": {
           "es": "Lavandería industrial inteligente para el procesamiento de uniformes y ropa de trabajo cuando la operación lo requiere.",

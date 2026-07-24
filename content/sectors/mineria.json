@@ -212,7 +212,7 @@
           "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse, también en faena.",
           "en": "Smart industrial laundry for operations that cannot stop, including on site."
         },
-        "image": "/img/pacifica-hero.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica para operaciones en faena",
           "en": "Pacífica industrial laundry for on-site operations"
@@ -244,7 +244,7 @@
           "es": "RFID, software, auditoría y data para la trazabilidad individual del textil de faena, incluso en operaciones remotas.",
           "en": "RFID, software, auditing and data for individual traceability of on-site textiles, even in remote operations."
         },
-        "image": "/img/trazatex-hero.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": {
           "es": "Trazatex: RFID y data para la trazabilidad del textil de faena",
           "en": "Trazatex: RFID and data for on-site textile traceability"
