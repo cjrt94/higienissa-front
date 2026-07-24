@@ -1,5 +1,5 @@
 <script setup>
-const page = useLegalContent('privacidad')
+const page = await useLegalContent('privacidad')
 const t = useT()
 
 // Mientras el documento conserve placeholders [ASÍ] (email legal/DPO, responsable,

@@ -1,74 +1,48 @@
 // Fuente de contenido del sitio público.
 //
-// Lee los JSON semilla en /content (build-time, SSG, sin SDK de Firebase en cliente).
-// El mismo shape ({ es, en } por campo) vive en Firestore `pages/{id}`; al conectar el admin
-// se reemplaza SOLO la implementación de estos loaders — los componentes no cambian.
+// Los loaders leen desde la API interna `/api/content/**` (server/api/content), que resuelve
+// Firestore (Admin SDK) con fallback a los JSON semilla en /content. En SSG esto corre en
+// build/prerender; el rebuild on-publish regenera con datos frescos. NO hay SDK de Firebase
+// en el cliente y los JSON semilla ya no entran al bundle público (viven solo en el server).
 //
-// Se importan como texto crudo (?raw) + JSON.parse para evitar el transform de JSON de Vite
-// (que en este entorno lanza "orgTransform.apply is not a function").
+// Todos los loaders son async: en las páginas se consumen con `await` (top-level en <script setup>).
+// useAsyncData cachea por key y transfiere el payload SSR→cliente (sin refetch en hidratación).
 
-import settingsRaw from '../content/settings.json?raw'
-
-import homeRaw from '../content/pages/home.json?raw'
-import contactoRaw from '../content/pages/contacto.json?raw'
-import institucionalRaw from '../content/pages/institucional.json?raw'
-import recursosRaw from '../content/pages/recursos.json?raw'
-import articuloRaw from '../content/pages/articulo.json?raw'
-
-import pacificaRaw from '../content/brands/pacifica.json?raw'
-import trazatexRaw from '../content/brands/trazatex.json?raw'
-import operissaRaw from '../content/brands/operissa.json?raw'
-
-import saludRaw from '../content/sectors/salud.json?raw'
-import hoteleriaRaw from '../content/sectors/hoteleria.json?raw'
-import industriaRaw from '../content/sectors/industria.json?raw'
-import mineriaRaw from '../content/sectors/mineria.json?raw'
-
-import avisoLegalRaw from '../content/legal/aviso-legal.json?raw'
-import privacidadRaw from '../content/legal/privacidad.json?raw'
-
-const P = (s) => JSON.parse(s)
-const settings = P(settingsRaw)
-const pages = {
-  home: P(homeRaw), contacto: P(contactoRaw),
-  institucional: P(institucionalRaw), recursos: P(recursosRaw), articulo: P(articuloRaw),
-}
-const brands = { pacifica: P(pacificaRaw), trazatex: P(trazatexRaw), operissa: P(operissaRaw) }
-const sectors = { salud: P(saludRaw), hoteleria: P(hoteleriaRaw), industria: P(industriaRaw), mineria: P(mineriaRaw) }
-const legal = { 'aviso-legal': P(avisoLegalRaw), privacidad: P(privacidadRaw) }
-
-export function useSettings() {
-  return settings
+export async function useSettings() {
+  const { data } = await useAsyncData('content:settings', () => $fetch('/api/content/settings'))
+  return data.value
 }
 
-export function usePageContent(id) {
-  const page = pages[id]
-  if (!page) throw createError({ statusCode: 404, statusMessage: `Página no encontrada: ${id}` })
-  return page
+export async function usePageContent(id) {
+  const { data } = await useAsyncData(`content:page:${id}`, () => $fetch(`/api/content/pages/${id}`))
+  if (!data.value) throw createError({ statusCode: 404, statusMessage: `Página no encontrada: ${id}` })
+  return data.value
 }
 
-export function useBrandContent(slug) {
-  const brand = brands[slug]
-  if (!brand) throw createError({ statusCode: 404, statusMessage: `Marca no encontrada: ${slug}` })
-  return brand
+export async function useBrandContent(slug) {
+  const { data } = await useAsyncData(`content:brand:${slug}`, () => $fetch(`/api/content/brands/${slug}`))
+  if (!data.value) throw createError({ statusCode: 404, statusMessage: `Marca no encontrada: ${slug}` })
+  return data.value
 }
 
-export function useSectorContent(slug) {
-  const sector = sectors[slug]
-  if (!sector) throw createError({ statusCode: 404, statusMessage: `Sector no encontrado: ${slug}` })
-  return sector
+export async function useAllBrands() {
+  const { data } = await useAsyncData('content:brands', () => $fetch('/api/content/brands'))
+  return data.value || []
 }
 
-export function useAllSectors() {
-  return Object.values(sectors).sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+export async function useSectorContent(slug) {
+  const { data } = await useAsyncData(`content:sector:${slug}`, () => $fetch(`/api/content/sectors/${slug}`))
+  if (!data.value) throw createError({ statusCode: 404, statusMessage: `Sector no encontrado: ${slug}` })
+  return data.value
 }
 
-export function useAllBrands() {
-  return Object.values(brands).sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+export async function useAllSectors() {
+  const { data } = await useAsyncData('content:sectors', () => $fetch('/api/content/sectors'))
+  return data.value || []
 }
 
-export function useLegalContent(slug) {
-  const doc = legal[slug]
-  if (!doc) throw createError({ statusCode: 404, statusMessage: `Documento legal no encontrado: ${slug}` })
-  return doc
+export async function useLegalContent(slug) {
+  const { data } = await useAsyncData(`content:legal:${slug}`, () => $fetch(`/api/content/legal/${slug}`))
+  if (!data.value) throw createError({ statusCode: 404, statusMessage: `Documento legal no encontrado: ${slug}` })
+  return data.value
 }

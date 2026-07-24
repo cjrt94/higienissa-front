@@ -1,5 +1,5 @@
 <script setup>
-const page = usePageContent('home')
+const page = await usePageContent('home')
 const t = useT()
 const config = useRuntimeConfig()
 

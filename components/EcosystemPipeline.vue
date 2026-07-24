@@ -14,7 +14,7 @@ const props = defineProps({
 })
 const t = useT()
 const localePath = useLocalePath()
-const nodes = useSettings().ecosystem.pipeline
+const nodes = (await useSettings()).ecosystem.pipeline
 </script>
 
 <template>

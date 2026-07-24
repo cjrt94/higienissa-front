@@ -1,5 +1,5 @@
 <script setup>
-const page = usePageContent('recursos')
+const page = await usePageContent('recursos')
 const t = useT()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()

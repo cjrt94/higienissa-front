@@ -1,5 +1,5 @@
 <script setup>
-const page = usePageContent('articulo')
+const page = await usePageContent('articulo')
 const t = useT()
 const { t: $t } = useI18n()
 const localePath = useLocalePath()

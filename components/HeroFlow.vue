@@ -3,7 +3,7 @@
 // el flujo del ecosistema (Procesa → Traza → Opera) con riel central animado.
 const props = defineProps({ data: { type: Object, required: true } })
 const t = useT()
-const settings = useSettings()
+const settings = await useSettings()
 const { locale } = useI18n()
 const hlTitle = computed(() =>
   t(props.data.title)

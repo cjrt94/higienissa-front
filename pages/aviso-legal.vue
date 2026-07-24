@@ -1,7 +1,7 @@
 <script setup>
-const page = useLegalContent('aviso-legal')
+const page = await useLegalContent('aviso-legal')
 const t = useT()
-const settings = useSettings()
+const settings = await useSettings()
 
 // Atribución de imágenes de terceros con licencia CC (obligatoria) — vive aquí, al
 // final del aviso legal, no en el footer global. LegalDoc la renderiza como sección

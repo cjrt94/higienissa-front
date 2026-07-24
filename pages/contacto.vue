@@ -1,7 +1,7 @@
 <script setup>
-const page = usePageContent('contacto')
+const page = await usePageContent('contacto')
 const t = useT()
-const settings = useSettings()
+const settings = await useSettings()
 
 useSeoMeta({
   title: () => t(page.seo.title),

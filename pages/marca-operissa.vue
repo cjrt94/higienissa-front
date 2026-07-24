@@ -1,5 +1,5 @@
 <script setup>
-const page = useBrandContent('operissa')
+const page = await useBrandContent('operissa')
 const t = useT()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()

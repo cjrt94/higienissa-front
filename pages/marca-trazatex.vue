@@ -1,5 +1,5 @@
 <script setup>
-const page = useBrandContent('trazatex')
+const page = await useBrandContent('trazatex')
 const t = useT()
 const config = useRuntimeConfig()
 

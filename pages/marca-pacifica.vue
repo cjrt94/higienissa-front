@@ -1,5 +1,5 @@
 <script setup>
-const page = useBrandContent('pacifica')
+const page = await useBrandContent('pacifica')
 const t = useT()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()

@@ -1,5 +1,5 @@
 <script setup>
-const page = useSectorContent('salud')
+const page = await useSectorContent('salud')
 // Hero de tope = foto oscura a sangre → el navbar transparente va en blanco (contraste AA).
 definePageMeta({ darkHero: true })
 const t = useT()

@@ -2,7 +2,7 @@
 const { t } = useI18n()
 const tt = useT()
 const localePath = useLocalePath()
-const settings = useSettings()
+const settings = await useSettings()
 
 const brandsCol = [
   { to: '/marca-pacifica', key: 'pacifica' },
