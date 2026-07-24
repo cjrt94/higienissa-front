@@ -21,6 +21,15 @@ const EXTRA = {
   blurb: { es: 'El estándar único que integra proceso, trazabilidad y operación.', en: 'The single standard that integrates process, traceability and operation.' },
 }
 const groupNode = computed(() => props.data.groupNode || EXTRA)
+
+// Negrita segura por convención **texto** en las descripciones (sin v-html: se
+// interpola con {{ }} y se envuelve solo el segmento marcado en <strong>).
+function boldParts(text) {
+  return String(text || '')
+    .split(/(\*\*[^*]+\*\*)/g)
+    .filter(Boolean)
+    .map((seg) => (/^\*\*[^*]+\*\*$/.test(seg) ? { b: true, t: seg.slice(2, -2) } : { b: false, t: seg }))
+}
 const nodes = computed(() => [
   // Descripciones desde settings.ecosystem.pipeline (editables en /admin/settings).
   ...settings.ecosystem.pipeline.map((n) => ({
@@ -59,7 +68,7 @@ const nodes = computed(() => [
             <span class="fn-mark"><BaseIcon :name="n.icon" :size="n.key === 'grupo' ? 24 : 20" /></span>
             <span class="fn-name">{{ n.name }}</span>
             <span class="fn-role">{{ t(n.role) }}</span>
-            <span class="fn-desc">{{ n.blurb }}</span>
+            <span class="fn-desc"><template v-for="(part, pi) in boldParts(n.blurb)" :key="pi"><strong v-if="part.b">{{ part.t }}</strong><template v-else>{{ part.t }}</template></template></span>
           </li>
         </ol>
       </div>
@@ -96,7 +105,7 @@ const nodes = computed(() => [
 .fn-mark { position: relative; z-index: 1; display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 72%, var(--azul)) 100%); box-shadow: 0 4px 14px color-mix(in srgb, var(--azul) 22%, transparent); margin-bottom: var(--space-4); }
 .fn-name { font: 600 1.35rem/1.1 var(--font-display); color: var(--ink); }
 .fn-role { font: 600 var(--fs-body-sm) var(--font-body); color: var(--celeste); margin: 3px 0 var(--space-3); }
-.fn-desc { font-size: var(--fs-body-sm); line-height: 1.5; color: var(--muted); max-width: 30ch; }
+.fn-desc { font-size: var(--fs-small); line-height: 1.5; color: var(--muted); max-width: 30ch; }
 .fn-desc :deep(strong) { font-weight: 700; color: var(--ink); }
 
 /* Nodo de cierre: Grupo Higienissa se destaca como ancla/culminación del flujo

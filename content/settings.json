@@ -98,8 +98,8 @@
         "name": "Pacífica",
         "role": { "es": "Procesa", "en": "Processes" },
         "desc": {
-          "es": "Lavandería industrial inteligente: el punto donde empieza la disponibilidad del textil.",
-          "en": "Smart industrial laundry: the point where textile availability begins."
+          "es": "**Lavandería** industrial inteligente: el punto donde empieza la disponibilidad del textil.",
+          "en": "Smart industrial **laundry**: the point where textile availability begins."
         },
         "to": "/marca-pacifica"
       },
