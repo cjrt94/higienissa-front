@@ -9,6 +9,8 @@ defineOptions({ name: 'AdminObjectEditor' })
 const props = defineProps({
   model: { type: [Object, Array], required: true },
   lang: { type: String, default: 'es' }, // pestaña de idioma activa
+  pageId: { type: String, default: 'misc' }, // contexto para la ruta de Storage
+  blockId: { type: String, default: 'block' },
 })
 
 const isBilingual = (v) => v && typeof v === 'object' && !Array.isArray(v)
@@ -22,6 +24,11 @@ const entries = computed(() =>
 
 const label = (k) => String(k).replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase())
 const isLong = (v) => typeof v === 'string' && v.length > 80
+// Campo de imagen: por extensión de archivo o por nombre de clave (excluye `icon`, que son
+// nombres de íconos Lucide, y `imageAlt`, que es bilingüe y se maneja aparte).
+const isImageField = (k, v) =>
+  /\.(jpg|jpeg|png|webp|gif|avif|svg)$/i.test(v) ||
+  (/(image|img|photo|cover|poster|logo)/i.test(String(k)) && !/alt/i.test(String(k)))
 </script>
 
 <template>
@@ -34,11 +41,16 @@ const isLong = (v) => typeof v === 'string' && v.length > 80
         <input v-else v-model="e.value[lang]" type="text">
       </div>
 
-      <!-- string simple (imágenes, refs, slugs) -->
+      <!-- string de imagen → subidor a Storage -->
+      <div v-else-if="typeof e.value === 'string' && isImageField(e.label, e.value)" class="admin-field">
+        <label>{{ label(e.label) }}</label>
+        <ImageUploader v-model="props.model[e.key]" :page-id="pageId" :block-id="blockId" />
+      </div>
+
+      <!-- string simple (refs, slugs, íconos) -->
       <div v-else-if="typeof e.value === 'string'" class="admin-field">
         <label>{{ label(e.label) }}</label>
         <input v-model="props.model[e.key]" type="text">
-        <img v-if="/\.(jpg|jpeg|png|webp)$/i.test(e.value)" :src="e.value" alt="" style="max-height:70px;border-radius:8px;margin-top:6px">
       </div>
 
       <!-- número / bool -->
@@ -50,7 +62,7 @@ const isLong = (v) => typeof v === 'string' && v.length > 80
       <!-- array u objeto anidado -->
       <fieldset v-else-if="e.value && typeof e.value === 'object'" class="obj-nest">
         <legend>{{ label(e.label) }}</legend>
-        <AdminObjectEditor :model="e.value" :lang="lang" />
+        <AdminObjectEditor :model="e.value" :lang="lang" :page-id="pageId" :block-id="blockId" />
       </fieldset>
     </div>
   </div>

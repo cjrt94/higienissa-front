@@ -25,6 +25,7 @@ const nav = [
   { to: '/admin/sectors', label: 'Sectores' },
   { to: '/admin/posts', label: 'Blog' },
   { to: '/admin/submissions', label: 'Contactos' },
+  { to: '/admin/settings', label: 'Ajustes' },
 ]
 </script>
 

@@ -38,14 +38,33 @@ onMounted(async () => {
   }
 })
 
+function addTextBlock() {
+  doc.value.blocks.push({
+    id: `richText-${crypto.randomUUID().slice(0, 8)}`,
+    type: 'richText',
+    order: doc.value.blocks.length,
+    data: { title: { es: '', en: '' }, body: { es: '', en: '' } },
+  })
+}
+
+async function removeBlock(el) {
+  const ok = await confirm({ title: 'Eliminar bloque', message: `¿Eliminar el bloque "${el.type}"? Se aplica al guardar.`, confirmText: 'Eliminar', danger: true })
+  if (!ok) return
+  const i = doc.value.blocks.indexOf(el)
+  if (i >= 0) doc.value.blocks.splice(i, 1)
+  if (editing.value === el) editing.value = null
+}
+
 async function saveDraft() {
   saving.value = true
   try {
     const { db } = await useFirebase()
     const { doc: dref, setDoc, serverTimestamp } = await import('firebase/firestore')
+    // Renumerar `order` por posición del array (el arrastre reordena el array, no el campo).
+    const blocks = doc.value.blocks.map((b, i) => ({ ...b, order: i }))
     await setDoc(dref(db, 'pages', id), {
       seo: doc.value.seo,
-      draft: { blocks: doc.value.blocks },
+      draft: { blocks },
       status: doc.value.status || 'draft',
       updatedAt: serverTimestamp(),
     }, { merge: true })
@@ -106,7 +125,10 @@ async function onPublish() {
     </div>
 
     <!-- Bloques -->
-    <b style="display:block;margin-bottom:10px">Bloques ({{ doc.blocks.length }})</b>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <b>Bloques ({{ doc.blocks.length }})</b>
+      <button class="admin-btn ghost small" @click="addTextBlock">+ Bloque de texto</button>
+    </div>
     <draggable v-model="doc.blocks" item-key="id" handle=".drag" class="admin-list">
       <template #item="{ element }">
         <div class="admin-row">
@@ -117,7 +139,10 @@ async function onPublish() {
               <small>orden {{ element.order }}</small>
             </div>
           </div>
-          <button class="admin-btn ghost small" @click="editing = element">Editar contenido</button>
+          <div style="display:flex;gap:8px">
+            <button class="admin-btn ghost small" @click="editing = element">Editar contenido</button>
+            <button class="admin-btn ghost small danger" @click="removeBlock(element)">Eliminar</button>
+          </div>
         </div>
       </template>
     </draggable>
@@ -128,7 +153,7 @@ async function onPublish() {
           <button :class="{ active: lang === 'es' }" @click="lang = 'es'">ES</button>
           <button :class="{ active: lang === 'en' }" @click="lang = 'en'">EN</button>
         </div>
-        <AdminObjectEditor :model="editing.data" :lang="lang" />
+        <AdminObjectEditor :model="editing.data" :lang="lang" :page-id="id" :block-id="editing.type" />
       </div>
       <template #footer>
         <button class="admin-btn" @click="editing = null">Listo</button>

@@ -50,6 +50,14 @@ exports.publishPage = onCall({ secrets: [VERCEL_DEPLOY_HOOK] }, async (req) => {
   return { ok: true }
 })
 
+// Rebuild directo (sin draft→published): para colecciones planas (settings, brands, sectors)
+// que se editan en el doc en vivo y solo necesitan regenerar el sitio SSG tras guardar.
+exports.rebuild = onCall({ secrets: [VERCEL_DEPLOY_HOOK] }, async (req) => {
+  await requireEditor(req.auth)
+  await triggerRebuild(VERCEL_DEPLOY_HOOK.value())
+  return { ok: true }
+})
+
 // Denormalización: mantener postCategories.postCount al escribir posts.
 exports.onPostWritten = onDocumentWritten('posts/{postId}', async (event) => {
   const before = event.data?.before?.data()
