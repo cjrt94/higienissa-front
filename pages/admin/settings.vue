@@ -1,5 +1,5 @@
 <script setup>
-definePageMeta({ layout: 'admin' })
+definePageMeta({ layout: 'admin', pageTransition: false })
 defineI18nRoute(false)
 useHead({ title: 'Ajustes · Admin' })
 

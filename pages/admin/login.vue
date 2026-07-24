@@ -1,6 +1,6 @@
 <script setup>
 import '~/assets/css/admin.css'
-definePageMeta({ layout: false })
+definePageMeta({ layout: false, pageTransition: false })
 defineI18nRoute(false)
 
 const { login, init, isAuthed, isEditor, ready } = useAuth()

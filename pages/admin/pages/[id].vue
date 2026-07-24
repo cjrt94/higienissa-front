@@ -1,6 +1,6 @@
 <script setup>
 import draggable from 'vuedraggable'
-definePageMeta({ layout: 'admin' })
+definePageMeta({ layout: 'admin', pageTransition: false })
 defineI18nRoute(false)
 
 const route = useRoute()
@@ -14,9 +14,19 @@ const doc = ref(null)
 const loading = ref(true)
 const saving = ref(false)
 const lang = ref('es')
-const editing = ref(null) // bloque en edición (modal)
+const selected = ref(null) // 'seo' | bloque | null
 
 useHead(() => ({ title: `Editar ${id} · Admin` }))
+
+const BLOCK_LABELS = {
+  hero: 'Hero', groupIntro: 'Quiénes somos', divisions: 'Divisiones', pillars: 'Pilares',
+  sectorsBlock: 'Sectores', asis: 'ASIS', finalCta: 'CTA final', richText: 'Texto',
+  whoWeAre: 'Quiénes somos', ecosystem: 'Ecosistema', capabilities: 'Capacidades',
+  methodology: 'Metodología', differentiators: 'Diferenciadores', aside: 'Panel lateral',
+  process: 'Proceso', body: 'Cuerpo', related: 'Relacionados', filters: 'Filtros',
+  posts: 'Posts', pagination: 'Paginación',
+}
+const blockLabel = (t) => BLOCK_LABELS[t] || t
 
 onMounted(async () => {
   try {
@@ -25,12 +35,12 @@ onMounted(async () => {
     const snap = await getDoc(dref(db, 'pages', id))
     if (!snap.exists()) { toast.error('Página no encontrada.'); router.replace('/admin/pages'); return }
     const data = snap.data()
-    // trabajar sobre el draft (o clon de lo publicado)
     doc.value = {
       ...data,
       seo: data.seo || { title: { es: '', en: '' }, description: { es: '', en: '' } },
       blocks: structuredClone(data.draft?.blocks || data.blocks || []),
     }
+    selected.value = doc.value.blocks[0] || 'seo'
   } catch (e) {
     toast.error('No se pudo cargar. Verificá Firebase en .env.')
   } finally {
@@ -39,20 +49,22 @@ onMounted(async () => {
 })
 
 function addTextBlock() {
-  doc.value.blocks.push({
+  const block = {
     id: `richText-${crypto.randomUUID().slice(0, 8)}`,
     type: 'richText',
     order: doc.value.blocks.length,
     data: { title: { es: '', en: '' }, body: { es: '', en: '' } },
-  })
+  }
+  doc.value.blocks.push(block)
+  selected.value = block
 }
 
 async function removeBlock(el) {
-  const ok = await confirm({ title: 'Eliminar bloque', message: `¿Eliminar el bloque "${el.type}"? Se aplica al guardar.`, confirmText: 'Eliminar', danger: true })
+  const ok = await confirm({ title: 'Eliminar bloque', message: `¿Eliminar el bloque "${blockLabel(el.type)}"? Se aplica al guardar.`, confirmText: 'Eliminar', danger: true })
   if (!ok) return
   const i = doc.value.blocks.indexOf(el)
   if (i >= 0) doc.value.blocks.splice(i, 1)
-  if (editing.value === el) editing.value = null
+  if (selected.value === el) selected.value = doc.value.blocks[0] || 'seo'
 }
 
 async function saveDraft() {
@@ -60,7 +72,6 @@ async function saveDraft() {
   try {
     const { db } = await useFirebase()
     const { doc: dref, setDoc, serverTimestamp } = await import('firebase/firestore')
-    // Renumerar `order` por posición del array (el arrastre reordena el array, no el campo).
     const blocks = doc.value.blocks.map((b, i) => ({ ...b, order: i }))
     await setDoc(dref(db, 'pages', id), {
       seo: doc.value.seo,
@@ -94,70 +105,81 @@ async function onPublish() {
 </script>
 
 <template>
-  <h1>Editar: {{ id }}</h1>
-
-  <p v-if="loading" style="color:#7a8190">Cargando…</p>
-  <div v-else-if="doc">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap">
-      <div class="lang-tabs">
-        <button :class="{ active: lang === 'es' }" @click="lang = 'es'">ES</button>
-        <button :class="{ active: lang === 'en' }" @click="lang = 'en'">EN</button>
-      </div>
-      <div style="display:flex;gap:10px">
-        <button class="admin-btn ghost" :disabled="saving" @click="saveDraft">Guardar borrador</button>
-        <button class="admin-btn" :disabled="saving" @click="onPublish">Publicar</button>
-      </div>
-    </div>
-
-    <!-- SEO -->
-    <div class="admin-card" style="margin-bottom:20px">
-      <b style="display:block;margin-bottom:12px">SEO ({{ lang.toUpperCase() }})</b>
-      <div class="admin-field">
-        <label>Título</label>
-        <input v-model="doc.seo.title[lang]" type="text" maxlength="70">
-        <span class="hint">Máx. 70 caracteres.</span>
-      </div>
-      <div class="admin-field">
-        <label>Descripción</label>
-        <textarea v-model="doc.seo.description[lang]" maxlength="180" />
-        <span class="hint">Máx. 180 caracteres.</span>
-      </div>
-    </div>
-
-    <!-- Bloques -->
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <b>Bloques ({{ doc.blocks.length }})</b>
-      <button class="admin-btn ghost small" @click="addTextBlock">+ Bloque de texto</button>
-    </div>
-    <draggable v-model="doc.blocks" item-key="id" handle=".drag" class="admin-list">
-      <template #item="{ element }">
-        <div class="admin-row">
-          <div class="meta" style="flex-direction:row;align-items:center;gap:12px">
-            <span class="drag" style="cursor:grab;color:#c9d3e8">⠿</span>
-            <div class="meta">
-              <b>{{ element.type }}</b>
-              <small>orden {{ element.order }}</small>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px">
-            <button class="admin-btn ghost small" @click="editing = element">Editar contenido</button>
-            <button class="admin-btn ghost small danger" @click="removeBlock(element)">Eliminar</button>
-          </div>
+  <div>
+    <div class="editor-bar">
+      <div style="display:flex;align-items:center;gap:12px;min-width:0">
+        <NuxtLink to="/admin/pages" class="admin-btn ghost small">←</NuxtLink>
+        <div style="min-width:0">
+          <h1 style="margin:0;font-size:1.25rem;text-transform:capitalize">{{ id }}</h1>
+          <span v-if="doc" class="badge-status" :class="doc.status === 'published' ? 'published' : 'draft'">{{ doc.status === 'published' ? 'publicada' : 'borrador' }}</span>
         </div>
-      </template>
-    </draggable>
-
-    <BaseModal :model-value="!!editing" wide :title="`Bloque: ${editing?.type}`" @update:model-value="editing = null">
-      <div v-if="editing">
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
         <div class="lang-tabs">
           <button :class="{ active: lang === 'es' }" @click="lang = 'es'">ES</button>
           <button :class="{ active: lang === 'en' }" @click="lang = 'en'">EN</button>
         </div>
-        <AdminObjectEditor :model="editing.data" :lang="lang" :page-id="id" :block-id="editing.type" />
+        <button class="admin-btn ghost" :disabled="saving || !doc" @click="saveDraft">Guardar borrador</button>
+        <button class="admin-btn" :disabled="saving || !doc" @click="onPublish">Publicar</button>
       </div>
-      <template #footer>
-        <button class="admin-btn" @click="editing = null">Listo</button>
-      </template>
-    </BaseModal>
+    </div>
+
+    <div v-if="loading" style="display:grid;place-items:center;padding:60px"><div class="admin-spinner" /></div>
+
+    <div v-else-if="doc" class="editor-2col">
+      <!-- Columna izquierda: SEO + lista de bloques -->
+      <div>
+        <div class="block-list">
+          <div class="block-item" :class="{ 'is-active': selected === 'seo' }" @click="selected = 'seo'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7" /><path d="M21 21l-4.3-4.3" /></svg>
+            <span class="b-name">SEO</span>
+          </div>
+          <draggable v-model="doc.blocks" item-key="id" handle=".drag" class="block-list">
+            <template #item="{ element }">
+              <div class="block-item" :class="{ 'is-active': selected === element }" @click="selected = element">
+                <span class="drag" title="Arrastrar para reordenar">⠿</span>
+                <span class="b-name">{{ blockLabel(element.type) }}</span>
+                <button class="b-del" title="Eliminar" @click.stop="removeBlock(element)">×</button>
+              </div>
+            </template>
+          </draggable>
+        </div>
+        <button class="admin-btn ghost small" style="margin-top:12px;width:100%;justify-content:center" @click="addTextBlock">+ Bloque de texto</button>
+      </div>
+
+      <!-- Columna derecha: editor del bloque seleccionado -->
+      <div class="editor-pane">
+        <template v-if="selected === 'seo'">
+          <div class="editor-pane-head"><b>SEO ({{ lang.toUpperCase() }})</b></div>
+          <div class="editor-pane-body">
+            <div class="admin-field">
+              <label>Título</label>
+              <input v-model="doc.seo.title[lang]" type="text" maxlength="70">
+              <span class="hint">Máx. 70 caracteres · aparece en la pestaña del navegador y en Google.</span>
+            </div>
+            <div class="admin-field">
+              <label>Descripción</label>
+              <textarea v-model="doc.seo.description[lang]" maxlength="180" />
+              <span class="hint">Máx. 180 caracteres · el resumen que muestra Google.</span>
+            </div>
+          </div>
+        </template>
+
+        <template v-else-if="selected">
+          <div class="editor-pane-head">
+            <b>{{ blockLabel(selected.type) }}</b>
+            <span class="hint" style="font-size:.78rem">{{ lang.toUpperCase() }}</span>
+          </div>
+          <div class="editor-pane-body">
+            <AdminObjectEditor :model="selected.data" :lang="lang" :page-id="id" :block-id="selected.type" />
+          </div>
+        </template>
+
+        <div v-else class="editor-empty">
+          <div class="big">✎</div>
+          Seleccioná un bloque de la izquierda para editar su contenido.
+        </div>
+      </div>
+    </div>
   </div>
 </template>

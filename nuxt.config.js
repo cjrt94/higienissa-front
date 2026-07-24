@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     '~/assets/css/sections.css',
   ],
 
+  // Auto-import por nombre de archivo (sin prefijo de carpeta): componentes en
+  // components/ui, components/admin, components/sector se usan como <BaseModal>,
+  // <CollectionEditor>, <SectorHero>, etc. (el prefijo por defecto rompía la resolución).
+  components: [{ path: '~/components', pathPrefix: false }],
+
   modules: [
     '@nuxtjs/i18n',
   ],
