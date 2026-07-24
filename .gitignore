@@ -10,6 +10,10 @@ dist
 .env
 .env.*
 !.env.example
+# Service accounts / claves privadas — NUNCA commitear
+*firebase-adminsdk*.json
+*serviceAccount*.json
+*-service-account*.json
 
 # Firebase
 .firebase
