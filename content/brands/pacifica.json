@@ -29,10 +29,10 @@
       "es": "Lavandería industrial inteligente con el respaldo del ecosistema Grupo Higienissa: procesos especializados, trazabilidad y disponibilidad garantizada.",
       "en": "Smart industrial laundry backed by the Grupo Higienissa ecosystem: specialized processes, traceability and guaranteed availability."
     },
-    "image": "/img/pacifica-hero.jpg",
+    "image": "/img/pacifica-hero-rfid.jpg",
     "imageAlt": {
-      "es": "Planta de lavandería industrial Pacífica: línea de alimentación y planchado operando a escala",
-      "en": "Pacífica industrial laundry plant: feeding and ironing line operating at scale"
+      "es": "Panel de inventario RFID en una lavandería: lectura de ropa etiquetada y métricas en tiempo real",
+      "en": "RFID inventory dashboard in a laundry: reading tagged linens and real-time metrics"
     },
     "badge": {
       "icon": "activity",

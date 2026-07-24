@@ -16,6 +16,7 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `ecosistema.jpg` | **Foto propia** — planta de Grupo Higienissa | Grupo Higienissa | Propietaria | No |
 | `asis-idtrak.jpg` | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RFID_Chip_004.JPG) | Maschinenjunge | CC BY-SA 3.0 | **Sí + share-alike** |
 | `pacifica-hero.jpg` | **Foto propia** — planta de Grupo Higienissa (línea de alimentación/planchado) | Grupo Higienissa | Propietaria | No |
+| `pacifica-hero-rfid.jpg` | Aportada por el cliente (Grupo Higienissa) | Grupo Higienissa | Propietaria | No |
 | `pacifica-proceso.jpg` | **Foto propia** — planta de Grupo Higienissa (calandra) | Grupo Higienissa | Propietaria | No |
 | `pacifica-band.jpg` | **Foto propia** — planta de Grupo Higienissa (línea de alimentadoras) | Grupo Higienissa | Propietaria | No |
 | `operissa-hero.jpg` | [Pexels](https://www.pexels.com/photo/31259205/) | EqualStock IN | Pexels License | No (opcional) |
