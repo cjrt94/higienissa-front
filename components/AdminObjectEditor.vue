@@ -53,10 +53,15 @@ const isImageField = (k, v) =>
         <input v-model="props.model[e.key]" type="text">
       </div>
 
-      <!-- número / bool -->
-      <div v-else-if="typeof e.value === 'number' || typeof e.value === 'boolean'" class="admin-field">
+      <!-- booleano → checkbox -->
+      <div v-else-if="typeof e.value === 'boolean'" class="admin-field admin-field-check">
+        <label><input v-model="props.model[e.key]" type="checkbox"> {{ label(e.label) }}</label>
+      </div>
+
+      <!-- número -->
+      <div v-else-if="typeof e.value === 'number'" class="admin-field">
         <label>{{ label(e.label) }}</label>
-        <input v-model="props.model[e.key]" type="text">
+        <input v-model.number="props.model[e.key]" type="number">
       </div>
 
       <!-- array u objeto anidado -->
