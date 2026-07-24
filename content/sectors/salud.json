@@ -186,7 +186,7 @@
           "es": "Lavandería industrial inteligente con estándar de bioseguridad para operaciones clínicas.",
           "en": "Smart industrial laundry with a biosafety standard for clinical operations."
         },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": {
           "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
           "en": "Pacífica industrial laundry: machines and washing process at scale"
@@ -202,7 +202,7 @@
           "es": "RFID, software, auditoría y data para la trazabilidad individual de cada activo textil.",
           "en": "RFID, software, auditing and data for individual traceability of each textile asset."
         },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": {
           "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil",
           "en": "Trazatex: RFID technology and data applied to every textile asset"
@@ -218,7 +218,7 @@
           "es": "Operación y gestión especializada de la logística textil clínica, con personas y procesos a la medida del entorno hospitalario.",
           "en": "Specialized operation and management of clinical textile logistics, with people and processes tailored to the hospital environment."
         },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": {
           "es": "Operissa: equipos y procesos de operación textil especializada en terreno",
           "en": "Operissa: teams and processes for specialized on-site textile operations"

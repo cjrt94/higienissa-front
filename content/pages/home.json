@@ -82,7 +82,7 @@
         "eyebrow": { "es": "Lavandería inteligente", "en": "Smart laundry" },
         "name": "Pacífica",
         "desc": { "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse: procesos especializados, trazabilidad y disponibilidad garantizada del textil.", "en": "Smart industrial laundry for operations that cannot stop: specialized processes, traceability and guaranteed textile availability." },
-        "image": "/img/marca-pacifica.jpg",
+        "image": "/img/pacifica-hero-rfid.jpg",
         "imageAlt": { "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala", "en": "Pacífica industrial laundry: machines and washing process at scale" },
         "to": "/marca-pacifica"
       },
@@ -90,7 +90,7 @@
         "eyebrow": { "es": "Trazabilidad · RFID · data", "en": "Traceability · RFID · data" },
         "name": "Trazatex",
         "desc": { "es": "RFID, software, auditoría y data que convierten cada activo textil en información gestionable, con control en tiempo real de cada ciclo.", "en": "RFID, software, auditing and data that turn every textile asset into manageable information, with real-time control of each cycle." },
-        "image": "/img/marca-trazatex.jpg",
+        "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": { "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil", "en": "Trazatex: RFID technology and data applied to every textile asset" },
         "to": "/marca-trazatex"
       },
@@ -98,7 +98,7 @@
         "eyebrow": { "es": "Operación en terreno", "en": "On-site operations" },
         "name": "Operissa",
         "desc": { "es": "Operación y gestión textil especializada en terreno, con personas y procesos a la medida de cada operación.", "en": "Specialized on-site textile operations and management, with people and processes tailored to each operation." },
-        "image": "/img/marca-operissa.jpg",
+        "image": "/img/operissa-hero.jpg",
         "imageAlt": { "es": "Operissa: equipos y procesos de operación textil especializada en terreno", "en": "Operissa: teams and processes for specialized on-site textile operations" },
         "to": "/marca-operissa"
       }
