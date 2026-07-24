@@ -21,7 +21,7 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `operissa-hero.jpg` | [Pexels](https://www.pexels.com/photo/31259205/) | EqualStock IN | Pexels License | No (opcional) |
 | `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/two-workers-in-a-warehouse-4487365/) | Tiger Lily | Pexels License | No (opcional) |
 | `operissa-band.jpg` | [Pexels](https://www.pexels.com/photo/31047154/) | EqualStock IN | Pexels License | No (opcional) |
-| `trazatex-hero.jpg` | [Pexels](https://www.pexels.com/photo/4483942/) | Tiger Lily | Pexels License | No (opcional) |
+| `trazatex-hero.jpg` | [Pexels](https://www.pexels.com/photo/textile-factory-worker-in-manufacturing-facility-31091544/) | — | Pexels License | No (opcional) |
 | `trazatex-datos.jpg` | [Pexels](https://www.pexels.com/photo/36950598/) | Jakub Zerdzicki | Pexels License | No (opcional) |
 | `trazatex-band.jpg` | [Pexels](https://www.pexels.com/photo/27141307/) | Egor Komarov | Pexels License | No (opcional) |
 | `hoteleria-hero.jpg` | [Pexels](https://www.pexels.com/photo/2736388/) | Engin Akyurt | Pexels License | No (opcional) |
