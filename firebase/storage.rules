@@ -1,10 +1,13 @@
 rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
-    function profile() { return firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data; }
+    // Autoridad por CUSTOM CLAIM en el token (`role`), NO por firestore.get cross-service:
+    // la lectura Storage→Firestore falla silenciosamente en este proyecto y devuelve 403 en
+    // cada subida. El claim lo setea scripts/create-staff.mjs vía setCustomUserClaims({role}).
+    // (Patrón del equipo: autoridad en el claim, no en el doc — ver security_rules skill.)
     function isEditor() {
-      return request.auth != null && profile().active == true &&
-        (profile().role == 'admin' || profile().role == 'editor');
+      return request.auth != null
+        && request.auth.token.role in ['admin', 'editor'];
     }
     match /images/{allPaths=**} {
       allow read: if true;                                  // imágenes públicas del sitio

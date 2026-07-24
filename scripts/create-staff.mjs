@@ -1,9 +1,12 @@
-// Crea (o actualiza) el usuario staff del back office: cuenta en Firebase Auth +
-// doc users/{uid} con rol admin activo (el admin lee el rol de Firestore, no de claims).
+// Crea (o actualiza) el usuario staff del back office:
+//   · cuenta en Firebase Auth
+//   · custom claim `role` (autoridad de las Storage rules — subida de imágenes)
+//   · doc users/{uid} con rol admin activo (lo lee el cliente useAuth + las Firestore rules)
 //
 //   STAFF_EMAIL=alguien@higienissa.com STAFF_PASSWORD='••••••' node scripts/create-staff.mjs
 //
 // Requiere FIREBASE_SERVICE_ACCOUNT en .env o el entorno.
+// Nota: tras setear el claim, el usuario debe re-loguear para que su token lo incluya.
 
 import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
@@ -46,8 +49,14 @@ try {
   console.log(`▸ Usuario creado: ${email}`)
 }
 
+const role = process.env.STAFF_ROLE || 'admin'
+
+// Custom claim `role`: fuente de autoridad de las Storage rules (subida de imágenes).
+await auth.setCustomUserClaims(user.uid, { ...(user.customClaims || {}), role })
+console.log(`▸ custom claim role='${role}' seteado (re-logueá para refrescar el token).`)
+
 await db.doc(`users/${user.uid}`).set(
-  { name, lastName, email, role: 'admin', active: true, updatedAt: FieldValue.serverTimestamp() },
+  { name, lastName, email, role, active: true, updatedAt: FieldValue.serverTimestamp() },
   { merge: true },
 )
-console.log(`✔ users/${user.uid} → role admin, activo. Ya podés entrar a /admin/login.`)
+console.log(`✔ users/${user.uid} → role ${role}, activo. Ya podés entrar a /admin/login.`)
