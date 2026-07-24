@@ -11,6 +11,7 @@ const props = defineProps({
   lang: { type: String, default: 'es' }, // pestaña de idioma activa
   pageId: { type: String, default: 'misc' }, // contexto para la ruta de Storage
   blockId: { type: String, default: 'block' },
+  omit: { type: Array, default: () => [] }, // claves a NO mostrar (se conservan en el modelo)
 })
 
 const isBilingual = (v) => v && typeof v === 'object' && !Array.isArray(v)
@@ -19,7 +20,9 @@ const isBilingual = (v) => v && typeof v === 'object' && !Array.isArray(v)
 const entries = computed(() =>
   Array.isArray(props.model)
     ? props.model.map((v, i) => ({ key: i, label: `#${i + 1}`, value: v }))
-    : Object.entries(props.model).map(([k, v]) => ({ key: k, label: k, value: v })),
+    : Object.entries(props.model)
+      .filter(([k]) => !props.omit.includes(k))
+      .map(([k, v]) => ({ key: k, label: k, value: v })),
 )
 
 const label = (k) => String(k).replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase())

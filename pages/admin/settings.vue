@@ -74,7 +74,7 @@ async function onPublish() {
     </div>
 
     <div class="admin-card">
-      <AdminObjectEditor :model="doc" :lang="lang" page-id="settings" block-id="global" />
+      <AdminObjectEditor :model="doc" :lang="lang" page-id="settings" block-id="global" :omit="['imageCredits', 'updatedAt']" />
     </div>
   </div>
 </template>
