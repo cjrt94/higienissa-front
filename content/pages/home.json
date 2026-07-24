@@ -82,7 +82,7 @@
         "eyebrow": { "es": "Lavandería inteligente", "en": "Smart laundry" },
         "name": "Pacífica",
         "desc": { "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse: procesos especializados, trazabilidad y disponibilidad garantizada del textil.", "en": "Smart industrial laundry for operations that cannot stop: specialized processes, traceability and guaranteed textile availability." },
-        "image": "/img/pacifica-hero-rfid.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": { "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala", "en": "Pacífica industrial laundry: machines and washing process at scale" },
         "to": "/marca-pacifica"
       },

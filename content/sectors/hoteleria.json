@@ -157,7 +157,7 @@
         "name": "Pacífica",
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento del blanco", "en": "Linen processing" },
-        "image": "/img/pacifica-hero-rfid.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
           "es": "Pacífica: lavandería industrial inteligente para hotelería",
           "en": "Pacífica: smart industrial laundry for hospitality"

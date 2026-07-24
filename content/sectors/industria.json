@@ -200,7 +200,7 @@
         "name": { "es": "Pacífica", "en": "Pacífica" },
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento en planta", "en": "In-plant processing" },
-        "image": "/img/pacifica-hero-rfid.jpg",
+        "image": "/img/pacifica-hero.jpg",
         "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
         "desc": {
           "es": "Lavandería industrial inteligente para el procesamiento de uniformes y ropa de trabajo cuando la operación lo requiere.",
