@@ -7,6 +7,16 @@ const rows = ref([])
 const loading = ref(true)
 const err = ref('')
 
+// Orden de prioridad (Home primero); las páginas fuera de la lista van al final.
+const ORDER = ['home', 'institucional', 'recursos', 'contacto', 'aviso-legal', 'privacidad']
+const LABELS = {
+  home: 'Home', institucional: 'Nosotros', recursos: 'Recursos', contacto: 'Contacto',
+  articulo: 'Artículo (plantilla)', 'aviso-legal': 'Aviso legal', privacidad: 'Privacidad',
+}
+const rank = (id) => { const i = ORDER.indexOf(id); return i === -1 ? 999 : i }
+const sorted = computed(() => [...rows.value].sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id)))
+const label = (p) => LABELS[p.id] || p.slug || p.id
+
 onMounted(async () => {
   try {
     const { db } = await useFirebase()
@@ -22,24 +32,30 @@ onMounted(async () => {
 </script>
 
 <template>
-  <h1>Páginas</h1>
+  <div>
+    <div class="admin-page-head">
+      <div>
+        <h1>Páginas</h1>
+        <p class="sub">Editá el contenido, las secciones y el SEO de cada página del sitio.</p>
+      </div>
+    </div>
 
-  <p v-if="loading" style="color:#7a8190">Cargando…</p>
-  <div v-else-if="err" class="admin-card">{{ err }}</div>
-  <div v-else-if="!rows.length" class="admin-card">
-    Todavía no hay páginas en Firestore. El contenido semilla vive en <code>/content</code>;
-    importalo a la colección <code>pages</code> (o creá los documentos) para editarlo desde acá.
-  </div>
-  <div v-else class="admin-list">
-    <div v-for="p in rows" :key="p.id" class="admin-row">
-      <div class="meta">
-        <b>{{ p.slug || p.id }}</b>
-        <small>{{ p.template }}</small>
-      </div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <span class="badge-status" :class="p.status">{{ p.status }}</span>
-        <NuxtLink class="admin-btn ghost small" :to="`/admin/pages/${p.id}`">Editar</NuxtLink>
-      </div>
+    <div v-if="loading" style="display:grid;place-items:center;padding:50px"><div class="admin-spinner" /></div>
+    <div v-else-if="err" class="admin-card">{{ err }}</div>
+    <div v-else-if="!rows.length" class="admin-card">
+      Todavía no hay páginas en Firestore. Corré <code>npm run seed</code> para importar el contenido semilla.
+    </div>
+    <div v-else class="admin-list">
+      <NuxtLink v-for="p in sorted" :key="p.id" :to="`/admin/pages/${p.id}`" class="admin-row" style="text-decoration:none;color:inherit">
+        <div class="meta">
+          <b>{{ label(p) }}</b>
+          <small>/{{ p.slug || p.id }} · {{ p.template }}</small>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <span class="badge-status" :class="p.status === 'published' ? 'published' : 'draft'">{{ p.status === 'published' ? 'publicada' : 'borrador' }}</span>
+          <span class="admin-btn ghost small">Editar</span>
+        </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
