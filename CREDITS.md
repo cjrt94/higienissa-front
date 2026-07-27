@@ -20,7 +20,7 @@ Imágenes de banco gratuito usadas en el sitio (`assets/img/`). **Las licencias 
 | `pacifica-proceso.jpg` | **Foto propia** — planta de Grupo Higienissa (calandra) | Grupo Higienissa | Propietaria | No |
 | `pacifica-band.jpg` | **Foto propia** — planta de Grupo Higienissa (línea de alimentadoras) | Grupo Higienissa | Propietaria | No |
 | `operissa-hero.jpg` | [Pexels](https://www.pexels.com/photo/31259205/) | EqualStock IN | Pexels License | No (opcional) |
-| `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/two-workers-in-a-warehouse-4487365/) | Tiger Lily | Pexels License | No (opcional) |
+| `operissa-proceso.jpg` | [Pexels](https://www.pexels.com/photo/8774639/) | Tima Miroshnichenko | Pexels License | No (opcional) |
 | `operissa-band.jpg` | [Pexels](https://www.pexels.com/photo/31047154/) | EqualStock IN | Pexels License | No (opcional) |
 | `trazatex-hero.jpg` | Aportada por el cliente (Grupo Higienissa) | Grupo Higienissa | Propietaria | No |
 | `trazatex-hero-rfid.jpg` | Aportada por el cliente (Grupo Higienissa) — dashboard RFID en lavandería | Grupo Higienissa | Propietaria | No |
