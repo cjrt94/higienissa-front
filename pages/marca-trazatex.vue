@@ -88,24 +88,6 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
       />
     </div>
 
-    <!-- 5 · MODELO DE 4 CAPAS (flujo numerado) -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">{{ t(page.fourLayer.kicker) }}</span>
-          <h2>{{ t(page.fourLayer.title) }}</h2>
-          <p class="lead">{{ t(page.fourLayer.lead) }}</p>
-        </div>
-        <div class="grid cols-4 reveal">
-          <div v-for="(l, i) in page.fourLayer.layers" :key="i" class="layer-card">
-            <span class="layer-num">{{ String(l.num).padStart(2, '0') }}</span>
-            <h3>{{ t(l.title) }}</h3>
-            <p>{{ t(l.text) }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- 6 · INFRAESTRUCTURA TECNOLÓGICA (feature cards + checklist) -->
     <section class="section">
       <div class="container">
@@ -256,19 +238,6 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
   box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent);
   font: 600 1.1rem/1 var(--font-display); letter-spacing: .01em;
 }
-
-/* 4 capas — flujo numerado (mismo badge del home "Lo que nos define") */
-.layer-card { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow-xs); transition: box-shadow .2s var(--ease), transform .2s var(--ease); }
-.layer-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-.layer-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 3rem; height: 3rem; border-radius: 14px; margin-bottom: var(--space-4);
-  color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent);
-  font: 600 1.35rem/1 var(--font-display); letter-spacing: .01em;
-}
-.layer-card h3 { font-size: 1.15rem; margin-bottom: var(--space-2); }
-.layer-card p { margin: 0; color: var(--text); font-size: .95rem; }
 
 /* Checklist con ✓ (infraestructura + base instalada) — check alineado a la 1.ª línea */
 .check-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: var(--space-2); }

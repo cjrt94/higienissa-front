@@ -264,66 +264,6 @@
       "to": "/soluciones"
     }
   },
-  "fourLayer": {
-    "kicker": {
-      "es": "Cómo funciona",
-      "en": "How it works"
-    },
-    "title": {
-      "es": "El modelo de 4 capas",
-      "en": "The 4-layer model"
-    },
-    "lead": {
-      "es": "De la prenda al dato, y del dato a la operación: cada capa habilita a la siguiente.",
-      "en": "From garment to data, and from data to operation: each layer enables the next."
-    },
-    "layers": [
-      {
-        "num": "1",
-        "title": {
-          "es": "Infraestructura de lectura",
-          "en": "Reading infrastructure"
-        },
-        "text": {
-          "es": "Túneles RFID, cabinas, lectores portátiles y estaciones adaptadas al flujo.",
-          "en": "RFID tunnels, cabins, handheld readers and stations adapted to the flow."
-        }
-      },
-      {
-        "num": "2",
-        "title": {
-          "es": "Identificación individual",
-          "en": "Individual identification"
-        },
-        "text": {
-          "es": "RFID por prenda; lectura masiva sin conteo manual.",
-          "en": "RFID per garment; bulk reading without manual counting."
-        }
-      },
-      {
-        "num": "3",
-        "title": {
-          "es": "Plataforma de gestión",
-          "en": "Management platform"
-        },
-        "text": {
-          "es": "Visualización en tiempo real, control por área, reportes históricos, KPIs y auditoría digital.",
-          "en": "Real-time visualization, control by area, historical reports, KPIs and digital auditing."
-        }
-      },
-      {
-        "num": "4",
-        "title": {
-          "es": "Integración operativa",
-          "en": "Operational integration"
-        },
-        "text": {
-          "es": "Modelo diseñado según el flujo real de cada organización.",
-          "en": "Model designed around each organization's real flow."
-        }
-      }
-    ]
-  },
   "techInfra": {
     "kicker": {
       "es": "Infraestructura tecnológica",
