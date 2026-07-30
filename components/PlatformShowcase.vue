@@ -75,7 +75,7 @@ onBeforeUnmount(() => io && io.disconnect())
           </li>
         </ul>
         <div class="pf-foot">
-          <BaseButton v-if="data.cta" :to="data.cta.to" variant="primary">{{ t(data.cta.label) }}</BaseButton>
+          <BaseButton v-if="data.cta" :href="data.cta.to" variant="primary">{{ t(data.cta.label) }}</BaseButton>
         </div>
       </div>
     </div>

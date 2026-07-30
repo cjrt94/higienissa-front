@@ -681,10 +681,10 @@
       }
     ],
     "cta": {
-      "to": "/contacto",
+      "to": "https://dashboard.asisidtrak.com/",
       "label": {
-        "es": "Solicitar una demo",
-        "en": "Request a demo"
+        "es": "Solicita una demo en vivo",
+        "en": "Request a live demo"
       }
     }
   },
