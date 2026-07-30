@@ -12,9 +12,15 @@ export function getAdminDb() {
     if (raw) {
       const creds = JSON.parse(raw)
       initializeApp({ credential: cert(creds) })
-    } else {
+    } else if (process.env.GOOGLE_APPLICATION_CREDENTIALS) {
       // Fallback: credenciales por defecto del entorno (GOOGLE_APPLICATION_CREDENTIALS)
       initializeApp({ credential: applicationDefault() })
+    } else {
+      // Sin credenciales (típico en local sin Firebase): NO invocar applicationDefault(),
+      // que en una máquina fuera de GCP intenta el metadata server (169.254.169.254) y
+      // cuelga ~8 s por lectura antes de fallar. Lanzamos: los loaders de content.js
+      // atrapan el error y caen al JSON semilla al instante (arranque seguro y rápido).
+      throw new Error('Firebase Admin sin credenciales (FIREBASE_SERVICE_ACCOUNT/GOOGLE_APPLICATION_CREDENTIALS) — usando seed')
     }
   }
   _db = getFirestore()
