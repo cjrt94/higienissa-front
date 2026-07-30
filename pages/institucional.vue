@@ -47,7 +47,7 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
     <!-- 2 · QUIÉNES SOMOS (split con foto + highlights) -->
     <section class="section section-alt">
       <div class="container">
-        <div class="intro-split">
+        <div class="intro-split reverse">
           <div class="intro-copy">
             <div class="section-head left">
               <span class="kicker">{{ t(page.whoWeAre.eyebrow) }}</span>
