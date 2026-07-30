@@ -112,7 +112,7 @@
       "en": "We process the textile, turn it into strategic information and manage it on-site. Three capabilities working as a single system to guarantee the availability, control and continuity of the textile asset."
     },
     "image": "/img/operissa-proceso.jpg",
-    "imageAlt": { "es": "Planta de lavandería industrial del ecosistema Higienissa: operarios gestionando el proceso textil entre lavadoras y secadoras de gran capacidad", "en": "Industrial laundry plant of the Higienissa ecosystem: operators managing the textile process among large-capacity washers and dryers" },
+    "imageAlt": { "es": "Interior de una lavandería industrial: fila de lavadoras y secadoras de gran capacidad con carros de ropa", "en": "Interior of an industrial laundry: a row of large-capacity washers and dryers with linen carts" },
     "items": [
       { "icon": "droplet", "title": { "es": "Lavandería", "en": "Laundry" }, "text": { "es": "Donde empieza la disponibilidad del textil en cada operación.", "en": "Where textile availability begins in every operation." } },
       { "icon": "target", "title": { "es": "Inteligencia y precisión", "en": "Intelligence and precision" }, "text": { "es": "Cada decisión y cada activo, respaldados por datos y trazabilidad individual.", "en": "Every decision and every asset, backed by data and individual traceability." } },
