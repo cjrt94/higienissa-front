@@ -1,11 +1,16 @@
 <script setup>
-defineProps({ data: { type: Object, required: true } })
+defineProps({
+  data: { type: Object, required: true },
+  // Superficie: blanca por defecto; true = gris (section-alt), para alternar con la
+  // sección previa cuando comparten fondo (al retirarse Pillars quedó blanco-sobre-blanco).
+  alt: { type: Boolean, default: false },
+})
 const t = useT()
 const localePath = useLocalePath()
 </script>
 
 <template>
-  <section class="section">
+  <section class="section" :class="{ 'section-alt': alt }">
     <div class="container">
       <div class="section-head center">
         <span class="kicker">{{ t(data.eyebrow) }}</span>

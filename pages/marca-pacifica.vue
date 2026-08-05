@@ -130,12 +130,15 @@ const solutionItems = computed(() =>
       </div>
     </section>
 
-    <!-- 6 · ECOSISTEMA HIGIENISSA — pipeline de 3 marcas (Pacífica actual). -->
+    <!-- 6 · ECOSISTEMA HIGIENISSA — pipeline de 3 marcas (Pacífica actual).
+         Blanca (alt=false): al retirarse "Nuestra diferencia" quedaba pegada al
+         gris de "Sectores"; así se recupera la alternancia de superficies. -->
     <EcosystemPipeline
       :eyebrow="page.ecosystem.eyebrow"
       :title="page.ecosystem.title"
       :lead="page.ecosystem.lead"
       current="pacifica"
+      :alt="false"
     />
 
     <!-- 7 · CTA final -->
