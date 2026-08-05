@@ -263,10 +263,23 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 .impact-card p { margin: 0; font-size: var(--fs-small); color: var(--text); line-height: 1.5; }
 
 .problem-symptoms { margin-top: clamp(var(--space-8), 6vw, var(--space-9)); }
-.symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-4); }
+.symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-5); }
 
 @media (max-width: 900px) { .problem-duo { grid-template-columns: 1fr; gap: var(--space-7); } }
 @media (max-width: 520px) { .impact-cards { grid-template-columns: 1fr; } }
+
+/* Los síntomas — grilla de 2 columnas con tiles (antes: una sola columna a todo el
+   ancho que dejaba mucho vacío a la derecha). Tiles blancos sobre el gris de la
+   sección, en la misma familia visual que las cards de "El impacto operativo". El
+   último (impar) ocupa la fila completa para no dejar una celda hueca. */
+.problem-symptoms :deep(.stake-list) { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+.problem-symptoms :deep(.stake-row) { align-items: center; gap: var(--space-4); border-top: 0; padding: clamp(var(--space-4), 2vw, var(--space-5)); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-xs); transition: box-shadow .2s var(--ease), transform .2s var(--ease), border-color .2s var(--ease); }
+.problem-symptoms :deep(.stake-row:hover) { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: color-mix(in srgb, var(--celeste) 45%, var(--line)); }
+.problem-symptoms :deep(.stake-row:last-child:nth-child(odd)) { grid-column: 1 / -1; }
+.problem-symptoms :deep(.stake-body) { padding-top: 0; }
+.problem-symptoms :deep(.stake-text) { font-size: 1rem; line-height: 1.45; }
+@media (max-width: 700px) { .problem-symptoms :deep(.stake-list) { grid-template-columns: 1fr; } }
+
 .problem-symptoms :deep(.marker-number .stake-marker) {
   width: 2.6rem; height: 2.6rem; border: 0; border-radius: 12px; margin-top: 0;
   color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%);
