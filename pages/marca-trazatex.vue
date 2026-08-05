@@ -59,35 +59,21 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
       </div>
     </section>
 
-    <!-- 2 · EL PROBLEMA — en vertical: (1) el planteamiento centrado (pregunta marco +
-         conclusión); (2) EL IMPACTO OPERATIVO (horas-hombre + riesgo microbiológico) como
-         panel a fila completa debajo; (3) los síntomas (el de "horas contando a mano" se
-         elevó al impacto, por eso no se repite en la lista). -->
+    <!-- 2 · EL IMPACTO OPERATIVO — se retiró el planteamiento de "El problema" (kicker +
+         pregunta marco + conclusión) por pedido del cliente; la sección abre directo con el
+         panel de impacto (horas-hombre + riesgo microbiológico) y debajo, los síntomas. -->
     <section class="section section-alt">
       <div class="container">
-        <div class="problem-duo">
-          <div class="problem-frame">
-            <div class="section-head center">
-              <span class="kicker">{{ t(page.problem.kicker) }}</span>
-              <h2>{{ t(page.problem.q) }}</h2>
-            </div>
-            <p v-if="t(page.problem.sub)" class="problem-sub">{{ t(page.problem.sub) }}</p>
-            <p class="problem-conclusion">
-              {{ t(page.problem.punch.pre) }}<strong>{{ t(page.problem.punch.strong) }}</strong>{{ t(page.problem.punch.post) }}
-            </p>
-          </div>
-
-          <div v-if="page.problem.impact" class="problem-impact reveal">
-            <span class="kicker impact-kicker">{{ t(page.problem.impact.kicker) }}</span>
-            <p class="impact-q">{{ t(page.problem.impact.q) }}</p>
-            <p class="impact-body">{{ t(page.problem.impact.body) }}</p>
-            <div class="impact-cards">
-              <article v-for="(c, i) in page.problem.impact.cards" :key="i" class="impact-card">
-                <span class="ic-icon"><BaseIcon :name="c.icon || 'check'" :size="22" /></span>
-                <h3>{{ t(c.title) }}</h3>
-                <p>{{ t(c.text) }}</p>
-              </article>
-            </div>
+        <div v-if="page.problem.impact" class="problem-impact reveal">
+          <span class="kicker impact-kicker">{{ t(page.problem.impact.kicker) }}</span>
+          <p class="impact-q">{{ t(page.problem.impact.q) }}</p>
+          <p class="impact-body">{{ t(page.problem.impact.body) }}</p>
+          <div class="impact-cards">
+            <article v-for="(c, i) in page.problem.impact.cards" :key="i" class="impact-card">
+              <span class="ic-icon"><BaseIcon :name="c.icon || 'check'" :size="22" /></span>
+              <h3>{{ t(c.title) }}</h3>
+              <p>{{ t(c.text) }}</p>
+            </article>
           </div>
         </div>
 
@@ -242,17 +228,8 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 
 <style scoped>
 
-/* El problema — planteamiento centrado (pregunta marco + conclusión) */
-.problem-frame { max-width: 62ch; margin: 0 auto; text-align: center; }
-.problem-frame .section-head { margin: 0 0 var(--space-4); max-width: none; }
-.problem-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.6; margin: var(--space-4) auto 0; max-width: 52ch; }
-.problem-conclusion { margin: var(--space-6) auto 0; font-size: 1.2rem; line-height: 1.4; color: var(--ink); max-width: 48ch; }
-.problem-conclusion strong { color: var(--azul); font-weight: 700; }
-
-/* Stack vertical: planteamiento centrado arriba + panel de impacto a fila completa debajo */
-.problem-duo { display: grid; gap: clamp(var(--space-7), 5vw, var(--space-8)); }
-
-/* Impacto operativo — panel branded a fila completa; cabecera centrada, dos tarjetas debajo */
+/* Impacto operativo — panel branded a fila completa (abre la sección); cabecera
+   centrada, dos tarjetas debajo. El planteamiento de "El problema" se retiró. */
 .problem-impact { background: var(--bg); border: 1px solid color-mix(in srgb, var(--celeste) 34%, var(--line)); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 3.5vw, var(--space-8)); box-shadow: var(--shadow-sm); text-align: center; }
 .impact-kicker { color: var(--azul); }
 .impact-q { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.2; color: var(--ink); margin: var(--space-2) auto var(--space-4); max-width: 28ch; text-wrap: balance; }
@@ -266,7 +243,6 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 .problem-symptoms { margin-top: clamp(var(--space-8), 6vw, var(--space-9)); }
 .symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-5); }
 
-@media (max-width: 900px) { .problem-duo { grid-template-columns: 1fr; gap: var(--space-7); } }
 @media (max-width: 520px) { .impact-cards { grid-template-columns: 1fr; } }
 
 /* Los síntomas — grilla de 2 columnas con tiles (antes: una sola columna a todo el
