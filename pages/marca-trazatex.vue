@@ -59,15 +59,15 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
       </div>
     </section>
 
-    <!-- 2 · EL PROBLEMA — dos encuadres lado a lado: (izq) la pregunta marco + la
-         conclusión; (der) EL IMPACTO OPERATIVO (horas-hombre + riesgo microbiológico)
-         con dos tarjetas. Debajo, los síntomas (el de "horas contando a mano" se
-         elevó al impacto de la derecha, por eso no se repite en la lista). -->
+    <!-- 2 · EL PROBLEMA — en vertical: (1) el planteamiento centrado (pregunta marco +
+         conclusión); (2) EL IMPACTO OPERATIVO (horas-hombre + riesgo microbiológico) como
+         panel a fila completa debajo; (3) los síntomas (el de "horas contando a mano" se
+         elevó al impacto, por eso no se repite en la lista). -->
     <section class="section section-alt">
       <div class="container">
         <div class="problem-duo">
           <div class="problem-frame">
-            <div class="section-head left">
+            <div class="section-head center">
               <span class="kicker">{{ t(page.problem.kicker) }}</span>
               <h2>{{ t(page.problem.q) }}</h2>
             </div>
@@ -242,21 +242,22 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 
 <style scoped>
 
-/* El problema — jerarquia + sintomas numerados (badge azul en degradado, como el home) */
-.problem-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.6; margin: var(--space-4) 0 0; max-width: 44ch; }
-.problem-conclusion { margin-top: var(--space-6); font-size: 1.2rem; line-height: 1.4; color: var(--ink); max-width: 44ch; }
+/* El problema — planteamiento centrado (pregunta marco + conclusión) */
+.problem-frame { max-width: 62ch; margin: 0 auto; text-align: center; }
+.problem-frame .section-head { margin: 0 0 var(--space-4); max-width: none; }
+.problem-sub { color: var(--muted); font-size: 1.02rem; line-height: 1.6; margin: var(--space-4) auto 0; max-width: 52ch; }
+.problem-conclusion { margin: var(--space-6) auto 0; font-size: 1.2rem; line-height: 1.4; color: var(--ink); max-width: 48ch; }
 .problem-conclusion strong { color: var(--azul); font-weight: 700; }
 
-/* Dos encuadres lado a lado: pregunta marco (izq) + impacto operativo (der) */
-.problem-duo { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(var(--space-6), 5vw, var(--space-9)); align-items: start; }
-.problem-frame .section-head { margin: 0 0 var(--space-4); max-width: none; }
+/* Stack vertical: planteamiento centrado arriba + panel de impacto a fila completa debajo */
+.problem-duo { display: grid; gap: clamp(var(--space-7), 5vw, var(--space-8)); }
 
-/* Impacto operativo — panel branded con dos tarjetas (horas-hombre / riesgo) */
-.problem-impact { background: var(--bg); border: 1px solid color-mix(in srgb, var(--celeste) 34%, var(--line)); border-radius: var(--radius-lg); padding: clamp(var(--space-5), 3vw, var(--space-7)); box-shadow: var(--shadow-sm); }
+/* Impacto operativo — panel branded a fila completa; cabecera centrada, dos tarjetas debajo */
+.problem-impact { background: var(--bg); border: 1px solid color-mix(in srgb, var(--celeste) 34%, var(--line)); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 3.5vw, var(--space-8)); box-shadow: var(--shadow-sm); text-align: center; }
 .impact-kicker { color: var(--azul); }
-.impact-q { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.22; color: var(--ink); margin: var(--space-2) 0 var(--space-4); text-wrap: balance; }
-.impact-body { color: var(--muted); margin: 0 0 var(--space-5); font-size: var(--fs-body-sm); line-height: 1.6; }
-.impact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.impact-q { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.2; color: var(--ink); margin: var(--space-2) auto var(--space-4); max-width: 28ch; text-wrap: balance; }
+.impact-body { color: var(--muted); margin: 0 auto var(--space-6); font-size: var(--fs-body-sm); line-height: 1.6; max-width: 64ch; }
+.impact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); max-width: 820px; margin-inline: auto; text-align: left; }
 .impact-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-5); }
 .ic-icon { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: var(--radius-chip); color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%); box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent); margin-bottom: var(--space-3); }
 .impact-card h3 { font-size: 1.02rem; margin: 0 0 var(--space-2); line-height: 1.2; }
