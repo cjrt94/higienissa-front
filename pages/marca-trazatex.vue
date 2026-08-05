@@ -93,8 +93,11 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
       />
     </div>
 
-    <!-- 6 · INFRAESTRUCTURA TECNOLÓGICA (feature cards + checklist) -->
-    <section class="section">
+    <!-- 6 · INFRAESTRUCTURA TECNOLÓGICA (feature cards + checklist).
+         Gris (section-alt): "Qué hacemos" arriba es blanca y quedaba pegada sin
+         separación; el gris restablece la alternancia (Platform, debajo, es tinte
+         celeste con borde propio). -->
+    <section class="section section-alt">
       <div class="container">
         <!-- Título centrado (el texto lead/body se retiró por pedido del cliente);
              la galería de infraestructura queda debajo del título. -->
