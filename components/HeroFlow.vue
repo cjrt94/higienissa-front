@@ -98,7 +98,11 @@ const nodes = computed(() => [
 .flow-link:hover { color: var(--electrico); }
 
 /* Nodos del ecosistema — independientes (sin riel conector) */
-.flow-track { position: relative; max-width: 1120px; margin: clamp(40px, 6vh, 72px) auto 0; }
+/* Rompe el .container (1200px) de forma controlada para dar más aire a los 4 nodos.
+   width con min(): tope 1320px en desktop, pero nunca más que el viewport menos los
+   gutters → sin scroll horizontal ni desborde en pantallas chicas. Centrado con
+   left 50% + translate (el .container ya está centrado en el viewport). */
+.flow-track { position: relative; width: min(1320px, calc(100vw - 2 * var(--space-5))); margin-top: clamp(40px, 6vh, 72px); margin-left: 50%; transform: translateX(-50%); }
 .flow-nodes { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); list-style: none; margin: 0; padding: 0; }
 .flow-node { display: flex; flex-direction: column; align-items: center; text-align: center; }
 
