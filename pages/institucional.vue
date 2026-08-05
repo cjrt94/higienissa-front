@@ -76,13 +76,16 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
     <!-- 3 · ECOSISTEMA HIGIENISSA — mismo pipeline de las páginas de marca.
          Al ser la página del grupo, no hay nodo "actual" (current=""): las tres
          marcas se muestran por igual, todas enlazadas. alt=false para separarse
-         del "Quiénes somos" (gris) de arriba y de "Qué integramos" (gris) de abajo. -->
+         del "Quiénes somos" (gris) de arriba y de "Qué integramos" (gris) de abajo.
+         logo-as-name: el logo (wordmark) reemplaza al nombre en texto — mostrar ambos
+         se sentía repetitivo (aquí, con las 3 marcas iguales, se nota más). -->
     <EcosystemPipeline
       :eyebrow="page.ecosystem.eyebrow"
       :title="page.ecosystem.title"
       :lead="page.ecosystem.lead"
       :alt="false"
       current=""
+      logo-as-name
     />
 
     <!-- 4 · QUÉ INTEGRAMOS — split editorial: encabezado + dato ancla (izq, sticky) y

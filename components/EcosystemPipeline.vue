@@ -13,6 +13,11 @@ const props = defineProps({
   // Superficie: alt (gris) por defecto; false = blanca, para separar cuando la
   // sección previa ya es section-alt (p. ej. Trazatex tras "Respaldo").
   alt: { type: Boolean, default: true },
+  // El logo (wordmark) reemplaza al <h3> del nombre: el logo YA lleva el nombre,
+  // así que mostrar ambos es repetitivo. Se usa en la home institucional (Nosotros),
+  // donde las 3 marcas van iguales. Fallback: si un nodo no tiene logo, se muestra el
+  // nombre igual. Las páginas de marca conservan logo + nombre (default false).
+  logoAsName: { type: Boolean, default: false },
 })
 const t = useT()
 const localePath = useLocalePath()
@@ -51,7 +56,7 @@ function boldParts(str) {
         <p v-if="lead" class="lead">{{ t(lead) }}</p>
       </div>
 
-      <div class="eco-grid reveal">
+      <div class="eco-grid reveal" :class="{ 'logo-as-name': logoAsName }">
         <div
           v-for="n in nodes"
           :key="n.slug"
@@ -60,7 +65,7 @@ function boldParts(str) {
         >
           <span v-if="n.logo" class="eco-logo"><img :src="n.logo" :alt="n.name" loading="lazy" decoding="async"></span>
           <span class="eco-role">{{ t(n.role) }}</span>
-          <h3>{{ n.name }}</h3>
+          <h3 v-if="!logoAsName || !n.logo">{{ n.name }}</h3>
           <p><template v-for="(part, pi) in boldParts(t(n.desc))" :key="pi"><strong v-if="part.b">{{ part.t }}</strong><template v-else>{{ part.t }}</template></template></p>
           <NuxtLink v-if="n.slug !== current" class="link-arrow" :to="localePath(n.to)">{{ $t('cta.viewMore') }}</NuxtLink>
           <span v-else class="eco-here">{{ $t('cta.youAreHere') }}</span>
@@ -94,6 +99,11 @@ function boldParts(str) {
 /* Logo real de la marca sobre chip claro (mismo tratamiento que el hero) */
 .eco-logo { align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 6px 14px; background: #fff; border: 1px solid var(--line); border-radius: 10px; margin-bottom: var(--space-4); }
 .eco-logo img { height: 100%; max-height: 26px; width: auto; max-width: 120px; object-fit: contain; display: block; }
+
+/* Cuando el logo sustituye al nombre (Nosotros): gana presencia como identidad de
+   la marca, al retirarse el <h3>. */
+.logo-as-name .eco-logo { height: 52px; padding: 8px 18px; margin-bottom: var(--space-3); }
+.logo-as-name .eco-logo img { max-height: 34px; max-width: 150px; }
 
 .eco-node .eco-role {
   align-self: flex-start;
