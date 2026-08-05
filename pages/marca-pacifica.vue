@@ -161,7 +161,10 @@ const solutionItems = computed(() =>
 /* Puente discreto a Operissa bajo las soluciones (servicio movido de Pacífica) */
 .sol-crosslink {
   display: flex; align-items: flex-start; gap: var(--space-3);
-  margin: calc(-1 * var(--space-4)) auto 0; max-width: 760px;
+  /* top: sube la nota hacia el bento (queda como su footnote); bottom: separación
+     blanca real antes de la sección gris "Sectores" — sin ella la nota (gris) quedaba
+     pegada al inicio del gris y "chocaba". */
+  margin: calc(-1 * var(--space-5)) auto var(--space-7); max-width: 760px;
   padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--bg-alt); color: var(--text); font-size: var(--fs-body-sm); line-height: 1.55;
 }
