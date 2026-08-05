@@ -100,9 +100,10 @@ function boldParts(str) {
 .eco-logo { align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 6px 14px; background: #fff; border: 1px solid var(--line); border-radius: 10px; margin-bottom: var(--space-4); }
 .eco-logo img { height: 100%; max-height: 26px; width: auto; max-width: 120px; object-fit: contain; display: block; }
 
-/* Cuando el logo sustituye al nombre (Nosotros): gana presencia como identidad de
-   la marca, al retirarse el <h3>. */
-.logo-as-name .eco-logo { height: 52px; padding: 8px 18px; margin-bottom: var(--space-3); }
+/* Cuando el logo sustituye al nombre (Nosotros): el rol (PROCESA/TRAZA/OPERA) va
+   arriba y el logo debajo, ocupando el lugar del <h3> retirado y con más presencia. */
+.logo-as-name .eco-role { order: -1; margin-bottom: var(--space-3); }
+.logo-as-name .eco-logo { height: 52px; padding: 8px 18px; margin-bottom: var(--space-4); }
 .logo-as-name .eco-logo img { max-height: 34px; max-width: 150px; }
 
 .eco-node .eco-role {
