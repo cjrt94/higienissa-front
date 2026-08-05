@@ -108,7 +108,12 @@
     "title": {
       "es": "Qué hacemos",
       "en": "What we do"
-    }
+    },
+    "note": {
+      "es": "¿Opera con lavandería e infraestructura propia? La operación integral de lavanderías in situ la ejecuta Operissa, con el respaldo del know-how de Pacífica.",
+      "en": "Running your own laundry and infrastructure? End-to-end on-site laundry operation is delivered by Operissa, backed by Pacífica's know-how."
+    },
+    "noteTo": "/marca-operissa"
   },
   "solutions": [
     {
@@ -245,51 +250,6 @@
         }
       ],
       "icon": "scan"
-    },
-    {
-      "order": 4,
-      "title": {
-        "es": "Operación Integral de Lavanderías",
-        "en": "End-to-End Laundry Operation"
-      },
-      "executedBy": {
-        "brand": "Operissa",
-        "label": {
-          "es": "por Operissa",
-          "en": "by Operissa"
-        }
-      },
-      "description": {
-        "es": "Para clientes con infraestructura propia: operación de lavandería in situ.",
-        "en": "For clients with their own infrastructure: on-site laundry operation."
-      },
-      "listLabel": {
-        "es": "Incluye",
-        "en": "Includes"
-      },
-      "items": [
-        {
-          "es": "Supervisión especializada",
-          "en": "Specialized supervision"
-        },
-        {
-          "es": "Personal operativo",
-          "en": "Operating staff"
-        },
-        {
-          "es": "Gestión de producción",
-          "en": "Production management"
-        },
-        {
-          "es": "Procedimientos estandarizados",
-          "en": "Standardized procedures"
-        },
-        {
-          "es": "Optimización de procesos",
-          "en": "Process optimization"
-        }
-      ],
-      "icon": "cog"
     }
   ],
   "sectorsApplied": {
@@ -364,71 +324,6 @@
         "imageAlt": {
           "es": "Sector minería: operaciones remotas exigentes",
           "en": "Mining sector: demanding remote operations"
-        }
-      }
-    ]
-  },
-  "differentiators": {
-    "eyebrow": {
-      "es": "Nuestra diferencia",
-      "en": "Our difference"
-    },
-    "title": {
-      "es": "Más que una lavandería tradicional",
-      "en": "More than a traditional laundry"
-    },
-    "image": "/img/ecosistema.jpg",
-    "imageAlt": {
-      "es": "Calandra de planchado industrial de Pacífica, respaldada por el ecosistema Higienissa",
-      "en": "Pacífica industrial ironing machine, backed by the Higienissa ecosystem"
-    },
-    "lead": {
-      "es": "No solo procesamos textiles: sostenemos operaciones que no pueden detenerse. Pensamos como operadores y trabajamos respaldados por el ecosistema Higienissa, con infraestructura y trazabilidad que una lavandería tradicional no puede ofrecer.",
-      "en": "We don't just process textiles: we sustain operations that can't stop. We think like operators and work backed by the Higienissa ecosystem, with infrastructure and traceability a traditional laundry can't offer."
-    },
-    "items": [
-      {
-        "icon": "users",
-        "title": {
-          "es": "Pensamos como operadores",
-          "en": "We think like operators"
-        },
-        "text": {
-          "es": "Conocemos la operación desde dentro y diseñamos para que no se detenga.",
-          "en": "We know the operation from the inside and design so it never stops."
-        }
-      },
-      {
-        "icon": "shield",
-        "title": {
-          "es": "Ecosistema de respaldo",
-          "en": "A backing ecosystem"
-        },
-        "text": {
-          "es": "Respaldo del ecosistema frente a la lavandería tradicional.",
-          "en": "Ecosystem backing versus the traditional laundry model."
-        }
-      },
-      {
-        "icon": "activity",
-        "title": {
-          "es": "Soluciones escalables",
-          "en": "Scalable solutions"
-        },
-        "text": {
-          "es": "Soluciones escalables que evolucionan con el cliente.",
-          "en": "Scalable solutions that evolve with the client."
-        }
-      },
-      {
-        "icon": "scan",
-        "title": {
-          "es": "Infraestructura premium",
-          "en": "Premium infrastructure"
-        },
-        "text": {
-          "es": "Infraestructura premium con integración RFID y dashboards.",
-          "en": "Premium infrastructure with RFID integration and dashboards."
         }
       }
     ]

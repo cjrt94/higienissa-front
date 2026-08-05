@@ -96,6 +96,7 @@
       {
         "slug": "pacifica",
         "name": "Pacífica",
+        "logo": "/img/logos/pacifica.jpg",
         "role": { "es": "Procesa", "en": "Processes" },
         "desc": {
           "es": "**Lavandería** industrial inteligente: el punto donde empieza la disponibilidad del textil.",
@@ -106,6 +107,7 @@
       {
         "slug": "trazatex",
         "name": "Trazatex",
+        "logo": "/img/logos/trazatex.png",
         "role": { "es": "Traza", "en": "Traces" },
         "desc": {
           "es": "RFID, software, auditoría y data para el control individual de cada activo textil.",
@@ -116,13 +118,22 @@
       {
         "slug": "operissa",
         "name": "Operissa",
+        "logo": "/img/logos/operissa.png",
         "role": { "es": "Opera", "en": "Operates" },
         "desc": {
-          "es": "Operación y gestión textil especializada en terreno, para que su operación no se detenga.",
-          "en": "Specialized on-site textile operation and management, so your operation never stops."
+          "es": "Operación y gestión textil especializada en las instalaciones de nuestros clientes, para que su operación no se detenga.",
+          "en": "Specialized textile operation and management at our clients' facilities, so your operation never stops."
         },
         "to": "/marca-operissa"
       }
-    ]
+    ],
+    "pairing": {
+      "es": "Pacífica + Trazatex, integradas",
+      "en": "Pacífica + Trazatex, integrated"
+    },
+    "disclaimer": {
+      "es": "Cada marca opera de forma independiente. La trazabilidad de Trazatex se integra con la lavandería de Pacífica para ofrecer una solución conjunta.",
+      "en": "Each brand operates independently. Trazatex's traceability integrates with Pacífica's laundry to deliver a joint solution."
+    }
   }
 }

@@ -76,11 +76,12 @@
   },
   "divisions": {
     "eyebrow": { "es": "Las 3 divisiones", "en": "The 3 divisions" },
-    "title": { "es": "Tres marcas, un mismo estándar", "en": "Three brands, one standard" },
+    "title": { "es": "", "en": "" },
     "items": [
       {
         "eyebrow": { "es": "Lavandería inteligente", "en": "Smart laundry" },
         "name": "Pacífica",
+        "logo": "/img/logos/pacifica.jpg",
         "desc": { "es": "Lavandería industrial inteligente para operaciones que no pueden detenerse: procesos especializados, trazabilidad y disponibilidad garantizada del textil.", "en": "Smart industrial laundry for operations that cannot stop: specialized processes, traceability and guaranteed textile availability." },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": { "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala", "en": "Pacífica industrial laundry: machines and washing process at scale" },
@@ -89,6 +90,7 @@
       {
         "eyebrow": { "es": "Trazabilidad · RFID · data", "en": "Traceability · RFID · data" },
         "name": "Trazatex",
+        "logo": "/img/logos/trazatex.png",
         "desc": { "es": "RFID, software, auditoría y data que convierten cada activo textil en información gestionable, con control en tiempo real de cada ciclo.", "en": "RFID, software, auditing and data that turn every textile asset into manageable information, with real-time control of each cycle." },
         "image": "/img/trazatex-hero-rfid.jpg",
         "imageAlt": { "es": "Trazatex: tecnología RFID y data aplicada a cada activo textil", "en": "Trazatex: RFID technology and data applied to every textile asset" },
@@ -97,26 +99,12 @@
       {
         "eyebrow": { "es": "Operación en terreno", "en": "On-site operations" },
         "name": "Operissa",
-        "desc": { "es": "Operación y gestión textil especializada en terreno, con personas y procesos a la medida de cada operación.", "en": "Specialized on-site textile operations and management, with people and processes tailored to each operation." },
+        "logo": "/img/logos/operissa.png",
+        "desc": { "es": "Operación textil especializada en las instalaciones de nuestros clientes, con un equipo capacitado y experimentado para manejar sus procesos y operaciones.", "en": "Specialized textile operations at our clients' facilities, with a trained, experienced team to run their processes and operations." },
         "image": "/img/operissa-hero.jpg",
         "imageAlt": { "es": "Operissa: equipos y procesos de operación textil especializada en terreno", "en": "Operissa: teams and processes for specialized on-site textile operations" },
         "to": "/marca-operissa"
       }
-    ]
-  },
-  "pillars": {
-    "eyebrow": { "es": "Cómo lo hacemos", "en": "How we do it" },
-    "title": { "es": "Lavandería, inteligencia y excelencia operacional", "en": "Laundry, intelligence and operational excellence" },
-    "lead": {
-      "es": "Procesamos el textil, lo convertimos en información estratégica y lo gestionamos en terreno. Tres capacidades que trabajan como un solo sistema para garantizar la disponibilidad, el control y la continuidad del activo textil.",
-      "en": "We process the textile, turn it into strategic information and manage it on-site. Three capabilities working as a single system to guarantee the availability, control and continuity of the textile asset."
-    },
-    "image": "/img/operissa-proceso.jpg",
-    "imageAlt": { "es": "Interior de una lavandería industrial: fila de lavadoras y secadoras de gran capacidad con carros de ropa", "en": "Interior of an industrial laundry: a row of large-capacity washers and dryers with linen carts" },
-    "items": [
-      { "icon": "droplet", "title": { "es": "Lavandería", "en": "Laundry" }, "text": { "es": "Donde empieza la disponibilidad del textil en cada operación.", "en": "Where textile availability begins in every operation." } },
-      { "icon": "target", "title": { "es": "Inteligencia y precisión", "en": "Intelligence and precision" }, "text": { "es": "Cada decisión y cada activo, respaldados por datos y trazabilidad individual.", "en": "Every decision and every asset, backed by data and individual traceability." } },
-      { "icon": "shield", "title": { "es": "Excelencia operacional", "en": "Operational excellence" }, "text": { "es": "Equipos y procesos que se adaptan a la realidad de cada terreno.", "en": "Teams and processes that adapt to the reality of each site." } }
     ]
   },
   "sectorsBlock": {

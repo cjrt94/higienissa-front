@@ -2,6 +2,7 @@
 const page = await usePageContent('contacto')
 const t = useT()
 const settings = await useSettings()
+const localePath = useLocalePath()
 
 useSeoMeta({
   title: () => t(page.seo.title),
@@ -100,7 +101,7 @@ const brands = computed(() => settings.ecosystem?.pipeline ?? [])
           <p class="lead">{{ t(page.ecosystem.lead) }}</p>
         </div>
         <div class="eco-grid">
-          <NuxtLink v-for="b in brands" :key="b.slug" :to="b.to" class="eco-card">
+          <NuxtLink v-for="b in brands" :key="b.slug" :to="localePath(b.to)" class="eco-card">
             <span class="eco-role">{{ t(b.role) }}</span>
             <span class="eco-name">{{ b.name }}</span>
             <span class="eco-desc">{{ t(b.desc) }}</span>

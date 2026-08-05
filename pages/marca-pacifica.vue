@@ -21,10 +21,10 @@ const solutionItems = computed(() =>
     icon: s.icon || solutionIcons[i] || 'check',
     title: s.title,
     desc: s.description,
-    // Ocupan fila completa (dos columnas): la insignia (índice 0, checklist largo)
-    // y "Operación Integral de Lavanderías" (índice 3). El bento queda simétrico:
-    // fila completa / par / fila completa.
-    wide: i === 0 || i === 3,
+    // Ocupa fila completa (dos columnas) la insignia (índice 0, checklist largo).
+    // Quedan 3 soluciones (se movió "Operación Integral de Lavanderías" a Operissa):
+    // bento = destacada full-width + par debajo.
+    wide: i === 0,
     groups: s.items && s.items.length ? [{ label: s.listLabel, items: s.items }] : [],
   })),
 )
@@ -92,6 +92,17 @@ const solutionItems = computed(() =>
         :title="page.solutionsBlock.title"
         :items="solutionItems"
       />
+      <!-- Puente a Operissa: la operación de lavandería in situ la ejecuta Operissa
+           (servicio movido desde Pacífica), con el respaldo del know-how de Pacífica. -->
+      <div v-if="page.solutionsBlock.note" class="container">
+        <p class="sol-crosslink">
+          <span class="scx-icon"><BaseIcon name="cog" :size="18" /></span>
+          <span>
+            {{ t(page.solutionsBlock.note) }}
+            <NuxtLink v-if="page.solutionsBlock.noteTo" class="link-arrow" :to="localePath(page.solutionsBlock.noteTo)">{{ $t('cta.viewMore') }}</NuxtLink>
+          </span>
+        </p>
+      </div>
     </div>
 
     <!-- 4 · SECTORES QUE ATENDEMOS (cards a sangre con overlay) -->
@@ -115,34 +126,6 @@ const solutionItems = computed(() =>
               <span class="sc-link">{{ $t('cta.seeSector') }}</span>
             </span>
           </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5 · NUESTRA DIFERENCIA — header split título+foto (imagen izq, reverse)
-         + key points editoriales CON icono debajo (misma estructura .value-cols). -->
-    <section class="section">
-      <div class="container">
-        <div class="intro-split reverse">
-          <div class="intro-copy">
-            <div class="section-head left">
-              <span class="kicker">{{ t(page.differentiators.eyebrow) }}</span>
-              <h2>{{ t(page.differentiators.title) }}</h2>
-              <p class="lead">{{ t(page.differentiators.lead) }}</p>
-            </div>
-          </div>
-          <div class="hero-media">
-            <div class="frame frame--portrait">
-              <img :src="page.differentiators.image" :alt="t(page.differentiators.imageAlt)" width="1000" height="800" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </div>
-        <div class="value-cols cols-4 reveal" style="margin-top:var(--space-7)">
-          <article v-for="d in page.differentiators.items" :key="d.title.es" class="value-col">
-            <span class="v-icon"><BaseIcon :name="d.icon" :size="24" /></span>
-            <h3>{{ t(d.title) }}</h3>
-            <p>{{ t(d.text) }}</p>
-          </article>
         </div>
       </div>
     </section>
@@ -171,4 +154,14 @@ const solutionItems = computed(() =>
 <style scoped>
 /* Titulos de cards a 2 lineas balanceadas (misma logica que SolutionsShowcase) */
 .h-label span { display: block; }
+
+/* Puente discreto a Operissa bajo las soluciones (servicio movido de Pacífica) */
+.sol-crosslink {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  margin: calc(-1 * var(--space-4)) auto 0; max-width: 760px;
+  padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg-alt); color: var(--text); font-size: var(--fs-body-sm); line-height: 1.55;
+}
+.sol-crosslink .scx-icon { flex: none; width: 38px; height: 38px; border-radius: var(--radius-chip); background: var(--bg); border: 1px solid var(--line); color: var(--azul); display: inline-flex; align-items: center; justify-content: center; }
+.sol-crosslink .link-arrow { margin-left: 6px; }
 </style>

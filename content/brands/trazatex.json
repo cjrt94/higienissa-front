@@ -70,8 +70,46 @@
       "en": "Did you know that most hospitals, hotels and industries don't know exactly where their textiles are?"
     },
     "sub": {
-      "es": "No es un detalle menor. Sin trazabilidad, el textil se vuelve un activo invisible: se mueve, se lava, se pierde y se repone sin que nadie lo registre. Y lo que no se mide, no se controla.",
-      "en": "It's not a minor detail. Without traceability, textiles become an invisible asset: they move, get washed, go missing and get replaced with no one recording it. And what isn't measured can't be controlled."
+      "es": "",
+      "en": ""
+    },
+    "impact": {
+      "kicker": {
+        "es": "El impacto operativo",
+        "en": "The operational impact"
+      },
+      "q": {
+        "es": "¿Cuántas horas de su equipo se pierden contando prendas una por una y cuál es el riesgo para su personal?",
+        "en": "How many of your team's hours are lost counting garments one by one — and what's the risk to your staff?"
+      },
+      "body": {
+        "es": "El conteo manual consume horas-hombre valiosas y obliga al personal a abrir bolsas o sacos de prendas y manipular constantemente ropa utilizada, aumentando el riesgo de exposición a contaminantes y microorganismos.",
+        "en": "Manual counting eats up valuable labor hours and forces staff to open bags and sacks of garments and constantly handle used textiles, increasing the risk of exposure to contaminants and microorganisms."
+      },
+      "cards": [
+        {
+          "icon": "chart",
+          "title": {
+            "es": "Hasta 90% menos tiempo en conteos",
+            "en": "Up to 90% less time on counts"
+          },
+          "text": {
+            "es": "La lectura RFID es masiva y automática. En minutos lo que antes tomaba horas.",
+            "en": "RFID reading is bulk and automatic. What used to take hours now takes minutes."
+          }
+        },
+        {
+          "icon": "shield",
+          "title": {
+            "es": "Menor manipulación, menor riesgo",
+            "en": "Less handling, less risk"
+          },
+          "text": {
+            "es": "Menos contacto con ropa usada significa menor exposición a riesgos biológicos y mayor seguridad para su equipo.",
+            "en": "Less contact with used textiles means lower exposure to biological risks and greater safety for your team."
+          }
+        }
+      ]
     },
     "symptoms": [
       {
@@ -81,10 +119,6 @@
       {
         "es": "Compras de reposición \"por si acaso\", sin conocer el inventario real.",
         "en": "\"Just in case\" replacement purchases, with no view of real inventory."
-      },
-      {
-        "es": "Horas de personal contando prendas a mano, con conteos que no cuadran.",
-        "en": "Staff hours spent counting garments by hand, with counts that never add up."
       },
       {
         "es": "Prendas que se descartan casi nuevas o se usan más allá de su vida útil.",
@@ -296,14 +330,6 @@
         }
       }
     ],
-    "lead": {
-      "es": "La solución Trazatex combina infraestructura tecnológica, inteligencia operativa y servicios especializados para transformar la gestión textil en un proceso controlado, medible y optimizado.",
-      "en": "The Trazatex solution combines technology infrastructure, operational intelligence and specialized services to turn textile management into a controlled, measurable and optimized process."
-    },
-    "body": {
-      "es": "A través de hardware especializado, una plataforma de gestión basada en datos y un equipo de profesionales dedicados a la implementación, capacitación y mejora continua, Trazatex permite controlar cada prenda a lo largo de su ciclo de vida, reducir pérdidas, optimizar recursos y tomar decisiones basadas en información confiable.",
-      "en": "Through specialized hardware, a data-driven management platform and a team of professionals dedicated to implementation, training and continuous improvement, Trazatex makes it possible to control every garment throughout its life cycle, reduce losses, optimize resources and make decisions based on reliable information."
-    },
     "columns": [
       {
         "title": {

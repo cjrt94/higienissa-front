@@ -115,8 +115,8 @@
           "en": "Laundry Operations"
         },
         "desc": {
-          "es": "Operación integral de lavanderías propias del cliente; gestión diaria para productividad, cumplimiento y continuidad.",
-          "en": "Full operation of the client's own laundries; day-to-day management for productivity, compliance and continuity."
+          "es": "Operación integral de lavanderías in situ, para clientes con infraestructura propia: gestión diaria para productividad, cumplimiento y continuidad. Con el respaldo del know-how de Pacífica, aseguramos un óptimo servicio.",
+          "en": "End-to-end on-site laundry operation for clients with their own infrastructure: day-to-day management for productivity, compliance and continuity. Backed by Pacífica's know-how, we deliver top-tier service."
         },
         "groups": [
           {
@@ -152,6 +152,10 @@
               {
                 "es": "Reportes operativos",
                 "en": "Operational reporting"
+              },
+              {
+                "es": "Optimización de procesos",
+                "en": "Process optimization"
               }
             ]
           },

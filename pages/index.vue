@@ -18,7 +18,6 @@ useSeoMeta({
     <HeroFlow :data="page.hero" />
     <GroupIntro :data="page.groupIntro" />
     <DivisionsGrid :data="page.divisions" />
-    <PillarsGrid :data="page.pillars" />
     <SectorsGrid :data="page.sectorsBlock" />
     <FinalCta :data="page.finalCta" />
   </div>
