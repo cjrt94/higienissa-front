@@ -136,14 +136,10 @@ function boldParts(str) {
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--celeste) 25%, transparent);
 }
 
-/* Pacífica + Trazatex: vínculo explícito pero acotado — barra superior en degradado
-   que las agrupa (el resto de marcas queda sin ella = independientes). No pisa el
-   destacado del nodo actual, que ya tiene su propio borde/relleno. */
-.eco-node.is-linked::before {
-  content: ""; position: absolute; left: -1px; right: -1px; top: -1px; height: 3px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: linear-gradient(90deg, var(--azul), var(--celeste));
-}
+/* Pacífica/CCW + Trazatex: el vínculo se comunica SOLO con el callout de texto debajo
+   (pairing + disclaimer). Sin barra/línea de acento de color en las cards (antipatrón de
+   marca: nunca líneas de color en los cards). `is-linked` se conserva por si se necesita
+   un realce futuro no basado en líneas. */
 
 /* Callout del vínculo P+T + disclaimer de independencia */
 .eco-link {
