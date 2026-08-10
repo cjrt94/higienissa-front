@@ -59,27 +59,17 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
       </div>
     </section>
 
-    <!-- 2 · EL IMPACTO OPERATIVO — se retiró el planteamiento de "El problema" (kicker +
-         pregunta marco + conclusión) por pedido del cliente; la sección abre directo con el
-         panel de impacto (horas-hombre + riesgo microbiológico) y debajo, los síntomas. -->
+    <!-- 2 · EL PROBLEMA — dos columnas editoriales (costo oculto / impacto operativo)
+         con divisor central, por pedido del cliente (ver referencia). Reemplaza el panel
+         de impacto + "Los síntomas". Copy data-driven en page.problem.duo. -->
     <section class="section section-alt">
       <div class="container">
-        <div v-if="page.problem.impact" class="problem-impact reveal">
-          <span class="kicker impact-kicker">{{ t(page.problem.impact.kicker) }}</span>
-          <p class="impact-q">{{ t(page.problem.impact.q) }}</p>
-          <p class="impact-body">{{ t(page.problem.impact.body) }}</p>
-          <div class="impact-cards">
-            <article v-for="(c, i) in page.problem.impact.cards" :key="i" class="impact-card">
-              <span class="ic-icon"><BaseIcon :name="c.icon || 'check'" :size="22" /></span>
-              <h3>{{ t(c.title) }}</h3>
-              <p>{{ t(c.text) }}</p>
-            </article>
+        <div class="problem-duo reveal">
+          <div v-for="(f, i) in page.problem.duo" :key="i" class="pd-col">
+            <span class="kicker pd-kicker">{{ t(f.kicker) }}</span>
+            <h2 class="pd-q">{{ t(f.q) }}</h2>
+            <p class="pd-body">{{ t(f.body) }}</p>
           </div>
-        </div>
-
-        <div class="problem-symptoms reveal">
-          <span class="symptoms-label">{{ t(page.problem.symptomsLabel) }}</span>
-          <StakeList :items="page.problem.symptoms" marker="number" />
         </div>
       </div>
     </section>
@@ -231,40 +221,21 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 
 <style scoped>
 
-/* Impacto operativo — panel branded a fila completa (abre la sección); cabecera
-   centrada, dos tarjetas debajo. El planteamiento de "El problema" se retiró. */
-.problem-impact { background: var(--bg); border: 1px solid color-mix(in srgb, var(--celeste) 34%, var(--line)); border-radius: var(--radius-lg); padding: clamp(var(--space-6), 3.5vw, var(--space-8)); box-shadow: var(--shadow-sm); text-align: center; }
-.impact-kicker { color: var(--azul); }
-.impact-q { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.2; color: var(--ink); margin: var(--space-2) auto var(--space-4); max-width: 28ch; text-wrap: balance; }
-.impact-body { color: var(--muted); margin: 0 auto var(--space-6); font-size: var(--fs-body-sm); line-height: 1.6; max-width: 64ch; }
-.impact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); max-width: 820px; margin-inline: auto; text-align: left; }
-.impact-card { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--space-5); }
-.ic-icon { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: var(--radius-chip); color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%); box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent); margin-bottom: var(--space-3); }
-.impact-card h3 { font-size: 1.02rem; margin: 0 0 var(--space-2); line-height: 1.2; }
-.impact-card p { margin: 0; font-size: var(--fs-small); color: var(--text); line-height: 1.5; }
+/* El problema — dos columnas editoriales (costo oculto / impacto operativo) con
+   divisor central; el título de cada columna es la pregunta (h2). Apila en móvil.
+   Copy data-driven en page.problem.duo. */
+.problem-duo { display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+.pd-col { padding-inline: clamp(var(--space-5), 3.5vw, var(--space-8)); }
+.pd-col:first-child { padding-left: 0; }
+.pd-col:last-child { padding-right: 0; border-left: 1px solid var(--line); }
+.pd-kicker { display: block; color: var(--azul); margin-bottom: var(--space-4); }
+.pd-q { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.12; letter-spacing: -.01em; color: var(--ink); margin: 0 0 var(--space-5); text-wrap: balance; }
+.pd-body { margin: 0; color: var(--muted); font-size: var(--fs-body); line-height: 1.65; max-width: 44ch; }
 
-.problem-symptoms { margin-top: clamp(var(--space-8), 6vw, var(--space-9)); }
-.symptoms-label { display: block; font: 700 var(--fs-kicker) var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--space-5); }
-
-@media (max-width: 520px) { .impact-cards { grid-template-columns: 1fr; } }
-
-/* Los síntomas — grilla de 2 columnas con tiles (antes: una sola columna a todo el
-   ancho que dejaba mucho vacío a la derecha). Tiles blancos sobre el gris de la
-   sección, en la misma familia visual que las cards de "El impacto operativo". El
-   último (impar) ocupa la fila completa para no dejar una celda hueca. */
-.problem-symptoms :deep(.stake-list) { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
-.problem-symptoms :deep(.stake-row) { align-items: center; gap: var(--space-4); border-top: 0; padding: clamp(var(--space-4), 2vw, var(--space-5)); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-xs); transition: box-shadow .2s var(--ease), transform .2s var(--ease), border-color .2s var(--ease); }
-.problem-symptoms :deep(.stake-row:hover) { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: color-mix(in srgb, var(--celeste) 45%, var(--line)); }
-.problem-symptoms :deep(.stake-row:last-child:nth-child(odd)) { grid-column: 1 / -1; }
-.problem-symptoms :deep(.stake-body) { padding-top: 0; }
-.problem-symptoms :deep(.stake-text) { font-size: 1rem; line-height: 1.45; }
-@media (max-width: 700px) { .problem-symptoms :deep(.stake-list) { grid-template-columns: 1fr; } }
-
-.problem-symptoms :deep(.marker-number .stake-marker) {
-  width: 2.6rem; height: 2.6rem; border: 0; border-radius: 12px; margin-top: 0;
-  color: #fff; background: linear-gradient(135deg, var(--azul) 0%, color-mix(in srgb, var(--celeste) 70%, var(--azul)) 100%);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--azul) 18%, transparent);
-  font: 600 1.1rem/1 var(--font-display); letter-spacing: .01em;
+@media (max-width: 760px) {
+  .problem-duo { grid-template-columns: 1fr; }
+  .pd-col { padding-inline: 0; }
+  .pd-col:last-child { border-left: 0; border-top: 1px solid var(--line); padding-top: var(--space-7); margin-top: var(--space-7); }
 }
 
 /* Checklist con ✓ (infraestructura + base instalada) — check alineado a la 1.ª línea */
