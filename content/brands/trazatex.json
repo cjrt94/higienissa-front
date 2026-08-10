@@ -185,8 +185,8 @@
           "en": "Integrated into the ecosystem"
         },
         "text": {
-          "es": "Se conecta con la lavandería de Pacífica y la operación de Operissa.",
-          "en": "It connects with Pacífica's laundry and Operissa's operation."
+          "es": "Se conecta con la lavandería de CCW y la operación de Operissa.",
+          "en": "It connects with CCW's laundry and Operissa's operation."
         }
       },
       {
@@ -862,20 +862,20 @@
       "en": "Trazatex does not work alone"
     },
     "lead": {
-      "es": "La trazabilidad de Trazatex potencia al resto del ecosistema: integra datos en la lavandería de Pacífica y en la operación en terreno de Operissa.",
-      "en": "Trazatex traceability strengthens the rest of the ecosystem: it integrates data into Pacífica's laundry and into Operissa's on-site operation."
+      "es": "La trazabilidad de Trazatex potencia al resto del ecosistema: integra datos en la lavandería de CCW y en la operación en terreno de Operissa.",
+      "en": "Trazatex traceability strengthens the rest of the ecosystem: it integrates data into CCW's laundry and into Operissa's on-site operation."
     },
     "items": [
       {
-        "name": "Pacífica",
+        "name": "CCW",
         "desc": {
           "es": "Lavandería industrial inteligente. La trazabilidad Trazatex se integra en cada ciclo de proceso.",
           "en": "Intelligent industrial laundry. Trazatex traceability is integrated into every process cycle."
         },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Pacífica, lavandería industrial inteligente del ecosistema Higienissa",
-          "en": "Pacífica, the intelligent industrial laundry of the Higienissa ecosystem"
+          "es": "CCW, lavandería industrial inteligente del ecosistema Higienissa",
+          "en": "CCW, the intelligent industrial laundry of the Higienissa ecosystem"
         },
         "linkLabel": {
           "es": "Ver más",

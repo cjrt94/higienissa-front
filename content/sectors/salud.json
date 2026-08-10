@@ -179,7 +179,7 @@
     },
     "items": [
       {
-        "name": "Pacífica",
+        "name": "CCW",
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Bioseguridad en el lavado", "en": "Biosafety in washing" },
         "desc": {
@@ -188,8 +188,8 @@
         },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
-          "en": "Pacífica industrial laundry: machines and washing process at scale"
+          "es": "Lavandería industrial CCW: máquinas y proceso de lavado a escala",
+          "en": "CCW industrial laundry: machines and washing process at scale"
         },
         "to": "/marca-pacifica",
         "cta": { "es": "Ver más", "en": "See more" }

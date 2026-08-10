@@ -122,10 +122,10 @@
     "nodes": [
       {
         "name": {
-          "es": "Pacífica · Procesa",
-          "en": "Pacífica · Process"
+          "es": "CCW · Procesa",
+          "en": "CCW · Process"
         },
-        "brand": "Pacífica",
+        "brand": "CCW",
         "desc": {
           "es": "Lavandería industrial inteligente: donde empieza la disponibilidad del textil.",
           "en": "Intelligent industrial laundry: where textile availability begins."
@@ -133,8 +133,8 @@
         "to": "/marca-pacifica",
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Pacífica · Procesa — división del ecosistema Higienissa",
-          "en": "Pacífica · Process — Higienissa ecosystem division"
+          "es": "CCW · Procesa — división del ecosistema Higienissa",
+          "en": "CCW · Process — Higienissa ecosystem division"
         }
       },
       {

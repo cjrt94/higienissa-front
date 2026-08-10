@@ -154,13 +154,13 @@
     },
     "items": [
       {
-        "name": "Pacífica",
+        "name": "CCW",
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento del blanco", "en": "Linen processing" },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Pacífica: lavandería industrial inteligente para hotelería",
-          "en": "Pacífica: smart industrial laundry for hospitality"
+          "es": "CCW: lavandería industrial inteligente para hotelería",
+          "en": "CCW: smart industrial laundry for hospitality"
         },
         "desc": {
           "es": "Lavandería industrial inteligente que procesa blancos y lencería cuidando el textil y la experiencia.",

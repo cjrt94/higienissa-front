@@ -197,11 +197,11 @@
         "linkLabel": { "es": "Ver más", "en": "See more" }
       },
       {
-        "name": { "es": "Pacífica", "en": "Pacífica" },
+        "name": { "es": "CCW", "en": "CCW" },
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento en planta", "en": "In-plant processing" },
         "image": "/img/pacifica-hero.jpg",
-        "imageAlt": { "es": "Pacífica — lavandería industrial inteligente", "en": "Pacífica — smart industrial laundry" },
+        "imageAlt": { "es": "CCW — lavandería industrial inteligente", "en": "CCW — smart industrial laundry" },
         "desc": {
           "es": "Lavandería industrial inteligente para el procesamiento de uniformes y ropa de trabajo cuando la operación lo requiere.",
           "en": "Smart industrial laundry for processing uniforms and workwear when the operation requires it."
@@ -211,8 +211,8 @@
       }
     ],
     "note": {
-      "es": "Nota: en industria suele predominar el modelo tercerizado (Operissa + Trazatex); Pacífica procesa en planta según el caso.",
-      "en": "Note: industry tends to favor the outsourced model (Operissa + Trazatex); Pacífica processes in-plant on a case-by-case basis."
+      "es": "Nota: en industria suele predominar el modelo tercerizado (Operissa + Trazatex); CCW procesa en planta según el caso.",
+      "en": "Note: industry tends to favor the outsourced model (Operissa + Trazatex); CCW processes in-plant on a case-by-case basis."
     }
   },
   "finalCta": {

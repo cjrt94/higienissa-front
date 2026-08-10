@@ -115,8 +115,8 @@
           "en": "Laundry Operations"
         },
         "desc": {
-          "es": "Operación integral de lavanderías in situ, para clientes con infraestructura propia: gestión diaria para productividad, cumplimiento y continuidad. Con el respaldo del know-how de Pacífica, aseguramos un óptimo servicio.",
-          "en": "End-to-end on-site laundry operation for clients with their own infrastructure: day-to-day management for productivity, compliance and continuity. Backed by Pacífica's know-how, we deliver top-tier service."
+          "es": "Operación integral de lavanderías in situ, para clientes con infraestructura propia: gestión diaria para productividad, cumplimiento y continuidad. Con el respaldo del know-how de CCW, aseguramos un óptimo servicio.",
+          "en": "End-to-end on-site laundry operation for clients with their own infrastructure: day-to-day management for productivity, compliance and continuity. Backed by CCW's know-how, we deliver top-tier service."
         },
         "groups": [
           {
@@ -493,8 +493,8 @@
       "en": "We operate with the ecosystem behind us"
     },
     "lead": {
-      "es": "Operissa opera en terreno con el respaldo de Pacífica y la trazabilidad de Trazatex. Cada marca potencia a las otras.",
-      "en": "Operissa operates on site backed by Pacífica and the traceability of Trazatex. Each brand strengthens the others."
+      "es": "Operissa opera en terreno con el respaldo de CCW y la trazabilidad de Trazatex. Cada marca potencia a las otras.",
+      "en": "Operissa operates on site backed by CCW and the traceability of Trazatex. Each brand strengthens the others."
     },
     "image": "/img/operissa-band.jpg",
     "imageAlt": {
@@ -503,15 +503,15 @@
     },
     "items": [
       {
-        "name": "Pacífica",
+        "name": "CCW",
         "desc": {
           "es": "Lavandería industrial inteligente.",
           "en": "Intelligent industrial laundry."
         },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Lavandería industrial Pacífica: máquinas y proceso de lavado a escala",
-          "en": "Pacífica industrial laundry: machines and washing process at scale"
+          "es": "Lavandería industrial CCW: máquinas y proceso de lavado a escala",
+          "en": "CCW industrial laundry: machines and washing process at scale"
         },
         "to": "/marca-pacifica"
       },

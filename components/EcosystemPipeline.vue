@@ -25,10 +25,10 @@ const ecosystem = (await useSettings()).ecosystem
 const nodes = ecosystem.pipeline
 // Pacífica y Trazatex van integradas; el resto, independiente.
 const LINKED = ['pacifica', 'trazatex']
-const pairing = ecosystem.pairing || { es: 'Pacífica + Trazatex, integradas', en: 'Pacífica + Trazatex, integrated' }
+const pairing = ecosystem.pairing || { es: 'CCW + Trazatex, integradas', en: 'CCW + Trazatex, integrated' }
 const disclaimer = ecosystem.disclaimer || {
-  es: 'Cada marca opera de forma independiente. La trazabilidad de Trazatex se integra con la lavandería de Pacífica para ofrecer una solución conjunta.',
-  en: "Each brand operates independently. Trazatex's traceability integrates with Pacífica's laundry to deliver a joint solution.",
+  es: 'Cada marca opera de forma independiente. La trazabilidad de Trazatex se integra con la lavandería de CCW para ofrecer una solución conjunta.',
+  en: "Each brand operates independently. Trazatex's traceability integrates with CCW's laundry to deliver a joint solution.",
 }
 // Negrita segura por convención **texto** en las descripciones (sin v-html: se
 // interpola con {{ }} y se envuelve solo el segmento marcado en <strong>). Mismo

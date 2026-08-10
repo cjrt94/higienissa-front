@@ -1,25 +1,25 @@
 {
   "slug": "pacifica",
   "order": 1,
-  "name": "Pacífica",
+  "name": "CCW",
   "poweredBy": null,
   "ctaConvention": "evaluacion",
   "published": true,
   "updatedAt": "2026-07-08T00:00:00.000Z",
   "seo": {
     "title": {
-      "es": "Pacífica — Lavandería industrial inteligente | Grupo Higienissa",
-      "en": "Pacífica — Smart industrial laundry | Grupo Higienissa"
+      "es": "CCW — Lavandería industrial inteligente | Grupo Higienissa",
+      "en": "CCW — Smart industrial laundry | Grupo Higienissa"
     },
     "description": {
-      "es": "Pacífica: lavandería industrial para operaciones que no pueden detenerse. Pensamos como operadores, con el respaldo del ecosistema Grupo Higienissa.",
-      "en": "Pacífica: industrial laundry for operations that cannot stop. We think like operators, backed by the Grupo Higienissa ecosystem."
+      "es": "CCW: lavandería industrial para operaciones que no pueden detenerse. Pensamos como operadores, con el respaldo del ecosistema Grupo Higienissa.",
+      "en": "CCW: industrial laundry for operations that cannot stop. We think like operators, backed by the Grupo Higienissa ecosystem."
     }
   },
   "hero": {
     "eyebrow": {
-      "es": "Pacífica",
-      "en": "Pacífica"
+      "es": "CCW",
+      "en": "CCW"
     },
     "claim": {
       "es": "Lavandería industrial para operaciones que no pueden detenerse.",
@@ -56,13 +56,13 @@
       "en": "More than an industrial laundry."
     },
     "body": {
-      "es": "Pacífica transforma la lavandería en una herramienta estratégica: detrás de cada sábana hospitalaria, uniforme o blanco hotelero hay una operación que depende de su disponibilidad. Nuestro compromiso no es solo procesar textiles, sino sostener el funcionamiento de quienes confían en nosotros.",
-      "en": "Pacífica turns laundry into a strategic tool: behind every hospital sheet, uniform or hotel linen there is an operation that depends on its availability. Our commitment is not just to process textiles, but to sustain the operations of those who rely on us."
+      "es": "CCW transforma la lavandería en una herramienta estratégica: detrás de cada sábana hospitalaria, uniforme o blanco hotelero hay una operación que depende de su disponibilidad. Nuestro compromiso no es solo procesar textiles, sino sostener el funcionamiento de quienes confían en nosotros.",
+      "en": "CCW turns laundry into a strategic tool: behind every hospital sheet, uniform or hotel linen there is an operation that depends on its availability. Our commitment is not just to process textiles, but to sustain the operations of those who rely on us."
     },
     "image": "/img/pacifica-proceso.jpg",
     "imageAlt": {
-      "es": "Proceso textil de Pacífica: ropa institucional lista y controlada",
-      "en": "Pacífica textile process: institutional linens ready and controlled"
+      "es": "Proceso textil de CCW: ropa institucional lista y controlada",
+      "en": "CCW textile process: institutional linens ready and controlled"
     },
     "highlights": [
       {
@@ -110,8 +110,8 @@
       "en": "What we do"
     },
     "note": {
-      "es": "¿Opera con lavandería e infraestructura propia? La operación integral de lavanderías in situ la ejecuta Operissa, con el respaldo del know-how de Pacífica.",
-      "en": "Running your own laundry and infrastructure? End-to-end on-site laundry operation is delivered by Operissa, backed by Pacífica's know-how."
+      "es": "¿Opera con lavandería e infraestructura propia? La operación integral de lavanderías in situ la ejecuta Operissa, con el respaldo del know-how de CCW.",
+      "en": "Running your own laundry and infrastructure? End-to-end on-site laundry operation is delivered by Operissa, backed by CCW's know-how."
     },
     "noteTo": "/marca-operissa"
   },
@@ -338,16 +338,16 @@
       "en": "Backed by the ecosystem"
     },
     "lead": {
-      "es": "Pacífica procesa. Trazatex aporta datos y trazabilidad. Operissa opera en terreno. Cada marca potencia a las otras.",
-      "en": "Pacífica processes. Trazatex provides data and traceability. Operissa operates on-site. Each brand strengthens the others."
+      "es": "CCW procesa. Trazatex aporta datos y trazabilidad. Operissa opera en terreno. Cada marca potencia a las otras.",
+      "en": "CCW processes. Trazatex provides data and traceability. Operissa operates on-site. Each brand strengthens the others."
     },
     "image": "/img/pacifica-band.jpg",
     "imageAlt": {
-      "es": "Nave de lavandería industrial Pacífica operando a escala",
-      "en": "Pacífica industrial laundry floor operating at scale"
+      "es": "Nave de lavandería industrial CCW operando a escala",
+      "en": "CCW industrial laundry floor operating at scale"
     },
     "self": {
-      "name": "Pacífica",
+      "name": "CCW",
       "role": {
         "es": "Procesa",
         "en": "Processes"

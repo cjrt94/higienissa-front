@@ -11,8 +11,8 @@
     },
     {
       "use": {
-        "es": "Pacífica",
-        "en": "Pacífica"
+        "es": "CCW",
+        "en": "CCW"
       },
       "author": "Thatsme2",
       "license": "CC BY-SA 3.0",
@@ -95,8 +95,8 @@
     "pipeline": [
       {
         "slug": "pacifica",
-        "name": "Pacífica",
-        "logo": "/img/logos/pacifica.jpg",
+        "name": "CCW",
+        "logo": "/img/logos/ccw.svg",
         "role": { "es": "Procesa", "en": "Processes" },
         "desc": {
           "es": "**Lavandería** industrial inteligente: el punto donde empieza la disponibilidad del textil.",
@@ -128,12 +128,12 @@
       }
     ],
     "pairing": {
-      "es": "Pacífica + Trazatex, integradas",
-      "en": "Pacífica + Trazatex, integrated"
+      "es": "CCW + Trazatex, integradas",
+      "en": "CCW + Trazatex, integrated"
     },
     "disclaimer": {
-      "es": "Cada marca opera de forma independiente. La trazabilidad de Trazatex se integra con la lavandería de Pacífica para ofrecer una solución conjunta.",
-      "en": "Each brand operates independently. Trazatex's traceability integrates with Pacífica's laundry to deliver a joint solution."
+      "es": "Cada marca opera de forma independiente. La trazabilidad de Trazatex se integra con la lavandería de CCW para ofrecer una solución conjunta.",
+      "en": "Each brand operates independently. Trazatex's traceability integrates with CCW's laundry to deliver a joint solution."
     }
   }
 }

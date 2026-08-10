@@ -136,8 +136,8 @@
       {
         "title": { "es": "Procesamiento con estándar", "en": "Standardized processing" },
         "desc": {
-          "es": "Pacífica procesa el textil de faena bajo un estándar controlado, pensado para operaciones que no pueden detenerse.",
-          "en": "Pacífica processes on-site textiles under a controlled standard, designed for operations that cannot stop."
+          "es": "CCW procesa el textil de faena bajo un estándar controlado, pensado para operaciones que no pueden detenerse.",
+          "en": "CCW processes on-site textiles under a controlled standard, designed for operations that cannot stop."
         }
       },
       {
@@ -205,7 +205,7 @@
     },
     "items": [
       {
-        "name": "Pacífica",
+        "name": "CCW",
         "eyebrow": { "es": "Procesa · Lavandería", "en": "Processes · Laundry" },
         "role": { "es": "Procesamiento con estándar", "en": "Standardized processing" },
         "desc": {
@@ -214,8 +214,8 @@
         },
         "image": "/img/pacifica-hero.jpg",
         "imageAlt": {
-          "es": "Lavandería industrial Pacífica para operaciones en faena",
-          "en": "Pacífica industrial laundry for on-site operations"
+          "es": "Lavandería industrial CCW para operaciones en faena",
+          "en": "CCW industrial laundry for on-site operations"
         },
         "to": "/marca-pacifica",
         "cta": { "es": "Ver más", "en": "See more" }
