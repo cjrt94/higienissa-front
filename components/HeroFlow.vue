@@ -70,7 +70,7 @@ const nodes = computed(() => [
           <li v-for="n in nodes" :key="n.key" class="flow-node" :class="{ 'is-group': n.key === 'grupo' }">
             <span v-if="n.logo" class="fn-logo"><img :src="n.logo" :alt="n.name" loading="lazy" decoding="async"></span>
             <span v-else class="fn-mark"><BaseIcon :name="n.icon" :size="n.key === 'grupo' ? 24 : 20" /></span>
-            <span class="fn-name">{{ n.name }}</span>
+            <span v-if="!n.logo" class="fn-name">{{ n.name }}</span>
             <span class="fn-role">{{ t(n.role) }}</span>
             <span class="fn-desc"><template v-for="(part, pi) in boldParts(n.blurb)" :key="pi"><strong v-if="part.b">{{ part.t }}</strong><template v-else>{{ part.t }}</template></template></span>
           </li>

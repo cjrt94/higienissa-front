@@ -65,7 +65,7 @@ function boldParts(str) {
         >
           <span v-if="n.logo" class="eco-logo"><img :src="n.logo" :alt="n.name" loading="lazy" decoding="async"></span>
           <span class="eco-role">{{ t(n.role) }}</span>
-          <h3 v-if="!logoAsName || !n.logo">{{ n.name }}</h3>
+          <h3 v-if="!n.logo">{{ n.name }}</h3>
           <p><template v-for="(part, pi) in boldParts(t(n.desc))" :key="pi"><strong v-if="part.b">{{ part.t }}</strong><template v-else>{{ part.t }}</template></template></p>
           <NuxtLink v-if="n.slug !== current" class="link-arrow" :to="localePath(n.to)">{{ $t('cta.viewMore') }}</NuxtLink>
           <span v-else class="eco-here">{{ $t('cta.youAreHere') }}</span>
@@ -96,9 +96,9 @@ function boldParts(str) {
   padding: clamp(var(--space-5), 3vw, var(--space-6));
   box-shadow: var(--shadow-xs);
 }
-/* Logo real de la marca sobre chip claro (mismo tratamiento que el hero) */
-.eco-logo { align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 6px 14px; background: #fff; border: 1px solid var(--line); border-radius: 10px; margin-bottom: var(--space-4); }
-.eco-logo img { height: 100%; max-height: 26px; width: auto; max-width: 120px; object-fit: contain; display: block; }
+/* Logo real de la marca sobre chip claro (mismo tratamiento que el hero) — ampliado */
+.eco-logo { align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; height: 64px; padding: 9px 18px; background: #fff; border: 1px solid var(--line); border-radius: 10px; margin-bottom: var(--space-4); }
+.eco-logo img { height: 100%; max-height: 48px; width: auto; max-width: 200px; object-fit: contain; display: block; }
 
 /* Cuando el logo sustituye al nombre (Nosotros): el rol (PROCESA/TRAZA/OPERA) va
    arriba y el logo debajo, ocupando el lugar del <h3> retirado y con más presencia. */

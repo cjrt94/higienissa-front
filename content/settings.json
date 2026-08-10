@@ -96,7 +96,7 @@
       {
         "slug": "pacifica",
         "name": "CCW",
-        "logo": "/img/logos/ccw.svg",
+        "logo": "/img/logos/ccw.png",
         "role": { "es": "Procesa", "en": "Processes" },
         "desc": {
           "es": "**Lavandería** industrial inteligente: el punto donde empieza la disponibilidad del textil.",

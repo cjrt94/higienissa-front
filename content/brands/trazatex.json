@@ -57,36 +57,6 @@
     }
   },
   "problem": {
-    "duo": [
-      {
-        "kicker": {
-          "es": "El costo oculto",
-          "en": "The hidden cost"
-        },
-        "q": {
-          "es": "¿Cuánto le cuesta no saber dónde está cada prenda?",
-          "en": "What does it cost you not to know where each garment is?"
-        },
-        "body": {
-          "es": "Sin trazabilidad, el textil deja de ser un activo gestionable. Se pierde información, aumentan las reposiciones innecesarias y las decisiones dejan de basarse en datos.",
-          "en": "Without traceability, textiles stop being a manageable asset. Information is lost, unnecessary replacements pile up, and decisions stop being data-driven."
-        }
-      },
-      {
-        "kicker": {
-          "es": "El impacto operativo",
-          "en": "The operational impact"
-        },
-        "q": {
-          "es": "¿Cuántas horas de su equipo se pierden contando prendas una por una?",
-          "en": "How many of your team's hours are lost counting garments one by one?"
-        },
-        "body": {
-          "es": "El conteo manual consume horas-hombre valiosas y obliga al personal a manipular constantemente ropa utilizada. La lectura RFID automatiza el proceso, acelera los inventarios y reduce la exposición durante la operación.",
-          "en": "Manual counting eats up valuable labor hours and forces staff to constantly handle used textiles. RFID reading automates the process, speeds up inventories and reduces exposure during operation."
-        }
-      }
-    ],
     "kicker": {
       "es": "El problema",
       "en": "The problem"

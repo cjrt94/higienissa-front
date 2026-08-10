@@ -2,9 +2,6 @@
 defineProps({ data: { type: Object, required: true } })
 const t = useT()
 const localePath = useLocalePath()
-// Mismo lenguaje de íconos por marca que el hero (Pacífica=lavado, Trazatex=RFID, Operissa=operación)
-const iconFor = (to = '') =>
-  to.includes('trazatex') ? 'scan' : to.includes('operissa') ? 'cog' : 'droplet'
 </script>
 
 <template>
@@ -20,12 +17,8 @@ const iconFor = (to = '') =>
             <img :src="item.image" :alt="t(item.imageAlt)" width="800" height="500" loading="lazy" decoding="async">
           </div>
           <div class="card-body">
-            <span class="card-eyebrow-row">
-              <span v-if="item.logo" class="card-logo"><img :src="item.logo" :alt="item.name" loading="lazy" decoding="async"></span>
-              <span v-else class="card-ico"><BaseIcon :name="iconFor(item.to)" :size="18" /></span>
-              <span class="card-eyebrow">{{ t(item.eyebrow) }}</span>
-            </span>
-            <h3>{{ item.name }}</h3>
+            <span v-if="item.logo" class="card-brand"><img :src="item.logo" :alt="item.name" loading="lazy" decoding="async"></span>
+            <h3 v-else>{{ item.name }}</h3>
             <p class="card-desc">{{ t(item.desc) }}</p>
             <NuxtLink class="link-arrow" :to="localePath(item.to)">
               {{ $t('cta.viewMore') }}
@@ -38,7 +31,13 @@ const iconFor = (to = '') =>
 </template>
 
 <style scoped>
-/* Logo real de la marca sobre chip claro (mismo tratamiento que el hero) */
-.card-logo { display: inline-flex; align-items: center; justify-content: center; height: 30px; padding: 4px 10px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
-.card-logo img { height: 100%; max-height: 22px; width: auto; max-width: 92px; object-fit: contain; display: block; }
+/* Logo de la marca en reemplazo del nombre y del eyebrow (ampliado) */
+.card-brand { align-self: flex-start; display: inline-flex; margin-bottom: var(--space-1); }
+.card-brand img { height: auto; max-height: 72px; max-width: 210px; width: auto; object-fit: contain; display: block; }
+
+/* Card completo clickeable (stretched link): el enlace "Ver más" se mantiene como
+   única <a> (accesible) y su ::after se estira sobre todo el card. */
+.card { position: relative; cursor: pointer; }
+.card .link-arrow::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.card:has(.link-arrow:focus-visible) { outline: 2px solid var(--azul); outline-offset: 2px; }
 </style>
