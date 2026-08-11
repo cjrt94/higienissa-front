@@ -5,6 +5,19 @@
 const props = defineProps({ data: { type: Object, required: true } })
 const t = useT()
 const ui = useUiText()
+
+// Entrada del hero: timeline sutil kicker→título→lead→CTA→nodos. Se registra ANTES del
+// `await` (los lifecycle hooks tras un await en setup async pierden el contexto de instancia).
+const root = ref(null)
+useGsapContext(root, ({ gsap }) => {
+  gsap.timeline()
+    .to('.flow-kicker', { autoAlpha: 1, y: 0 })
+    .fromTo('.flow-title', { scale: 0.985 }, { autoAlpha: 1, y: 0, scale: 1 }, '-=0.40')
+    .to('.flow-lead', { autoAlpha: 1, y: 0 }, '-=0.45')
+    .to('.flow-actions', { autoAlpha: 1, y: 0 }, '-=0.45')
+    .to('.flow-node', { autoAlpha: 1, y: 0, stagger: 0.10 }, '-=0.30')
+})
+
 const settings = await useSettings()
 const hlTitle = computed(() =>
   t(props.data.title)
@@ -55,13 +68,13 @@ const nodes = computed(() => [
 </script>
 
 <template>
-  <section class="hero-flow">
+  <section ref="root" class="hero-flow">
     <div class="flow-aura" aria-hidden="true" />
     <div class="container flow-inner">
-      <span class="kicker flow-kicker">{{ t(data.eyebrow) }}</span>
-      <h1 class="flow-title" v-html="hlTitle" />
-      <p class="flow-lead">{{ t(data.lead) }}</p>
-      <div class="flow-actions">
+      <span class="kicker flow-kicker anim-in">{{ t(data.eyebrow) }}</span>
+      <h1 class="flow-title anim-in" v-html="hlTitle" />
+      <p class="flow-lead anim-in">{{ t(data.lead) }}</p>
+      <div class="flow-actions anim-in">
         <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
         <a class="flow-link" href="#ecosistema">{{ ui('cta.knowEcosystem') }} →</a>
       </div>
@@ -69,7 +82,7 @@ const nodes = computed(() => [
       <!-- Nodos independientes (sin riel): las marcas no se leen como una secuencia -->
       <div class="flow-track">
         <ul class="flow-nodes">
-          <li v-for="n in nodes" :key="n.key" class="flow-node" :class="{ 'is-group': n.key === 'grupo' }">
+          <li v-for="n in nodes" :key="n.key" class="flow-node anim-in" :class="{ 'is-group': n.key === 'grupo' }">
             <span v-if="n.logo" class="fn-logo"><img :src="n.logo" :alt="n.name" loading="lazy" decoding="async"></span>
             <span v-else class="fn-mark"><BaseIcon :name="n.icon" :size="n.key === 'grupo' ? 24 : 20" /></span>
             <span v-if="!n.logo" class="fn-name">{{ n.name }}</span>

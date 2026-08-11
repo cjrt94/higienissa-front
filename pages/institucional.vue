@@ -1,4 +1,10 @@
 <script setup>
+// Entrada del hero: stagger sutil del copy. Registrado ANTES del await (los lifecycle hooks
+// tras un await en setup async pierden el contexto de instancia).
+const heroRoot = ref(null)
+useGsapContext(heroRoot, ({ gsap }) => {
+  gsap.timeline().to('.anim-in', { autoAlpha: 1, y: 0, stagger: 0.12 })
+})
 const page = await usePageContent('institucional')
 const t = useT()
 const ui = useUiText()
@@ -22,13 +28,13 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
 <template>
   <div>
     <!-- 1 · HERO rico (foto + badge) -->
-    <section class="hero">
+    <section ref="heroRoot" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker">{{ t(page.hero.eyebrow) }}</span>
-          <h1 class="display">{{ t(page.hero.title) }}</h1>
-          <p class="lead">{{ t(page.hero.lead) }}</p>
-          <div class="hero-actions">
+          <span class="kicker anim-in">{{ t(page.hero.eyebrow) }}</span>
+          <h1 class="display anim-in">{{ t(page.hero.title) }}</h1>
+          <p class="lead anim-in">{{ t(page.hero.lead) }}</p>
+          <div class="hero-actions anim-in">
             <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
             <BaseButton href="#ecosistema" variant="ghost">{{ ui('cta.knowMore') }}</BaseButton>
           </div>

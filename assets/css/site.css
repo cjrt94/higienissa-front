@@ -447,6 +447,19 @@ li { margin-bottom: var(--space-2); }
 }
 
 /* ============================================================
+   MOTION · entrada de heroes (GSAP)  ·  pre-hide anti-FOUC
+   ============================================================ */
+/* Los timelines de entrada (HeroFlow/PageHero/SectorHero) requieren ocultar el copy antes
+   del primer paint para no verlo aparecer→desaparecer→animar en SSG. Se pre-oculta SOLO con
+   JS presente (`html.js`, marca puesta por script inline en <head> antes de pintar) y bajo
+   `no-preference`. GSAP revela con estilos inline (mayor especificidad → ganan al pre-hide).
+   `:not(.gsap-ready)` es el failsafe: si GSAP no montara, un timeout añade `.gsap-ready` y el
+   contenido se muestra igual. Sin JS o con reduced-motion, esta regla no aplica → visible. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js:not(.gsap-ready) .anim-in { opacity: 0; transform: translateY(38px); }
+}
+
+/* ============================================================
    PAGE TRANSITION  ·  fade sutil entre rutas (sin desplazamiento → sin CLS)
    ============================================================ */
 @media (prefers-reduced-motion: no-preference) {

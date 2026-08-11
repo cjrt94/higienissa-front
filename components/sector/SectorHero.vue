@@ -13,10 +13,17 @@ defineProps({
 })
 const t = useT()
 const ui = useUiText()
+
+// Entrada del hero: stagger sutil del copy. Solo el texto (.sh-*) lleva `.anim-in`;
+// el fondo a sangre (.sh-media/.sh-scrim) nunca se pre-oculta (debe verse desde el HTML estático).
+const root = ref(null)
+useGsapContext(root, ({ gsap }) => {
+  gsap.timeline().to('.anim-in', { autoAlpha: 1, y: 0, stagger: 0.12 })
+})
 </script>
 
 <template>
-  <section class="hero sector-hero">
+  <section ref="root" class="hero sector-hero">
     <div class="sh-media">
       <img v-if="image" :src="image" :alt="t(imageAlt)" fetchpriority="high" width="1920" height="1280">
       <span class="sh-scrim" aria-hidden="true" />
@@ -25,17 +32,17 @@ const ui = useUiText()
     </div>
 
     <div class="container sh-inner">
-      <span class="sh-eyebrow">
+      <span class="sh-eyebrow anim-in">
         <span v-if="icon" class="sh-chip"><BaseIcon :name="icon" :size="16" /></span>
         <span class="sh-eyebrow-text">{{ t(eyebrow) }}</span>
       </span>
-      <h1 class="sh-title">{{ t(title) }}</h1>
-      <p class="sh-lead">{{ t(lead) }}</p>
-      <div class="sh-actions">
+      <h1 class="sh-title anim-in">{{ t(title) }}</h1>
+      <p class="sh-lead anim-in">{{ t(lead) }}</p>
+      <div class="sh-actions anim-in">
         <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
         <BaseButton href="#marcas" variant="light">{{ ui('cta.knowMore') }}</BaseButton>
       </div>
-      <p v-if="badge" class="sh-badge">
+      <p v-if="badge" class="sh-badge anim-in">
         <span class="sh-badge-ico"><BaseIcon :name="badge.icon || 'scan'" :size="18" /></span>
         <span class="sh-badge-text"><b>{{ t(badge.title) }}</b>{{ t(badge.sub) }}</span>
       </p>

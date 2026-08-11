@@ -72,6 +72,17 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: { lang: 'es' },
+      // Marca `js` en <html> antes del primer paint → habilita el pre-hide de los heroes
+      // animados por GSAP (evita flash visible→oculto en SSG). Sin JS, no hay clase → los
+      // heroes se ven desde el HTML estático. Failsafe: si a los 2.5s GSAP no montó, se
+      // añade `gsap-ready` que neutraliza el pre-hide (el contenido no queda invisible).
+      script: [
+        {
+          tagPosition: 'head',
+          innerHTML:
+            "document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('gsap-ready')},2500)",
+        },
+      ],
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
