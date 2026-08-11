@@ -5,6 +5,10 @@ import { contactSchema } from '~/schemas/contact.js'
 
 const { t } = useI18n()
 const { locale } = useI18n()
+const tt = useT()
+const ui = useUiText()
+// Texto de consentimiento editable desde /admin/settings → contact.consent (bilingüe); cae a i18n.
+const { data: settings } = useNuxtData('content:settings')
 const toast = useToast()
 const sent = ref(false)
 const submitting = ref(false)
@@ -113,8 +117,8 @@ watch(sent, (v) => {
         <div class="form-field full">
           <label for="f-type">{{ t('contact.requestType') }}</label>
           <select id="f-type" v-model="ctaContext">
-            <option value="evaluacion">{{ $t('cta.evaluation') }}</option>
-            <option value="diagnostico">{{ $t('cta.diagnosis') }}</option>
+            <option value="evaluacion">{{ ui('cta.evaluation') }}</option>
+            <option value="diagnostico">{{ ui('cta.diagnosis') }}</option>
           </select>
         </div>
         <div class="form-field full">
@@ -127,7 +131,7 @@ watch(sent, (v) => {
         <div class="form-check">
           <input id="f-consent" v-model="consent" type="checkbox"
                  :aria-invalid="!!eConsent" :aria-describedby="eConsent ? 'e-consent' : undefined">
-          <label for="f-consent">{{ t('contact.consent') }} <span class="req">*</span></label>
+          <label for="f-consent">{{ tt(settings?.contact?.consent) || t('contact.consent') }} <span class="req">*</span></label>
           <span v-if="eConsent" id="e-consent" class="field-error" role="alert">{{ eConsent }}</span>
         </div>
       </div>

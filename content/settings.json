@@ -55,10 +55,36 @@
       "source": "https://commons.wikimedia.org/wiki/File:University_Medical_Center_New_Orleans_interior_Feb_2020_17.jpg"
     }
   ],
+  "brand": {
+    "name": "Grupo Higienissa",
+    "logoColor": "/logos/lockup-horizontal-azul.png",
+    "logoWhite": "/logos/lockup-horizontal-blanco.png"
+  },
   "contact": {
     "email": "contacto@higienissa.com",
     "phone": "+51 1 000 0000",
-    "city": { "es": "Lima, Perú", "en": "Lima, Peru" }
+    "city": { "es": "Lima, Perú", "en": "Lima, Peru" },
+    "consent": {
+      "es": "Acepto que Grupo Higienissa use mis datos para responder mi consulta.",
+      "en": "I agree that Grupo Higienissa may use my data to respond to my inquiry."
+    }
+  },
+  "ui": {
+    "tagline": {
+      "es": "Un solo ecosistema. Infinitas posibilidades.",
+      "en": "One ecosystem. Infinite possibilities."
+    },
+    "cta": {
+      "evaluation": { "es": "Solicitar evaluación", "en": "Request an assessment" },
+      "diagnosis": { "es": "Solicitar diagnóstico", "en": "Request a diagnosis" },
+      "knowEcosystem": { "es": "Conocer el ecosistema", "en": "Explore the ecosystem" },
+      "knowGroup": { "es": "Conocer el grupo", "en": "About the group" },
+      "seeSector": { "es": "Ver sector", "en": "View sector" },
+      "knowMore": { "es": "Conocer más", "en": "Learn more" },
+      "know": { "es": "Conocer", "en": "Discover" },
+      "viewMore": { "es": "Ver más", "en": "See more" },
+      "youAreHere": { "es": "Estás aquí", "en": "You are here" }
+    }
   },
   "social": {
     "linkedin": "#",

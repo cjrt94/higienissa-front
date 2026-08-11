@@ -37,7 +37,7 @@ onBeforeUnmount(() => io && io.disconnect())
         <div class="pf-sticky">
           <div class="pf-device">
             <span class="pf-chrome" aria-hidden="true"><i></i><i></i><i></i>
-              <span class="pf-url">dashboard.asisidtrak.com</span>
+              <span class="pf-url">{{ data.deviceUrl || 'dashboard.asisidtrak.com' }}</span>
             </span>
             <div class="pf-screens">
               <img

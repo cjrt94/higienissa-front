@@ -12,6 +12,7 @@ defineProps({
   badge: { type: Object, default: null },      // { icon, title{es,en}, sub{es,en} }
 })
 const t = useT()
+const ui = useUiText()
 </script>
 
 <template>
@@ -31,8 +32,8 @@ const t = useT()
       <h1 class="sh-title">{{ t(title) }}</h1>
       <p class="sh-lead">{{ t(lead) }}</p>
       <div class="sh-actions">
-        <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
-        <BaseButton href="#marcas" variant="light">{{ $t('cta.knowMore') }}</BaseButton>
+        <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
+        <BaseButton href="#marcas" variant="light">{{ ui('cta.knowMore') }}</BaseButton>
       </div>
       <p v-if="badge" class="sh-badge">
         <span class="sh-badge-ico"><BaseIcon :name="badge.icon || 'scan'" :size="18" /></span>

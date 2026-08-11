@@ -551,6 +551,7 @@
     ]
   },
   "platform": {
+    "deviceUrl": "dashboard.asisidtrak.com",
     "kicker": {
       "es": "La plataforma en vivo",
       "en": "The platform, live"

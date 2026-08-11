@@ -1,6 +1,7 @@
 <script setup>
 defineProps({ data: { type: Object, required: true } })
 const t = useT()
+const ui = useUiText()
 const localePath = useLocalePath()
 </script>
 
@@ -21,7 +22,7 @@ const localePath = useLocalePath()
         </div>
         <p style="margin-top:var(--space-4)">
           <NuxtLink class="link-arrow" :to="localePath('/marca-trazatex')">
-            {{ $t('cta.viewMore') }}
+            {{ ui('cta.viewMore') }}
           </NuxtLink>
         </p>
       </div>

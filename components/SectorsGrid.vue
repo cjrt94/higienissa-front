@@ -6,6 +6,7 @@ defineProps({
   alt: { type: Boolean, default: false },
 })
 const t = useT()
+const ui = useUiText()
 const localePath = useLocalePath()
 </script>
 
@@ -23,7 +24,7 @@ const localePath = useLocalePath()
           <span class="sc-body">
             <h3>{{ t(item.name) }}</h3>
             <p>{{ t(item.desc) }}</p>
-            <span class="sc-link">{{ $t('cta.seeSector') }}</span>
+            <span class="sc-link">{{ ui('cta.seeSector') }}</span>
           </span>
         </NuxtLink>
       </div>

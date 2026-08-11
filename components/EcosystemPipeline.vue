@@ -20,6 +20,7 @@ const props = defineProps({
   logoAsName: { type: Boolean, default: false },
 })
 const t = useT()
+const ui = useUiText()
 const localePath = useLocalePath()
 const ecosystem = (await useSettings()).ecosystem
 const nodes = ecosystem.pipeline
@@ -67,8 +68,8 @@ function boldParts(str) {
           <span class="eco-role">{{ t(n.role) }}</span>
           <h3 v-if="!n.logo">{{ n.name }}</h3>
           <p><template v-for="(part, pi) in boldParts(t(n.desc))" :key="pi"><strong v-if="part.b">{{ part.t }}</strong><template v-else>{{ part.t }}</template></template></p>
-          <NuxtLink v-if="n.slug !== current" class="link-arrow" :to="localePath(n.to)">{{ $t('cta.viewMore') }}</NuxtLink>
-          <span v-else class="eco-here">{{ $t('cta.youAreHere') }}</span>
+          <NuxtLink v-if="n.slug !== current" class="link-arrow" :to="localePath(n.to)">{{ ui('cta.viewMore') }}</NuxtLink>
+          <span v-else class="eco-here">{{ ui('cta.youAreHere') }}</span>
         </div>
       </div>
 

@@ -11,6 +11,7 @@ const props = defineProps({
   ctaLabel: { type: String, default: '' },
 })
 const t = useT()
+const ui = useUiText()
 </script>
 
 <template>
@@ -22,7 +23,7 @@ const t = useT()
         <h1>{{ t(title) }}</h1>
         <p v-if="lead" class="lead">{{ t(lead) }}</p>
         <div v-if="ctaTo" class="hero-actions">
-          <BaseButton :to="ctaTo" variant="primary">{{ ctaLabel || $t('cta.evaluation') }}</BaseButton>
+          <BaseButton :to="ctaTo" variant="primary">{{ ctaLabel || ui('cta.evaluation') }}</BaseButton>
         </div>
       </div>
       <div v-if="image" class="page-hero-media">

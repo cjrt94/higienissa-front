@@ -1,6 +1,7 @@
 <script setup>
 const page = await usePageContent('contacto')
 const t = useT()
+const ui = useUiText()
 const settings = await useSettings()
 const localePath = useLocalePath()
 
@@ -105,7 +106,7 @@ const brands = computed(() => settings.ecosystem?.pipeline ?? [])
             <span class="eco-role">{{ t(b.role) }}</span>
             <span class="eco-name">{{ b.name }}</span>
             <span class="eco-desc">{{ t(b.desc) }}</span>
-            <span class="eco-link link-arrow">{{ $t('cta.know') }}</span>
+            <span class="eco-link link-arrow">{{ ui('cta.know') }}</span>
           </NuxtLink>
         </div>
       </div>

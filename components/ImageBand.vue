@@ -11,6 +11,7 @@ const props = defineProps({
   align: { type: String, default: 'center' }, // center | left
 })
 const t = useT()
+const ui = useUiText()
 </script>
 
 <template>
@@ -22,7 +23,7 @@ const t = useT()
       <h2 v-if="title">{{ t(title) }}</h2>
       <p v-if="statement" class="ib-statement">{{ t(statement) }}</p>
       <div v-if="ctaTo" class="ib-cta">
-        <BaseButton :to="ctaTo" variant="light">{{ ctaLabel || $t('cta.evaluation') }}</BaseButton>
+        <BaseButton :to="ctaTo" variant="light">{{ ctaLabel || ui('cta.evaluation') }}</BaseButton>
       </div>
     </div>
   </section>

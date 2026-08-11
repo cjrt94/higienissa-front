@@ -4,6 +4,7 @@
 // leen como cadena de procesos). Cada marca se representa con su logo real.
 const props = defineProps({ data: { type: Object, required: true } })
 const t = useT()
+const ui = useUiText()
 const settings = await useSettings()
 const hlTitle = computed(() =>
   t(props.data.title)
@@ -12,14 +13,15 @@ const hlTitle = computed(() =>
 )
 // Ícono representativo por empresa (fallback si un nodo no trae logo ni icon).
 const ICON = { pacifica: 'droplet', trazatex: 'scan', operissa: 'cog' }
-// Nodo del grupo que cierra el flujo. EDITABLE desde el contenido del hero (`data.groupNode`);
-// EXTRA es solo el fallback si el contenido no lo trae. NO se agrega al pipeline compartido de
-// settings.json (que alimenta EcosystemPipeline con 3 nodos en otras páginas).
+// Nodo del grupo que cierra el flujo. El copy (role/blurb) es EDITABLE desde el contenido del
+// hero (`data.groupNode`, en /admin → Home). EXTRA es solo un fallback ESTRUCTURAL (nombre + ícono,
+// sin copy editorial hardcodeado) por si el CMS deja el nodo vacío. NO se agrega al pipeline
+// compartido de settings.json (que alimenta EcosystemPipeline con 3 nodos en otras páginas).
 const EXTRA = {
-  name: 'Grupo Higienissa',
-  role: { es: 'Garantiza', en: 'Guarantees' },
+  name: settings.brand?.name || 'Grupo Higienissa',
+  role: '',
   icon: 'shield',
-  blurb: { es: 'El estándar único que integra proceso, trazabilidad y operación.', en: 'The single standard that integrates process, traceability and operation.' },
+  blurb: '',
 }
 const groupNode = computed(() => props.data.groupNode || EXTRA)
 
@@ -60,8 +62,8 @@ const nodes = computed(() => [
       <h1 class="flow-title" v-html="hlTitle" />
       <p class="flow-lead">{{ t(data.lead) }}</p>
       <div class="flow-actions">
-        <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
-        <a class="flow-link" href="#ecosistema">{{ $t('cta.knowEcosystem') }} →</a>
+        <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
+        <a class="flow-link" href="#ecosistema">{{ ui('cta.knowEcosystem') }} →</a>
       </div>
 
       <!-- Nodos independientes (sin riel): las marcas no se leen como una secuencia -->

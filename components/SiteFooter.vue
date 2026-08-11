@@ -1,6 +1,7 @@
 <script setup>
 const { t } = useI18n()
 const tt = useT()
+const ui = useUiText()
 const localePath = useLocalePath()
 const settings = await useSettings()
 
@@ -39,8 +40,8 @@ const socialLinks = computed(() => SOCIAL.map((s) => ({
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="/logos/lockup-horizontal-blanco.png" width="192" height="46" alt="Grupo Higienissa">
-          <p>{{ t('tagline') }}</p>
+          <img :src="settings.brand?.logoWhite || '/logos/lockup-horizontal-blanco.png'" width="192" height="46" :alt="settings.brand?.name || 'Grupo Higienissa'">
+          <p>{{ ui('tagline') }}</p>
           <div class="footer-social" :aria-label="t('footer.social')">
             <a v-for="s in socialLinks" :key="s.key" :href="s.url" :aria-label="s.label">{{ s.label }}</a>
           </div>

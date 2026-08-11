@@ -2,6 +2,7 @@
 const { t } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
+const settings = await useSettings()
 const open = ref(false)
 const route = useRoute()
 const toggleEl = ref(null)
@@ -19,10 +20,12 @@ const isTransparent = computed(() => !scrolled.value && !open.value)
 // Señal por página: SiteHeader lee route.meta.darkHero (reactivo y se resetea al navegar).
 const darkHero = computed(() => route.meta.darkHero === true)
 const isDarkHero = computed(() => isTransparent.value && darkHero.value)
+// Logos editables desde /admin/settings → grupo `brand` (color para navbar transparente sobre
+// hero claro; blanco para navbar sólido u hero oscuro). Fallback a los assets del brand kit.
+const logoColor = computed(() => settings.brand?.logoColor || '/logos/lockup-horizontal-azul.png')
+const logoWhite = computed(() => settings.brand?.logoWhite || '/logos/lockup-horizontal-blanco.png')
 const logoSrc = computed(() =>
-  isTransparent.value && !darkHero.value
-    ? '/logos/lockup-horizontal-azul.png'
-    : '/logos/lockup-horizontal-blanco.png',
+  isTransparent.value && !darkHero.value ? logoColor.value : logoWhite.value,
 )
 const onScroll = () => { scrolled.value = window.scrollY > 24 }
 
@@ -59,7 +62,7 @@ const nav = [
   <header class="site-header" :class="{ 'is-transparent': isTransparent, 'is-scrolled': scrolled, 'is-dark-hero': isDarkHero }">
     <div class="container">
       <NuxtLink class="brand-logo" :to="localePath('/')" :aria-label="t('a11y.homeLink')">
-        <img :src="logoSrc" width="167" height="40" alt="Grupo Higienissa">
+        <img :src="logoSrc" width="167" height="40" :alt="settings.brand?.name || 'Grupo Higienissa'">
       </NuxtLink>
 
       <button

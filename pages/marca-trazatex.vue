@@ -1,6 +1,7 @@
 <script setup>
 const page = await useBrandContent('trazatex')
 const t = useT()
+const ui = useUiText()
 const config = useRuntimeConfig()
 
 useSeoMeta({
@@ -43,7 +44,7 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
           <h1 class="display">{{ t(page.hero.title) }}</h1>
           <p class="lead">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions">
-            <BaseButton :to="page.hero.ctaPrimary.to" variant="primary">{{ $t('cta.diagnosis') }}</BaseButton>
+            <BaseButton :to="page.hero.ctaPrimary.to" variant="primary">{{ ui('cta.diagnosis') }}</BaseButton>
             <BaseButton :href="page.hero.ctaSecondary.to" variant="ghost">{{ t(page.hero.ctaSecondary.label) }}</BaseButton>
           </div>
         </div>
@@ -222,7 +223,7 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
         <h2>{{ t(page.finalCta.title) }}</h2>
         <p class="lead">{{ t(page.finalCta.lead) }}</p>
         <div class="cta-actions">
-          <BaseButton to="/contacto" variant="light">{{ $t('cta.diagnosis') }}</BaseButton>
+          <BaseButton to="/contacto" variant="light">{{ ui('cta.diagnosis') }}</BaseButton>
         </div>
       </div>
     </section>

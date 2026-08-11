@@ -1,6 +1,7 @@
 <script setup>
 const page = await useBrandContent('operissa')
 const t = useT()
+const ui = useUiText()
 const localePath = useLocalePath()
 const config = useRuntimeConfig()
 const splitTwo = useSplitTwo()
@@ -43,8 +44,8 @@ const solutionItems = computed(() =>
           <h1 class="display">{{ t(page.hero.title) }}</h1>
           <p class="lead">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions">
-            <BaseButton to="/contacto" variant="primary">{{ $t('cta.evaluation') }}</BaseButton>
-            <BaseButton href="#soluciones" variant="ghost">{{ $t('cta.knowMore') }}</BaseButton>
+            <BaseButton to="/contacto" variant="primary">{{ ui('cta.evaluation') }}</BaseButton>
+            <BaseButton href="#soluciones" variant="ghost">{{ ui('cta.knowMore') }}</BaseButton>
           </div>
         </div>
         <div class="hero-media">
@@ -115,7 +116,7 @@ const solutionItems = computed(() =>
             <span class="sc-body">
               <h3>{{ t(s.name) }}</h3>
               <p>{{ t(s.desc) }}</p>
-              <span class="sc-link">{{ $t('cta.seeSector') }}</span>
+              <span class="sc-link">{{ ui('cta.seeSector') }}</span>
             </span>
           </NuxtLink>
         </div>
@@ -163,7 +164,7 @@ const solutionItems = computed(() =>
         <h2>{{ t(page.finalCta.title) }}</h2>
         <p class="lead">{{ t(page.finalCta.lead) }}</p>
         <div class="cta-actions">
-          <BaseButton to="/contacto" variant="light">{{ $t('cta.evaluation') }}</BaseButton>
+          <BaseButton to="/contacto" variant="light">{{ ui('cta.evaluation') }}</BaseButton>
         </div>
       </div>
     </section>
