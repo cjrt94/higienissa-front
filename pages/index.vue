@@ -16,8 +16,7 @@ useSeoMeta({
 <template>
   <div>
     <HeroFlow :data="page.hero" />
-    <GroupIntro :data="page.groupIntro" />
-    <DivisionsGrid :data="page.divisions" />
+    <DivisionsGrid :data="page.divisions" :intro="page.groupIntro" />
     <SectorsGrid :data="page.sectorsBlock" alt />
     <FinalCta :data="page.finalCta" />
   </div>
