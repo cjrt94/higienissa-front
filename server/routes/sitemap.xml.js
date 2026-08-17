@@ -24,7 +24,7 @@ const PATHS = [
 ]
 
 export default defineEventHandler(async (event) => {
-  const site = (process.env.NUXT_PUBLIC_SITE_URL || 'https://higienissa.com').replace(/\/$/, '')
+  const site = (process.env.NUXT_PUBLIC_SITE_URL || 'https://www.higienissa.pe').replace(/\/$/, '')
   const loc = (locale, path) => `${site}/${locale}${path ? `/${path}` : ''}`
 
   const staticUrls = PATHS.flatMap((path) =>

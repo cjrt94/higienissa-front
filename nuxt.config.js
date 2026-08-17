@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       { code: 'es', language: 'es-PE', name: 'Español', file: 'es.json', dir: 'ltr' },
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json', dir: 'ltr' },
     ],
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://higienissa.com',
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.higienissa.pe',
     bundle: { optimizeTranslationDirective: false },
   },
 
@@ -55,7 +55,7 @@ export default defineNuxtConfig({
     firebaseServiceAccount: process.env.FIREBASE_SERVICE_ACCOUNT || '',
     vercelDeployHook: process.env.VERCEL_DEPLOY_HOOK || '',
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://higienissa.com',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.higienissa.pe',
       firebase: {
         apiKey: process.env.NUXT_PUBLIC_FIREBASE_API_KEY || '',
         authDomain: process.env.NUXT_PUBLIC_FIREBASE_AUTH_DOMAIN || '',
