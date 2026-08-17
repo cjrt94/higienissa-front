@@ -214,8 +214,8 @@ const capIcons = ['droplet', 'scan', 'chart', 'shield', 'activity', 'users', 'co
 .integrate-item { display: flex; gap: var(--space-4); align-items: flex-start; padding: var(--space-5) 0; border-top: 1px solid var(--line); }
 .integrate-item:first-child { border-top: 0; padding-top: 0; }
 .ii-icon { flex: none; display: inline-flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); color: var(--azul); }
-.ii-body h3 { font-size: 1.15rem; margin: 0 0 4px; }
-.ii-body p { margin: 0; color: var(--muted); font-size: var(--fs-body-sm); line-height: 1.55; }
+.ii-body h3 { font-size: var(--fs-h3); margin: 0 0 4px; }
+.ii-body p { margin: 0; color: var(--text); font-size: var(--fs-body-sm); line-height: 1.55; }
 
 @media (max-width: 900px) {
   .integrate-grid { grid-template-columns: 1fr; gap: var(--space-6); }

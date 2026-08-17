@@ -62,7 +62,9 @@
 .value-col h3 { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
 .value-col p { margin: 0; color: var(--text); }
 @media (max-width: 1000px) { .value-cols.cols-4 { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 760px) { .value-cols { grid-template-columns: 1fr; gap: var(--space-6); } }
+/* Incluye la variante `.cols-4` (especificidad 0,2,0) o la regla de 2-col de arriba
+   la deja pegada en móvil (títulos rotos, cuerpos apretados). */
+@media (max-width: 760px) { .value-cols, .value-cols.cols-4 { grid-template-columns: 1fr; gap: var(--space-6); } }
 
 /* --- Def-cols: lista de definición densa a 2 columnas (reemplaza grids de cards de "capacidades") --- */
 .def-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5) clamp(var(--space-7), 6vw, var(--space-9)); margin: 0; }
