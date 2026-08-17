@@ -43,7 +43,8 @@ const solutionItems = computed(() =>
     <section ref="heroRoot" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker anim-in">{{ t(page.hero.eyebrow) }}</span>
+          <img v-if="page.hero.logo" class="hero-logo anim-in" :src="page.hero.logo" :alt="t(page.hero.eyebrow)" height="44" loading="eager" decoding="async">
+          <span v-else class="kicker anim-in">{{ t(page.hero.eyebrow) }}</span>
           <h1 class="display anim-in">{{ t(page.hero.claim) }}</h1>
           <p class="lead anim-in">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions anim-in">
@@ -162,6 +163,8 @@ const solutionItems = computed(() =>
 </template>
 
 <style scoped>
+.hero-logo { display: block; height: clamp(34px, 4vw, 44px); width: auto; max-width: 240px; object-fit: contain; margin-bottom: var(--space-4); }
+
 /* Titulos de cards a 2 lineas balanceadas (misma logica que SolutionsShowcase) */
 .h-label span { display: block; }
 

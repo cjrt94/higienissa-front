@@ -36,8 +36,8 @@
       "role": { "es": "Garantiza", "en": "Guarantees" },
       "icon": "shield",
       "blurb": {
-        "es": "El estándar único que integra proceso, trazabilidad y operación.",
-        "en": "The single standard that integrates process, traceability and operation."
+        "es": "Un ecosistema que conecta soluciones especializadas para construir el modelo que cada operación necesita.",
+        "en": "An ecosystem that connects specialized solutions to build the model each operation needs."
       }
     }
   },
@@ -48,8 +48,8 @@
       "en": "Three brands, one shared vision"
     },
     "lead": {
-      "es": "Grupo Higienissa reúne tres marcas especializadas que trabajan bajo un mismo estándar para transformar la gestión del activo textil. A través de lavandería industrial, trazabilidad RFID y operación especializada, ofrecemos una solución integral que mejora la disponibilidad, el control y la continuidad del activo textil crítico.",
-      "en": "Grupo Higienissa brings together three specialized brands that work under a single standard to transform textile asset management. Through industrial laundry, RFID traceability and specialized operations, we deliver an integral solution that improves the availability, control and continuity of critical textile assets."
+      "es": "Grupo Higienissa reúne tres marcas especializadas que comparten una misma visión: transformar la gestión del activo textil. Cada una aporta una capacidad específica —lavandería industrial, trazabilidad e inteligencia RFID y operación especializada— y puede funcionar de manera independiente o integrarse con las demás para construir una solución adaptada a las necesidades y realidad operativa de cada cliente.",
+      "en": "Grupo Higienissa brings together three specialized brands that share a single vision: transforming textile asset management. Each one contributes a specific capability —industrial laundry, RFID traceability and intelligence, and specialized operations— and can work independently or integrate with the others to build a solution tailored to the needs and operational reality of each client."
     },
     "image": "/img/ecosistema.jpg",
     "imageAlt": {
@@ -111,8 +111,8 @@
     "eyebrow": { "es": "Sectores", "en": "Sectors" },
     "title": { "es": "Una solución adaptada a cada sector", "en": "A solution tailored to each sector" },
     "lead": {
-      "es": "Adaptamos nuestro ecosistema de lavandería industrial, trazabilidad y operación especializada a las necesidades específicas de cada industria.",
-      "en": "We adapt our ecosystem of industrial laundry, traceability and specialized operations to the specific needs of each industry."
+      "es": "Cada operación es diferente. Por eso, nuestras soluciones pueden funcionar de manera independiente o combinarse entre sí. Tú eliges qué necesitas y nosotros construimos el modelo adecuado para tu operación.",
+      "en": "Every operation is different. That's why our solutions can work independently or combine with one another. You choose what you need and we build the right model for your operation."
     },
     "items": [
       { "name": { "es": "Salud", "en": "Health" }, "desc": { "es": "Disponibilidad permanente en el textil crítico.", "en": "Permanent availability of critical textiles." }, "image": "/img/sector-salud.jpg", "imageAlt": { "es": "Sector salud: ropa hospitalaria limpia y disponible", "en": "Health sector: clean, available hospital linens" }, "to": "/sector-salud" },

@@ -46,7 +46,8 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
     <section ref="heroRoot" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="kicker anim-in">{{ t(page.hero.eyebrow) }}</span>
+          <img v-if="page.hero.logo" class="hero-logo anim-in" :src="page.hero.logo" :alt="t(page.hero.eyebrow)" height="44" loading="eager" decoding="async">
+          <span v-else class="kicker anim-in">{{ t(page.hero.eyebrow) }}</span>
           <h1 class="display anim-in">{{ t(page.hero.title) }}</h1>
           <p class="lead anim-in">{{ t(page.hero.lead) }}</p>
           <div class="hero-actions anim-in">
@@ -237,6 +238,7 @@ const splitAsis = (val) => t(val).split(new RegExp(`(${escapeRe(partnerName.valu
 </template>
 
 <style scoped>
+.hero-logo { display: block; height: clamp(34px, 4vw, 44px); width: auto; max-width: 240px; object-fit: contain; margin-bottom: var(--space-4); }
 
 /* Impacto operativo — panel branded a fila completa (abre la sección); cabecera
    centrada, dos tarjetas debajo. El planteamiento de "El problema" se retiró. */
