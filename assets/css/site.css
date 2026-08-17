@@ -398,7 +398,7 @@ li { margin-bottom: var(--space-2); }
 .site-footer { background: var(--bg-deep); color: rgba(255,255,255,.72); padding: var(--space-9) 0 var(--space-6); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr; gap: var(--space-6); }
 .site-footer h3 { color:#fff; font-family: var(--font-body); font-weight: 700; font-size: var(--fs-small); text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--space-4); }
-.site-footer .muted { font-size: 0.75rem; line-height: 1.5; margin-top: var(--space-3); opacity: .85; }
+.site-footer .muted { color: rgba(255,255,255,.62); font-size: 0.75rem; line-height: 1.5; margin-top: var(--space-3); opacity: 1; }
 .site-footer ul { list-style:none; padding:0; margin:0; }
 .site-footer li { margin-bottom: var(--space-2); }
 .site-footer a { color: rgba(255,255,255,.72); font-size: var(--fs-small); }
@@ -406,7 +406,7 @@ li { margin-bottom: var(--space-2); }
 .footer-brand img { height: 46px; margin-bottom: var(--space-4); }
 .footer-brand > p { max-width: 32ch; font-size: var(--fs-small); }
 .footer-social { display:flex; flex-wrap: wrap; gap: var(--space-4); margin: var(--space-4) 0; }
-.footer-social a { color: rgba(255,255,255,.72); font-size: var(--fs-small); }
+.footer-social a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; color: rgba(255,255,255,.72); font-size: var(--fs-small); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: var(--space-8); padding-top: var(--space-4); display:flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); font-size: var(--fs-small); color: rgba(255,255,255,.72); }
 /* Enlaces legales: flex con separadores como pseudo-elementos (no rompen al envolver) */
 .footer-legal { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
@@ -488,7 +488,7 @@ li { margin-bottom: var(--space-2); }
 @media (max-width: 1000px) {
   .footer-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-brand { grid-column: 1 / -1; }
-  .hero-grid, .intro-split { grid-template-columns: 1fr; }
+  .hero-grid, .intro-split, .intro-split.reverse { grid-template-columns: 1fr; }
   .hero-media { order: -1; }
   .hero-media .frame { aspect-ratio: 16/10; }
   .hero-badge { left: 16px; }
@@ -514,10 +514,19 @@ li { margin-bottom: var(--space-2); }
   .nav-scrim { display: block; position: fixed; inset: var(--header-h) 0 0; z-index: 90; background: rgba(15,24,54,.45); -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px); }
   .cols-3, .cols-2 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Reduce el aire muerto sobre el hero en móvil (la foto va order:-1, así que el
+     padding-top del hero quedaba como una franja vacía antes del contenido). */
+  .hero { padding-top: var(--space-6); }
+  /* Sector-cards a fila completa: de retrato 3/4 (muy altas apiladas) a apaisado
+     4/3 → misma foto a sangre, página más corta. */
+  .sector-card { aspect-ratio: 4/3; }
 }
 @media (max-width: 460px) {
   .cols-4, .footer-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn-primary, .hero-actions .btn-ghost { justify-content: center; }
   .hero-badge { display: none; }
+  /* CTA final full-width, consistente con los botones del hero en móvil */
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .cta-actions .btn-primary, .cta-actions .btn-light, .cta-actions .btn-ghost { justify-content: center; }
 }

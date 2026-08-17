@@ -132,8 +132,11 @@ const splitTwo = useSplitTwo()
 @media (max-width: 700px) { .sol-bento { grid-template-columns: 1fr; } .sol-bento .b-full { grid-column: 1; } }
 
 @media (max-width: 900px) {
-  .sol-featured { grid-template-columns: 1fr; }
-  .sol-aside { padding-top: var(--space-5); }
+  /* Apilada: el `gap` grande (pensado como gutter horizontal de 2 columnas) se volvía
+     un hueco vertical enorme y encima se sumaba el padding-top del aside. Se colapsa a
+     una única separación limpia entre copy y lista. */
+  .sol-featured { grid-template-columns: 1fr; gap: var(--space-4); }
+  .sol-aside { padding-top: 0; }
 }
 @media (max-width: 460px) {
   .sol-list.two { grid-template-columns: 1fr; }
