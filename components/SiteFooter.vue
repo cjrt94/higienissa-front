@@ -1,6 +1,5 @@
 <script setup>
 const { t } = useI18n()
-const tt = useT()
 const ui = useUiText()
 const localePath = useLocalePath()
 const settings = await useSettings()
@@ -78,8 +77,6 @@ const socialLinks = computed(() => SOCIAL.map((s) => ({
           <h3>{{ t('footer.contact') }}</h3>
           <ul>
             <li><a :href="`mailto:${settings.contact.email}`">{{ settings.contact.email }}</a></li>
-            <li><a :href="`tel:${settings.contact.phone.replace(/\s+/g, '')}`">{{ settings.contact.phone }}</a></li>
-            <li>{{ tt(settings.contact.city) }}</li>
           </ul>
           <p class="muted">
             {{ t('footer.asisNote', { partner: settings.asisStrip.partnerName }) }}
