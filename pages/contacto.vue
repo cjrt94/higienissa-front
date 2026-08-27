@@ -101,10 +101,14 @@ const brands = computed(() => settings.ecosystem?.pipeline ?? [])
 
 <style scoped>
 /* ---- Layout de contacto: panel de acento + formulario ---- */
-.contact-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: stretch; }
+/* align-items:start → cada columna toma su altura natural; el aside navy NO se estira para
+   igualar al formulario (que ahora es alto por el cuestionario). El aside acompaña el scroll
+   del form vía position:sticky (se desactiva en el breakpoint de 1 columna, ver abajo). */
+.contact-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(var(--space-6), 4vw, var(--space-8)); align-items: start; }
 
 /* Panel de acento navy (misma familia que .cta-band / .asis-strip) */
 .contact-aside {
+  position: sticky; top: var(--space-6);
   border-radius: var(--radius-lg);
   background: linear-gradient(150deg, #0F1836 0%, #1C2A87 62%, #22347f 100%);
   color: rgba(255,255,255,.82);
@@ -153,6 +157,8 @@ a.ca-v:hover { color: #8FD0FF; }
 
 @media (max-width: 900px) {
   .contact-layout { grid-template-columns: 1fr; gap: var(--space-6); }
+  /* En 1 columna el aside va apilado sobre el form: sin sticky para que no se quede pinado */
+  .contact-aside { position: static; top: auto; }
   .proc-steps { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
   .eco-grid { grid-template-columns: 1fr; }
 }

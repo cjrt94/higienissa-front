@@ -151,7 +151,11 @@
 .form-check { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--space-3); }
 .form-check input { width: 18px; height: 18px; margin-top: 2px; flex: none; }
 .form-check input[aria-invalid="true"] { outline: 2px solid #c0392b; outline-offset: 2px; border-radius: 3px; }
-.form-check label { font-size: var(--fs-small); color: var(--text); }
+/* La label toma el espacio restante y su texto (con el * de .req) envuelve AL LADO del checkbox,
+   nunca debajo. flex-basis:0 es clave: con basis:auto el tamaño hipotético de la label es el texto
+   sin envolver → flex-wrap la baja a otra línea antes de encoger. Con basis:0 siempre cabe en la
+   fila del checkbox y crece para ocupar el resto, envolviendo el texto dentro. */
+.form-check label { flex: 1 1 0; min-width: 0; font-size: var(--fs-small); color: var(--text); }
 /* El error del consentimiento se alinea bajo el texto del checkbox, no en una fila suelta */
 .form-check .field-error { flex-basis: 100%; margin-left: calc(18px + var(--space-3)); }
 /* Grupo cuestionario "¿En qué podemos ayudarlo?" — fieldset accesible con checkboxes en tarjeta */
