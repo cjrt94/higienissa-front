@@ -54,10 +54,20 @@
     "position": "Role",
     "company": "Company",
     "email": "Work email",
+    "phone": "Phone / WhatsApp",
     "sector": "Sector",
     "selectSector": "Select a sector",
     "other": "Other",
-    "message": "Message",
+    "helpWith": "How can we help you?",
+    "help": {
+      "laundry": "Industrial laundry",
+      "rfid": "RFID traceability and textile asset management",
+      "insitu": "On-site operation",
+      "renting": "Textile renting",
+      "combine": "I want to combine several solutions",
+      "assess": "I want you to assess my operation"
+    },
+    "message": "Tell us briefly about your operation or need",
     "requestType": "Request type",
     "consent": "I agree that Grupo Higienissa may use my data to respond to my inquiry.",
     "submit": "Send request",
@@ -67,6 +77,8 @@
     "backHome": "Back to home",
     "error": "Could not send. Please try again or email us.",
     "required": "Fields marked with * are required.",
+    "whatsappPrefill": "Hi, I'd like more information about Grupo Higienissa's solutions.",
+    "whatsappAria": "Message us on WhatsApp",
     "errors": {
       "nameReq": "Please enter your name.",
       "lastNameReq": "Please enter your last name.",
@@ -75,6 +87,7 @@
       "emailReq": "Please enter your email.",
       "emailInvalid": "Invalid email.",
       "messageReq": "Please enter your message.",
+      "helpWithReq": "Select at least one option.",
       "consentReq": "We need your consent.",
       "max": "Maximum {n} characters."
     }

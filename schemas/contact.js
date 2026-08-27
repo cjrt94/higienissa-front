@@ -21,8 +21,9 @@ export function contactSchema(t) {
       errorMap: () => ({ message: m('contact.errors.sectorReq') }),
     }),
     email: reqStr('contact.errors.emailReq').email(m('contact.errors.emailInvalid')).max(120, m('contact.errors.max', { n: 120 })),
+    phone: z.string().max(40, m('contact.errors.max', { n: 40 })).optional().default(''),
+    helpWith: z.array(z.enum(['laundry', 'rfid', 'insitu', 'renting', 'combine', 'assess'])).min(1, m('contact.errors.helpWithReq')),
     message: reqStr('contact.errors.messageReq').max(1200, m('contact.errors.max', { n: 1200 })),
-    ctaContext: z.enum(['evaluacion', 'diagnostico']).default('evaluacion'),
     consent: z.literal(true, { errorMap: () => ({ message: m('contact.errors.consentReq') }) }),
   })
 }

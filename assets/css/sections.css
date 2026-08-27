@@ -154,6 +154,17 @@
 .form-check label { font-size: var(--fs-small); color: var(--text); }
 /* El error del consentimiento se alinea bajo el texto del checkbox, no en una fila suelta */
 .form-check .field-error { flex-basis: 100%; margin-left: calc(18px + var(--space-3)); }
+/* Grupo cuestionario "¿En qué podemos ayudarlo?" — fieldset accesible con checkboxes en tarjeta */
+.form-fieldset { grid-column: 1 / -1; border: 0; margin: 0; padding: 0; min-width: 0; }
+.form-fieldset > legend { display: block; font: 600 var(--fs-small) var(--font-body); color: var(--ink); padding: 0; margin: 0 0 8px; }
+.check-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+.check-item { display: flex; align-items: flex-start; gap: var(--space-3); margin: 0; font: 500 var(--fs-small) var(--font-body); color: var(--text); cursor: pointer; padding: 11px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease); }
+.check-item:hover { border-color: var(--electrico); }
+.check-item input { width: 18px; height: 18px; margin: 1px 0 0; flex: none; accent-color: var(--electrico); }
+.check-item:has(input:checked) { border-color: var(--electrico); background: color-mix(in srgb, var(--electrico) 6%, var(--bg)); }
+.check-item:has(input:focus-visible) { outline: var(--focus-ring); outline-offset: var(--focus-offset); border-color: var(--electrico); }
+.form-fieldset[aria-invalid="true"] .check-item { border-color: #c0392b; }
+.form-fieldset .field-error { display: block; margin-top: 8px; }
 .form-actions { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4); }
 /* Contador de caracteres y spinner de envío */
 .char-count { font-size: var(--fs-small); color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
@@ -177,6 +188,7 @@
   .page-hero.with-media .page-hero-grid { grid-template-columns: 1fr; }
   .feature-grid, .feature-grid.cols-2 { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
+  .check-grid { grid-template-columns: 1fr; }
   .marker-list.cols-2 { grid-template-columns: 1fr; }
   .installed-base { grid-template-columns: 1fr; }
 }

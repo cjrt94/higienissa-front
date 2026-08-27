@@ -27,6 +27,17 @@ onMounted(async () => {
   }
 })
 
+// Etiquetas ES del cuestionario "¿En qué podemos ayudarlo?" (helpWith) para el back office.
+const HELP_LABELS = {
+  laundry: 'Lavandería industrial',
+  rfid: 'Trazabilidad RFID y gestión de activos textiles',
+  insitu: 'Operación in situ',
+  renting: 'Renting textil',
+  combine: 'Combinar varias soluciones',
+  assess: 'Evaluar mi operación',
+}
+const helpText = (arr) => (Array.isArray(arr) ? arr.map((s) => HELP_LABELS[s] || s).join(', ') : '')
+
 function fmtDate(ts) {
   const d = ts?.toDate?.() || (ts?._seconds ? new Date(ts._seconds * 1000) : null)
   return d ? d.toLocaleString('es-PE', { dateStyle: 'medium', timeStyle: 'short' }) : ''
@@ -81,7 +92,7 @@ function openRow(row) {
     <div v-for="r in rows" :key="r.id" class="admin-row">
       <div class="meta" style="cursor:pointer" @click="openRow(r)">
         <b>{{ r.name }} {{ r.lastName }} · {{ r.company }}</b>
-        <small>{{ r.email }} · {{ r.sector }} · {{ r.ctaContext }} · {{ fmtDate(r.createdAt) }}</small>
+        <small>{{ r.email }} · {{ r.sector }} · {{ fmtDate(r.createdAt) }}</small>
       </div>
       <div style="display:flex;gap:8px;align-items:center">
         <span class="badge-status" :class="r.status === 'new' ? 'draft' : 'published'">{{ r.status }}</span>
@@ -95,7 +106,9 @@ function openRow(row) {
     <div v-if="open" class="sub-detail">
       <p><b>Empresa:</b> {{ open.company }}<span v-if="open.position"> · {{ open.position }}</span></p>
       <p><b>Email:</b> <a :href="`mailto:${open.email}`">{{ open.email }}</a></p>
-      <p><b>Sector:</b> {{ open.sector }} · <b>Interés:</b> {{ open.ctaContext }} · <b>Idioma:</b> {{ open.locale }}</p>
+      <p v-if="open.phone"><b>Teléfono / WhatsApp:</b> {{ open.phone }}</p>
+      <p><b>Sector:</b> {{ open.sector }} · <b>Idioma:</b> {{ open.locale }}</p>
+      <p v-if="open.helpWith?.length"><b>¿En qué podemos ayudarlo?:</b> {{ helpText(open.helpWith) }}</p>
       <p><b>Recibido:</b> {{ fmtDate(open.createdAt) }}</p>
       <p class="sub-message">{{ open.message }}</p>
     </div>

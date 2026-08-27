@@ -16,7 +16,7 @@ const successEl = ref(null)
 
 const { handleSubmit } = useForm({
   validationSchema: toTypedSchema(contactSchema(t)),
-  initialValues: { position: '', ctaContext: 'evaluacion', consent: false },
+  initialValues: { position: '', phone: '', helpWith: [], consent: false },
 })
 
 const { value: name, errorMessage: eName } = useField('name')
@@ -25,14 +25,19 @@ const { value: position } = useField('position')
 const { value: company, errorMessage: eCompany } = useField('company')
 const { value: sector, errorMessage: eSector } = useField('sector')
 const { value: email, errorMessage: eEmail } = useField('email')
+const { value: phone } = useField('phone')
+const { value: helpWith, errorMessage: eHelp } = useField('helpWith')
 const { value: message, errorMessage: eMessage } = useField('message')
-const { value: ctaContext } = useField('ctaContext')
 const { value: consent, errorMessage: eConsent } = useField('consent')
 
 const msgLen = computed(() => (message.value || '').length)
 
-// id del campo por nombre de error → para llevar el foco al primer campo inválido
-const FIELD_ID = { name: 'f-name', lastName: 'f-last', company: 'f-company', sector: 'f-sector', email: 'f-email', message: 'f-message', consent: 'f-consent' }
+// Cuestionario "¿En qué podemos ayudarlo?" — multi-select (mín. 1). slug → label vía i18n.
+const HELP_OPTIONS = ['laundry', 'rfid', 'insitu', 'renting', 'combine', 'assess']
+
+// id del campo por nombre de error → para llevar el foco al primer campo inválido.
+// helpWith apunta al primer checkbox del grupo (fieldset).
+const FIELD_ID = { name: 'f-name', lastName: 'f-last', company: 'f-company', position: 'f-position', sector: 'f-sector', email: 'f-email', phone: 'f-phone', helpWith: 'f-help-laundry', message: 'f-message', consent: 'f-consent' }
 
 const onValid = async (values) => {
   submitting.value = true
@@ -86,14 +91,24 @@ watch(sent, (v) => {
           <span v-if="eLast" id="e-last" class="field-error" role="alert">{{ eLast }}</span>
         </div>
         <div class="form-field">
-          <label for="f-position">{{ t('contact.position') }}</label>
-          <input id="f-position" v-model="position" type="text" maxlength="80">
-        </div>
-        <div class="form-field">
           <label for="f-company">{{ t('contact.company') }} <span class="req">*</span></label>
           <input id="f-company" v-model="company" type="text" maxlength="100" autocomplete="organization"
                  :aria-invalid="!!eCompany" :aria-describedby="eCompany ? 'e-company' : undefined">
           <span v-if="eCompany" id="e-company" class="field-error" role="alert">{{ eCompany }}</span>
+        </div>
+        <div class="form-field">
+          <label for="f-position">{{ t('contact.position') }}</label>
+          <input id="f-position" v-model="position" type="text" maxlength="80" autocomplete="organization-title">
+        </div>
+        <div class="form-field">
+          <label for="f-email">{{ t('contact.email') }} <span class="req">*</span></label>
+          <input id="f-email" v-model="email" type="email" maxlength="120" autocomplete="email"
+                 :aria-invalid="!!eEmail" :aria-describedby="eEmail ? 'e-email' : undefined">
+          <span v-if="eEmail" id="e-email" class="field-error" role="alert">{{ eEmail }}</span>
+        </div>
+        <div class="form-field">
+          <label for="f-phone">{{ t('contact.phone') }}</label>
+          <input id="f-phone" v-model="phone" type="tel" maxlength="40" autocomplete="tel">
         </div>
         <div class="form-field">
           <label for="f-sector">{{ t('contact.sector') }} <span class="req">*</span></label>
@@ -108,19 +123,18 @@ watch(sent, (v) => {
           </select>
           <span v-if="eSector" id="e-sector" class="field-error" role="alert">{{ eSector }}</span>
         </div>
-        <div class="form-field">
-          <label for="f-email">{{ t('contact.email') }} <span class="req">*</span></label>
-          <input id="f-email" v-model="email" type="email" maxlength="120" autocomplete="email"
-                 :aria-invalid="!!eEmail" :aria-describedby="eEmail ? 'e-email' : undefined">
-          <span v-if="eEmail" id="e-email" class="field-error" role="alert">{{ eEmail }}</span>
-        </div>
-        <div class="form-field full">
-          <label for="f-type">{{ t('contact.requestType') }}</label>
-          <select id="f-type" v-model="ctaContext">
-            <option value="evaluacion">{{ ui('cta.evaluation') }}</option>
-            <option value="diagnostico">{{ ui('cta.diagnosis') }}</option>
-          </select>
-        </div>
+        <fieldset class="form-fieldset full" :aria-invalid="!!eHelp"
+                  :aria-describedby="eHelp ? 'e-help' : undefined">
+          <legend>{{ t('contact.helpWith') }} <span class="req">*</span></legend>
+          <div class="check-grid">
+            <label v-for="opt in HELP_OPTIONS" :key="opt" class="check-item" :for="`f-help-${opt}`">
+              <input :id="`f-help-${opt}`" v-model="helpWith" type="checkbox" :value="opt"
+                     :aria-invalid="!!eHelp">
+              <span>{{ t(`contact.help.${opt}`) }}</span>
+            </label>
+          </div>
+          <span v-if="eHelp" id="e-help" class="field-error" role="alert">{{ eHelp }}</span>
+        </fieldset>
         <div class="form-field full">
           <label for="f-message">{{ t('contact.message') }} <span class="req">*</span></label>
           <textarea id="f-message" v-model="message" maxlength="1200"
@@ -138,7 +152,7 @@ watch(sent, (v) => {
       <div class="form-actions">
         <button class="btn-primary" type="submit" :disabled="submitting">
           <span v-if="submitting" class="btn-spinner" aria-hidden="true" />
-          {{ submitting ? t('contact.sending') : t('contact.submit') }}
+          {{ submitting ? t('contact.sending') : ui('cta.evaluation') }}
         </button>
       </div>
     </form>

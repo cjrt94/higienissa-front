@@ -69,6 +69,10 @@
   /* --- Anillo de foco único (usado en :focus-visible y en inputs) --- */
   --focus-ring: 3px solid var(--electrico);
   --focus-offset: 2px;
+
+  /* --- FAB de WhatsApp (fuente única compartida con el toast para no solaparse) --- */
+  --fab-size: 60px;
+  --fab-offset: clamp(16px, 4vw, 24px);
 }
 
 /* Helper mínimo. Los selectores de componente (.kicker, .btn-*, .placeholder-img,

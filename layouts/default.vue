@@ -59,6 +59,7 @@ settings.value = await useSettings()
       <slot />
     </main>
     <SiteFooter />
+    <WhatsappFab />
     <ClientOnly><ToastHost /></ClientOnly>
   </div>
 </template>
