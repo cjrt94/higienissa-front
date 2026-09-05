@@ -16,7 +16,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
-  ogImage: `${config.public.siteUrl}${page.hero.image}`,
+  ogImage: `${config.public.siteUrl}/img/og-higienissa.png`,
 })
 
 // Soluciones al contrato de <SolutionsShowcase> (sin groups: solo titulo + desc)

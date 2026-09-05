@@ -13,7 +13,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
-  ogImage: `${config.public.siteUrl}/img/ecosistema.jpg`,
+  ogImage: `${config.public.siteUrl}/img/og-higienissa.png`,
 })
 
 const slugOf = (p) => (locale.value === 'en' ? p.slugEn : p.slugEs) || p.slugEs

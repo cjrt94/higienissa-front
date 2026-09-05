@@ -18,7 +18,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
-  ogImage: `${config.public.siteUrl}${page.hero.image}`,
+  ogImage: `${config.public.siteUrl}/img/og-higienissa.png`,
 })
 
 const diffIcons = ['users', 'shield', 'activity', 'scan']

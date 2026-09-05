@@ -11,7 +11,7 @@ useSeoMeta({
   ogTitle: () => t(page.seo.title),
   ogDescription: () => t(page.seo.description),
   ogType: 'website',
-  ogImage: `${config.public.siteUrl}${page.hero.image}`,
+  ogImage: `${config.public.siteUrl}/img/og-higienissa.png`,
 })
 
 // El acento de sector (--sector / --sector-ink / --sector-soft) es único para

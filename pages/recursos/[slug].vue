@@ -27,7 +27,7 @@ useSeoMeta({
   ogTitle: () => t(seo.value.title),
   ogDescription: () => t(seo.value.description),
   ogType: 'article',
-  ogImage: post.coverImage?.url ? `${config.public.siteUrl}${post.coverImage.url}` : undefined,
+  ogImage: post.coverImage?.url ? `${config.public.siteUrl}${post.coverImage.url}` : `${config.public.siteUrl}/img/og-higienissa.png`,
 })
 </script>
 
